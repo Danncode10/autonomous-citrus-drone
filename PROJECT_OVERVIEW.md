@@ -6,9 +6,11 @@ This project is a drone-based computer vision system for monitoring the health o
 
 The main idea is to use a drone with a camera to inspect each tower, capture images of individual lettuce plants, analyze plant condition using an AI/computer vision model, and save the results to a web dashboard where farmers can view the status of each tower and plant.
 
+The physical prototype will focus on **one real hydroponic tower** with lettuce plants. To represent the larger farm scenario, the project will also include a **Gazebo simulation environment** with multiple virtual towers and obstacles. This allows the navigation and inspection workflow to be tested at farm scale before applying it to the real-world prototype.
+
 ## Working Thesis Title
 
-**Drone-Based Computer Vision System for Plant-Level Health Monitoring of Hydroponic Lettuce Towers**
+**Drone-Based Computer Vision and Simulation System for Plant-Level Health Monitoring of Hydroponic Lettuce Towers**
 
 ## Problem Statement
 
@@ -28,6 +30,7 @@ To design and develop an automated system that uses a drone-mounted camera and c
 4. Store inspection results in a database with tower, slot, image, timestamp, and health status.
 5. Create a web dashboard where farmers can view tower status, individual plant status, and alerts.
 6. Add basic drone navigation and obstacle avoidance for safe movement around towers.
+7. Develop a Gazebo simulation environment to test multi-tower navigation before real-world drone testing.
 
 ## Target Crop
 
@@ -43,12 +46,14 @@ Lettuce is selected because:
 
 ## System Concept
 
-The farm contains multiple hydroponic towers. Each tower has a known location and multiple plant holes or slots. The drone visits each tower, captures plant images, and sends the data to the system.
+The farm concept contains multiple hydroponic towers. Each tower has a known location and multiple plant holes or slots. The drone visits each tower, captures plant images, and sends the data to the system.
+
+For the physical prototype, only one tower will be built. The multi-tower farm environment will be represented in Gazebo, where the drone can be tested in a virtual layout with several towers and obstacles.
 
 The system then analyzes each plant image and produces a health status. Farmers can check the results through a website.
 
 ```text
-Hydroponic Tower Farm
+Hydroponic Tower Farm or Gazebo Farm Simulation
         |
         v
 Drone with Camera
@@ -106,7 +111,7 @@ Possible drone tasks:
 - Avoid obstacles such as nearby towers, pipes, frames, or walls
 - Send captured images to the processing system
 
-For the prototype, the drone navigation can start with a controlled path instead of full autonomous navigation.
+For the prototype, the drone navigation can start with a controlled path instead of full autonomous navigation. The drone should move slowly, stop at each inspection point, capture a clear image, then continue to the next plant slot.
 
 Possible navigation methods:
 
@@ -117,7 +122,59 @@ Possible navigation methods:
 - Depth camera or LiDAR for obstacle detection
 - ROS 2 with PX4 or ArduPilot for advanced autonomous navigation
 
-### 3. Computer Vision Module
+### 3. Drone Platform Direction
+
+The preferred physical drone direction is a **CogniFly-based custom drone**.
+
+CogniFly is a useful reference because it is an open-source indoor drone concept with printable parts, a protected/collision-resilient frame, camera support, optical flow, Time-of-Flight sensing, and Python control. This matches the project goal of flying indoors near hydroponic towers and capturing plant images.
+
+Reference repositories:
+
+- CogniFly project page: <https://thecognifly.github.io/>
+- CogniFly STL files: <https://github.com/thecognifly/CogniFly-STL>
+- CogniFly Python control: <https://github.com/thecognifly/cognifly-python>
+
+The project may adapt CogniFly instead of designing a drone completely from zero. Custom 3D-printed modifications may include:
+
+- Camera mount for tower-facing plant inspection
+- Distance sensor mount
+- Battery holder
+- Protective frame improvements
+- Landing gear or tower-inspection positioning guides
+- Mounting points for QR/ArUco marker detection hardware
+
+Important note: the drone should be designed for **slow, stable, close-range inspection**, not speed, racing, or cinematic video.
+
+### 4. Gazebo Simulation Module
+
+Gazebo will be used to simulate the drone and farm environment before real-world testing.
+
+The simulation is important because the physical prototype will only include one real hydroponic tower. The simulation can show how the system would behave in a larger farm with multiple towers, obstacles, and inspection targets.
+
+Possible simulation tasks:
+
+- Create a virtual hydroponic farm with multiple towers
+- Add obstacles such as nearby towers, walls, pipes, and frames
+- Add QR codes or ArUco markers to towers
+- Simulate a drone approaching a target tower
+- Use marker detection to identify tower ID and orientation
+- Test inspection paths around a tower
+- Test move-stop-capture movement between plant slots
+- Test obstacle avoidance behavior before real-world flight
+
+The planned drone behavior is:
+
+1. Take off from a start position.
+2. Navigate toward the target tower.
+3. Detect the tower marker using the camera.
+4. Identify tower ID and orientation.
+5. Align with the tower start position.
+6. Move to a plant slot inspection point.
+7. Hold position and capture an image.
+8. Continue to the next plant slot.
+9. Upload or save results for dashboard viewing.
+
+### 5. Computer Vision Module
 
 The computer vision module analyzes lettuce plant images and predicts plant status.
 
@@ -143,7 +200,7 @@ Recommended first classification categories:
 
 Important note: the system should avoid claiming that it can perfectly diagnose exact fertilizer needs from images alone. A safer and more realistic claim is that the system detects visible symptoms that may indicate nutrient deficiency or poor growth.
 
-### 4. Optional Sensor Module
+### 6. Optional Sensor Module
 
 To improve accuracy, the system can also collect sensor data from the hydroponic setup.
 
@@ -158,7 +215,7 @@ Possible sensors:
 
 Sensor data can help explain plant symptoms. For example, yellowing leaves plus abnormal EC readings may suggest a nutrient issue.
 
-### 5. Database Module
+### 7. Database Module
 
 The database stores information about towers, plants, inspections, images, and AI results.
 
@@ -187,7 +244,7 @@ Confidence: 87%
 Timestamp: 2026-08-04 12:54 PM
 ```
 
-### 6. Web Dashboard
+### 8. Web Dashboard
 
 The web dashboard allows farmers to monitor the farm without manually checking every tower.
 
@@ -270,7 +327,7 @@ This makes the thesis stronger because it can show that real farm images improve
 
 ## Drone Navigation Scope
 
-Drone navigation should be included, but it should be scoped carefully because full autonomous navigation can become a separate thesis.
+Drone navigation should be included, but it should be scoped carefully because full autonomous navigation can become a separate thesis. This project will use simulation to explore the larger autonomous navigation problem while keeping the physical build manageable.
 
 Recommended prototype scope:
 
@@ -278,6 +335,8 @@ Recommended prototype scope:
 - The tower has visual markers such as QR codes or ArUco markers.
 - The drone uses a camera and distance sensor to maintain safe positioning.
 - The system includes basic obstacle avoidance to prevent collision with nearby towers.
+- Gazebo is used to simulate multiple towers and obstacle layouts.
+- Real-world testing focuses on one physical tower.
 
 Possible obstacle avoidance technologies:
 
@@ -296,12 +355,14 @@ The first complete version should focus on proving the main concept.
 MVP features:
 
 1. One hydroponic tower with lettuce plants.
-2. A camera or drone-mounted camera that captures plant images.
-3. Plant slot identification using tower layout or markers.
-4. Computer vision model that classifies plant status.
-5. Database for storing inspection results.
-6. Web dashboard for viewing tower and plant status.
-7. Basic obstacle avoidance or controlled navigation demonstration.
+2. A CogniFly-based or similar 3D-printable drone prototype.
+3. Camera or drone-mounted camera that captures plant images.
+4. Plant slot identification using tower layout or markers.
+5. Computer vision model that classifies plant status.
+6. Database for storing inspection results.
+7. Web dashboard for viewing tower and plant status.
+8. Basic obstacle avoidance or controlled navigation demonstration.
+9. Gazebo simulation with multiple towers and obstacles.
 
 ## Possible Advanced Features
 
@@ -309,6 +370,8 @@ These can be added if time allows:
 
 - Multiple tower support
 - Farm map view
+- More realistic Gazebo farm simulation
+- ROS 2 integration
 - Automated drone route planning
 - Full autonomous navigation
 - Sensor fusion with pH, EC/TDS, and water level readings
@@ -323,7 +386,7 @@ These can be added if time allows:
 
 Main research question:
 
-**Can a drone-mounted camera and computer vision model accurately identify the health and harvest status of lettuce plants in a vertical hydroponic tower farm?**
+**Can a drone-mounted camera and computer vision model accurately identify the health and harvest status of lettuce plants in a vertical hydroponic tower farm, while using simulation to validate navigation in a larger multi-tower environment?**
 
 Supporting research questions:
 
@@ -332,12 +395,15 @@ Supporting research questions:
 3. Can the system correctly associate captured images with tower IDs and plant slots?
 4. Can a web dashboard help farmers identify towers and plants that need attention?
 5. Can basic drone navigation safely support plant inspection in a tower farm environment?
+6. Can Gazebo simulation help validate multi-tower navigation and obstacle avoidance before real-world testing?
 
 ## Expected Outputs
 
 The final project should produce:
 
 - A working hydroponic tower inspection prototype
+- A CogniFly-based or similar 3D-printable drone prototype
+- A Gazebo simulation environment with multiple hydroponic towers
 - A trained or fine-tuned lettuce health classification model
 - A drone/camera image capture workflow
 - A database of tower inspections
@@ -355,6 +421,8 @@ Possible metrics for evaluating the project:
 - Correct tower/slot identification rate
 - Average inspection time per tower
 - Obstacle detection success rate
+- Simulation navigation success rate
+- Simulated collision rate
 - Dashboard usability feedback
 - System response time from image capture to dashboard update
 
@@ -375,6 +443,13 @@ Possible metrics for evaluating the project:
 - Towers may be too close together for safe navigation.
 - Obstacle avoidance may require additional sensors.
 - Battery life limits inspection time.
+- A fully 3D-printed or mostly 3D-printed drone may have vibration, weight, and durability issues.
+
+### Simulation Limitations
+
+- Gazebo simulation may not perfectly match real-world flight behavior.
+- Simulated lighting, camera images, and plant appearances may be simpler than real farm conditions.
+- Navigation that works in simulation may still need tuning during real-world testing.
 
 ### Scope Limitations
 
@@ -388,7 +463,7 @@ The best thesis scope is:
 
 **A drone-assisted computer vision system that detects visible lettuce plant health conditions in hydroponic towers and displays plant-level inspection results on a web dashboard.**
 
-This scope is realistic, research-worthy, and buildable. The system can include basic navigation and obstacle avoidance, but the main contribution should be plant-level health monitoring and farm dashboard reporting.
+This scope is realistic, research-worthy, and buildable. The system can include basic navigation and obstacle avoidance, but the main contribution should be plant-level health monitoring and farm dashboard reporting. The physical system will validate inspection on one real tower, while Gazebo simulation will validate the navigation concept for multiple towers.
 
 ## Suggested Technology Stack
 
@@ -396,7 +471,7 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 
 - Hydroponic tower prototype
 - Lettuce plants
-- Drone or camera rig
+- CogniFly-based or similar 3D-printable drone prototype
 - RGB camera
 - Optional depth camera or distance sensor
 - Optional pH and EC/TDS sensors
@@ -411,8 +486,11 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 
 ### Drone and Robotics
 
-- PX4 or ArduPilot
-- ROS 2
+- CogniFly reference design
+- 3D-printed drone frame
+- Gazebo simulation
+- ROS 2 for future simulation and robotics integration
+- PX4 or ArduPilot for future advanced navigation, if needed
 - MAVLink
 - ArUco markers or QR codes
 - Depth sensor or distance sensor for obstacle avoidance
@@ -431,6 +509,8 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 - Study hydroponic lettuce growth symptoms.
 - Review open plant disease datasets.
 - Review drone navigation options.
+- Review CogniFly hardware and software structure.
+- Review Gazebo drone simulation requirements.
 - Finalize system architecture.
 
 ### Phase 2: Prototype Tower and Data Collection
@@ -448,24 +528,35 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 
 ### Phase 4: Drone or Camera Inspection
 
-- Mount the camera on the drone or camera rig.
+- Build or adapt a CogniFly-based 3D-printable drone.
+- Mount the camera on the drone.
 - Define tower inspection positions.
 - Capture plant slot images.
 - Add basic obstacle detection.
 
-### Phase 5: Web Dashboard
+### Phase 5: Gazebo Simulation
+
+- Create a virtual hydroponic tower model.
+- Create a multi-tower farm layout.
+- Add obstacles and tower markers.
+- Simulate drone navigation to a target tower.
+- Simulate move-stop-capture inspection behavior.
+- Compare simulation behavior with real-world prototype testing.
+
+### Phase 6: Web Dashboard
 
 - Create database schema.
 - Build API for storing inspection results.
 - Build dashboard views for farm, tower, and plant slot status.
 
-### Phase 6: Integration and Testing
+### Phase 7: Integration and Testing
 
 - Connect camera capture, AI model, database, and dashboard.
 - Test end-to-end inspection workflow.
+- Test simulated multi-tower navigation.
 - Measure performance and accuracy.
 - Document limitations and future improvements.
 
 ## Short Pitch
 
-This project automates the inspection of hydroponic lettuce towers using a drone-mounted camera and computer vision. The drone captures images of individual plant slots, the AI model classifies each plant's condition, and the results are stored in a web dashboard so farmers can quickly identify healthy plants, problem areas, and harvest-ready lettuce.
+This project automates the inspection of hydroponic lettuce towers using a 3D-printable drone, camera, computer vision, and web dashboard. The physical prototype uses one real lettuce tower, while Gazebo simulation represents a larger farm with multiple towers and obstacles. The drone identifies a tower using visual markers, captures images of individual plant slots, and sends AI-generated plant health results to a dashboard so farmers can quickly identify healthy plants, problem areas, and harvest-ready lettuce.
