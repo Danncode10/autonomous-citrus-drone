@@ -1,5 +1,63 @@
 # Hardware Requirements
 
+## Plants and Growing Supplies
+
+| Device | Link | Price | Quantity |
+| --- | --- | ---: | ---: |
+| Lettuce seeds or seedlings | TBD | TBD | TBD |
+| Growing medium | TBD | TBD | TBD |
+| Hydroponic nutrient solution | TBD | TBD | 1 |
+| Clean water supply | TBD | TBD | TBD |
+
+## Hydroponic Tower Structure and Hardware
+
+| Device | Link | Price | Quantity |
+| --- | --- | ---: | ---: |
+| 3D-printed stackable tower module | TBD | TBD | TBD |
+| 3D-printed top cap / water distributor | TBD | TBD | 1 |
+| 3D-printed base adapter | TBD | TBD | 1 |
+| Reservoir tank | TBD | TBD | 1 |
+| Net cups | TBD | TBD | TBD |
+| Tower base or support stand | TBD | TBD | 1 |
+| Reservoir lid / tower mounting plate | TBD | TBD | 1 |
+| Water tubing | TBD | TBD | 1 |
+| Pump fittings / connectors | TBD | TBD | TBD |
+| QR code / ArUco marker labels | TBD | TBD | TBD |
+| Waterproof labels / lamination | TBD | TBD | TBD |
+
+## Hydroponic Tower Electronics
+
+| Device | Link | Price | Quantity |
+| --- | --- | ---: | ---: |
+| ESP32 development board | TBD | TBD | 1 |
+| Submersible water pump | TBD | TBD | 1 |
+| Pump power supply | TBD | TBD | 1 |
+| pH sensor | TBD | TBD | 1 |
+| EC/TDS sensor | TBD | TBD | 1 |
+| Water temperature sensor | TBD | TBD | 1 |
+| Water level sensor | TBD | TBD | 1 |
+| LED grow light / inspection light | TBD | TBD | Optional |
+
+## Drone Hardware and Electronics
+
+| Device | Link | Price | Quantity |
+| --- | --- | ---: | ---: |
+| CogniFly-based 3D-printable drone frame | <https://github.com/thecognifly/CogniFly-STL> | TBD | 1 |
+| Flight controller | TBD | TBD | 1 |
+| Motors | TBD | TBD | 4 |
+| Propellers | TBD | TBD | 4+ |
+| ESCs, if using brushless motors | TBD | TBD | 4 |
+| Raspberry Pi Zero 2 W | TBD | TBD | 1 |
+| Raspberry Pi Camera Module | TBD | TBD | 1 |
+| Optical flow sensor | TBD | TBD | 1 |
+| Time-of-Flight / range sensor | TBD | TBD | 1+ |
+| LiPo battery | TBD | TBD | 1+ |
+| LiPo battery charger | TBD | TBD | 1 |
+| Voltage regulator / power module | TBD | TBD | 1 |
+| RC transmitter and receiver / control link | TBD | TBD | 1 |
+| Screws, standoffs, and fasteners | TBD | TBD | TBD |
+| Propeller guards / protective frame | TBD | TBD | 1 set |
+
 ## Overview
 
 This document lists the hardware needed for the automated hydroponic tower health check project. The hardware is separated into two main systems:
@@ -7,17 +65,19 @@ This document lists the hardware needed for the automated hydroponic tower healt
 1. Hydroponic tower system
 2. Drone inspection system
 
-The physical prototype will use one real hydroponic tower and one 3D-printable CogniFly-based drone. The larger multi-tower farm scenario will be tested in Gazebo simulation.
+The physical prototype will use one real modular 3D-printed hydroponic tower and one 3D-printable CogniFly-based drone. The larger multi-tower farm scenario will be tested in Gazebo simulation.
 
 ## 1. Hydroponic Tower Hardware
 
-The hydroponic tower is the physical crop-growing system. It will hold lettuce plants and provide the real images and sensor readings used by the drone and web dashboard.
+The hydroponic tower is the physical crop-growing system. It will hold lettuce plants and provide the real images and sensor readings used by the drone and web dashboard. The planned tower structure is modular and 3D printed, where multiple printed tower modules can be stacked to make the tower taller.
 
 ### 1.1 Tower Structure
 
 Required components:
 
-- Vertical tower body or PVC pipe
+- 3D-printed stackable tower modules
+- 3D-printed top cap or water distributor
+- 3D-printed base adapter
 - Plant holes or plant ports
 - Net cups
 - Tower base or support stand
@@ -29,7 +89,9 @@ Optional components:
 
 - 3D-printed plant cup holders
 - 3D-printed tower brackets
-- Modular tower sections
+- Interlocking alignment pins or slots
+- Rubber gasket or silicone seal between modules
+- Threaded rod or center support for stability
 - Waterproof inspection labels
 - Cable clips or wire guides
 
