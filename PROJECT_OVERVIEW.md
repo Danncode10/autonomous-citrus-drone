@@ -50,6 +50,8 @@ The farm concept contains multiple hydroponic towers. Each tower has a known loc
 
 For the physical prototype, only one tower will be built. The multi-tower farm environment will be represented in Gazebo, where the drone can be tested in a virtual layout with several towers and obstacles.
 
+The hydroponic tower is treated as fixed farm infrastructure. It should normally run from wall power or a protected extension cord, not from individual batteries per tower. Low-voltage devices such as a 12V DC pump still need a power adapter to convert the wall outlet's AC power into the DC voltage required by the device. The drone is the battery-powered part of the system.
+
 The system then analyzes each plant image and produces a health status. Farmers can check the results through a website.
 
 ```text
@@ -99,6 +101,14 @@ Tower A
 - Slot A04: missing plant
 ```
 
+Physical tower responsibilities:
+
+- Hold lettuce plants in vertical plant slots
+- Circulate nutrient water from the reservoir to the top of the tower
+- Provide stable labels or markers for tower identification
+- Support optional pH, EC/TDS, temperature, and water level sensing
+- Run from a safe AC outlet or protected extension cord, with adapters only where DC devices require them
+
 ### 2. Drone Inspection Module
 
 The drone is responsible for moving near each tower and capturing images of the plants.
@@ -124,7 +134,7 @@ Possible navigation methods:
 
 ### 3. Drone Platform Direction
 
-The preferred physical drone direction is a **CogniFly-based custom drone**.
+The preferred physical drone direction is a **modified CogniFly-based custom drone**.
 
 CogniFly is a useful reference because it is an open-source indoor drone concept with printable parts, a protected/collision-resilient frame, camera support, optical flow, Time-of-Flight sensing, and Python control. This matches the project goal of flying indoors near hydroponic towers and capturing plant images.
 
@@ -134,7 +144,7 @@ Reference repositories:
 - CogniFly STL files: <https://github.com/thecognifly/CogniFly-STL>
 - CogniFly Python control: <https://github.com/thecognifly/cognifly-python>
 
-The project may adapt CogniFly instead of designing a drone completely from zero. Custom 3D-printed modifications may include:
+The project may adapt CogniFly instead of designing a drone completely from zero. The physical build is expected to be CogniFly-inspired rather than an exact copy of the original bill of materials, because some original components are older or harder to source locally. Custom 3D-printed modifications may include:
 
 - Camera mount for tower-facing plant inspection
 - Distance sensor mount
@@ -144,6 +154,8 @@ The project may adapt CogniFly instead of designing a drone completely from zero
 - Mounting points for QR/ArUco marker detection hardware
 
 Important note: the drone should be designed for **slow, stable, close-range inspection**, not speed, racing, or cinematic video.
+
+Safety note: even if the inspection behavior is autonomous, the physical drone should still have a manual control link for arming, disarming, tuning, early flight tests, and emergency override.
 
 ### 4. Gazebo Simulation Module
 
@@ -214,6 +226,13 @@ Possible sensors:
 - Light intensity sensor
 
 Sensor data can help explain plant symptoms. For example, yellowing leaves plus abnormal EC readings may suggest a nutrient issue.
+
+Tower power note:
+
+- The pump, sensors, and lights are part of the fixed tower setup.
+- The tower should use wall power or a protected extension cord as its main power source.
+- A 12V DC pump needs a 12V adapter; a 220V AC pump can plug into the protected AC source directly.
+- Individual batteries per tower are not part of the intended real-world design unless a future solar or backup-power system is added.
 
 ### 7. Database Module
 
@@ -355,14 +374,15 @@ The first complete version should focus on proving the main concept.
 MVP features:
 
 1. One hydroponic tower with lettuce plants.
-2. A CogniFly-based or similar 3D-printable drone prototype.
-3. Camera or drone-mounted camera that captures plant images.
-4. Plant slot identification using tower layout or markers.
-5. Computer vision model that classifies plant status.
-6. Database for storing inspection results.
-7. Web dashboard for viewing tower and plant status.
-8. Basic obstacle avoidance or controlled navigation demonstration.
-9. Gazebo simulation with multiple towers and obstacles.
+2. Tower water circulation powered from a safe AC source, with a DC adapter if a 12V pump is used.
+3. A modified CogniFly-based or similar 3D-printable drone prototype.
+4. Camera or drone-mounted camera that captures plant images.
+5. Plant slot identification using tower layout or markers.
+6. Computer vision model that classifies plant status.
+7. Database for storing inspection results.
+8. Web dashboard for viewing tower and plant status.
+9. Basic obstacle avoidance or controlled navigation demonstration.
+10. Gazebo simulation with multiple towers and obstacles.
 
 ## Possible Advanced Features
 
@@ -402,7 +422,7 @@ Supporting research questions:
 The final project should produce:
 
 - A working hydroponic tower inspection prototype
-- A CogniFly-based or similar 3D-printable drone prototype
+- A modified CogniFly-based or similar 3D-printable drone prototype
 - A Gazebo simulation environment with multiple hydroponic towers
 - A trained or fine-tuned lettuce health classification model
 - A drone/camera image capture workflow
@@ -443,7 +463,14 @@ Possible metrics for evaluating the project:
 - Towers may be too close together for safe navigation.
 - Obstacle avoidance may require additional sensors.
 - Battery life limits inspection time.
+- Manual override is still needed for safe real-world testing, even if the intended inspection path is autonomous.
 - A fully 3D-printed or mostly 3D-printed drone may have vibration, weight, and durability issues.
+
+### Tower Power and Water Safety Limitations
+
+- The hydroponic tower should use a protected AC outlet or extension cord, not individual tower batteries.
+- Low-voltage DC devices still need the correct adapter; an extension cord alone does not convert 220V AC into 12V DC.
+- Water and electricity require careful cable routing, drip loops, splash protection, and an accessible emergency power switch.
 
 ### Simulation Limitations
 
@@ -471,7 +498,9 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 
 - Hydroponic tower prototype
 - Lettuce plants
-- CogniFly-based or similar 3D-printable drone prototype
+- AC outlet or protected extension cord for the fixed tower
+- 12V DC pump adapter if using a 12V pump
+- Modified CogniFly-based or similar 3D-printable drone prototype
 - RGB camera
 - Optional depth camera or distance sensor
 - Optional pH and EC/TDS sensors
@@ -516,6 +545,7 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 ### Phase 2: Prototype Tower and Data Collection
 
 - Build or prepare a small hydroponic tower.
+- Set up the pump using wall power or a protected extension cord, plus the correct adapter if the pump is 12V DC.
 - Grow lettuce plants.
 - Capture sample images under different lighting and growth conditions.
 - Label images by plant status.
@@ -528,8 +558,9 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 
 ### Phase 4: Drone or Camera Inspection
 
-- Build or adapt a CogniFly-based 3D-printable drone.
+- Build or adapt a modified CogniFly-based 3D-printable drone.
 - Mount the camera on the drone.
+- Add manual control link and emergency override before real flight testing.
 - Define tower inspection positions.
 - Capture plant slot images.
 - Add basic obstacle detection.

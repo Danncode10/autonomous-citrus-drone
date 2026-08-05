@@ -32,15 +32,16 @@
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
 | ESP32 DevKitC V4 / ESP32-WROOM-32E development board | TBD | PHP 250-500 estimate | 1 |
-| Submersible water pump | TBD | PHP 200-1,000 estimate | 1 |
-| Pump power supply | TBD | PHP 200-500 estimate | 1 |
+| Submersible water pump | [banggood](https://ph.banggood.com/Ultra-quiet-DC-12V-or-24V-Home-750L-or-H-Portable-Brushless-Motor-Submersible-Water-Pump-5_5M-for-Cooling-System-Fountains-Heater-Mini-p-1988210.html?cur_warehouse=CN&ID=518349&rmmds=search) | PHP 217 | 1 |
+| AC power source / protected extension cord | TBD | PHP 0-600 estimate | 1 |
+| 12V DC pump power adapter | [makerlab](https://makerlab.ph/products/12v-2a-power-adapter?variant=42292825948351&country=PH&currency=PHP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOopzivvWGIwmBl9GR-V25Z9FUX96La6at7y715Dtcd3L2_JQDBejqTo) | PHP 200-500 estimate | 1 |
 | pH sensor | TBD | PHP 450-1,500 estimate | 1 |
 | EC/TDS sensor | TBD | PHP 340-1,000 estimate | 1 |
 | Water temperature sensor | TBD | PHP 80-200 estimate | 1 |
 | Water level sensor | TBD | PHP 50-250 estimate | 1 |
 | LED grow light / inspection light | TBD | PHP 300-1,500 estimate | Optional |
-| Hydroponic tower electronics subtotal, excluding optional LED | TBD | PHP 1,570-4,950 estimate | TBD |
-| Hydroponic tower prototype subtotal, excluding optional LED | TBD | PHP 3,865-12,350 estimate | TBD |
+| Hydroponic tower electronics subtotal, excluding optional LED | TBD | PHP 1,587-4,767 estimate | TBD |
+| Hydroponic tower prototype subtotal, excluding optional LED | TBD | PHP 3,882-12,167 estimate | TBD |
 
 ## Drone Hardware and Electronics
 
@@ -131,7 +132,8 @@ Required components:
 - Water tubing
 - Pump outlet fitting
 - Water return path
-- Pump power supply
+- AC outlet or protected extension cord as the main tower power source
+- 12V DC pump power adapter if using a 12V DC pump
 
 Optional components:
 
@@ -219,7 +221,7 @@ Optional components:
 Required if indoor lighting is weak:
 
 - LED grow lights or white LED inspection lights
-- Light power supply
+- Light power adapter or driver, if not included with the light
 - Light mounting bracket
 
 Optional components:
@@ -229,14 +231,15 @@ Optional components:
 - Diffusers to reduce harsh shadows
 - Ring light or inspection light mounted near the camera
 
-### 1.8 Power and Safety
+### 1.8 Tower Power and Safety
 
 Required components:
 
-- Pump power supply
+- AC outlet or protected extension cord as the main tower power source
+- 12V DC pump power adapter if using a 12V DC pump
 - Safe cable routing
 - Waterproof or splash-resistant wire protection
-- Power strip or outlet with protection
+- Power strip or outlet with overload protection
 
 Recommended safety components:
 
@@ -246,6 +249,13 @@ Recommended safety components:
 - Reservoir cover
 - Non-slip base
 - Emergency power switch
+
+Power note:
+
+- The hydroponic tower should normally run from wall power, not individual batteries per tower.
+- An extension cord or power strip can provide the main 220V AC source.
+- A power adapter is still needed when a device expects low-voltage DC. For example, a 12V DC pump needs a 12V adapter that converts 220V AC from the outlet into 12V DC for the pump.
+- If a pump already accepts 220V AC directly, then a separate 12V pump adapter is not needed. A 12V DC pump is still safer and easier to test around water for a student prototype.
 
 ## 2. Drone Inspection Hardware
 
@@ -555,10 +565,10 @@ This total covers rows with filled prices or estimate ranges. Rows marked with T
 | --- | ---: |
 | Plants and growing supplies subtotal | PHP 495-1,850 |
 | Hydroponic tower structure and hardware subtotal | PHP 1,800-5,550 |
-| Hydroponic tower electronics subtotal | PHP 1,570-4,950 |
-| Hydroponic tower prototype subtotal | PHP 3,865-12,350 |
+| Hydroponic tower electronics subtotal | PHP 1,587-4,767 |
+| Hydroponic tower prototype subtotal | PHP 3,882-12,167 |
 | Drone hardware selected/required subtotal | PHP 22,556.22-25,326.22 |
-| Current project total with tower + known drone costs | PHP 26,421.22-37,676.22 |
+| Current project total with tower + known drone costs | PHP 26,438.22-37,493.22 |
 | Optional LED grow light / inspection light | PHP 300-1,500 |
 | Optional front Time-of-Flight distance sensor | PHP 150-600 |
 | Propeller guards / protective frame | TBD |
