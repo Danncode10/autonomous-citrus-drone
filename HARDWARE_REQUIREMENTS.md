@@ -1,500 +1,221 @@
 # Hardware Requirements
 
-## Plants and Growing Supplies
+## Overview
+
+This document lists the hardware needed for the updated autonomous citrus tree inspection project. The previous hydroponic tower hardware is no longer part of the research scope. The system now focuses on outdoor citrus orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
+
+The hardware is separated into four main areas:
+
+1. Citrus farm data collection
+2. Drone inspection system
+3. Mapping, navigation, and safety equipment
+4. Backend and development equipment
+
+The physical prototype should start with a small number of citrus trees and supervised drone flights. The larger orchard scenario should be tested first in Gazebo simulation.
+
+## Citrus Farm Data Collection
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| Lettuce seeds or seedlings | TBD | PHP 50-200 estimate | TBD |
-| Growing medium | TBD | PHP 85-600 estimate | TBD |
-| Hydroponic nutrient solution | TBD | PHP 360-950 estimate | 1 |
-| Clean water supply | TBD | PHP 0-100 estimate | TBD |
-| Plants and growing supplies subtotal | TBD | PHP 495-1,850 estimate | TBD |
-
-## Hydroponic Tower Structure and Hardware
-
-| Device | Link | Price | Quantity |
-| --- | --- | ---: | ---: |
-| 3D-printed stackable tower module | TBD | PHP 600-1,500 estimate | TBD |
-| 3D-printed top cap / water distributor | TBD | PHP 100-300 estimate | 1 |
-| 3D-printed base adapter | TBD | PHP 150-400 estimate | 1 |
-| Reservoir tank | TBD | PHP 200-800 estimate | 1 |
-| Net cups | TBD | PHP 100-300 estimate | TBD |
-| Tower base or support stand | TBD | PHP 300-1,000 estimate | 1 |
-| Reservoir lid / tower mounting plate | TBD | PHP 100-400 estimate | 1 |
-| Water tubing | TBD | PHP 50-200 estimate | 1 |
-| Pump fittings / connectors | TBD | PHP 100-300 estimate | TBD |
-| QR code / ArUco marker labels | TBD | PHP 50-150 estimate | TBD |
-| Waterproof labels / lamination | TBD | PHP 50-200 estimate | TBD |
-| Hydroponic tower structure and hardware subtotal | TBD | PHP 1,800-5,550 estimate | TBD |
-
-## Hydroponic Tower Electronics
-
-| Device | Link | Price | Quantity |
-| --- | --- | ---: | ---: |
-| ESP32 DevKitC V4 / ESP32-WROOM-32E development board | TBD | PHP 250-500 estimate | 1 |
-| Submersible water pump | [banggood](https://ph.banggood.com/Ultra-quiet-DC-12V-or-24V-Home-750L-or-H-Portable-Brushless-Motor-Submersible-Water-Pump-5_5M-for-Cooling-System-Fountains-Heater-Mini-p-1988210.html?cur_warehouse=CN&ID=518349&rmmds=search) | PHP 217 | 1 |
-| AC power source / protected extension cord | TBD | PHP 0-600 estimate | 1 |
-| 12V DC pump power adapter | [makerlab](https://makerlab.ph/products/12v-2a-power-adapter?variant=42292825948351&country=PH&currency=PHP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOopzivvWGIwmBl9GR-V25Z9FUX96La6at7y715Dtcd3L2_JQDBejqTo) | PHP 200-500 estimate | 1 |
-| pH sensor | TBD | PHP 450-1,500 estimate | 1 |
-| EC/TDS sensor | TBD | PHP 340-1,000 estimate | 1 |
-| Water temperature sensor | TBD | PHP 80-200 estimate | 1 |
-| Water level sensor | TBD | PHP 50-250 estimate | 1 |
-| LED grow light / inspection light | TBD | PHP 300-1,500 estimate | Optional |
-| Hydroponic tower electronics subtotal, excluding optional LED | TBD | PHP 1,587-4,767 estimate | TBD |
-| Hydroponic tower prototype subtotal, excluding optional LED | TBD | PHP 3,882-12,167 estimate | TBD |
+| Citrus farm access / test trees | TBD | TBD | 1 farm or test area |
+| Citrus tree labels or waterproof tags | TBD | PHP 50-300 estimate | TBD |
+| Measuring tape or laser distance meter | TBD | PHP 100-1,500 estimate | 1 |
+| Ground control markers / visual reference markers | TBD | PHP 100-500 estimate | TBD |
+| Notebook or digital field form device | TBD | PHP 0-500 estimate | 1 |
+| Data collection subtotal | TBD | PHP 250-2,800 estimate | TBD |
 
 ## Drone Hardware and Electronics
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| CogniFly-based 3D-printable drone frame STL files | <https://github.com/thecognifly/CogniFly-STL> | TBD | 1 |
-| SpeedyBee F405 Mini Stack, FC + BLS 35A 4-in-1 ESC | [Shopee, choose option "Stack"](https://shopee.ph/product/709543365/25756157647?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAw8-UEATWkahzAjSTPjL3YTk89P96JpeyADKv9kpXsKLDIuOsN7QnyVuzBF07NUqKrX7yBNGbBHa3YFB3__8U178RSXZV9-K4ZgQ25TximiGqVyhasgJPSPiDdVL0toBxqEK89MpmU4AUuB&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9BKk0LBc6FmkMD8t9HzhJLcU&gclid=EAIaIQobChMIx-SH2ZKHlgMVKhx7Bx1VxhrhEAQYASABEgKlXfD_BwE) | PHP 5,342 | 1 |
-| CADDXFPV 1303 6000KV 2-4S brushless motors | [Banggood, 4pcs already](https://ph.banggood.com/1-or-4PCS-CADDXFPV-1303-6000KV-2-4S-Brushless-Motors-1_5mm-Shaft-for-Gofilm-20-2-Inch-Brushless-Whoop-RC-FPV-Racing-Drone-p-2017084.html?rmmds=search&act_poa=POA10879739&cur_warehouse=CN&tags=searchListProductcard&bid=84561&forced_jump=1&xpath=0000000DL&page_id=bgm_search-list&uet=1785854062946&is_wap=1&user_id=1563232186965&sess_id=1563232186965&site=ph-m.banggood.com&position_type=2&ID=6291971529815) | PHP 3,609.07 | 4 |
-| Gemfan Hurricane 3018 3x1.8 3-inch 2-blade propellers, 1.5mm hole T-mount | [Banggood](https://ph.banggood.com/4-Pairs-or-20-Pairs-Gemfan-Hurricane-3018-3x1_8-3-Inch-2-Blade-Propeller-1_5mm-Hole-T-Mount-for-RC-Drone-FPV-Racing-p-1576078.html?cur_warehouse=CN&ID=5173886313661&rmmds=search) | PHP 168.15 | 4 pairs |
-| Raspberry Pi Zero W or Raspberry Pi Zero 2 W | Always out of Stock: Get Notified Here [Cytron](https://www.cytron.io/p-raspberry-pi-zero-2-w?currency=PHP&src=raspberrypi), [Element 14](https://ph.element14.com/raspberry-pi/rpi-zero-w-v2/raspberry-pi-kit-64bit-arm-cortex/dp/3838499?rd=raspberry+pi+zero+2+w&ost=Raspberry+Pi+Zero+2+W), [pishop](https://www.pishop.ca/product/raspberry-pi-zero-2-w-with-header/) | PHP 2,000 estimate | 1 |
-| Raspberry Pi Camera Module V2 | [Markerlab](https://makerlab.ph/products/raspberry-pi-camera-module-v2-8-megapixels?variant=42288085401791&country=PH&currency=PHP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=23272569557&gbraid=0AAAAADiCHt1xiQslFpC1l-f3CRMHsFRci&gclid=EAIaIQobChMI6vr93buIlgMVFcFMAh03UylvEAQYASABEgKPBvD_BwE) | PHP 2,299 | 1 |
-| Raspberry Pi Zero camera ribbon cable | TBD | PHP 80-200 estimate | 1 |
-| Matek Optical Flow & Lidar Sensor 3901-L0X | [Shopee](https://shopee.ph/product/779642846/23727761329) | PHP 1,920 | 1 |
-| Front Time-of-Flight distance sensor | TBD | PHP 150-600 estimate | Optional |
-| LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1,004 | 1+ |
-| LiPo battery charger | [Shopee](https://shopee.ph/product/933050849/22523275057?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzt6xHLEel2tixnsm8WgqWDeM7uDzf7iAlc3cFMeLMQOeQxMxoKHdcQobCjOBjOE9j1ExFvvjWLVuSmA0A-0vwQ9jNbPR2T3ok58rVVUGKHb20lh3gm9hZQs1Px3G2UuFdKQAHxjK04aArg&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9AlH-1_7NH_qcuCnpfVm2Vzb&gclid=EAIaIQobChMI24rG3tGIlgMVRF8PAh2YoDaJEAQYASABEgJjtfD_BwE) | PHP 625 | 1 |
-| 5V voltage regulator / BEC for Raspberry Pi | [Amazon](https://www.amazon.com/Module-Quadcopter-Airplane-Servo-Model/dp/B0D97FH1JS/ref=sr_1_1?crid=1S0FWBEGH4I1E&dib=eyJ2IjoiMSJ9.B69bMzHFave2f719qjB8FAEhxFicLXnzucNs-w1iQCgA6KtGndpZjc0mhZ83iFxqTWKB5S_3ZQqmX1EUFbWE9Kr-0mpG1SjWIfHZjpRbpyfofe86-vaTpx7CIb2heEYjQwIuCRgiOcv_HgVy9K189U8H7SJgYeHIvcStgLXGL7hBPkBX7mcIvvRIz0GdfeAXx4BOmEhSvyMBwuf7fHbcMQdbRwrW3P2dlUt01VUxTp0.bo7M3DXeiUGe7qUBevqWMpXpODW3kXBb_PpKJFPX6S0&dib_tag=se&keywords=5V+5A+BEC+2S+6S+drone&qid=1785904092&sprefix=5v+5a+bec+2s+6s%2Caps%2C788&sr=8-1) | PHP 609 | 1 |
-| RC transmitter and receiver / control link | [Shopee, choose "mode2 i6X with iA6B"](https://shopee.ph/Flysky-FS-i6X-10CH-2.4GHz-AFHDS-2A-RC-Transmitter-With-FS-iA6B-FS-iA10B-FS-X6B-FS-A8S-Receiver-For-Rc-Airplane-i.779642846.21405448162) | PHP 3,200-3,850 estimate | 1 |
-| TPU 95A filament for protective frame | TBD | PHP 700-1,200 estimate | 1 kg spool |
-| PLA or ABS filament for rigid plates | TBD | PHP 600-1,000 estimate | 1 kg spool |
-| 3mm carbon fiber rods or bamboo skewers for frame struts | TBD | PHP 100-600 estimate | TBD |
-| M2 screws, nuts, standoffs, and rubber rings | TBD | PHP 150-500 estimate | TBD |
-| Propeller guards / protective frame | TBD | TBD | Optional / custom printed |
-| XT30 connector, battery strap, and zip ties | TBD | PHP 150-400 estimate | 1 set |
-| Drone hardware selected/required subtotal, excluding optional front ToF and propeller guards | TBD | PHP 22,556.22-25,326.22 estimate | TBD |
+| Outdoor-capable drone platform | TBD | TBD | 1 |
+| Flight controller compatible with PX4 or ArduPilot | TBD | TBD | 1 |
+| ESC and motor set suitable for outdoor flight | TBD | TBD | 1 set |
+| Propellers plus spare propellers | TBD | TBD | TBD |
+| Drone battery packs | TBD | TBD | 2+ recommended |
+| Battery charger | TBD | TBD | 1 |
+| RC transmitter and receiver / manual override link | TBD | TBD | 1 |
+| RGB camera or drone camera | TBD | TBD | 1 |
+| Optional camera gimbal | TBD | TBD | Optional |
+| Companion computer, such as Raspberry Pi, Jetson, or similar | TBD | TBD | Optional / recommended |
+| 5V voltage regulator / BEC for companion computer | TBD | TBD | 1 if needed |
+| Drone hardware subtotal | TBD | TBD | TBD |
 
-## Overview
+## Mapping, Navigation, and Safety Hardware
 
-This document lists the hardware needed for the automated hydroponic tower health check project. The hardware is separated into two main systems:
+| Device | Link | Price | Quantity |
+| --- | --- | ---: | ---: |
+| GPS module | TBD | TBD | 1 |
+| RTK GPS module and base station | TBD | TBD | Optional |
+| Depth camera or LiDAR sensor | TBD | TBD | Optional / recommended |
+| Front obstacle distance sensor | TBD | TBD | Optional |
+| Telemetry radio | TBD | TBD | Optional |
+| Landing pad or marked launch area | TBD | PHP 200-1,000 estimate | 1 |
+| Propeller guards or protective frame | TBD | TBD | Optional |
+| Safety cones / test boundary markers | TBD | PHP 100-500 estimate | TBD |
+| LiPo-safe charging bag or battery safety box | TBD | PHP 200-800 estimate | 1 |
+| Mapping and safety subtotal | TBD | TBD | TBD |
 
-1. Hydroponic tower system
-2. Drone inspection system
+## Development and Backend Equipment
 
-The physical prototype will use one real modular 3D-printed hydroponic tower and one 3D-printable CogniFly-based drone. The drone will be a modified CogniFly-inspired build because some original CogniFly components are old or difficult to source locally. The larger multi-tower farm scenario will be tested in Gazebo simulation.
+| Device | Link | Price | Quantity |
+| --- | --- | ---: | ---: |
+| Laptop or desktop for development | Existing / TBD | TBD | 1 |
+| Local server or cloud backend | TBD | TBD | 1 |
+| External storage for image dataset backup | TBD | PHP 500-3,000 estimate | Optional |
+| Internet connection for dashboard and dataset sync | Existing / TBD | TBD | 1 |
+| Development equipment subtotal | TBD | TBD | TBD |
 
-## 1. Hydroponic Tower Hardware
+## 1. Citrus Farm and Tree Identification Hardware
 
-The hydroponic tower is the physical crop-growing system. It will hold lettuce plants and provide the real images and sensor readings used by the drone and web dashboard. The planned tower structure is modular and 3D printed, where multiple printed tower modules can be stacked to make the tower taller.
-
-### 1.1 Tower Structure
+The field setup provides the real-world citrus trees, labels, and reference measurements needed for training and validating the system.
 
 Required components:
 
-- 3D-printed stackable tower modules
-- 3D-printed top cap or water distributor
-- 3D-printed base adapter
-- Plant holes or plant ports
-- Net cups
-- Tower base or support stand
-- Reservoir lid or tower mounting plate
-- Tubing from pump to tower top
-- Return path for water back to reservoir
+- Access to citrus trees in a farm or controlled outdoor test area
+- Tree labels or waterproof tags
+- Tree ID list
+- Measuring tape or laser distance meter for manual height reference
+- Ground reference markers or visual markers for controlled tests
+- Field notes for tree variety, fruit maturity, and farmer observations
 
 Optional components:
 
-- 3D-printed plant cup holders
-- 3D-printed tower brackets
-- Interlocking alignment pins or slots
-- Rubber gasket or silicone seal between modules
-- Threaded rod or center support for stability
-- Waterproof inspection labels
-- Cable clips or wire guides
-
-### 1.2 Growing Components
-
-Required components:
-
-- Lettuce seeds or seedlings
-- Growing medium
-- Hydroponic nutrient solution
-- Clean water supply
-- Net cups matched to the plant holes
-
-Possible growing media:
-
-- Rockwool cubes
-- Coco peat
-- Clay pebbles
-- Perlite
-- Sponge starter plugs
-
-### 1.3 Water Circulation System
-
-Required components:
-
-- Reservoir tank
-- Submersible water pump
-- Water tubing
-- Pump outlet fitting
-- Water return path
-- AC outlet or protected extension cord as the main tower power source
-- 12V DC pump power adapter if using a 12V DC pump
-
-Optional components:
-
-- Pump timer
-- Flow control valve
-- Water filter
-- Backup pump
-- Check valve
-
-### 1.4 Tower Sensors
-
-The tower can work without sensors if the first prototype focuses only on computer vision. However, sensors are recommended because they make the system stronger and allow the dashboard to show nutrient and water status.
-
-Recommended sensors:
-
-- pH sensor
-- EC/TDS sensor
-- Water temperature sensor
-- Water level sensor
-
-Optional sensors:
-
-- Air temperature sensor
-- Humidity sensor
-- Light intensity sensor
-- Flow sensor
-- Dissolved oxygen sensor
-- Reservoir leak sensor
-
-### 1.5 Tower Microcontroller
-
-Recommended board:
-
-- ESP32 DevKitC V4 / ESP32-WROOM-32E development board
-
-Why ESP32:
-
-- Built-in Wi-Fi
-- Low cost
-- Good for sensor readings
-- Can send data to the backend or website
-- Easy to program using Arduino IDE, PlatformIO, or MicroPython
-
-ESP32 responsibilities:
-
-- Read pH value
-- Read EC/TDS value
-- Read water temperature
-- Detect low water level
-- Send sensor data to backend/database
-- Optionally control pump schedule
-
-Optional alternatives:
-
-- Arduino Uno with Wi-Fi module
-- Raspberry Pi Pico W
-- ESP8266
-- Raspberry Pi
-
-Recommended note: CogniFly does not use an ESP32 for the drone. The ESP32 is recommended for the hydroponic tower sensor system only.
-
-### 1.6 Tower Identification and Mapping
-
-Required components:
-
-- QR code or ArUco marker for tower identification
-- Printed tower ID label
-- Waterproof marker covering or lamination
+- GPS phone or handheld GPS for rough tree coordinates
+- RTK reference points for accurate mapping
+- Calibration board for camera testing
+- Color reference card for fruit maturity image calibration
 
 Purpose:
 
-- Allows the drone to identify which tower it is inspecting
-- Helps the drone determine tower orientation
-- Helps map captured images to the correct tower and plant slot
-
-Optional components:
-
-- Marker per tower face
-- Marker per inspection side
-- Slot labels
-- Color-coded plant slot markers
-
-### 1.7 Lighting
-
-Required if indoor lighting is weak:
-
-- LED grow lights or white LED inspection lights
-- Light power adapter or driver, if not included with the light
-- Light mounting bracket
-
-Optional components:
-
-- Timer-controlled grow lights
-- Dimmable LED lights
-- Diffusers to reduce harsh shadows
-- Ring light or inspection light mounted near the camera
-
-### 1.8 Tower Power and Safety
-
-Required components:
-
-- AC outlet or protected extension cord as the main tower power source
-- 12V DC pump power adapter if using a 12V DC pump
-- Safe cable routing
-- Waterproof or splash-resistant wire protection
-- Power strip or outlet with overload protection
-
-Recommended safety components:
-
-- Drip loop for cables
-- Fuse or breaker
-- Waterproof connectors
-- Reservoir cover
-- Non-slip base
-- Emergency power switch
-
-Power note:
-
-- The hydroponic tower should normally run from wall power, not individual batteries per tower.
-- An extension cord or power strip can provide the main 220V AC source.
-- A power adapter is still needed when a device expects low-voltage DC. For example, a 12V DC pump needs a 12V adapter that converts 220V AC from the outlet into 12V DC for the pump.
-- If a pump already accepts 220V AC directly, then a separate 12V pump adapter is not needed. A 12V DC pump is still safer and easier to test around water for a student prototype.
+- Assign each citrus tree a stable identity
+- Help compare drone-estimated height with manual measurement
+- Help validate fruit count and harvest-readiness estimates
+- Support dashboard tree registration and map placement
 
 ## 2. Drone Inspection Hardware
 
-The drone inspection system captures images of lettuce plants, identifies tower markers, and supports basic navigation around the hydroponic tower.
+The drone inspection system captures tree images, circles around the target tree, supports autonomous navigation, and contributes to map creation or map updates.
 
-The preferred direction is a **modified CogniFly-based 3D-printable drone**, adapted for hydroponic tower inspection. This is not an exact CogniFly bill of materials; it keeps the CogniFly layout ideas that matter for this project, then substitutes locally available parts where needed.
+### 2.1 Drone Platform
 
-Reference repositories:
+Recommended direction:
 
-- CogniFly project page: <https://thecognifly.github.io/>
-- CogniFly STL files: <https://github.com/thecognifly/CogniFly-STL>
-- CogniFly Python control: <https://github.com/thecognifly/cognifly-python>
+- Use an outdoor-capable quadcopter or similar drone platform.
+- Prefer a platform that supports autonomous missions, GPS waypoints, manual override, and camera mounting.
+- For research flexibility, a PX4-compatible or ArduPilot-compatible platform is preferred.
 
-CogniFly alignment notes:
+Important note:
 
-- CogniFly uses a 20x20mm flight controller and 4-in-1 ESC layout; the SpeedyBee F405 Mini Stack matches the 20x20mm stack direction.
-- CogniFly's published BOM references 1104 6000KV motors with 3025 two-blade propellers, or 1106 3800KV motors with 4025 two-blade propellers and a larger frame.
-- This project currently uses CADDXFPV 1303 6000KV motors with Gemfan Hurricane 3018 propellers as a modified build. This needs motor-mount and prop-clearance checks before printing the final frame.
-- CogniFly references a Raspberry Pi Zero W, Raspberry Pi Camera V2, Matek optical flow/lidar sensor, 3S 650mAh 75C LiPo battery, TPU 95A flexible parts, PLA/ABS rigid parts, and 3mm rods. These are kept aligned here.
-- CogniFly's original optional AI accelerator is not required for the first prototype because heavier lettuce health classification can run on the laptop/backend.
+The previous CogniFly-inspired drone direction was better suited for indoor, close-range tower inspection. Citrus tree inspection is an outdoor task with wind, terrain, larger distances, and tree branches. A small indoor drone may still be useful for simulation concepts or controlled tests, but the main physical prototype should use a safer outdoor-capable drone.
 
-### 2.1 Drone Frame and Mechanical Parts
+Required platform capabilities:
 
-Required components:
+- Stable outdoor hover
+- Manual control and emergency override
+- Camera mount or integrated camera
+- Enough battery life for tree approach, circular scan, and return
+- Safe operation near trees
+- Support for waypoint missions or companion-computer control
 
-- 3D-printed drone frame
-- 3D-printed protective frame or bumper
-- Custom 3D-printed motor mounts for CADDXFPV 1303 motors
-- Battery holder
-- Flight controller mount
-- Raspberry Pi mount
-- Camera mount
-- Landing gear or landing supports
-- TPU 95A filament for flexible/protective parts
-- PLA or ABS filament for rigid plates
-- 3mm rods or spars for frame structure
-- Screws, nuts, standoffs, and fasteners
+Optional platform capabilities:
 
-CogniFly frame notes:
+- Obstacle avoidance sensors
+- Gimbal stabilization
+- RTK GPS support
+- Telemetry radio
+- Payload bay for companion computer or extra sensors
 
-- Print flexible protective parts in TPU 95A.
-- Print rigid plates/mounts in PLA or ABS.
-- Use 3mm carbon fiber rods or bamboo skewers for struts.
-- Keep some dimensions as TBD until the 1303 motor mount pattern, propeller clearance, and Raspberry Pi/camera placement are checked.
-
-Optional components:
-
-- 3D-printed prop guards
-- 3D-printed sensor mounts
-- 3D-printed cable guides
-- Rubber vibration dampers
-- Foam padding for protection
-- Modular payload bay
-
-### 2.2 Flight Hardware
-
-Required components:
-
-- SpeedyBee F405 Mini flight controller from the SpeedyBee F405 Mini Stack
-- 4x CADDXFPV 1303 6000KV 2-4S brushless motors
-- Gemfan Hurricane 3018 3x1.8 3-inch 2-blade propellers, 1.5mm hole T-mount
-- Included BLS 35A 4-in-1 ESC from the SpeedyBee F405 Mini Stack
-- Power distribution wiring or board
-- Battery connector
-- RC receiver or control link
-
-Optional components:
-
-- Spare propellers
-- Spare motors
-- Spare ESCs
-- Propeller guards
-- Telemetry module
-- Buzzer or lost-drone beeper
-- Status LEDs
-
-Modification note: CogniFly originally references 1104 6000KV motors with 3025 two-blade propellers. This project may use CADDXFPV 1303 6000KV motors with Gemfan Hurricane 3018 propellers instead because they are available as a 4-pack and provide stronger thrust for carrying the Raspberry Pi, camera, and sensors. This substitution is not a direct CogniFly drop-in replacement; it requires checking motor screw pattern, shaft size, propeller clearance, total weight, and INAV motor/ESC tuning.
-
-### 2.3 Drone Onboard Computer
-
-Recommended board:
-
-- Raspberry Pi Zero W or Raspberry Pi Zero 2 W
-
-Why Raspberry Pi Zero W / Zero 2 W:
-
-- Small and lightweight
-- Has Wi-Fi
-- Supports Raspberry Pi Camera
-- Can run Python and OpenCV
-- Suitable for QR/ArUco detection and image capture
-
-CogniFly originally references Raspberry Pi Zero W. For this project, Raspberry Pi Zero 2 W is a reasonable upgrade if the weight, power, and software compatibility remain acceptable.
-
-Drone onboard computer responsibilities:
-
-- Capture camera images
-- Detect QR/ArUco markers
-- Identify tower ID and orientation
-- Send images to backend/server
-- Communicate with drone control software
-- Run simple inspection logic
-
-Optional alternatives:
-
-- Raspberry Pi Zero W
-- Raspberry Pi 4
-- Raspberry Pi 5
-- Jetson Nano
-- Jetson Orin Nano
-
-Important note: Raspberry Pi 4, Raspberry Pi 5, and Jetson boards are more powerful, but they are heavier and use more power. For a small 3D-printable drone, weight is a major design constraint.
-
-### 2.4 Camera
-
-Recommended camera:
-
-- Raspberry Pi Camera Module V2
-
-Preferred options:
-
-- Raspberry Pi Camera Module V2
-- Raspberry Pi Camera Module 3 with autofocus
-
-Camera responsibilities:
-
-- Capture lettuce plant images
-- Read QR/ArUco tower markers
-- Support tower alignment and inspection workflow
+### 2.2 Camera
 
 Recommended camera requirements:
 
-- Clear image at close range
-- Stable mounting
-- Good enough resolution for plant health classification
-- Adjustable angle toward plant slots
+- RGB image capture
+- Clear view of citrus fruits at tree-canopy distance
+- Stable mounting or gimbal support
+- Good resolution for fruit detection
+- Ability to capture still images or video
+
+Camera responsibilities:
+
+- Capture fruits from multiple sides of the tree
+- Capture images while circling the tree
+- Support fruit counting and harvest-readiness estimation
+- Support visual mapping or localization if used
 
 Optional alternatives:
 
-- USB webcam
+- Integrated drone camera
+- Raspberry Pi Camera Module
+- USB camera
 - Arducam autofocus camera
-- Small FPV camera
 - Depth camera, if payload allows
 
-### 2.5 Navigation and Obstacle Sensors
+### 2.3 Companion Computer
 
-Recommended minimum sensor:
+Recommended options:
 
-- Matek Optical Flow & Lidar Sensor 3901-L0X
+- Raspberry Pi 4 or Raspberry Pi 5
+- Jetson Nano or Jetson Orin Nano
+- Raspberry Pi Zero 2 W for lighter capture-only setups
+- Laptop/backend processing for early prototypes
 
-Additional recommended sensor:
+Possible responsibilities:
 
-- Front Time-of-Flight or LiDAR distance sensor
+- Capture or receive camera images
+- Run basic image processing
+- Detect visual markers or tree target areas
+- Communicate with the flight controller through MAVLink
+- Upload images to the backend
+- Store mission logs
+
+Important note:
+
+Heavy fruit detection and model training can run on the laptop or backend during early development. The drone does not need to run the full AI model onboard in the first prototype.
+
+### 2.4 Navigation and Mapping Sensors
+
+Recommended minimum:
+
+- GPS module for outdoor waypoint navigation
+- Camera-based capture for visual inspection
+- Manual control link for safety
+
+Stronger navigation setup:
+
+- RTK GPS for more accurate tree approach
+- Depth camera or LiDAR for obstacle detection
+- Visual SLAM or visual-inertial odometry support
+- Telemetry radio for monitoring
 
 Purpose:
 
-- Improve indoor position holding
-- Help maintain distance from the tower
-- Detect obstacles in front of the drone
-- Reduce collision risk near towers
+- Navigate to registered tree positions
+- Maintain distance from tree canopies
+- Avoid branches, trunks, posts, and other obstacles
+- Update the orchard map after repeated missions
+- Support autonomous or semi-autonomous operation in unfamiliar environments
 
-Optional sensors:
-
-- Side distance sensors
-- Rear distance sensor
-- Depth camera
-- 360-degree LiDAR
-- IMU expansion sensor
-- Barometer
-
-### 2.6 Battery and Power
+### 2.5 Battery and Power
 
 Required components:
 
-- LiPo battery, 3S 11.1V 650mAh 75C, XT30
+- Drone battery packs
 - Battery charger
-- XT30 battery connector or adapter
-- 5V voltage regulator or BEC for Raspberry Pi
+- Power cables and connectors
+- Voltage regulator or BEC if powering a companion computer
 
 Recommended considerations:
 
-- Keep the battery light enough for the drone to lift safely
-- Use a battery with enough current output for motors
-- Verify the flight controller/ESC stack input voltage before first power-up
-- Separate clean power for camera/computer if needed
-- Monitor battery voltage during flight
+- Use at least two batteries for field testing.
+- Monitor voltage during flight.
+- Keep enough reserve power for return-to-home.
+- Verify payload weight before adding sensors.
+- Use a LiPo-safe charging bag or battery safety box.
 
-Optional components:
+## 3. Website, Backend, and Storage Context
 
-- Extra batteries
-- Battery voltage alarm
-- Fire-resistant LiPo charging bag
-- Power switch
-- Battery strap
-
-### 2.7 Communication
-
-Required components:
-
-- Wi-Fi connection from Raspberry Pi to laptop/backend
-- Control link for drone operation, safety override, and setup
-
-Optional components:
-
-- RC transmitter and receiver
-- Telemetry radio
-- Bluetooth module
-- Ground station laptop
-
-Communication tasks:
-
-- Send captured images to backend
-- Send inspection status
-- Receive control commands
-- Monitor drone status during testing
-
-Autonomy note: the drone can be autonomous in normal inspection behavior, but a manual control link is still recommended for arming, disarming, tuning, safety override, and early flight tests.
-
-### 2.8 Safety Hardware
-
-Required or strongly recommended:
-
-- Propeller guards or protective frame
-- Emergency stop method
-- Manual override control
-- Safe test area
-- Spare propellers
-
-Optional components:
-
-- Soft landing gear
-- Protective net around test area
-- Low-battery alarm
-- Buzzer
-- LED status indicators
-
-## 3. Backend and Cloud Hardware Context
-
-The cloud/backend is not a physical hardware category like the tower or drone, but it affects hardware decisions.
+The backend is not a physical farm component, but it affects the hardware and data collection workflow.
 
 Recommended first setup:
 
@@ -502,79 +223,97 @@ Recommended first setup:
 - Local server or cloud backend
 - Database
 - Image storage
+- Dataset backup drive
 
 Suggested processing split:
 
-- Drone Raspberry Pi captures images and detects tower markers.
-- Backend or laptop runs heavier lettuce health AI model.
-- ESP32 sends tower sensor readings to backend.
-- Website displays plant health, tower status, and inspection history.
-
-This avoids forcing the small drone computer to run heavy AI models during early development.
+- Drone captures images and mission logs.
+- Backend or laptop runs fruit detection and harvest-readiness estimation.
+- Website stores tree registration and inspection results.
+- Dashboard displays map, fruit count, readiness percentage, height, images, and history.
 
 ## 4. Minimum Hardware Build
 
 Minimum realistic physical prototype:
 
-- One hydroponic tower
-- Lettuce plants
-- Reservoir
-- Pump
-- Net cups
-- Nutrient solution
-- ESP32 DevKitC V4 / ESP32-WROOM-32E development board
-- pH sensor
-- EC/TDS sensor
-- Water level sensor
-- CogniFly-based 3D-printable drone frame
-- SpeedyBee F405 Mini flight controller from the SpeedyBee F405 Mini Stack
-- 4x CADDXFPV 1303 6000KV 2-4S brushless motors
-- Included BLS 35A 4-in-1 ESC from the SpeedyBee F405 Mini Stack
-- Raspberry Pi Zero W or Raspberry Pi Zero 2 W
-- Raspberry Pi Camera Module V2
-- Raspberry Pi Zero camera ribbon cable
-- Matek Optical Flow & Lidar Sensor 3901-L0X
-- Gemfan Hurricane 3018 3x1.8 propellers
-- LiPo battery, 3S 11.1V 650mAh 75C, XT30
+- Access to one or more citrus trees
+- Tree ID labels or waterproof tags
+- Measuring tape or laser distance meter
+- Outdoor-capable drone with camera
+- Manual RC control link and emergency override
 - Battery and charger
-- 5V voltage regulator or BEC for Raspberry Pi
-- RC transmitter and receiver or equivalent control link
-- TPU 95A filament, PLA/ABS filament, 3mm rods, and fasteners for the CogniFly-inspired frame
-- Computer/laptop for backend, model training, and dashboard development
+- Laptop for backend, dashboard, model training, and image processing
+- Ground markers for controlled navigation tests
+- Gazebo simulation setup for orchard terrain and multi-tree navigation
+
+Recommended improved prototype:
+
+- PX4-compatible or ArduPilot-compatible drone
+- Companion computer
+- GPS module
+- Optional RTK GPS
+- Optional depth camera or LiDAR
+- Optional gimbal
+- Telemetry radio
+- Extra batteries
+- Dataset backup storage
 
 ## 5. Recommended First Purchase or Build Priority
 
 Suggested order:
 
-1. Build the hydroponic tower.
-2. Start growing lettuce.
-3. Set up ESP32 sensors for water/nutrient monitoring.
-4. Collect plant images using a phone or fixed camera.
-5. Start training the computer vision model.
-6. Build or adapt the CogniFly-based drone.
-7. Add camera and marker detection.
-8. Add basic distance sensing.
-9. Integrate drone image capture with the backend.
-10. Build Gazebo simulation for multi-tower navigation testing.
+1. Confirm access to a citrus farm or test trees.
+2. Define tree registration fields for the website.
+3. Collect raw citrus fruit images manually using a phone or camera.
+4. Label fruit bounding boxes and harvest-readiness classes.
+5. Train a baseline citrus fruit detection model.
+6. Build the web dashboard and database schema.
+7. Start with manual-assisted drone image capture.
+8. Add circular scan planning around a tree.
+9. Add autonomous navigation to selected tree locations.
+10. Build Gazebo simulation for orchard terrain, trees, obstacles, and repeated map updates.
+11. Integrate drone capture, AI results, map, and dashboard.
 
 ## 6. Current Estimated Cost Summary
 
-This total covers rows with filled prices or estimate ranges. Rows marked with TBD links still need final supplier selection, and prices may change with shipping, vouchers, and stock.
+The cost table is now intentionally marked as TBD because the hydroponic tower parts have been removed and the final drone platform has not yet been selected.
 
 | Category | Estimated Total |
 | --- | ---: |
-| Plants and growing supplies subtotal | PHP 495-1,850 |
-| Hydroponic tower structure and hardware subtotal | PHP 1,800-5,550 |
-| Hydroponic tower electronics subtotal | PHP 1,587-4,767 |
-| Hydroponic tower prototype subtotal | PHP 3,882-12,167 |
-| Drone hardware selected/required subtotal | PHP 22,556.22-25,326.22 |
-| Current project total with tower + known drone costs | PHP 26,438.22-37,493.22 |
-| Optional LED grow light / inspection light | PHP 300-1,500 |
-| Optional front Time-of-Flight distance sensor | PHP 150-600 |
-| Propeller guards / protective frame | TBD |
+| Citrus farm data collection tools | PHP 250-2,800 estimate |
+| Drone platform and camera | TBD |
+| Mapping, navigation, and safety hardware | TBD |
+| Development and backend equipment | TBD |
+| Current project total | TBD |
 
 Notes:
 
-- The hydroponic tower subtotal assumes a one-tower prototype and starter quantities for items still marked with TBD quantity.
-- The drone subtotal includes the selected flight stack, motors, propellers, Raspberry Pi, camera, Pi Zero camera cable, Matek 3901-L0X, 3S LiPo battery, charger, 5V BEC, RC transmitter/receiver, filament estimates, rods/skewers, fasteners, XT30 connector, battery strap, and zip ties.
-- Shipping fees, vouchers, replacement parts, and price changes are not included.
+- The previous hydroponic tower subtotal is no longer applicable.
+- The old CogniFly-inspired bill of materials should not be treated as final for outdoor citrus orchard work.
+- Final cost depends mainly on the selected drone platform, camera, GPS accuracy requirements, and whether LiDAR, RTK GPS, or a gimbal will be included.
+- Shipping fees, replacement parts, batteries, and safety equipment should be included before final procurement.
+
+## 7. Safety Notes
+
+Outdoor drone testing near citrus trees requires careful safety planning.
+
+Required or strongly recommended:
+
+- Manual override control
+- Emergency stop or return-to-home behavior
+- Safe launch and landing area
+- Clear testing boundary
+- Visual observer during field tests
+- Flight testing away from people and animals
+- Weather and wind checks before flight
+- Battery safety procedures
+- Permission from farm owner or site manager
+
+Operational cautions:
+
+- Do not fly too close to branches during early tests.
+- Start with manual-assisted capture before full autonomy.
+- Test circular scan paths in simulation first.
+- Use slow movement near trees.
+- Keep altitude and distance limits conservative.
+- Document failed scans and low-confidence results.

@@ -1,371 +1,374 @@
-# Automated Hydroponic Tower Health Check
+# Autonomous Drone-Based Citrus Tree Fruit Counting and Harvest Readiness Mapping
 
 ## Project Summary
 
-This project is a drone-based computer vision system for monitoring the health of lettuce plants grown in vertical hydroponic towers. The system is designed for farms with many hydroponic towers, where manually checking each plant slot is time-consuming and prone to missed issues.
+This project is a drone-based computer vision and mapping system for citrus orchards. The system is designed for citrus farms in Nueva Vizcaya, which is known for citrus production in the Philippines. Instead of manually checking each tree, the farmer registers citrus trees in a web dashboard, and the drone autonomously navigates to a selected tree, circles around it, captures images or video, counts visible fruits, estimates how many fruits are ready to harvest, and updates the dashboard with tree-level records.
 
-The main idea is to use a drone with a camera to inspect each tower, capture images of individual lettuce plants, analyze plant condition using an AI/computer vision model, and save the results to a web dashboard where farmers can view the status of each tower and plant.
+The updated research no longer uses hydroponic towers. The target environment is an outdoor citrus orchard with natural terrain, uneven ground, tree canopies, changing lighting, and possible obstacles such as nearby trees, branches, people, fences, irrigation pipes, and farm structures.
 
-The physical prototype will focus on **one real hydroponic tower** with lettuce plants. To represent the larger farm scenario, the project will also include a **Gazebo simulation environment** with multiple virtual towers and obstacles. This allows the navigation and inspection workflow to be tested at farm scale before applying it to the real-world prototype.
+The physical prototype will focus on scanning selected citrus trees in a real farm or controlled outdoor test area. A Gazebo simulation environment will still be used to test autonomous navigation, orchard layouts, terrain, obstacle avoidance, and repeat inspection missions before real-world drone testing.
 
 ## Working Thesis Title
 
-**Drone-Based Computer Vision and Simulation System for Plant-Level Health Monitoring of Hydroponic Lettuce Towers**
+**Autonomous Drone-Based Computer Vision and Mapping System for Citrus Tree Fruit Counting and Harvest Readiness Estimation**
 
 ## Problem Statement
 
-Hydroponic tower farms can contain many towers, and each tower can contain multiple plant holes or slots. Farmers need to regularly check whether plants are healthy, missing, diseased, nutrient-deficient, or ready to harvest.
+Citrus farms require regular monitoring to estimate fruit quantity, identify harvest-ready trees, and plan labor and selling schedules. Manual fruit counting and harvest readiness checking can be slow, inconsistent, and difficult across many trees, especially when fruits are hidden behind leaves or distributed around the canopy.
 
-Manual inspection becomes difficult as the number of towers increases. It also depends heavily on human observation, which can lead to inconsistent monitoring. A drone-based inspection system can help automate this process and provide farmers with organized, plant-level health records.
+A drone-based inspection system can help farmers collect tree-level data more efficiently. By combining autonomous navigation, image capture, computer vision, and a web dashboard, the system can record fruit count, estimated harvest readiness, tree height, inspection history, and orchard map information for each registered citrus tree.
 
 ## Main Objective
 
-To design and develop an automated system that uses a drone-mounted camera and computer vision to inspect lettuce plants in hydroponic towers and report plant-level health status through a web-based dashboard.
+To design and develop an autonomous drone-based system that scans registered citrus trees, counts visible citrus fruits, estimates harvest readiness percentage, creates or updates an orchard map, and displays tree-level records through a web-based dashboard.
 
 ## Specific Objectives
 
-1. Build a hydroponic tower monitoring model where each tower has an ID, location, and multiple plant slots.
-2. Use a drone-mounted camera to capture images or video of lettuce plants in each tower.
-3. Train or fine-tune a computer vision model to classify lettuce plant status.
-4. Store inspection results in a database with tower, slot, image, timestamp, and health status.
-5. Create a web dashboard where farmers can view tower status, individual plant status, and alerts.
-6. Add basic drone navigation and obstacle avoidance for safe movement around towers.
-7. Develop a Gazebo simulation environment to test multi-tower navigation before real-world drone testing.
+1. Build a citrus orchard monitoring model where each tree has an ID, location, map position, inspection history, and tree attributes.
+2. Create a web dashboard where a farmer can register citrus trees and request or view drone inspection results.
+3. Use a drone-mounted camera to capture images or video while circling a citrus tree.
+4. Train or fine-tune a computer vision model to detect citrus fruits and classify harvest readiness.
+5. Estimate tree-level information such as fruit count, approximate tree height, and percentage of visible fruits ready to harvest.
+6. Store inspection results in a database with tree ID, images, timestamps, fruit count, readiness estimate, map data, and confidence values.
+7. Add autonomous navigation and obstacle avoidance for safe movement around trees and uneven terrain.
+8. Develop a Gazebo simulation environment to test orchard navigation, terrain traversal from the air, tree scanning paths, and map updating before real-world drone testing.
 
 ## Target Crop
 
-The initial target crop is **lettuce**.
+The target crop is **citrus**, such as calamansi, orange, dalandan, ponkan, or other locally available citrus varieties.
 
-Lettuce is selected because:
+Citrus is selected because:
 
-- It is commonly grown in hydroponic systems.
-- It grows relatively fast.
-- Its health symptoms are often visible through leaf color, size, shape, and wilting.
-- It is suitable for tower-based vertical farming.
-- It makes the prototype easier to test within a thesis timeline.
+- Nueva Vizcaya is strongly associated with citrus farming.
+- Fruit quantity and harvest readiness are important for farm planning.
+- Fruits are visually detectable from images when lighting and angle are suitable.
+- Tree-level monitoring is useful for orchard management.
+- The project has local relevance and can use real images gathered from citrus farms.
 
 ## System Concept
 
-The farm concept contains multiple hydroponic towers. Each tower has a known location and multiple plant holes or slots. The drone visits each tower, captures plant images, and sends the data to the system.
+The farmer registers a citrus tree in the website. The tree record may include a tree ID, tree name or label, farm section, approximate GPS or map location, citrus variety, and notes. The drone uses this information to navigate toward the tree, scan around the canopy, capture images, and update the system with fruit count and readiness estimates.
 
-For the physical prototype, only one tower will be built. The multi-tower farm environment will be represented in Gazebo, where the drone can be tested in a virtual layout with several towers and obstacles.
-
-The hydroponic tower is treated as fixed farm infrastructure. It should normally run from wall power or a protected extension cord, not from individual batteries per tower. Low-voltage devices such as a 12V DC pump still need a power adapter to convert the wall outlet's AC power into the DC voltage required by the device. The drone is the battery-powered part of the system.
-
-The system then analyzes each plant image and produces a health status. Farmers can check the results through a website.
+The drone should ideally maintain or improve a map of the orchard over time. If the area has already been scanned, the drone can use previous map information to plan safer routes. If the environment is unfamiliar, the drone should still be able to explore carefully, detect obstacles, and update the map after each mission. This makes the mapping module a continuing system memory rather than a one-time map.
 
 ```text
-Hydroponic Tower Farm or Gazebo Farm Simulation
+Web Dashboard Tree Registration
         |
         v
-Drone with Camera
+Drone Mission Planning
         |
         v
-Image Capture per Tower/Plant Slot
+Autonomous Navigation to Citrus Tree
         |
         v
-Computer Vision Model
+Circle Scan Around Tree Canopy
+        |
+        v
+Image Capture + Mapping Data
+        |
+        v
+Computer Vision Fruit Detection
+        |
+        v
+Fruit Count + Harvest Readiness Estimate
         |
         v
 Database
         |
         v
-Web Dashboard for Farmers
+Dashboard Map, Tree Records, and History
 ```
 
 ## Major System Components
 
-### 1. Hydroponic Tower Model
+### 1. Citrus Tree Model
 
-Each tower should be represented digitally in the system.
+Each citrus tree should be represented digitally in the system.
 
 Example data:
 
-- Tower ID
-- Tower name or label
-- Tower location
-- Number of plant slots
-- Slot position
-- Plant assigned to each slot
-- Latest inspection status
+- Tree ID
+- Tree name or label
+- Farm or orchard section
+- GPS coordinate or local map coordinate
+- Citrus variety
+- Approximate height
+- Latest fruit count
+- Latest harvest readiness percentage
+- Latest inspection date
+- Inspection history
+- Notes or farmer observations
 
 Example:
 
 ```text
-Tower A
-- Location: Row 1, Column 3
-- Slots: 24
-- Slot A01: healthy
-- Slot A02: ready to harvest
-- Slot A03: yellowing
-- Slot A04: missing plant
+Tree CT-001
+- Location: Orchard Block A, Row 2
+- Variety: Calamansi
+- Approximate height: 2.4 m
+- Latest fruit count: 186 visible fruits
+- Ready to harvest: 62%
+- Last inspected: 2026-08-05 10:30 AM
 ```
 
-Physical tower responsibilities:
+### 2. Web Dashboard
 
-- Hold lettuce plants in vertical plant slots
-- Circulate nutrient water from the reservoir to the top of the tower
-- Provide stable labels or markers for tower identification
-- Support optional pH, EC/TDS, temperature, and water level sensing
-- Run from a safe AC outlet or protected extension cord, with adapters only where DC devices require them
+The web dashboard is the farmer-facing control and reporting system.
 
-### 2. Drone Inspection Module
+Expected dashboard features:
 
-The drone is responsible for moving near each tower and capturing images of the plants.
+- Register citrus trees
+- View orchard map
+- Select a tree for inspection
+- View tree-level records
+- Show drone-created or drone-updated map data
+- Display latest tree image captures
+- Display fruit count
+- Display harvest readiness percentage
+- Display approximate tree height
+- Show inspection history
+- Show trees ready for harvest
+- Show alerts for failed scans, low confidence, or blocked navigation
+
+Possible tree-level statuses:
+
+- Not yet inspected
+- Scanned successfully
+- Needs rescan
+- High fruit count
+- Ready for harvest
+- Low confidence result
+- Navigation blocked
+
+### 3. Drone Inspection Module
+
+The drone is responsible for traveling to a target citrus tree, scanning the canopy, and sending captured data for processing.
 
 Possible drone tasks:
 
-- Navigate to a tower
-- Maintain safe distance from the tower
-- Capture images of plant slots
-- Avoid obstacles such as nearby towers, pipes, frames, or walls
-- Send captured images to the processing system
+- Navigate to a registered tree
+- Avoid obstacles in an orchard environment
+- Maintain a safe distance from tree branches
+- Circle around the tree canopy
+- Capture images or video from multiple angles
+- Estimate or assist in estimating tree height
+- Save camera pose, timestamp, and map data
+- Send images and mission data to the processing system
 
-For the prototype, the drone navigation can start with a controlled path instead of full autonomous navigation. The drone should move slowly, stop at each inspection point, capture a clear image, then continue to the next plant slot.
+Recommended scan behavior:
 
-Possible navigation methods:
+1. Take off from a safe launch area.
+2. Navigate toward the target tree using map, GPS, visual markers, or manual-assisted initialization.
+3. Slow down near the tree.
+4. Detect the tree canopy or registered target area.
+5. Circle around the tree at a safe distance.
+6. Capture images from multiple angles and heights.
+7. Avoid branches and nearby obstacles.
+8. Return to the launch area or move to the next registered tree.
+9. Upload images, map updates, and inspection results.
 
-- Fixed waypoints
-- QR codes or ArUco markers on towers
-- Manual-assisted flight with automatic image capture
-- Distance sensors for collision prevention
-- Depth camera or LiDAR for obstacle detection
-- ROS 2 with PX4 or ArduPilot for advanced autonomous navigation
+### 4. Mapping and Localization Module
 
-### 3. Drone Platform Direction
+The system should support orchard mapping because citrus farms are less structured than tower farms.
 
-The preferred physical drone direction is a **modified CogniFly-based custom drone**.
+Possible mapping tasks:
 
-CogniFly is a useful reference because it is an open-source indoor drone concept with printable parts, a protected/collision-resilient frame, camera support, optical flow, Time-of-Flight sensing, and Python control. This matches the project goal of flying indoors near hydroponic towers and capturing plant images.
+- Create an orchard map from drone flight data
+- Store known tree locations
+- Update the map after each flight
+- Record obstacles and safe flight corridors
+- Support navigation in a previously mapped area
+- Support careful exploration in unfamiliar areas
+- Display map output in the web dashboard
 
-Reference repositories:
+Possible mapping technologies:
 
-- CogniFly project page: <https://thecognifly.github.io/>
-- CogniFly STL files: <https://github.com/thecognifly/CogniFly-STL>
-- CogniFly Python control: <https://github.com/thecognifly/cognifly-python>
+- GPS waypoint mapping
+- Visual SLAM
+- VIO, visual-inertial odometry
+- RTK GPS for more accurate outdoor localization, if available
+- Depth camera or LiDAR-based mapping
+- Photogrammetry for orchard map generation
+- ROS 2 mapping and navigation tools
 
-The project may adapt CogniFly instead of designing a drone completely from zero. The physical build is expected to be CogniFly-inspired rather than an exact copy of the original bill of materials, because some original components are older or harder to source locally. Custom 3D-printed modifications may include:
-
-- Camera mount for tower-facing plant inspection
-- Distance sensor mount
-- Battery holder
-- Protective frame improvements
-- Landing gear or tower-inspection positioning guides
-- Mounting points for QR/ArUco marker detection hardware
-
-Important note: the drone should be designed for **slow, stable, close-range inspection**, not speed, racing, or cinematic video.
-
-Safety note: even if the inspection behavior is autonomous, the physical drone should still have a manual control link for arming, disarming, tuning, early flight tests, and emergency override.
-
-### 4. Gazebo Simulation Module
-
-Gazebo will be used to simulate the drone and farm environment before real-world testing.
-
-The simulation is important because the physical prototype will only include one real hydroponic tower. The simulation can show how the system would behave in a larger farm with multiple towers, obstacles, and inspection targets.
-
-Possible simulation tasks:
-
-- Create a virtual hydroponic farm with multiple towers
-- Add obstacles such as nearby towers, walls, pipes, and frames
-- Add QR codes or ArUco markers to towers
-- Simulate a drone approaching a target tower
-- Use marker detection to identify tower ID and orientation
-- Test inspection paths around a tower
-- Test move-stop-capture movement between plant slots
-- Test obstacle avoidance behavior before real-world flight
-
-The planned drone behavior is:
-
-1. Take off from a start position.
-2. Navigate toward the target tower.
-3. Detect the tower marker using the camera.
-4. Identify tower ID and orientation.
-5. Align with the tower start position.
-6. Move to a plant slot inspection point.
-7. Hold position and capture an image.
-8. Continue to the next plant slot.
-9. Upload or save results for dashboard viewing.
+Important scope note: full reliable autonomous mapping in an unfamiliar outdoor orchard can become a large research problem by itself. A realistic thesis scope can combine manual tree registration, GPS/map waypoints, controlled autonomous scan paths, and incremental map updates.
 
 ### 5. Computer Vision Module
 
-The computer vision module analyzes lettuce plant images and predicts plant status.
+The computer vision module analyzes citrus tree images and predicts fruit count and harvest readiness.
 
 Possible AI tasks:
 
-- Detect whether a plant exists in a slot
-- Classify plant health
-- Detect yellowing leaves
-- Detect wilting
-- Estimate plant size
-- Estimate harvest readiness
-- Flag abnormal plants for human review
+- Detect citrus fruits in images
+- Count visible fruits from multiple angles
+- Avoid double-counting the same fruit across frames where possible
+- Classify fruit readiness based on color, size, and visual maturity
+- Estimate tree canopy area or approximate height
+- Flag low-confidence results for human review
 
-Recommended first classification categories:
+Recommended first model outputs:
 
-- Healthy
-- Yellowing / possible nutrient deficiency
-- Wilted
-- Undersized
-- Missing plant
-- Ready to harvest
-- Possible disease / abnormal
+- Citrus fruit bounding boxes
+- Fruit count per image
+- Estimated unique fruit count per tree
+- Ready-to-harvest count
+- Not-yet-ready count
+- Harvest readiness percentage
+- Confidence score
 
-Important note: the system should avoid claiming that it can perfectly diagnose exact fertilizer needs from images alone. A safer and more realistic claim is that the system detects visible symptoms that may indicate nutrient deficiency or poor growth.
+Important note: the system should avoid claiming perfect total fruit count because occlusion from leaves and branches can hide fruits. A safer and more realistic claim is that the system estimates visible fruit count and harvest readiness from drone-captured images.
 
-### 6. Optional Sensor Module
+### 6. Dataset and Training Plan
 
-To improve accuracy, the system can also collect sensor data from the hydroponic setup.
+The project will gather raw images from a citrus farm. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets.
 
-Possible sensors:
+Suggested dataset process:
 
-- pH sensor
-- EC/TDS sensor
-- Water temperature sensor
-- Water level sensor
-- Air temperature and humidity sensor
-- Light intensity sensor
+1. Visit a citrus farm and capture raw images from different trees.
+2. Capture fruits from multiple angles, distances, heights, and lighting conditions.
+3. Label citrus fruits with bounding boxes.
+4. Label harvest readiness classes, such as ready and not ready.
+5. Split the dataset into training, validation, and test sets.
+6. Train a baseline object detection model.
+7. Fine-tune the model using locally captured citrus images.
+8. Evaluate fruit counting accuracy and readiness classification accuracy.
 
-Sensor data can help explain plant symptoms. For example, yellowing leaves plus abnormal EC readings may suggest a nutrient issue.
+Recommended initial labels:
 
-Tower power note:
+- Citrus fruit
+- Ready-to-harvest citrus fruit
+- Not-yet-ready citrus fruit
+- Unclear or occluded fruit
 
-- The pump, sensors, and lights are part of the fixed tower setup.
-- The tower should use wall power or a protected extension cord as its main power source.
-- A 12V DC pump needs a 12V adapter; a 220V AC pump can plug into the protected AC source directly.
-- Individual batteries per tower are not part of the intended real-world design unless a future solar or backup-power system is added.
+### 7. Gazebo Simulation Module
 
-### 7. Database Module
+Gazebo will be used to simulate the drone and orchard environment before real-world testing.
 
-The database stores information about towers, plants, inspections, images, and AI results.
+Possible simulation tasks:
+
+- Create virtual citrus trees with different canopy sizes
+- Create an orchard layout with multiple trees
+- Add uneven terrain and slopes
+- Add obstacles such as trunks, branches, fences, posts, irrigation pipes, and farm paths
+- Simulate drone navigation to a target tree
+- Simulate a circular tree scan path
+- Test obstacle avoidance around tree canopies
+- Test map update behavior across repeated missions
+- Compare simulated route success with real-world testing
+
+The planned simulated drone behavior is:
+
+1. Take off from a start position.
+2. Navigate to a registered tree.
+3. Detect the tree or its assigned waypoint.
+4. Approach at a safe distance.
+5. Circle around the tree while keeping the camera pointed toward the canopy.
+6. Capture images at planned intervals.
+7. Update the map with path and obstacle information.
+8. Return to start or continue to another tree.
+
+### 8. Database Module
+
+The database stores orchard, tree, drone mission, image, prediction, and mapping data.
 
 Possible tables:
 
 - Users
 - Farms
-- Towers
-- Plant slots
-- Plants
-- Drone inspections
-- Plant images
-- Health predictions
-- Sensor readings
+- Orchard blocks
+- Citrus trees
+- Drone missions
+- Drone flight paths
+- Tree scans
+- Captured images
+- Fruit detections
+- Harvest readiness predictions
+- Map versions
+- Obstacles
 - Alerts
 
 Example inspection record:
 
 ```text
-Inspection ID: INS-001
-Tower ID: TOWER-01
-Slot ID: SLOT-08
-Image: slot_08_2026_08_04.jpg
-Prediction: Yellowing / possible nutrient deficiency
-Confidence: 87%
-Timestamp: 2026-08-04 12:54 PM
+Scan ID: SCAN-001
+Tree ID: CT-001
+Mission ID: MIS-001
+Images: ct_001_scan_2026_08_05/*.jpg
+Visible fruit count: 186
+Ready-to-harvest count: 116
+Harvest readiness: 62%
+Approximate height: 2.4 m
+Confidence: 84%
+Timestamp: 2026-08-05 10:30 AM
 ```
-
-### 8. Web Dashboard
-
-The web dashboard allows farmers to monitor the farm without manually checking every tower.
-
-Expected dashboard features:
-
-- Farm overview
-- Tower list
-- Tower map or layout
-- Individual tower view
-- Plant slot status view
-- Latest captured plant images
-- Health classification result
-- Alerts and recommendations
-- Harvest-ready list
-- Inspection history
-
-Possible tower-level statuses:
-
-- All healthy
-- Needs attention
-- Has missing plants
-- Has harvest-ready plants
-- Requires nutrient check
-
-Possible plant-level statuses:
-
-- Healthy
-- Needs observation
-- Possible nutrient deficiency
-- Possible disease
-- Ready to harvest
-- Missing or dead plant
 
 ## Open-Source Datasets and Libraries
 
-The project can use open datasets and pre-trained models to reduce the amount of training required.
+The project can use open datasets and pre-trained models to reduce training time, but the strongest dataset should come from local citrus farm images.
 
 ### Possible Datasets
 
-- **PlantVillage Dataset**
-  - Large open dataset for plant disease recognition.
-  - Useful for transfer learning.
-  - Limitation: mostly individual leaf images, not hydroponic tower images.
+- Citrus fruit detection datasets from Roboflow, Kaggle, or GitHub
+- Fruit detection and counting datasets
+- Agricultural drone imagery datasets
+- Custom citrus farm image dataset from Nueva Vizcaya or nearby farms
 
-- **New Plant Diseases Dataset**
-  - Large dataset based on healthy and diseased crop leaf images.
-  - Useful for initial model experiments.
-  - Limitation: may not match the real farm camera angle.
+Limitations:
 
-- **Lettuce disease datasets from Roboflow or GitHub**
-  - More crop-specific.
-  - Useful because the target crop is lettuce.
-  - Limitation: often smaller and may need additional custom images.
+- Public datasets may not match local citrus varieties.
+- Public datasets may not match drone camera angle.
+- Fruits may be occluded by leaves and branches.
+- Harvest readiness can depend on variety and local farmer judgment.
 
 ### Possible AI Libraries and Models
 
-- YOLOv8 or YOLOv11 for object detection
-- Detectron2 for detection and segmentation
-- TensorFlow or Keras for classification
-- PyTorch for model training
-- OpenCV for image processing
-- MobileNet, EfficientNet, ResNet, or Vision Transformer models for transfer learning
+- YOLOv8, YOLOv11, or later YOLO models for object detection
+- Detectron2 or Mask R-CNN for detection and segmentation
+- OpenCV for image processing and camera calibration
+- PyTorch or TensorFlow for training
+- DeepSORT, ByteTrack, or similar tracking methods to reduce double counting across video frames
+- MobileNet, EfficientNet, ResNet, or Vision Transformer models for readiness classification
 
 ## Recommended AI Strategy
 
-The recommended approach is **transfer learning**.
+The recommended approach is **object detection plus readiness classification**.
 
-Instead of training a model from zero, the system should start with a pre-trained computer vision model and fine-tune it using lettuce images from the actual hydroponic tower setup.
+The first version should detect citrus fruits and estimate visible fruit count. A later version can reduce double-counting by tracking fruit detections across video frames or associating detections with camera poses from the drone scan.
 
 Suggested steps:
 
-1. Collect initial lettuce images from open datasets.
-2. Train a baseline classifier.
-3. Capture real images from the hydroponic tower prototype.
-4. Label the real images by plant status.
-5. Fine-tune the model using the real images.
-6. Compare model performance before and after fine-tuning.
-
-This makes the thesis stronger because it can show that real farm images improve accuracy compared with using generic plant datasets only.
+1. Collect citrus images manually from the farm using a phone or camera.
+2. Label fruit bounding boxes and readiness classes.
+3. Train a baseline YOLO object detection model.
+4. Test counting accuracy on unseen tree images.
+5. Capture drone images from one or more citrus trees.
+6. Fine-tune the model using drone-captured images.
+7. Add tree-level aggregation to estimate total visible fruit count and harvest readiness percentage.
 
 ## Drone Navigation Scope
 
-Drone navigation should be included, but it should be scoped carefully because full autonomous navigation can become a separate thesis. This project will use simulation to explore the larger autonomous navigation problem while keeping the physical build manageable.
+Autonomous orchard navigation should be included, but it should be scoped carefully. Outdoor autonomy, terrain awareness, obstacle avoidance, and mapping can become a separate thesis if the scope is too broad.
 
 Recommended prototype scope:
 
-- The drone follows a controlled route around the hydroponic tower.
-- The tower has visual markers such as QR codes or ArUco markers.
-- The drone uses a camera and distance sensor to maintain safe positioning.
-- The system includes basic obstacle avoidance to prevent collision with nearby towers.
-- Gazebo is used to simulate multiple towers and obstacle layouts.
-- Real-world testing focuses on one physical tower.
+- The farmer registers trees in the web dashboard.
+- The system stores tree coordinates or map positions.
+- The drone follows a controlled route to a selected tree.
+- The drone performs a planned circular scan around the tree.
+- The drone captures images from multiple angles.
+- The system updates a map or mission path after each run.
+- Gazebo is used to test larger orchard layouts, terrain, and obstacle avoidance.
+- Real-world testing focuses on a limited number of citrus trees under supervised conditions.
 
-Possible obstacle avoidance technologies:
+Possible navigation methods:
 
-- Ultrasonic sensor
-- Infrared distance sensor
-- Depth camera
-- LiDAR
-- Optical flow camera
-- ROS 2 navigation
-- PX4 or ArduPilot autopilot
+- GPS waypoints
+- RTK GPS, if available
+- Visual markers for controlled tests
+- Visual SLAM or VIO
+- Depth camera or LiDAR for obstacle detection
+- ROS 2 with PX4 or ArduPilot
+- Manual-assisted flight with automated image capture for early dataset collection
 
 ## Minimum Viable Prototype
 
@@ -373,156 +376,151 @@ The first complete version should focus on proving the main concept.
 
 MVP features:
 
-1. One hydroponic tower with lettuce plants.
-2. Tower water circulation powered from a safe AC source, with a DC adapter if a 12V pump is used.
-3. A modified CogniFly-based or similar 3D-printable drone prototype.
-4. Camera or drone-mounted camera that captures plant images.
-5. Plant slot identification using tower layout or markers.
-6. Computer vision model that classifies plant status.
-7. Database for storing inspection results.
-8. Web dashboard for viewing tower and plant status.
-9. Basic obstacle avoidance or controlled navigation demonstration.
-10. Gazebo simulation with multiple towers and obstacles.
+1. Web dashboard for registering citrus trees.
+2. One or more real citrus trees for data collection and testing.
+3. Drone-mounted camera or manually controlled drone capture workflow.
+4. Circular scan workflow around a selected tree.
+5. Computer vision model that detects citrus fruits.
+6. Estimated visible fruit count per tree.
+7. Estimated percentage of ready-to-harvest fruits.
+8. Database for storing tree records and scan results.
+9. Dashboard map showing registered trees, drone scan history, and results.
+10. Gazebo simulation with orchard terrain, multiple trees, and obstacles.
 
 ## Possible Advanced Features
 
-These can be added if time allows:
-
-- Multiple tower support
-- Farm map view
-- More realistic Gazebo farm simulation
-- ROS 2 integration
-- Automated drone route planning
-- Full autonomous navigation
-- Sensor fusion with pH, EC/TDS, and water level readings
-- Growth tracking over time
+- Multi-tree autonomous inspection route
+- Improved SLAM-based map creation
+- RTK GPS integration
+- 3D orchard map or point cloud view
+- Fruit tracking across video frames to reduce double counting
+- Tree canopy volume estimation
 - Yield prediction
 - Harvest scheduling
-- Mobile app support
+- Disease or pest symptom detection
 - Farmer notification system
-- Disease localization using bounding boxes or segmentation
+- Mobile app support
+- Automatic comparison of fruit count over time
 
 ## Research Questions
 
 Main research question:
 
-**Can a drone-mounted camera and computer vision model accurately identify the health and harvest status of lettuce plants in a vertical hydroponic tower farm, while using simulation to validate navigation in a larger multi-tower environment?**
+**Can an autonomous drone-mounted camera and computer vision model estimate citrus fruit count and harvest readiness at the tree level while using mapping and simulation to support navigation in an orchard environment?**
 
 Supporting research questions:
 
-1. How accurately can the model classify lettuce plant health from tower-captured images?
-2. Does fine-tuning with real hydroponic tower images improve model accuracy?
-3. Can the system correctly associate captured images with tower IDs and plant slots?
-4. Can a web dashboard help farmers identify towers and plants that need attention?
-5. Can basic drone navigation safely support plant inspection in a tower farm environment?
-6. Can Gazebo simulation help validate multi-tower navigation and obstacle avoidance before real-world testing?
+1. How accurately can the model detect citrus fruits from drone-captured tree images?
+2. How accurately can the system estimate visible fruit count per tree?
+3. Can the system classify or estimate harvest readiness from visual fruit features?
+4. Can the drone follow a safe circular scan path around a registered citrus tree?
+5. Can repeated drone missions improve or update an orchard map?
+6. Can Gazebo simulation help validate orchard navigation, terrain handling, and obstacle avoidance before real-world testing?
+7. Can a web dashboard help farmers view tree-level fruit count, readiness, height, map, and inspection history?
 
 ## Expected Outputs
 
 The final project should produce:
 
-- A working hydroponic tower inspection prototype
-- A modified CogniFly-based or similar 3D-printable drone prototype
-- A Gazebo simulation environment with multiple hydroponic towers
-- A trained or fine-tuned lettuce health classification model
-- A drone/camera image capture workflow
-- A database of tower inspections
-- A web dashboard for farmers
-- Test results showing model accuracy and system performance
+- A working citrus tree inspection prototype
+- A drone or drone-mounted camera workflow for tree scanning
+- A Gazebo simulation environment with citrus trees, terrain, and obstacles
+- A trained or fine-tuned citrus fruit detection model
+- A harvest-readiness estimation workflow
+- A database of citrus tree records and inspection results
+- A web dashboard with tree registration, map view, fruit count, readiness percentage, and history
+- Test results showing detection accuracy, counting accuracy, readiness estimation, and navigation performance
 - Thesis documentation explaining design, implementation, testing, and limitations
 
 ## Evaluation Metrics
 
 Possible metrics for evaluating the project:
 
-- Classification accuracy
-- Precision, recall, and F1-score per plant status category
+- Fruit detection precision, recall, and F1-score
+- Counting error per image
+- Counting error per tree
+- Harvest readiness classification accuracy
+- Mean average precision for fruit detection
 - Image capture success rate
-- Correct tower/slot identification rate
-- Average inspection time per tower
-- Obstacle detection success rate
-- Simulation navigation success rate
+- Correct tree identification rate
+- Average scan time per tree
+- Navigation success rate
+- Obstacle avoidance success rate
 - Simulated collision rate
-- Dashboard usability feedback
-- System response time from image capture to dashboard update
+- Map update consistency across repeated missions
+- Dashboard response time
+- Farmer usability feedback
 
 ## Risks and Limitations
 
 ### Computer Vision Limitations
 
+- Fruits may be hidden by leaves, branches, or other fruits.
 - Lighting changes may affect image quality.
-- Leaves can overlap, making individual plant detection harder.
-- Plant symptoms can look similar across different causes.
-- Open datasets may not match real hydroponic tower images.
-- More custom images may be needed for good accuracy.
+- Fruit color varies by citrus variety and maturity stage.
+- Similar-looking fruits may be counted twice across multiple images.
+- Public datasets may not match local citrus trees.
+- More custom farm images may be needed for reliable accuracy.
 
 ### Drone Limitations
 
-- Indoor drone flight can be difficult due to limited GPS.
-- Airflow from the drone may disturb plants.
-- Towers may be too close together for safe navigation.
-- Obstacle avoidance may require additional sensors.
-- Battery life limits inspection time.
-- Manual override is still needed for safe real-world testing, even if the intended inspection path is autonomous.
-- A fully 3D-printed or mostly 3D-printed drone may have vibration, weight, and durability issues.
+- Outdoor wind can affect stable scanning.
+- Tree branches can be dangerous for close flight.
+- GPS accuracy may not be enough for close tree scanning.
+- Battery life limits the number of trees per mission.
+- Manual override is still needed for safety.
+- A small indoor-style drone may not be suitable for outdoor orchard conditions.
 
-### Tower Power and Water Safety Limitations
+### Mapping and Navigation Limitations
 
-- The hydroponic tower should use a protected AC outlet or extension cord, not individual tower batteries.
-- Low-voltage DC devices still need the correct adapter; an extension cord alone does not convert 220V AC into 12V DC.
-- Water and electricity require careful cable routing, drip loops, splash protection, and an accessible emergency power switch.
-
-### Simulation Limitations
-
-- Gazebo simulation may not perfectly match real-world flight behavior.
-- Simulated lighting, camera images, and plant appearances may be simpler than real farm conditions.
-- Navigation that works in simulation may still need tuning during real-world testing.
+- Autonomous mapping in unfamiliar terrain is difficult.
+- Trees can look visually similar.
+- Dense canopy may reduce visibility.
+- Gazebo simulation may not perfectly match real orchard conditions.
+- Navigation that works in simulation may still need tuning outdoors.
 
 ### Scope Limitations
 
-- Exact disease diagnosis may be difficult.
-- Exact fertilizer recommendation may require sensor data.
-- Full autonomous navigation may be too large for the initial thesis scope.
+- The system estimates visible fruit count, not guaranteed total fruit count.
+- Harvest readiness is estimated from images and should be validated with farmer judgment.
+- Full orchard-wide autonomous navigation may be too large for the initial thesis scope.
 
 ## Recommended Project Scope
 
 The best thesis scope is:
 
-**A drone-assisted computer vision system that detects visible lettuce plant health conditions in hydroponic towers and displays plant-level inspection results on a web dashboard.**
+**A drone-assisted computer vision and mapping system that estimates visible citrus fruit count and harvest readiness for registered citrus trees, then displays tree-level inspection results on a web dashboard.**
 
-This scope is realistic, research-worthy, and buildable. The system can include basic navigation and obstacle avoidance, but the main contribution should be plant-level health monitoring and farm dashboard reporting. The physical system will validate inspection on one real tower, while Gazebo simulation will validate the navigation concept for multiple towers.
+This scope is locally relevant, research-worthy, and buildable. The system can include autonomous navigation and map updating, but the main contribution should be citrus fruit detection, tree-level counting, harvest readiness estimation, and dashboard reporting. Gazebo simulation can validate larger orchard navigation while real-world testing focuses on a limited number of trees.
 
 ## Suggested Technology Stack
 
 ### Hardware
 
-- Hydroponic tower prototype
-- Lettuce plants
-- AC outlet or protected extension cord for the fixed tower
-- 12V DC pump adapter if using a 12V pump
-- Modified CogniFly-based or similar 3D-printable drone prototype
-- RGB camera
-- Optional depth camera or distance sensor
-- Optional pH and EC/TDS sensors
+- Outdoor-capable drone platform
+- RGB camera or drone camera
+- Optional gimbal for stable tree-facing image capture
+- Optional depth camera or LiDAR
+- Optional RTK GPS module
+- Ground laptop or backend server
 
 ### AI and Computer Vision
 
 - Python
 - OpenCV
 - PyTorch or TensorFlow
-- YOLO for detection
-- MobileNet, EfficientNet, or ResNet for classification
+- YOLO for fruit detection
+- Optional segmentation model for occluded fruits
+- Optional tracking model for video-based counting
 
 ### Drone and Robotics
 
-- CogniFly reference design
-- 3D-printed drone frame
 - Gazebo simulation
-- ROS 2 for future simulation and robotics integration
-- PX4 or ArduPilot for future advanced navigation, if needed
+- ROS 2 for simulation and robotics integration
+- PX4 or ArduPilot
 - MAVLink
-- ArUco markers or QR codes
-- Depth sensor or distance sensor for obstacle avoidance
+- GPS or RTK GPS
+- SLAM, VIO, depth sensing, or LiDAR for mapping
 
 ### Web System
 
@@ -530,64 +528,64 @@ This scope is realistic, research-worthy, and buildable. The system can include 
 - Backend: Node.js, Python Flask, FastAPI, or Django
 - Database: PostgreSQL, MySQL, SQLite, or Supabase
 - Image storage: local storage, cloud storage, or object storage
+- Map display: Leaflet, Mapbox, Cesium, or a custom map view
 
 ## Proposed Development Phases
 
 ### Phase 1: Research and Planning
 
-- Study hydroponic lettuce growth symptoms.
-- Review open plant disease datasets.
-- Review drone navigation options.
-- Review CogniFly hardware and software structure.
-- Review Gazebo drone simulation requirements.
-- Finalize system architecture.
+- Study citrus varieties and harvest-readiness indicators.
+- Review fruit detection and counting datasets.
+- Review drone orchard navigation methods.
+- Review Gazebo orchard simulation requirements.
+- Finalize system architecture and scope.
 
-### Phase 2: Prototype Tower and Data Collection
+### Phase 2: Data Collection
 
-- Build or prepare a small hydroponic tower.
-- Set up the pump using wall power or a protected extension cord, plus the correct adapter if the pump is 12V DC.
-- Grow lettuce plants.
-- Capture sample images under different lighting and growth conditions.
-- Label images by plant status.
+- Coordinate access to a citrus farm.
+- Capture raw citrus tree images from multiple angles.
+- Capture images under different lighting conditions.
+- Record tree notes and farmer harvest-readiness judgment.
+- Label fruit bounding boxes and readiness classes.
 
 ### Phase 3: Computer Vision Model
 
-- Train a baseline model using open datasets.
-- Fine-tune the model using real hydroponic tower images.
-- Test accuracy and improve the dataset.
+- Train a baseline fruit detection model.
+- Fine-tune the model using local citrus farm images.
+- Test detection and counting accuracy.
+- Add harvest-readiness estimation.
 
-### Phase 4: Drone or Camera Inspection
-
-- Build or adapt a modified CogniFly-based 3D-printable drone.
-- Mount the camera on the drone.
-- Add manual control link and emergency override before real flight testing.
-- Define tower inspection positions.
-- Capture plant slot images.
-- Add basic obstacle detection.
-
-### Phase 5: Gazebo Simulation
-
-- Create a virtual hydroponic tower model.
-- Create a multi-tower farm layout.
-- Add obstacles and tower markers.
-- Simulate drone navigation to a target tower.
-- Simulate move-stop-capture inspection behavior.
-- Compare simulation behavior with real-world prototype testing.
-
-### Phase 6: Web Dashboard
+### Phase 4: Web Dashboard and Database
 
 - Create database schema.
-- Build API for storing inspection results.
-- Build dashboard views for farm, tower, and plant slot status.
+- Build tree registration workflow.
+- Build map view for registered trees.
+- Build scan result views for fruit count, readiness percentage, height, images, and history.
+
+### Phase 5: Drone or Camera Inspection
+
+- Set up the drone camera capture workflow.
+- Add manual-assisted image capture for early testing.
+- Define circular tree scan positions.
+- Add autonomous mission planning for selected trees.
+- Add obstacle detection and safety procedures.
+
+### Phase 6: Gazebo Simulation
+
+- Create virtual citrus tree models.
+- Create orchard terrain and multi-tree layouts.
+- Add obstacles and safe flight paths.
+- Simulate autonomous navigation to selected trees.
+- Simulate circular scan behavior and map updates.
 
 ### Phase 7: Integration and Testing
 
-- Connect camera capture, AI model, database, and dashboard.
-- Test end-to-end inspection workflow.
-- Test simulated multi-tower navigation.
-- Measure performance and accuracy.
+- Connect drone capture, AI model, database, map, and dashboard.
+- Test end-to-end tree inspection workflow.
+- Test simulated orchard navigation.
+- Measure detection, counting, readiness, mapping, and navigation performance.
 - Document limitations and future improvements.
 
 ## Short Pitch
 
-This project automates the inspection of hydroponic lettuce towers using a 3D-printable drone, camera, computer vision, and web dashboard. The physical prototype uses one real lettuce tower, while Gazebo simulation represents a larger farm with multiple towers and obstacles. The drone identifies a tower using visual markers, captures images of individual plant slots, and sends AI-generated plant health results to a dashboard so farmers can quickly identify healthy plants, problem areas, and harvest-ready lettuce.
+This project automates citrus tree inspection using a drone, computer vision, mapping, simulation, and a web dashboard. A farmer registers citrus trees in the website, then the drone navigates to a selected tree, circles around it, captures images, counts visible fruits, estimates harvest readiness, updates the orchard map, and saves tree-level results so farmers can monitor fruit quantity, harvest timing, and inspection history more efficiently.
