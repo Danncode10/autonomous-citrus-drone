@@ -2,59 +2,47 @@
 
 ## Overview
 
-This document lists the hardware needed for the updated autonomous citrus tree inspection project. The previous hydroponic tower hardware is no longer part of the research scope. The system now focuses on outdoor citrus orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
+This document lists the hardware needed for the updated autonomous Perante orange tree inspection project. The previous hydroponic tower hardware is no longer part of the research scope. The system now focuses on outdoor Perante orange orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
 
 The hardware is separated into four main areas:
 
-1. Citrus farm data collection
+1. Field validation tools
 2. Drone inspection system
-3. Mapping, navigation, and safety equipment
+3. GPS and basic safety equipment
 4. Backend and development equipment
 
-The physical prototype should start with a small number of citrus trees and supervised drone flights. The larger orchard scenario should be tested first in Gazebo simulation.
+The physical prototype should start with a small number of Perante orange trees and supervised drone flights. The larger orchard scenario should be tested first in Gazebo simulation.
 
-## Citrus Farm Data Collection
+## Field Validation Tools
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| Citrus farm access / test trees | TBD | TBD | 1 farm or test area |
-| Citrus tree labels or waterproof tags | TBD | PHP 50-300 estimate | TBD |
+| Perante orange tree labels or waterproof tags | TBD | PHP 50-300 estimate | TBD |
 | Measuring tape or laser distance meter | TBD | PHP 100-1,500 estimate | 1 |
-| Ground control markers / visual reference markers | TBD | PHP 100-500 estimate | TBD |
 | Notebook or digital field form device | TBD | PHP 0-500 estimate | 1 |
-| Data collection subtotal | TBD | PHP 250-2,800 estimate | TBD |
+| Field validation subtotal | TBD | PHP 150-2,300 estimate | TBD |
 
 ## Drone Hardware and Electronics
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| Outdoor-capable drone platform | TBD | TBD | 1 |
-| Flight controller compatible with PX4 or ArduPilot | TBD | TBD | 1 |
-| ESC and motor set suitable for outdoor flight | TBD | TBD | 1 set |
-| Propellers plus spare propellers | TBD | TBD | TBD |
-| Drone battery packs | TBD | TBD | 2+ recommended |
-| Battery charger | TBD | TBD | 1 |
-| RC transmitter and receiver / manual override link | TBD | TBD | 1 |
-| RGB camera or drone camera | TBD | TBD | 1 |
-| Optional camera gimbal | TBD | TBD | Optional |
-| Companion computer, such as Raspberry Pi, Jetson, or similar | TBD | TBD | Optional / recommended |
-| 5V voltage regulator / BEC for companion computer | TBD | TBD | 1 if needed |
+| GPS-enabled outdoor drone with camera and return-to-home | TBD | TBD | 1 |
+| Extra drone battery | TBD | TBD | 1+ recommended |
+| Battery charger | Included with drone / TBD | TBD | 1 |
+| Spare propellers | TBD | TBD | 1 set |
+| Optional camera gimbal, if not built in | TBD | TBD | Optional |
+| Optional companion computer for advanced autonomy | TBD | TBD | Optional |
 | Drone hardware subtotal | TBD | TBD | TBD |
 
-## Mapping, Navigation, and Safety Hardware
+## GPS and Basic Safety Hardware
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| GPS module | TBD | TBD | 1 |
-| RTK GPS module and base station | TBD | TBD | Optional |
-| Depth camera or LiDAR sensor | TBD | TBD | Optional / recommended |
-| Front obstacle distance sensor | TBD | TBD | Optional |
-| Telemetry radio | TBD | TBD | Optional |
+| GPS-enabled drone or GPS module | TBD | TBD | 1 |
+| Manual control link / return-to-home support | Included with drone / TBD | TBD | 1 |
 | Landing pad or marked launch area | TBD | PHP 200-1,000 estimate | 1 |
-| Propeller guards or protective frame | TBD | TBD | Optional |
-| Safety cones / test boundary markers | TBD | PHP 100-500 estimate | TBD |
 | LiPo-safe charging bag or battery safety box | TBD | PHP 200-800 estimate | 1 |
-| Mapping and safety subtotal | TBD | TBD | TBD |
+| GPS and safety subtotal | TBD | TBD | TBD |
 
 ## Development and Backend Equipment
 
@@ -66,32 +54,33 @@ The physical prototype should start with a small number of citrus trees and supe
 | Internet connection for dashboard and dataset sync | Existing / TBD | TBD | 1 |
 | Development equipment subtotal | TBD | TBD | TBD |
 
-## 1. Citrus Farm and Tree Identification Hardware
+## 1. Field Validation and Tree Identification Tools
 
-The field setup provides the real-world citrus trees, labels, and reference measurements needed for training and validating the system.
+This section is not a separate farm system. These are only the simple tools needed to label trees and validate whether the drone's estimates are correct.
 
 Required components:
 
-- Access to citrus trees in a farm or controlled outdoor test area
+- Access to Perante orange trees in a farm or controlled outdoor test area
 - Tree labels or waterproof tags
 - Tree ID list
 - Measuring tape or laser distance meter for manual height reference
-- Ground reference markers or visual markers for controlled tests
 - Field notes for tree variety, fruit maturity, and farmer observations
 
 Optional components:
 
 - GPS phone or handheld GPS for rough tree coordinates
-- RTK reference points for accurate mapping
-- Calibration board for camera testing
-- Color reference card for fruit maturity image calibration
+- Color reference card for fruit maturity image calibration, if available
 
 Purpose:
 
-- Assign each citrus tree a stable identity
+- Assign each Perante orange tree a stable identity
 - Help compare drone-estimated height with manual measurement
 - Help validate fruit count and harvest-readiness estimates
 - Support dashboard tree registration and map placement
+
+Why this is needed:
+
+The drone can estimate fruit count, height, and readiness, but the research still needs ground truth. For example, if the drone says a tree has 120 visible fruits and is 65% ready to harvest, the team needs some manual records or farmer observations to check whether the result is reasonable.
 
 ## 2. Drone Inspection Hardware
 
@@ -101,29 +90,30 @@ The drone inspection system captures tree images, circles around the target tree
 
 Recommended direction:
 
-- Use an outdoor-capable quadcopter or similar drone platform.
-- Prefer a platform that supports autonomous missions, GPS waypoints, manual override, and camera mounting.
-- For research flexibility, a PX4-compatible or ArduPilot-compatible platform is preferred.
+- Use a GPS-enabled outdoor drone with a camera.
+- Prefer a drone that already supports return-to-home, flight logs, manual override, and stable outdoor hover.
+- A ready-to-fly drone is the best first prototype direction because it reduces custom hardware risk.
 
 Important note:
 
-The previous CogniFly-inspired drone direction was better suited for indoor, close-range tower inspection. Citrus tree inspection is an outdoor task with wind, terrain, larger distances, and tree branches. A small indoor drone may still be useful for simulation concepts or controlled tests, but the main physical prototype should use a safer outdoor-capable drone.
+The previous CogniFly-inspired drone direction was better suited for indoor, close-range tower inspection. Perante orange tree inspection is an outdoor task with wind, terrain, larger distances, and tree branches. A small indoor drone may still be useful for simulation concepts or controlled tests, but the main physical prototype should use a safer outdoor-capable drone.
 
 Required platform capabilities:
 
 - Stable outdoor hover
 - Manual control and emergency override
-- Camera mount or integrated camera
+- Integrated camera or secure camera mount
+- GPS support
+- Return-to-home support
 - Enough battery life for tree approach, circular scan, and return
 - Safe operation near trees
-- Support for waypoint missions or companion-computer control
+- Flight log or last-known-location support
 
 Optional platform capabilities:
 
-- Obstacle avoidance sensors
 - Gimbal stabilization
-- RTK GPS support
-- Telemetry radio
+- Obstacle avoidance sensors
+- Waypoint mission support
 - Payload bay for companion computer or extra sensors
 
 ### 2.2 Camera
@@ -131,7 +121,7 @@ Optional platform capabilities:
 Recommended camera requirements:
 
 - RGB image capture
-- Clear view of citrus fruits at tree-canopy distance
+- Clear view of Perante oranges at tree-canopy distance
 - Stable mounting or gimbal support
 - Good resolution for fruit detection
 - Ability to capture still images or video
@@ -149,7 +139,6 @@ Optional alternatives:
 - Raspberry Pi Camera Module
 - USB camera
 - Arducam autofocus camera
-- Depth camera, if payload allows
 
 ### 2.3 Companion Computer
 
@@ -171,30 +160,34 @@ Possible responsibilities:
 
 Important note:
 
-Heavy fruit detection and model training can run on the laptop or backend during early development. The drone does not need to run the full AI model onboard in the first prototype.
+Heavy fruit detection and model training can run on the laptop or backend during early development. The drone does not need to run the full AI model onboard in the first prototype, so a companion computer is optional.
 
-### 2.4 Navigation and Mapping Sensors
+### 2.4 GPS, Navigation, and Recovery
 
 Recommended minimum:
 
-- GPS module for outdoor waypoint navigation
+- GPS-enabled drone or GPS module for outdoor waypoint navigation
+- Return-to-home behavior
+- Flight log or last-known-location recording
 - Camera-based capture for visual inspection
 - Manual control link for safety
 
-Stronger navigation setup:
+Why GPS is the best minimum choice:
 
-- RTK GPS for more accurate tree approach
-- Depth camera or LiDAR for obstacle detection
-- Visual SLAM or visual-inertial odometry support
-- Telemetry radio for monitoring
+- It helps the drone navigate to registered tree locations.
+- It allows return-to-home when signal or battery problems happen.
+- It records the drone's last known location, which helps find the drone if something goes wrong.
+- It is simpler and more realistic for the first prototype than LiDAR, RTK GPS, or full SLAM.
 
-Purpose:
+Not required for the first prototype:
 
-- Navigate to registered tree positions
-- Maintain distance from tree canopies
-- Avoid branches, trunks, posts, and other obstacles
-- Update the orchard map after repeated missions
-- Support autonomous or semi-autonomous operation in unfamiliar environments
+- RTK GPS
+- LiDAR
+- Depth camera
+- Telemetry radio
+- Full SLAM mapping
+
+These can be added later if the project needs more precise autonomy, but they are not required to prove the main research idea.
 
 ### 2.5 Battery and Power
 
@@ -236,25 +229,23 @@ Suggested processing split:
 
 Minimum realistic physical prototype:
 
-- Access to one or more citrus trees
+- Access to one or more Perante orange trees
 - Tree ID labels or waterproof tags
 - Measuring tape or laser distance meter
 - Outdoor-capable drone with camera
+- GPS support or built-in GPS return-to-home
 - Manual RC control link and emergency override
 - Battery and charger
 - Laptop for backend, dashboard, model training, and image processing
-- Ground markers for controlled navigation tests
 - Gazebo simulation setup for orchard terrain and multi-tree navigation
 
 Recommended improved prototype:
 
-- PX4-compatible or ArduPilot-compatible drone
-- Companion computer
-- GPS module
-- Optional RTK GPS
-- Optional depth camera or LiDAR
+- Waypoint-capable drone
+- Optional companion computer
+- Stronger GPS or RTK GPS
+- Optional obstacle avoidance sensor
 - Optional gimbal
-- Telemetry radio
 - Extra batteries
 - Dataset backup storage
 
@@ -262,11 +253,11 @@ Recommended improved prototype:
 
 Suggested order:
 
-1. Confirm access to a citrus farm or test trees.
+1. Confirm access to a Perante orange farm or test trees.
 2. Define tree registration fields for the website.
-3. Collect raw citrus fruit images manually using a phone or camera.
+3. Collect raw Perante orange fruit images manually using a phone or camera.
 4. Label fruit bounding boxes and harvest-readiness classes.
-5. Train a baseline citrus fruit detection model.
+5. Train a baseline Perante orange fruit detection model.
 6. Build the web dashboard and database schema.
 7. Start with manual-assisted drone image capture.
 8. Add circular scan planning around a tree.
@@ -280,22 +271,22 @@ The cost table is now intentionally marked as TBD because the hydroponic tower p
 
 | Category | Estimated Total |
 | --- | ---: |
-| Citrus farm data collection tools | PHP 250-2,800 estimate |
+| Field validation tools | PHP 150-2,300 estimate |
 | Drone platform and camera | TBD |
-| Mapping, navigation, and safety hardware | TBD |
+| GPS and basic safety hardware | TBD |
 | Development and backend equipment | TBD |
 | Current project total | TBD |
 
 Notes:
 
 - The previous hydroponic tower subtotal is no longer applicable.
-- The old CogniFly-inspired bill of materials should not be treated as final for outdoor citrus orchard work.
-- Final cost depends mainly on the selected drone platform, camera, GPS accuracy requirements, and whether LiDAR, RTK GPS, or a gimbal will be included.
+- The old CogniFly-inspired bill of materials should not be treated as final for outdoor Perante orange orchard work.
+- Final cost depends mainly on the selected drone platform, camera, GPS support, and whether a gimbal will be included.
 - Shipping fees, replacement parts, batteries, and safety equipment should be included before final procurement.
 
 ## 7. Safety Notes
 
-Outdoor drone testing near citrus trees requires careful safety planning.
+Outdoor drone testing near Perante orange trees requires careful safety planning.
 
 Required or strongly recommended:
 
