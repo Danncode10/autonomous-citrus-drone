@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document lists the hardware needed for the updated autonomous Perante orange tree inspection project. The previous hydroponic tower hardware is no longer part of the research scope. The system now focuses on outdoor Perante orange orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
+This document lists the hardware needed for the autonomous Perante orange tree inspection project. The system focuses on outdoor Perante orange orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
 
 The hardware is separated into four main areas:
 
@@ -96,7 +96,7 @@ Recommended direction:
 
 Important note:
 
-The previous CogniFly-inspired drone direction was better suited for indoor, close-range tower inspection. Perante orange tree inspection is an outdoor task with wind, terrain, larger distances, and tree branches. A small indoor drone may still be useful for simulation concepts or controlled tests, but the main physical prototype should use a safer outdoor-capable drone.
+Perante orange tree inspection is an outdoor task with wind, terrain, larger distances, and tree branches. The main physical prototype should use a safe outdoor-capable drone rather than a small indoor-style drone.
 
 Required platform capabilities:
 
@@ -267,7 +267,7 @@ Suggested order:
 
 ## 6. Current Estimated Cost Summary
 
-The cost table is now intentionally marked as TBD because the hydroponic tower parts have been removed and the final drone platform has not yet been selected.
+The cost table is intentionally marked as TBD because the final drone platform has not yet been selected.
 
 | Category | Estimated Total |
 | --- | ---: |
@@ -279,8 +279,6 @@ The cost table is now intentionally marked as TBD because the hydroponic tower p
 
 Notes:
 
-- The previous hydroponic tower subtotal is no longer applicable.
-- The old CogniFly-inspired bill of materials should not be treated as final for outdoor Perante orange orchard work.
 - Final cost depends mainly on the selected drone platform, camera, GPS support, and whether a gimbal will be included.
 - Shipping fees, replacement parts, batteries, and safety equipment should be included before final procurement.
 

@@ -4,9 +4,9 @@
 
 This project is a drone-based computer vision and mapping system for Perante orange orchards. The system is designed for Perante orange farms in Nueva Vizcaya, which is known for citrus production in the Philippines. Instead of manually checking each tree, the farmer registers Perante orange trees in a web dashboard, and the drone autonomously navigates to a selected tree, circles around it, captures images or video, counts visible fruits, estimates how many fruits are ready to harvest, and updates the dashboard with tree-level records.
 
-The updated research no longer uses hydroponic towers. The target environment is an outdoor Perante orange orchard with natural terrain, uneven ground, tree canopies, changing lighting, and possible obstacles such as nearby trees, branches, people, fences, irrigation pipes, and farm structures.
+The target environment has two parts: a real-world Perante orange orchard and a Gazebo simulation orchard. The real-world environment provides actual tree images, fruit-counting data, harvest-readiness observations, and supervised prototype testing. The simulation environment provides a safer place to test autonomous navigation, orchard layouts, terrain, obstacle avoidance, circular tree scanning, and repeated inspection missions before real-world drone testing.
 
-The physical prototype will focus on scanning selected Perante orange trees in a real farm or controlled outdoor test area. A Gazebo simulation environment will still be used to test autonomous navigation, orchard layouts, terrain, obstacle avoidance, and repeat inspection missions before real-world drone testing.
+The physical prototype will focus on scanning selected Perante orange trees in a real farm or controlled outdoor test area. The Gazebo simulation will represent a larger orchard with multiple virtual trees, terrain, obstacles, and drone routes so the system can be tested beyond the limited number of trees available for physical testing.
 
 ## Working Thesis Title
 
@@ -169,7 +169,7 @@ Recommended scan behavior:
 
 ### 4. Mapping and Localization Module
 
-The system should support orchard mapping because Perante orange farms are less structured than tower farms.
+The system should support orchard mapping because Perante orange orchards can have irregular tree spacing, terrain changes, and natural obstacles.
 
 Possible mapping tasks:
 
