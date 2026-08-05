@@ -4,59 +4,68 @@
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| Lettuce seeds or seedlings | TBD | TBD | TBD |
-| Growing medium | TBD | TBD | TBD |
-| Hydroponic nutrient solution | TBD | TBD | 1 |
-| Clean water supply | TBD | TBD | TBD |
+| Lettuce seeds or seedlings | TBD | PHP 50-200 estimate | TBD |
+| Growing medium | TBD | PHP 85-600 estimate | TBD |
+| Hydroponic nutrient solution | TBD | PHP 360-950 estimate | 1 |
+| Clean water supply | TBD | PHP 0-100 estimate | TBD |
+| Plants and growing supplies subtotal | TBD | PHP 495-1,850 estimate | TBD |
 
 ## Hydroponic Tower Structure and Hardware
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| 3D-printed stackable tower module | TBD | TBD | TBD |
-| 3D-printed top cap / water distributor | TBD | TBD | 1 |
-| 3D-printed base adapter | TBD | TBD | 1 |
-| Reservoir tank | TBD | TBD | 1 |
-| Net cups | TBD | TBD | TBD |
-| Tower base or support stand | TBD | TBD | 1 |
-| Reservoir lid / tower mounting plate | TBD | TBD | 1 |
-| Water tubing | TBD | TBD | 1 |
-| Pump fittings / connectors | TBD | TBD | TBD |
-| QR code / ArUco marker labels | TBD | TBD | TBD |
-| Waterproof labels / lamination | TBD | TBD | TBD |
+| 3D-printed stackable tower module | TBD | PHP 600-1,500 estimate | TBD |
+| 3D-printed top cap / water distributor | TBD | PHP 100-300 estimate | 1 |
+| 3D-printed base adapter | TBD | PHP 150-400 estimate | 1 |
+| Reservoir tank | TBD | PHP 200-800 estimate | 1 |
+| Net cups | TBD | PHP 100-300 estimate | TBD |
+| Tower base or support stand | TBD | PHP 300-1,000 estimate | 1 |
+| Reservoir lid / tower mounting plate | TBD | PHP 100-400 estimate | 1 |
+| Water tubing | TBD | PHP 50-200 estimate | 1 |
+| Pump fittings / connectors | TBD | PHP 100-300 estimate | TBD |
+| QR code / ArUco marker labels | TBD | PHP 50-150 estimate | TBD |
+| Waterproof labels / lamination | TBD | PHP 50-200 estimate | TBD |
+| Hydroponic tower structure and hardware subtotal | TBD | PHP 1,800-5,550 estimate | TBD |
 
 ## Hydroponic Tower Electronics
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| ESP32 development board | TBD | TBD | 1 |
-| Submersible water pump | TBD | TBD | 1 |
-| Pump power supply | TBD | TBD | 1 |
-| pH sensor | TBD | TBD | 1 |
-| EC/TDS sensor | TBD | TBD | 1 |
-| Water temperature sensor | TBD | TBD | 1 |
-| Water level sensor | TBD | TBD | 1 |
-| LED grow light / inspection light | TBD | TBD | Optional |
+| ESP32 DevKitC V4 / ESP32-WROOM-32E development board | TBD | PHP 250-500 estimate | 1 |
+| Submersible water pump | TBD | PHP 200-1,000 estimate | 1 |
+| Pump power supply | TBD | PHP 200-500 estimate | 1 |
+| pH sensor | TBD | PHP 450-1,500 estimate | 1 |
+| EC/TDS sensor | TBD | PHP 340-1,000 estimate | 1 |
+| Water temperature sensor | TBD | PHP 80-200 estimate | 1 |
+| Water level sensor | TBD | PHP 50-250 estimate | 1 |
+| LED grow light / inspection light | TBD | PHP 300-1,500 estimate | Optional |
+| Hydroponic tower electronics subtotal, excluding optional LED | TBD | PHP 1,570-4,950 estimate | TBD |
+| Hydroponic tower prototype subtotal, excluding optional LED | TBD | PHP 3,865-12,350 estimate | TBD |
 
 ## Drone Hardware and Electronics
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| CogniFly-based 3D-printable drone frame | <https://github.com/thecognifly/CogniFly-STL> | TBD | 1 |
-| Flight controller | TBD | TBD | 1 |
-| Motors | TBD | TBD | 4 |
-| Propellers | TBD | TBD | 4+ |
-| ESCs, if using brushless motors | TBD | TBD | 4 |
-| Raspberry Pi Zero 2 W | TBD | TBD | 1 |
-| Raspberry Pi Camera Module | TBD | TBD | 1 |
-| Optical flow sensor | TBD | TBD | 1 |
-| Time-of-Flight / range sensor | TBD | TBD | 1+ |
-| LiPo battery | TBD | TBD | 1+ |
-| LiPo battery charger | TBD | TBD | 1 |
-| Voltage regulator / power module | TBD | TBD | 1 |
-| RC transmitter and receiver / control link | TBD | TBD | 1 |
-| Screws, standoffs, and fasteners | TBD | TBD | TBD |
-| Propeller guards / protective frame | TBD | TBD | 1 set |
+| CogniFly-based 3D-printable drone frame STL files | <https://github.com/thecognifly/CogniFly-STL> | TBD | 1 |
+| SpeedyBee F405 Mini Stack, FC + BLS 35A 4-in-1 ESC | [Shopee, choose option "Stack"](https://shopee.ph/product/709543365/25756157647?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAw8-UEATWkahzAjSTPjL3YTk89P96JpeyADKv9kpXsKLDIuOsN7QnyVuzBF07NUqKrX7yBNGbBHa3YFB3__8U178RSXZV9-K4ZgQ25TximiGqVyhasgJPSPiDdVL0toBxqEK89MpmU4AUuB&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9BKk0LBc6FmkMD8t9HzhJLcU&gclid=EAIaIQobChMIx-SH2ZKHlgMVKhx7Bx1VxhrhEAQYASABEgKlXfD_BwE) | PHP 5,342 | 1 |
+| CADDXFPV 1303 6000KV 2-4S brushless motors | [Banggood, 4pcs already](https://ph.banggood.com/1-or-4PCS-CADDXFPV-1303-6000KV-2-4S-Brushless-Motors-1_5mm-Shaft-for-Gofilm-20-2-Inch-Brushless-Whoop-RC-FPV-Racing-Drone-p-2017084.html?rmmds=search&act_poa=POA10879739&cur_warehouse=CN&tags=searchListProductcard&bid=84561&forced_jump=1&xpath=0000000DL&page_id=bgm_search-list&uet=1785854062946&is_wap=1&user_id=1563232186965&sess_id=1563232186965&site=ph-m.banggood.com&position_type=2&ID=6291971529815) | PHP 3,609.07 | 4 |
+| Gemfan Hurricane 3018 3x1.8 3-inch 2-blade propellers, 1.5mm hole T-mount | [Banggood](https://ph.banggood.com/4-Pairs-or-20-Pairs-Gemfan-Hurricane-3018-3x1_8-3-Inch-2-Blade-Propeller-1_5mm-Hole-T-Mount-for-RC-Drone-FPV-Racing-p-1576078.html?cur_warehouse=CN&ID=5173886313661&rmmds=search) | PHP 168.15 | 4 pairs |
+| Raspberry Pi Zero W or Raspberry Pi Zero 2 W | Always out of Stock: Get Notified Here [Cytron](https://www.cytron.io/p-raspberry-pi-zero-2-w?currency=PHP&src=raspberrypi), [Element 14](https://ph.element14.com/raspberry-pi/rpi-zero-w-v2/raspberry-pi-kit-64bit-arm-cortex/dp/3838499?rd=raspberry+pi+zero+2+w&ost=Raspberry+Pi+Zero+2+W), [pishop](https://www.pishop.ca/product/raspberry-pi-zero-2-w-with-header/) | PHP 2,000 estimate | 1 |
+| Raspberry Pi Camera Module V2 | [Markerlab](https://makerlab.ph/products/raspberry-pi-camera-module-v2-8-megapixels?variant=42288085401791&country=PH&currency=PHP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=23272569557&gbraid=0AAAAADiCHt1xiQslFpC1l-f3CRMHsFRci&gclid=EAIaIQobChMI6vr93buIlgMVFcFMAh03UylvEAQYASABEgKPBvD_BwE) | PHP 2,299 | 1 |
+| Raspberry Pi Zero camera ribbon cable | TBD | PHP 80-200 estimate | 1 |
+| Matek Optical Flow & Lidar Sensor 3901-L0X | [Shopee](https://shopee.ph/product/779642846/23727761329) | PHP 1,920 | 1 |
+| Front Time-of-Flight distance sensor | TBD | PHP 150-600 estimate | Optional |
+| LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1,004 | 1+ |
+| LiPo battery charger | [Shopee](https://shopee.ph/product/933050849/22523275057?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzt6xHLEel2tixnsm8WgqWDeM7uDzf7iAlc3cFMeLMQOeQxMxoKHdcQobCjOBjOE9j1ExFvvjWLVuSmA0A-0vwQ9jNbPR2T3ok58rVVUGKHb20lh3gm9hZQs1Px3G2UuFdKQAHxjK04aArg&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9AlH-1_7NH_qcuCnpfVm2Vzb&gclid=EAIaIQobChMI24rG3tGIlgMVRF8PAh2YoDaJEAQYASABEgJjtfD_BwE) | PHP 625 | 1 |
+| 5V voltage regulator / BEC for Raspberry Pi | [Amazon](https://www.amazon.com/Module-Quadcopter-Airplane-Servo-Model/dp/B0D97FH1JS/ref=sr_1_1?crid=1S0FWBEGH4I1E&dib=eyJ2IjoiMSJ9.B69bMzHFave2f719qjB8FAEhxFicLXnzucNs-w1iQCgA6KtGndpZjc0mhZ83iFxqTWKB5S_3ZQqmX1EUFbWE9Kr-0mpG1SjWIfHZjpRbpyfofe86-vaTpx7CIb2heEYjQwIuCRgiOcv_HgVy9K189U8H7SJgYeHIvcStgLXGL7hBPkBX7mcIvvRIz0GdfeAXx4BOmEhSvyMBwuf7fHbcMQdbRwrW3P2dlUt01VUxTp0.bo7M3DXeiUGe7qUBevqWMpXpODW3kXBb_PpKJFPX6S0&dib_tag=se&keywords=5V+5A+BEC+2S+6S+drone&qid=1785904092&sprefix=5v+5a+bec+2s+6s%2Caps%2C788&sr=8-1) | PHP 609 | 1 |
+| RC transmitter and receiver / control link | [Shopee, choose "mode2 i6X with iA6B"](https://shopee.ph/Flysky-FS-i6X-10CH-2.4GHz-AFHDS-2A-RC-Transmitter-With-FS-iA6B-FS-iA10B-FS-X6B-FS-A8S-Receiver-For-Rc-Airplane-i.779642846.21405448162) | PHP 3,200-3,850 estimate | 1 |
+| TPU 95A filament for protective frame | TBD | PHP 700-1,200 estimate | 1 kg spool |
+| PLA or ABS filament for rigid plates | TBD | PHP 600-1,000 estimate | 1 kg spool |
+| 3mm carbon fiber rods or bamboo skewers for frame struts | TBD | PHP 100-600 estimate | TBD |
+| M2 screws, nuts, standoffs, and rubber rings | TBD | PHP 150-500 estimate | TBD |
+| Propeller guards / protective frame | TBD | TBD | Optional / custom printed |
+| XT30 connector, battery strap, and zip ties | TBD | PHP 150-400 estimate | 1 set |
+| Drone hardware selected/required subtotal, excluding optional front ToF and propeller guards | TBD | PHP 22,556.22-25,326.22 estimate | TBD |
 
 ## Overview
 
@@ -65,7 +74,7 @@ This document lists the hardware needed for the automated hydroponic tower healt
 1. Hydroponic tower system
 2. Drone inspection system
 
-The physical prototype will use one real modular 3D-printed hydroponic tower and one 3D-printable CogniFly-based drone. The larger multi-tower farm scenario will be tested in Gazebo simulation.
+The physical prototype will use one real modular 3D-printed hydroponic tower and one 3D-printable CogniFly-based drone. The drone will be a modified CogniFly-inspired build because some original CogniFly components are old or difficult to source locally. The larger multi-tower farm scenario will be tested in Gazebo simulation.
 
 ## 1. Hydroponic Tower Hardware
 
@@ -156,7 +165,7 @@ Optional sensors:
 
 Recommended board:
 
-- ESP32 development board
+- ESP32 DevKitC V4 / ESP32-WROOM-32E development board
 
 Why ESP32:
 
@@ -181,6 +190,8 @@ Optional alternatives:
 - Raspberry Pi Pico W
 - ESP8266
 - Raspberry Pi
+
+Recommended note: CogniFly does not use an ESP32 for the drone. The ESP32 is recommended for the hydroponic tower sensor system only.
 
 ### 1.6 Tower Identification and Mapping
 
@@ -240,7 +251,7 @@ Recommended safety components:
 
 The drone inspection system captures images of lettuce plants, identifies tower markers, and supports basic navigation around the hydroponic tower.
 
-The preferred direction is a **CogniFly-based 3D-printable drone**, adapted for hydroponic tower inspection.
+The preferred direction is a **modified CogniFly-based 3D-printable drone**, adapted for hydroponic tower inspection. This is not an exact CogniFly bill of materials; it keeps the CogniFly layout ideas that matter for this project, then substitutes locally available parts where needed.
 
 Reference repositories:
 
@@ -248,19 +259,37 @@ Reference repositories:
 - CogniFly STL files: <https://github.com/thecognifly/CogniFly-STL>
 - CogniFly Python control: <https://github.com/thecognifly/cognifly-python>
 
+CogniFly alignment notes:
+
+- CogniFly uses a 20x20mm flight controller and 4-in-1 ESC layout; the SpeedyBee F405 Mini Stack matches the 20x20mm stack direction.
+- CogniFly's published BOM references 1104 6000KV motors with 3025 two-blade propellers, or 1106 3800KV motors with 4025 two-blade propellers and a larger frame.
+- This project currently uses CADDXFPV 1303 6000KV motors with Gemfan Hurricane 3018 propellers as a modified build. This needs motor-mount and prop-clearance checks before printing the final frame.
+- CogniFly references a Raspberry Pi Zero W, Raspberry Pi Camera V2, Matek optical flow/lidar sensor, 3S 650mAh 75C LiPo battery, TPU 95A flexible parts, PLA/ABS rigid parts, and 3mm rods. These are kept aligned here.
+- CogniFly's original optional AI accelerator is not required for the first prototype because heavier lettuce health classification can run on the laptop/backend.
+
 ### 2.1 Drone Frame and Mechanical Parts
 
 Required components:
 
 - 3D-printed drone frame
 - 3D-printed protective frame or bumper
-- Motor mounts
+- Custom 3D-printed motor mounts for CADDXFPV 1303 motors
 - Battery holder
 - Flight controller mount
 - Raspberry Pi mount
 - Camera mount
 - Landing gear or landing supports
+- TPU 95A filament for flexible/protective parts
+- PLA or ABS filament for rigid plates
+- 3mm rods or spars for frame structure
 - Screws, nuts, standoffs, and fasteners
+
+CogniFly frame notes:
+
+- Print flexible protective parts in TPU 95A.
+- Print rigid plates/mounts in PLA or ABS.
+- Use 3mm carbon fiber rods or bamboo skewers for struts.
+- Keep some dimensions as TBD until the 1303 motor mount pattern, propeller clearance, and Raspberry Pi/camera placement are checked.
 
 Optional components:
 
@@ -275,10 +304,10 @@ Optional components:
 
 Required components:
 
-- Flight controller compatible with the selected CogniFly setup
-- 4 brushless or brushed motors, depending on chosen design
-- 4 propellers
-- ESCs if using brushless motors
+- SpeedyBee F405 Mini flight controller from the SpeedyBee F405 Mini Stack
+- 4x CADDXFPV 1303 6000KV 2-4S brushless motors
+- Gemfan Hurricane 3018 3x1.8 3-inch 2-blade propellers, 1.5mm hole T-mount
+- Included BLS 35A 4-in-1 ESC from the SpeedyBee F405 Mini Stack
 - Power distribution wiring or board
 - Battery connector
 - RC receiver or control link
@@ -293,20 +322,23 @@ Optional components:
 - Buzzer or lost-drone beeper
 - Status LEDs
 
+Modification note: CogniFly originally references 1104 6000KV motors with 3025 two-blade propellers. This project may use CADDXFPV 1303 6000KV motors with Gemfan Hurricane 3018 propellers instead because they are available as a 4-pack and provide stronger thrust for carrying the Raspberry Pi, camera, and sensors. This substitution is not a direct CogniFly drop-in replacement; it requires checking motor screw pattern, shaft size, propeller clearance, total weight, and INAV motor/ESC tuning.
+
 ### 2.3 Drone Onboard Computer
 
 Recommended board:
 
-- Raspberry Pi Zero 2 W
+- Raspberry Pi Zero W or Raspberry Pi Zero 2 W
 
-Why Raspberry Pi Zero 2 W:
+Why Raspberry Pi Zero W / Zero 2 W:
 
 - Small and lightweight
-- More powerful than Raspberry Pi Zero W
 - Has Wi-Fi
 - Supports Raspberry Pi Camera
 - Can run Python and OpenCV
 - Suitable for QR/ArUco detection and image capture
+
+CogniFly originally references Raspberry Pi Zero W. For this project, Raspberry Pi Zero 2 W is a reasonable upgrade if the weight, power, and software compatibility remain acceptable.
 
 Drone onboard computer responsibilities:
 
@@ -331,7 +363,7 @@ Important note: Raspberry Pi 4, Raspberry Pi 5, and Jetson boards are more power
 
 Recommended camera:
 
-- Raspberry Pi Camera Module
+- Raspberry Pi Camera Module V2
 
 Preferred options:
 
@@ -360,10 +392,12 @@ Optional alternatives:
 
 ### 2.5 Navigation and Obstacle Sensors
 
-Recommended minimum sensors:
+Recommended minimum sensor:
 
-- Downward optical flow sensor
-- Downward Time-of-Flight or range sensor
+- Matek Optical Flow & Lidar Sensor 3901-L0X
+
+Additional recommended sensor:
+
 - Front Time-of-Flight or LiDAR distance sensor
 
 Purpose:
@@ -386,15 +420,16 @@ Optional sensors:
 
 Required components:
 
-- LiPo battery compatible with the selected drone design
+- LiPo battery, 3S 11.1V 650mAh 75C, XT30
 - Battery charger
-- Battery connector
-- Voltage regulator or power module for electronics
+- XT30 battery connector or adapter
+- 5V voltage regulator or BEC for Raspberry Pi
 
 Recommended considerations:
 
 - Keep the battery light enough for the drone to lift safely
 - Use a battery with enough current output for motors
+- Verify the flight controller/ESC stack input voltage before first power-up
 - Separate clean power for camera/computer if needed
 - Monitor battery voltage during flight
 
@@ -411,7 +446,7 @@ Optional components:
 Required components:
 
 - Wi-Fi connection from Raspberry Pi to laptop/backend
-- Control link for drone operation
+- Control link for drone operation, safety override, and setup
 
 Optional components:
 
@@ -426,6 +461,8 @@ Communication tasks:
 - Send inspection status
 - Receive control commands
 - Monitor drone status during testing
+
+Autonomy note: the drone can be autonomous in normal inspection behavior, but a manual control link is still recommended for arming, disarming, tuning, safety override, and early flight tests.
 
 ### 2.8 Safety Hardware
 
@@ -475,15 +512,24 @@ Minimum realistic physical prototype:
 - Pump
 - Net cups
 - Nutrient solution
-- ESP32
+- ESP32 DevKitC V4 / ESP32-WROOM-32E development board
 - pH sensor
 - EC/TDS sensor
 - Water level sensor
 - CogniFly-based 3D-printable drone frame
-- Raspberry Pi Zero 2 W
-- Raspberry Pi Camera Module
-- Optical flow or range sensor
+- SpeedyBee F405 Mini flight controller from the SpeedyBee F405 Mini Stack
+- 4x CADDXFPV 1303 6000KV 2-4S brushless motors
+- Included BLS 35A 4-in-1 ESC from the SpeedyBee F405 Mini Stack
+- Raspberry Pi Zero W or Raspberry Pi Zero 2 W
+- Raspberry Pi Camera Module V2
+- Raspberry Pi Zero camera ribbon cable
+- Matek Optical Flow & Lidar Sensor 3901-L0X
+- Gemfan Hurricane 3018 3x1.8 propellers
+- LiPo battery, 3S 11.1V 650mAh 75C, XT30
 - Battery and charger
+- 5V voltage regulator or BEC for Raspberry Pi
+- RC transmitter and receiver or equivalent control link
+- TPU 95A filament, PLA/ABS filament, 3mm rods, and fasteners for the CogniFly-inspired frame
 - Computer/laptop for backend, model training, and dashboard development
 
 ## 5. Recommended First Purchase or Build Priority
@@ -500,3 +546,25 @@ Suggested order:
 8. Add basic distance sensing.
 9. Integrate drone image capture with the backend.
 10. Build Gazebo simulation for multi-tower navigation testing.
+
+## 6. Current Estimated Cost Summary
+
+This total covers rows with filled prices or estimate ranges. Rows marked with TBD links still need final supplier selection, and prices may change with shipping, vouchers, and stock.
+
+| Category | Estimated Total |
+| --- | ---: |
+| Plants and growing supplies subtotal | PHP 495-1,850 |
+| Hydroponic tower structure and hardware subtotal | PHP 1,800-5,550 |
+| Hydroponic tower electronics subtotal | PHP 1,570-4,950 |
+| Hydroponic tower prototype subtotal | PHP 3,865-12,350 |
+| Drone hardware selected/required subtotal | PHP 22,556.22-25,326.22 |
+| Current project total with tower + known drone costs | PHP 26,421.22-37,676.22 |
+| Optional LED grow light / inspection light | PHP 300-1,500 |
+| Optional front Time-of-Flight distance sensor | PHP 150-600 |
+| Propeller guards / protective frame | TBD |
+
+Notes:
+
+- The hydroponic tower subtotal assumes a one-tower prototype and starter quantities for items still marked with TBD quantity.
+- The drone subtotal includes the selected flight stack, motors, propellers, Raspberry Pi, camera, Pi Zero camera cable, Matek 3901-L0X, 3S LiPo battery, charger, 5V BEC, RC transmitter/receiver, filament estimates, rods/skewers, fasteners, XT30 connector, battery strap, and zip ties.
+- Shipping fees, vouchers, replacement parts, and price changes are not included.
