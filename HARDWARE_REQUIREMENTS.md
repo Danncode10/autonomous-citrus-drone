@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document lists the hardware needed for the autonomous citrus tree inspection project focused on Perante orange. The system focuses on outdoor citrus orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
+This document lists the hardware needed for the autonomous citrus tree inspection project focused on Perante orange. The system focuses on outdoor citrus orchards, drone-based scanning, visible fruit counting, tree-height estimation, orchard mapping, and Gazebo simulation.
 
 The hardware is separated into four main areas:
 
@@ -64,23 +64,23 @@ Required components:
 - Tree labels or waterproof tags
 - Tree ID list
 - Measuring tape or laser distance meter for manual height reference
-- Field notes for tree variety, fruit maturity, and farmer observations
+- Field notes for tree variety, manual fruit count references, and farmer observations
 
 Optional components:
 
 - GPS phone or handheld GPS for rough tree coordinates
-- Color reference card for fruit maturity image calibration, if available
+- Color reference card for consistent image capture, if available
 
 Purpose:
 
 - Assign each citrus tree a stable identity
 - Help compare drone-estimated height with manual measurement
-- Help validate fruit count and harvest-readiness estimates
+- Help validate visible fruit count estimates
 - Support dashboard tree registration and map placement
 
 Why this is needed:
 
-The drone can estimate fruit count, height, and readiness, but the research still needs ground truth. For example, if the drone says a tree has 120 visible fruits and is 65% ready to harvest, the team needs some manual records or farmer observations to check whether the result is reasonable.
+The drone can estimate visible fruit count and height, but the research still needs ground truth. For example, if the drone says a tree has 120 visible fruits, the team needs manual records or farmer observations to check whether the result is reasonable.
 
 ## 2. Drone Inspection Hardware
 
@@ -130,7 +130,7 @@ Camera responsibilities:
 
 - Capture fruits from multiple sides of the tree
 - Capture images while circling the tree
-- Support fruit counting and harvest-readiness estimation
+- Support fruit counting
 - Support visual mapping or localization if used
 
 Optional alternatives:
@@ -221,9 +221,9 @@ Recommended first setup:
 Suggested processing split:
 
 - Drone captures images and mission logs.
-- Backend or laptop runs fruit detection and harvest-readiness estimation.
+- Backend or laptop runs fruit detection and visible fruit counting.
 - Website stores tree registration and inspection results.
-- Dashboard displays map, fruit count, readiness percentage, height, images, and history.
+- Dashboard displays map, fruit count, height, images, and history.
 
 ## 4. Minimum Hardware Build
 
@@ -256,7 +256,7 @@ Suggested order:
 1. Confirm access to a citrus farm growing Perante orange or similar test trees.
 2. Define tree registration fields for the website.
 3. Collect raw citrus fruit images from Perante orange trees manually using a phone or camera.
-4. Label fruit bounding boxes and harvest-readiness classes.
+4. Label fruit bounding boxes.
 5. Train a baseline citrus fruit detection model for Perante orange.
 6. Build the web dashboard and database schema.
 7. Start with manual-assisted drone image capture.
