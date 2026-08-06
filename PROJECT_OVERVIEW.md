@@ -1,33 +1,33 @@
-# Autonomous Drone-Based Perante Orange Tree Fruit Counting and Harvest Readiness Mapping
+# Autonomous Drone-Based Citrus Fruit Counting and Harvest Readiness Mapping for Perante Orange
 
 ## Project Summary
 
-This project is a drone-based computer vision and mapping system for Perante orange orchards. The system is designed for Perante orange farms in Nueva Vizcaya, which is known for citrus production in the Philippines. Instead of manually checking each tree, the farmer registers Perante orange trees in a web dashboard, and the drone autonomously navigates to a selected tree, circles around it, captures images or video, counts visible fruits, estimates how many fruits are ready to harvest, and updates the dashboard with tree-level records.
+This project is a drone-based computer vision and mapping system for citrus orchards, focused on Perante orange farms in Nueva Vizcaya. Instead of manually checking each citrus tree, the farmer registers Perante orange trees in a web dashboard, and the drone autonomously navigates to a selected tree, circles around it, captures images or video, counts visible citrus fruits, estimates how many fruits are ready to harvest, and updates the dashboard with tree-level records.
 
-The target environment has two parts: a real-world Perante orange orchard and a Gazebo simulation orchard. The real-world environment provides actual tree images, fruit-counting data, harvest-readiness observations, and supervised prototype testing. The simulation environment provides a safer place to test autonomous navigation, orchard layouts, terrain, obstacle avoidance, circular tree scanning, and repeated inspection missions before real-world drone testing.
+The target environment has two parts: a real-world citrus orchard planted with Perante orange trees and a Gazebo citrus-orchard simulation. The real-world environment provides actual tree images, fruit-counting data, harvest-readiness observations, and supervised prototype testing. The simulation environment provides a safer place to test autonomous navigation, orchard layouts, terrain, obstacle avoidance, circular tree scanning, and repeated inspection missions before real-world drone testing.
 
-The physical prototype will focus on scanning selected Perante orange trees in a real farm or controlled outdoor test area. The Gazebo simulation will represent a larger orchard with multiple virtual trees, terrain, obstacles, and drone routes so the system can be tested beyond the limited number of trees available for physical testing.
+The physical prototype will focus on scanning selected citrus trees, specifically Perante orange trees, in a real farm or controlled outdoor test area. The Gazebo simulation will represent a larger citrus orchard with multiple virtual trees, terrain, obstacles, and drone routes so the system can be tested beyond the limited number of trees available for physical testing.
 
 ## Working Thesis Title
 
-**Autonomous Drone-Based Computer Vision and Mapping System for Perante Orange Tree Fruit Counting and Harvest Readiness Estimation**
+**Autonomous Drone-Based Computer Vision and Mapping System for Citrus Fruit Counting and Harvest Readiness Estimation in Perante Orange Trees**
 
 ## Problem Statement
 
-Perante orange farms require regular monitoring to estimate fruit quantity, identify harvest-ready trees, and plan labor and selling schedules. Manual fruit counting and harvest readiness checking can be slow, inconsistent, and difficult across many trees, especially when fruits are hidden behind leaves or distributed around the canopy.
+Citrus farms require regular monitoring to estimate fruit quantity, identify harvest-ready trees, and plan labor and selling schedules. For Perante orange trees, manual fruit counting and harvest readiness checking can be slow, inconsistent, and difficult across many trees, especially when fruits are hidden behind leaves or distributed around the canopy.
 
-A drone-based inspection system can help farmers collect tree-level data more efficiently. By combining autonomous navigation, image capture, computer vision, and a web dashboard, the system can record fruit count, estimated harvest readiness, tree height, inspection history, and orchard map information for each registered Perante orange tree.
+A drone-based citrus inspection system can help farmers collect tree-level data more efficiently. By combining autonomous navigation, image capture, computer vision, and a web dashboard, the system can record fruit count, estimated harvest readiness, tree height, inspection history, and orchard map information for each registered Perante orange tree.
 
 ## Main Objective
 
-To design and develop an autonomous drone-based system that scans registered Perante orange trees, counts visible Perante oranges, estimates harvest readiness percentage, creates or updates an orchard map, and displays tree-level records through a web-based dashboard.
+To design and develop an autonomous drone-based citrus monitoring system that scans registered Perante orange trees, counts visible citrus fruits, estimates harvest readiness percentage, creates or updates an orchard map, and displays tree-level records through a web-based dashboard.
 
 ## Specific Objectives
 
-1. Build a Perante orange orchard monitoring model where each tree has an ID, location, map position, inspection history, and tree attributes.
-2. Create a web dashboard where a farmer can register Perante orange trees and request or view drone inspection results.
-3. Use a drone-mounted camera to capture images or video while circling a Perante orange tree.
-4. Train or fine-tune a computer vision model to detect Perante oranges and classify harvest readiness.
+1. Build a citrus orchard monitoring model where each Perante orange tree has an ID, location, map position, inspection history, and tree attributes.
+2. Create a web dashboard where a farmer can register citrus trees, with Perante orange as the specific target crop, and request or view drone inspection results.
+3. Use a drone-mounted camera to capture images or video while circling a registered citrus tree.
+4. Train or fine-tune a computer vision model to detect citrus fruits from Perante orange trees and classify harvest readiness.
 5. Estimate tree-level information such as fruit count, approximate tree height, and percentage of visible fruits ready to harvest.
 6. Store inspection results in a database with tree ID, images, timestamps, fruit count, readiness estimate, map data, and confidence values.
 7. Add autonomous navigation and obstacle avoidance for safe movement around trees and uneven terrain.
@@ -35,19 +35,19 @@ To design and develop an autonomous drone-based system that scans registered Per
 
 ## Target Crop
 
-The target crop is **Perante orange**.
+The target crop is **Perante orange**, a citrus crop under sweet orange.
 
-Perante orange is selected because:
+Citrus, specifically Perante orange, is selected because:
 
-- Nueva Vizcaya is strongly associated with Perante orange farming.
+- Nueva Vizcaya is strongly associated with citrus farming.
 - Fruit quantity and harvest readiness are important for farm planning.
 - Fruits are visually detectable from images when lighting and angle are suitable.
 - Tree-level monitoring is useful for orchard management.
-- The project has local relevance and can use real images gathered from Perante orange farms.
+- The project has local relevance and can use real images gathered from local citrus farms growing Perante orange.
 
 ## System Concept
 
-The farmer registers a Perante orange tree in the website. The tree record may include a tree ID, tree name or label, farm section, approximate GPS or map location, variety, and notes. The drone uses this information to navigate toward the tree, scan around the canopy, capture images, and update the system with fruit count and readiness estimates.
+The farmer registers a citrus tree in the website. For this project, the registered crop is Perante orange. The tree record may include a tree ID, tree name or label, farm section, approximate GPS or map location, variety, and notes. The drone uses this information to navigate toward the tree, scan around the canopy, capture images, and update the system with fruit count and readiness estimates.
 
 The drone should ideally maintain or improve a map of the orchard over time. If the area has already been scanned, the drone can use previous map information to plan safer routes. If the environment is unfamiliar, the drone should still be able to explore carefully, detect obstacles, and update the map after each mission. This makes the mapping module a continuing system memory rather than a one-time map.
 
@@ -58,7 +58,7 @@ Web Dashboard Tree Registration
 Drone Mission Planning
         |
         v
-Autonomous Navigation to Perante Orange Tree
+Autonomous Navigation to Citrus Tree
         |
         v
 Circle Scan Around Tree Canopy
@@ -81,9 +81,9 @@ Dashboard Map, Tree Records, and History
 
 ## Major System Components
 
-### 1. Perante Orange Tree Model
+### 1. Citrus Tree Model
 
-Each Perante orange tree should be represented digitally in the system.
+Each registered citrus tree should be represented digitally in the system. The prototype focuses on Perante orange trees.
 
 Example data:
 
@@ -195,11 +195,11 @@ Important scope note: full reliable autonomous mapping in an unfamiliar outdoor 
 
 ### 5. Computer Vision Module
 
-The computer vision module analyzes Perante orange tree images and predicts fruit count and harvest readiness.
+The computer vision module analyzes citrus tree images from Perante orange orchards and predicts fruit count and harvest readiness.
 
 Possible AI tasks:
 
-- Detect Perante oranges in images
+- Detect citrus fruits in images
 - Count visible fruits from multiple angles
 - Avoid double-counting the same fruit across frames where possible
 - Classify fruit readiness based on color, size, and visual maturity
@@ -208,7 +208,7 @@ Possible AI tasks:
 
 Recommended first model outputs:
 
-- Perante orange fruit bounding boxes
+- Citrus fruit bounding boxes
 - Fruit count per image
 - Estimated unique fruit count per tree
 - Ready-to-harvest count
@@ -220,24 +220,24 @@ Important note: the system should avoid claiming perfect total fruit count becau
 
 ### 6. Dataset and Training Plan
 
-The project will gather raw images from a Perante orange farm. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets.
+The project will gather raw images from a citrus farm growing Perante orange. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets.
 
 Suggested dataset process:
 
-1. Visit a Perante orange farm and capture raw images from different trees.
+1. Visit a citrus farm growing Perante orange and capture raw images from different trees.
 2. Capture fruits from multiple angles, distances, heights, and lighting conditions.
-3. Label Perante oranges with bounding boxes.
+3. Label citrus fruits with bounding boxes.
 4. Label harvest readiness classes, such as ready and not ready.
 5. Split the dataset into training, validation, and test sets.
 6. Train a baseline object detection model.
-7. Fine-tune the model using locally captured Perante orange images.
+7. Fine-tune the model using locally captured Perante orange farm images.
 8. Evaluate fruit counting accuracy and readiness classification accuracy.
 
 Recommended initial labels:
 
-- Perante orange fruit
-- Ready-to-harvest Perante orange fruit
-- Not-yet-ready Perante orange fruit
+- Citrus fruit
+- Ready-to-harvest citrus fruit
+- Not-yet-ready citrus fruit
 - Unclear or occluded fruit
 
 ### 7. Gazebo Simulation Module
@@ -246,7 +246,7 @@ Gazebo will be used to simulate the drone and orchard environment before real-wo
 
 Possible simulation tasks:
 
-- Create virtual Perante orange trees with different canopy sizes
+- Create virtual citrus trees modeled after Perante orange trees
 - Create an orchard layout with multiple trees
 - Add uneven terrain and slopes
 - Add obstacles such as trunks, branches, fences, posts, irrigation pipes, and farm paths
@@ -276,7 +276,7 @@ Possible tables:
 - Users
 - Farms
 - Orchard blocks
-- Perante orange trees
+- Citrus trees
 - Drone missions
 - Drone flight paths
 - Tree scans
@@ -304,7 +304,7 @@ Timestamp: 2026-08-05 10:30 AM
 
 ## Open-Source Datasets and Libraries
 
-The project can use open datasets and pre-trained models to reduce training time, but the strongest dataset should come from local Perante orange farm images.
+The project can use open citrus datasets and pre-trained models to reduce training time, but the strongest dataset should come from local Perante orange farm images.
 
 ### Possible Datasets
 
@@ -333,15 +333,15 @@ Limitations:
 
 The recommended approach is **object detection plus readiness classification**.
 
-The first version should detect Perante oranges and estimate visible fruit count. A later version can reduce double-counting by tracking fruit detections across video frames or associating detections with camera poses from the drone scan.
+The first version should detect citrus fruits from Perante orange trees and estimate visible fruit count. A later version can reduce double-counting by tracking fruit detections across video frames or associating detections with camera poses from the drone scan.
 
 Suggested steps:
 
-1. Collect Perante orange images manually from the farm using a phone or camera.
+1. Collect citrus images from Perante orange trees manually using a phone or camera.
 2. Label fruit bounding boxes and readiness classes.
 3. Train a baseline YOLO object detection model.
 4. Test counting accuracy on unseen tree images.
-5. Capture drone images from one or more Perante orange trees.
+5. Capture drone images from one or more citrus trees in the Perante orange orchard.
 6. Fine-tune the model using drone-captured images.
 7. Add tree-level aggregation to estimate total visible fruit count and harvest readiness percentage.
 
@@ -376,11 +376,11 @@ The first complete version should focus on proving the main concept.
 
 MVP features:
 
-1. Web dashboard for registering Perante orange trees.
-2. One or more real Perante orange trees for data collection and testing.
+1. Web dashboard for registering citrus trees.
+2. One or more real citrus trees, specifically Perante orange trees, for data collection and testing.
 3. Drone-mounted camera or manually controlled drone capture workflow.
 4. Circular scan workflow around a selected tree.
-5. Computer vision model that detects Perante oranges.
+5. Computer vision model that detects citrus fruits.
 6. Estimated visible fruit count per tree.
 7. Estimated percentage of ready-to-harvest fruits.
 8. Database for storing tree records and scan results.
@@ -406,11 +406,11 @@ MVP features:
 
 Main research question:
 
-**Can an autonomous drone-mounted camera and computer vision model estimate Perante orange fruit count and harvest readiness at the tree level while using mapping and simulation to support navigation in an orchard environment?**
+**Can an autonomous drone-mounted camera and computer vision model estimate citrus fruit count and harvest readiness for Perante orange trees while using mapping and simulation to support navigation in an orchard environment?**
 
 Supporting research questions:
 
-1. How accurately can the model detect Perante oranges from drone-captured tree images?
+1. How accurately can the model detect citrus fruits from drone-captured Perante orange tree images?
 2. How accurately can the system estimate visible fruit count per tree?
 3. Can the system classify or estimate harvest readiness from visual fruit features?
 4. Can the drone follow a safe circular scan path around a registered Perante orange tree?
@@ -422,12 +422,12 @@ Supporting research questions:
 
 The final project should produce:
 
-- A working Perante orange tree inspection prototype
+- A working citrus tree inspection prototype focused on Perante orange
 - A drone or drone-mounted camera workflow for tree scanning
-- A Gazebo simulation environment with Perante orange trees, terrain, and obstacles
-- A trained or fine-tuned Perante orange fruit detection model
+- A Gazebo simulation environment with citrus trees, terrain, and obstacles
+- A trained or fine-tuned citrus fruit detection model for Perante orange
 - A harvest-readiness estimation workflow
-- A database of Perante orange tree records and inspection results
+- A database of citrus tree records and inspection results
 - A web dashboard with tree registration, map view, fruit count, readiness percentage, and history
 - Test results showing detection accuracy, counting accuracy, readiness estimation, and navigation performance
 - Thesis documentation explaining design, implementation, testing, and limitations
@@ -489,9 +489,9 @@ Possible metrics for evaluating the project:
 
 The best thesis scope is:
 
-**A drone-assisted computer vision and mapping system that estimates visible Perante orange fruit count and harvest readiness for registered Perante orange trees, then displays tree-level inspection results on a web dashboard.**
+**A drone-assisted computer vision and mapping system that estimates visible citrus fruit count and harvest readiness for registered Perante orange trees, then displays tree-level inspection results on a web dashboard.**
 
-This scope is locally relevant, research-worthy, and buildable. The system can include autonomous navigation and map updating, but the main contribution should be Perante orange fruit detection, tree-level counting, harvest readiness estimation, and dashboard reporting. Gazebo simulation can validate larger orchard navigation while real-world testing focuses on a limited number of trees.
+This scope is locally relevant, research-worthy, and buildable. The system can include autonomous navigation and map updating, but the main contribution should be citrus fruit detection for Perante orange trees, tree-level counting, harvest readiness estimation, and dashboard reporting. Gazebo simulation can validate larger orchard navigation while real-world testing focuses on a limited number of trees.
 
 ## Suggested Technology Stack
 
@@ -509,7 +509,7 @@ This scope is locally relevant, research-worthy, and buildable. The system can i
 - Python
 - OpenCV
 - PyTorch or TensorFlow
-- YOLO for fruit detection
+- YOLO for citrus fruit detection
 - Optional segmentation model for occluded fruits
 - Optional tracking model for video-based counting
 
@@ -534,7 +534,7 @@ This scope is locally relevant, research-worthy, and buildable. The system can i
 
 ### Phase 1: Research and Planning
 
-- Study Perante orange harvest-readiness indicators.
+- Study citrus harvest-readiness indicators for Perante orange.
 - Review fruit detection and counting datasets.
 - Review drone orchard navigation methods.
 - Review Gazebo orchard simulation requirements.
@@ -542,8 +542,8 @@ This scope is locally relevant, research-worthy, and buildable. The system can i
 
 ### Phase 2: Data Collection
 
-- Coordinate access to a Perante orange farm.
-- Capture raw Perante orange tree images from multiple angles.
+- Coordinate access to a citrus farm growing Perante orange.
+- Capture raw citrus tree images from multiple angles.
 - Capture images under different lighting conditions.
 - Record tree notes and farmer harvest-readiness judgment.
 - Label fruit bounding boxes and readiness classes.
@@ -572,7 +572,7 @@ This scope is locally relevant, research-worthy, and buildable. The system can i
 
 ### Phase 6: Gazebo Simulation
 
-- Create virtual Perante orange tree models.
+- Create virtual citrus tree models based on Perante orange trees.
 - Create orchard terrain and multi-tree layouts.
 - Add obstacles and safe flight paths.
 - Simulate autonomous navigation to selected trees.
@@ -588,4 +588,4 @@ This scope is locally relevant, research-worthy, and buildable. The system can i
 
 ## Short Pitch
 
-This project automates Perante orange tree inspection using a drone, computer vision, mapping, simulation, and a web dashboard. A farmer registers Perante orange trees in the website, then the drone navigates to a selected tree, circles around it, captures images, counts visible fruits, estimates harvest readiness, updates the orchard map, and saves tree-level results so farmers can monitor fruit quantity, harvest timing, and inspection history more efficiently.
+This project automates citrus tree inspection for Perante orange using a drone, computer vision, mapping, simulation, and a web dashboard. A farmer registers citrus trees in the website, then the drone navigates to a selected Perante orange tree, circles around it, captures images, counts visible fruits, estimates harvest readiness, updates the orchard map, and saves tree-level results so farmers can monitor fruit quantity, harvest timing, and inspection history more efficiently.

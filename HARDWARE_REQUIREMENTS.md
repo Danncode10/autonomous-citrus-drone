@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document lists the hardware needed for the autonomous Perante orange tree inspection project. The system focuses on outdoor Perante orange orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
+This document lists the hardware needed for the autonomous citrus tree inspection project focused on Perante orange. The system focuses on outdoor citrus orchards, drone-based scanning, fruit counting, harvest-readiness estimation, tree-height estimation, orchard mapping, and Gazebo simulation.
 
 The hardware is separated into four main areas:
 
@@ -11,13 +11,13 @@ The hardware is separated into four main areas:
 3. GPS and basic safety equipment
 4. Backend and development equipment
 
-The physical prototype should start with a small number of Perante orange trees and supervised drone flights. The larger orchard scenario should be tested first in Gazebo simulation.
+The physical prototype should start with a small number of citrus trees, specifically Perante orange trees, and supervised drone flights. The larger orchard scenario should be tested first in Gazebo simulation.
 
 ## Field Validation Tools
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| Perante orange tree labels or waterproof tags | TBD | PHP 50-300 estimate | TBD |
+| Citrus tree labels or waterproof tags | TBD | PHP 50-300 estimate | TBD |
 | Measuring tape or laser distance meter | TBD | PHP 100-1,500 estimate | 1 |
 | Notebook or digital field form device | TBD | PHP 0-500 estimate | 1 |
 | Field validation subtotal | TBD | PHP 150-2,300 estimate | TBD |
@@ -60,7 +60,7 @@ This section is not a separate farm system. These are only the simple tools need
 
 Required components:
 
-- Access to Perante orange trees in a farm or controlled outdoor test area
+- Access to citrus trees, specifically Perante orange trees, in a farm or controlled outdoor test area
 - Tree labels or waterproof tags
 - Tree ID list
 - Measuring tape or laser distance meter for manual height reference
@@ -73,7 +73,7 @@ Optional components:
 
 Purpose:
 
-- Assign each Perante orange tree a stable identity
+- Assign each citrus tree a stable identity
 - Help compare drone-estimated height with manual measurement
 - Help validate fruit count and harvest-readiness estimates
 - Support dashboard tree registration and map placement
@@ -96,7 +96,7 @@ Recommended direction:
 
 Important note:
 
-Perante orange tree inspection is an outdoor task with wind, terrain, larger distances, and tree branches. The main physical prototype should use a safe outdoor-capable drone rather than a small indoor-style drone.
+Citrus tree inspection in a Perante orange orchard is an outdoor task with wind, terrain, larger distances, and tree branches. The main physical prototype should use a safe outdoor-capable drone rather than a small indoor-style drone.
 
 Required platform capabilities:
 
@@ -121,7 +121,7 @@ Optional platform capabilities:
 Recommended camera requirements:
 
 - RGB image capture
-- Clear view of Perante oranges at tree-canopy distance
+- Clear view of citrus fruits at tree-canopy distance
 - Stable mounting or gimbal support
 - Good resolution for fruit detection
 - Ability to capture still images or video
@@ -229,7 +229,7 @@ Suggested processing split:
 
 Minimum realistic physical prototype:
 
-- Access to one or more Perante orange trees
+- Access to one or more citrus trees, specifically Perante orange trees
 - Tree ID labels or waterproof tags
 - Measuring tape or laser distance meter
 - Outdoor-capable drone with camera
@@ -253,11 +253,11 @@ Recommended improved prototype:
 
 Suggested order:
 
-1. Confirm access to a Perante orange farm or test trees.
+1. Confirm access to a citrus farm growing Perante orange or similar test trees.
 2. Define tree registration fields for the website.
-3. Collect raw Perante orange fruit images manually using a phone or camera.
+3. Collect raw citrus fruit images from Perante orange trees manually using a phone or camera.
 4. Label fruit bounding boxes and harvest-readiness classes.
-5. Train a baseline Perante orange fruit detection model.
+5. Train a baseline citrus fruit detection model for Perante orange.
 6. Build the web dashboard and database schema.
 7. Start with manual-assisted drone image capture.
 8. Add circular scan planning around a tree.
@@ -284,7 +284,7 @@ Notes:
 
 ## 7. Safety Notes
 
-Outdoor drone testing near Perante orange trees requires careful safety planning.
+Outdoor drone testing near citrus trees requires careful safety planning.
 
 Required or strongly recommended:
 
