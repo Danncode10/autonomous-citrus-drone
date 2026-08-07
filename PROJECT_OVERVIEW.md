@@ -362,7 +362,7 @@ Possible navigation methods:
 - ROS 2 with PX4 or ArduPilot
 - Manual-assisted flight with automated image capture for early dataset collection
 
-## Minimum Viable Prototype
+## Minimum Viable Prototype (Thesis Proof of Concept)
 
 The first complete version should focus on proving the main concept.
 
@@ -377,6 +377,76 @@ MVP features:
 7. Database for storing tree records and scan results.
 8. Dashboard map showing registered trees, drone scan history, and results.
 9. Gazebo simulation with orchard terrain, multiple trees, and obstacles.
+
+## MVP vs. Commercial Product Strategy
+
+Offloading AI inference from the physical drone to a cloud GPU server is the industry standard for commercial agricultural robotics, keeping hardware replacement costs under $200 while scaling computing power indefinitely.
+
+| Dimension | Thesis MVP (Proof of Concept) | Commercial Product (Scale) |
+| --- | --- | --- |
+| **Primary Goal** | Validate autonomous navigation and vision algorithms for academic defense. | Scalable, low-cost hardware with simple "one-click" farmer UX. |
+| **Drone Hardware** | ~$150 (SpeedyBee F405 Mini + Pi Zero 2 W + Pi Camera V2). | ~$180–$220 (Same drone + 4G LTE Cellular HAT module). |
+| **Processing Engine** | Local Ground Laptop (runs ROS 2, YOLOv8, ByteTrack). | Cloud GPU Server (FastAPI / Celery worker with YOLOv8 on AWS or RunPod). |
+| **Data Transmission** | Local Wi-Fi video stream from Pi to Laptop. | 4G/LTE cellular or automated Wi-Fi sync upon returning to base. |
+| **UI Updates** | Local dashboard / post-flight analytics. | Real-time WebSocket updates via Supabase Realtime. |
+| **Hardware Crash Risk** | Minimal financial impact; processing laptop stays safe on the ground. | Minimal financial impact; cheap ~$150 drone is easily replaced without losing software IP. |
+
+## Step-by-Step Commercial Implementation Architecture
+
+To achieve a system where a farmer clicks **"Scan My Farm"**, the drone flies autonomously, and the web UI shows progress updates (e.g., *Scanning*, *Processing*, *Completed*), the end-to-end pipeline operates through four core layers:
+
+```text
+ [ Farmer UI ] ──(1. Start Mission)──> [ Cloud API ] ──(2. MAVLink)──> [ 4G Drone ]
+       ▲                                                                      │
+       │                                                                (3. Upload Image
+ (6. Realtime UI Update)                                                   + GPS Metadata)
+       │                                                                      │
+       └───── [ Supabase DB ] <─── (5. Save Counts) ─── [ Cloud AI Worker ] <──┘
+```
+
+#### 1. Drone Hardware Layer (Low Cost)
+
+* **Flight Controller:** SpeedyBee F405 Mini running ArduPilot.
+* **Companion Computer:** Raspberry Pi Zero 2 W.
+* **Connectivity Module:** A 4G LTE HAT (e.g., Waveshare SIM7600 series) connected via USB/UART to the Pi.
+* **Execution:** When hovering over a target tree, the Pi captures a high-resolution snapshot, tags it with the tree ID and GPS coordinates, and sends an HTTP `POST` request with the compressed JPEG to your Cloud API endpoint over 4G LTE.
+
+#### 2. Cloud Ingestion & Async Processing Queue
+
+* When the Cloud API (FastAPI / Node.js) receives an image:
+  1. It immediately saves the raw image to **Supabase Storage**.
+  2. It creates an entry in the `scans` table with status set to `'PROCESSING'`.
+  3. It pushes an event to an asynchronous background task queue (e.g., Redis + Celery or a Cloud GPU Worker).
+
+* *Why asynchronous?* The drone does not need to wait for the AI to respond before moving to the next tree. It uploads and immediately flies to the next waypoint.
+
+#### 3. Cloud AI Execution Engine
+
+* A lightweight, auto-scaling GPU instance (e.g., RunPod Serverless or AWS EC2) pulls the image from the queue.
+* It executes your YOLOv8 fruit detection model.
+* It calculates total count, confidence scores, and bounding box annotations.
+* It updates the Supabase database row status to `'COMPLETED'` along with the final fruit count and annotated image URL.
+
+#### 4. Real-Time Farmer Dashboard UX
+
+* The web dashboard subscribes to database changes using **Supabase Realtime** (WebSockets).
+* As soon as the Cloud AI worker updates a tree status from `'PROCESSING'` to `'COMPLETED'`, the UI automatically updates without refreshing.
+
+### Farmer UI State Machine
+
+```text
+ ┌─────────────────────────────────────────────────────────────┐
+ │                TREE INSPECTION QUEUE - BLOCK A              │
+ ├──────────┬──────────────────────┬─────────────┬─────────────┤
+ │ Tree ID  │ GPS Location         │ Status      │ Fruit Count │
+ ├──────────┼──────────────────────┼─────────────┼─────────────┤
+ │ CT-001   │ 10.3157 N, 123.8854 E│  COMPLETED  │  142 Fruits │
+ │ CT-002   │ 10.3159 N, 123.8855 E│  COMPLETED  │  189 Fruits │
+ │ CT-003   │ 10.3161 N, 123.8856 E│  PROCESSING │  [ Counting...]
+ │ CT-004   │ 10.3163 N, 123.8857 E│  QUEUED     │  --         │
+ │ CT-005   │ 10.3165 N, 123.8858 E│  QUEUED     │  --         │
+ └──────────┴──────────────────────┴─────────────┴─────────────┘
+```
 
 ## Possible Advanced Features
 
@@ -481,43 +551,16 @@ The best thesis scope is:
 
 This scope is locally relevant, research-worthy, and buildable. The system can include autonomous navigation and map updating, but the main contribution should be citrus fruit detection for Perante orange trees, tree-level counting, duplicate-count reduction, and dashboard reporting. Gazebo simulation can validate larger orchard navigation while real-world testing focuses on a limited number of trees.
 
-## Suggested Technology Stack
+## Recommended Technology Stack for Scaling
 
-### Hardware
+This architecture allows you to deploy $150-$200 hardware units to farms. Even in the event of a total drone crash, the operational loss is limited to cheap off-the-shelf components, while your core intellectual property, computer vision models, and farm databases remain secure in the cloud.
 
-- Outdoor-capable drone platform
-- RGB camera or drone camera
-- Optional gimbal for stable tree-facing image capture
-- Optional depth camera or LiDAR
-- Optional RTK GPS module
-- Ground laptop or backend server
-
-### AI and Computer Vision
-
-- Python
-- OpenCV
-- PyTorch or TensorFlow
-- YOLO for citrus fruit detection
-- Optional segmentation model for occluded fruits
-- Optional tracking model for video-based counting
-
-### Drone and Robotics
-
-- Gazebo simulation
-- ROS 2 for simulation and robotics integration
-- PX4 or ArduPilot
-- MAVLink
-- GPS or RTK GPS
-- SLAM, VIO, depth sensing, or LiDAR for mapping
-
-### Web System
-
-- Frontend: React, Vue, or plain HTML/CSS/JavaScript
-- Backend: Node.js, Python Flask, FastAPI, or Django
-- Database: PostgreSQL, MySQL, SQLite, or Supabase
-- Image storage: local storage, cloud storage, or object storage
-- Map display: Leaflet, Mapbox, Cesium, or a custom map view
-
+- **Drone Software:** ArduPilot (Flight Controller) + Python MAVProxy / DroneKit (Raspberry Pi Zero 2 W).
+- **Network Protocol:** HTTP/HTTPS or MQTT over 4G LTE for image uploads and telemetry.
+- **Backend API:** FastAPI (Python) or Node.js hosting the ingestion endpoints.
+- **Database & Realtime Sync:** Supabase (PostgreSQL + Realtime WebSockets + Storage Buckets).
+- **Cloud AI Host:** Serverless GPU endpoints (RunPod, Modal, or AWS Lambda with GPU) for pay-per-execution model inferencing.
+- **Frontend Web App:** Next.js / React + Leaflet.js (for map rendering).
 ## Proposed Development Phases
 
 ### Phase 1: Research and Planning

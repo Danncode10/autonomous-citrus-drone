@@ -16,6 +16,7 @@ This document focuses only on the drone inspection hardware needed for the modif
 | Raspberry Pi Camera Module V2 | [Markerlab](https://makerlab.ph/products/raspberry-pi-camera-module-v2-8-megapixels?variant=42288085401791&country=PH&currency=PHP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=23272569557&gbraid=0AAAAADiCHt1xiQslFpC1l-f3CRMHsFRci&gclid=EAIaIQobChMI6vr93buIlgMVFcFMAh03UylvEAQYASABEgKPBvD_BwE) | PHP 2,299 | 1 |
 | Raspberry Pi Zero camera ribbon cable | TBD | PHP 80-200 estimate | 1 |
 | HGLRC M100-5883 GPS + Compass Module | [Shopee](https://shopee.ph/product/779642846/29163602209?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzDnclO7-bMvX3rynRr0XNyi6EqPr_u0c6t2cJ3FOANFzVs0_vNFl8pkFIOBgI4so46sTu_VmOcjIW0CptTtBBRrOsH90Aqof5m34qISUQtbB8u82P0DD0wKIVX9KOlhEsYPANCTI83SeKj&gad_source=1&gad_campaignid=23914051368&gbraid=0AAAAADPpU9BqsdEdCGNu0Tf1Xt_d5j_21&gclid=EAIaIQobChMI35btz5KOlgMVusRMAh3yvBsAEAQYAiABEgIUnPD_BwE) | PHP 1050  | 1 (required for outdoor deployment) |
+| 4G LTE Cellular HAT module (e.g., Waveshare SIM7600) | TBD | ~PHP 2,000 estimate | Optional (required for commercial Cloud GPU offloading) |
 | Front Time-of-Flight distance sensor | TBD | PHP 150-600 estimate | Optional |
 | LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1005 | 3 (minimum for field testing) |
 | LiPo battery charger | [Shopee](https://shopee.ph/product/933050849/22523275057?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzt6xHLEel2tixnsm8WgqWDeM7uDzf7iAlc3cFMeLMQOeQxMxoKHdcQobCjOBjOE9j1ExFvvjWLVuSmA0A-0vwQ9jNbPR2T3ok58rVVUGKHb20lh3gm9hZQs1Px3G2UuFdKQAHxjK04aArg&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9AlH-1_7NH_qcuCnpfVm2Vzb&gclid=EAIaIQobChMI24rG3tGIlgMVRF8PAh2YoDaJEAQYASABEgJjtfD_BwE) | PHP 625 | 1 |
@@ -147,6 +148,7 @@ Required components:
 
 Optional components:
 
+- 4G LTE Cellular HAT module (e.g., Waveshare SIM7600 series) for commercial scaling and cloud GPU offloading
 - RC transmitter and receiver
 - Telemetry radio
 - Bluetooth module
