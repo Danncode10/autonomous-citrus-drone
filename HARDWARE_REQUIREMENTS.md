@@ -17,7 +17,7 @@ This document focuses only on the drone inspection hardware needed for the modif
 | Raspberry Pi Zero camera ribbon cable | TBD | PHP 80-200 estimate | 1 |
 | HGLRC M100-5883 GPS + Compass Module | [Shopee](https://shopee.ph/product/779642846/29163602209?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzDnclO7-bMvX3rynRr0XNyi6EqPr_u0c6t2cJ3FOANFzVs0_vNFl8pkFIOBgI4so46sTu_VmOcjIW0CptTtBBRrOsH90Aqof5m34qISUQtbB8u82P0DD0wKIVX9KOlhEsYPANCTI83SeKj&gad_source=1&gad_campaignid=23914051368&gbraid=0AAAAADPpU9BqsdEdCGNu0Tf1Xt_d5j_21&gclid=EAIaIQobChMI35btz5KOlgMVusRMAh3yvBsAEAQYAiABEgIUnPD_BwE) | PHP 1050  | 1 (required for outdoor deployment) |
 | Front Time-of-Flight distance sensor | TBD | PHP 150-600 estimate | Optional |
-| LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1005 | 3+ (minimum for field testing) |
+| LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1005 | 3 (minimum for field testing) |
 | LiPo battery charger | [Shopee](https://shopee.ph/product/933050849/22523275057?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzt6xHLEel2tixnsm8WgqWDeM7uDzf7iAlc3cFMeLMQOeQxMxoKHdcQobCjOBjOE9j1ExFvvjWLVuSmA0A-0vwQ9jNbPR2T3ok58rVVUGKHb20lh3gm9hZQs1Px3G2UuFdKQAHxjK04aArg&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9AlH-1_7NH_qcuCnpfVm2Vzb&gclid=EAIaIQobChMI24rG3tGIlgMVRF8PAh2YoDaJEAQYASABEgJjtfD_BwE) | PHP 625 | 1 |
 | 5V voltage regulator / BEC for Raspberry Pi | [Amazon](https://www.amazon.com/Module-Quadcopter-Airplane-Servo-Model/dp/B0D97FH1JS/ref=sr_1_1?crid=1S0FWBEGH4I1E&dib=eyJ2IjoiMSJ9.B69bMzHFave2f719qjB8FAEhxFicLXnzucNs-w1iQCgA6KtGndpZjc0mhZ83iFxqTWKB5S_3ZQqmX1EUFbWE9Kr-0mpG1SjWIfHZjpRbpyfofe86-vaTpx7CIb2heEYjQwIuCRgiOcv_HgVy9K189U8H7SJgYeHIvcStgLXGL7hBPkBX7mcIvvRIz0GdfeAXx4BOmEhSvyMBwuf7fHbcMQdbRwrW3P2dlUt01VUxTp0.bo7M3DXeiUGe7qUBevqWMpXpODW3kXBb_PpKJFPX6S0&dib_tag=se&keywords=5V+5A+BEC+2S+6S+drone&qid=1785904092&sprefix=5v+5a+bec+2s+6s%2Caps%2C788&sr=8-1) | PHP 609 | 1 |
 | RC transmitter and receiver / control link — replace bundled FS-iA6B receiver with FlySky FS-A8S or FS-X6B (smaller, lighter, micro-stack compatible) | [Shopee, choose "mode2 i6X with iA6B"](https://shopee.ph/Flysky-FS-i6X-10CH-2.4GHz-AFHDS-2A-RC-Transmitter-With-FS-iA6B-FS-iA10B-FS-X6B-FS-A8S-Receiver-For-Rc-Airplane-i.779642846.21405448162) | PHP 3850 estimate | 1 |
@@ -31,7 +31,7 @@ This document focuses only on the drone inspection hardware needed for the modif
 
 ## Drone Inspection Hardware
 
-The drone inspection system is the part of the project being prioritized. The focus here is on the modified CogniFly-based 3D-printable drone platform, its onboard electronics, and the hardware needed to test it safely.
+The drone inspection system is the part of the project being prioritized. The focus here is on the modified CogniFly-based 3D-printable drone platform, its onboard electronics, and the hardware needed for field deployment.
 
 Reference repositories:
 
@@ -116,7 +116,7 @@ Optional alternatives:
 
 ### Navigation and Obstacle Sensors
 
-Recommended for indoor lab testing only:
+Recommended for indoor and low-light environments:
 
 - Matek Optical Flow & Lidar Sensor 3901-L0X (indoor only — the VL53L0X ToF rangefinder is saturated by ambient sunlight, reducing usable range from ~2m indoors to under 0.5m in bright daylight)
 
@@ -132,7 +132,7 @@ Additional recommended sensor:
 
 Required components:
 
-- LiPo battery, 3S 11.1V 650mAh or 850mAh 75C, XT30 — minimum 3 batteries required for field testing; a single battery provides approximately 3–4 minutes of flight time; the 850mAh option adds ~15g but extends flight time to approximately 5–6 minutes per charge
+- LiPo battery, 3S 11.1V 650mAh or 850mAh 75C, XT30 — minimum 3 batteries recommended for field operations; a single battery provides approximately 3–4 minutes of flight time; the 850mAh option adds ~15g but extends flight time to approximately 5–6 minutes per charge
 - Battery charger
 - XT30 battery connector or adapter
 - 5V voltage regulator or BEC for Raspberry Pi
@@ -158,7 +158,7 @@ Required or strongly recommended:
 - Propeller guards or protective frame
 - Emergency stop method
 - Manual override control
-- Safe test area
+- Designated safe operating area
 - Spare propellers
 
 ## Known Constraints and Deployment Caveats
@@ -169,7 +169,7 @@ The Matek 3901-L0X uses a VL53L0X Time-of-Flight (ToF) rangefinder that operates
 
 **Impact for citrus farm deployment:** Flying over uneven citrus tree canopies, the drone will lose its height reference and drift or crash without a GPS module providing position hold.
 
-**Required fix for outdoor deployment:** Add an HGLRC M100-5883 GPS + Compass Module (~PHP 1,050). The 3901-L0X remains valid for indoor lab testing only.
+**Required fix for outdoor deployment:** Add an HGLRC M100-5883 GPS + Compass Module (~PHP 1,050). The 3901-L0X remains valid for indoor and low-light environments only.
 
 ### Software and Firmware Architecture Decision
 
@@ -214,7 +214,7 @@ Motor thrust estimate: 1303 6000KV motors with 3018 props on 3S produce approxim
 
 Estimated thrust-to-weight ratio: approximately **2.1:1** — flyable but with limited safety margin.
 
-**Estimated flight time per battery: 3–4 minutes.** A minimum of 3 batteries is strongly recommended for any field testing session. Using 850mAh batteries adds approximately 15g but extends flight time to approximately 5–6 minutes per charge.
+**Estimated flight time per battery: 3–4 minutes.** A minimum of 3 batteries is strongly recommended for field operations. Using 850mAh batteries adds approximately 15g but extends flight time to approximately 5–6 minutes per charge.
 
 ## Minimum Hardware Build
 
@@ -230,12 +230,12 @@ Minimum realistic physical prototype:
 - Matek Optical Flow & Lidar Sensor 3901-L0X (indoor use only)
 - HGLRC M100-5883 GPS + Compass Module (required for outdoor deployment)
 - Gemfan Hurricane 3018 3x1.8 propellers
-- LiPo battery, 3S 11.1V 650mAh or 850mAh 75C, XT30 (minimum 3 batteries for field testing)
+- LiPo battery, 3S 11.1V 650mAh or 850mAh 75C, XT30 (minimum 3 batteries for field operations)
 - Battery and charger
 - 5V voltage regulator or BEC for Raspberry Pi
 - RC transmitter and receiver or equivalent control link
 - TPU 95A filament, PLA/ABS filament, 3mm rods, and fasteners for the drone frame
-- Computer/laptop for backend and basic testing
+- Computer/laptop for backend and field operation
 
 ## Estimated Cost Summary
 
@@ -250,5 +250,5 @@ Minimum realistic physical prototype:
 
 Notes:
 
-- The base drone subtotal includes the selected flight stack, motors, propellers, Raspberry Pi, camera, Pi Zero camera cable, Matek 3901-L0X, 3S LiPo battery, charger, 5V BEC, RC transmitter/receiver, filament estimates, rods/skewers, fasteners, XT30 connector, battery strap, and zip ties. The outdoor-ready revised estimate additionally includes the HGLRC M100-5883 GPS + Compass Module and 2 extra LiPo batteries for field testing.
+- The base drone subtotal includes the selected flight stack, motors, propellers, Raspberry Pi, camera, Pi Zero camera cable, Matek 3901-L0X, 3S LiPo battery, charger, 5V BEC, RC transmitter/receiver, filament estimates, rods/skewers, fasteners, XT30 connector, battery strap, and zip ties. The outdoor-ready revised estimate additionally includes the HGLRC M100-5883 GPS + Compass Module and 2 extra LiPo batteries for field operations.
 - Shipping fees, vouchers, replacement parts, and price changes are not included.
