@@ -194,6 +194,7 @@ The computer vision module analyzes citrus tree images from Perante orange orcha
 
 Possible AI tasks:
 
+- Detect the visible citrus canopy or fruit-bearing tree region
 - Detect citrus fruits in images
 - Count visible fruits from multiple angles
 - Avoid double-counting the same fruit across frames where possible
@@ -202,6 +203,7 @@ Possible AI tasks:
 
 Recommended first model outputs:
 
+- Citrus canopy bounding box, if canopy labeling is included
 - Citrus fruit bounding boxes
 - Fruit count per image
 - Estimated unique fruit count per tree
@@ -211,22 +213,28 @@ Important note: the system should avoid claiming perfect total fruit count becau
 
 ### 6. Dataset and Training Plan
 
-The project will gather raw images from a citrus farm growing Perante orange. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets.
+The project will gather raw images from a citrus farm growing Perante orange. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets. The images will be organized and labeled using **Databox**, a separate reusable dataset annotation tool built by the researcher for computer vision datasets.
 
 Suggested dataset process:
 
 1. Visit a citrus farm growing Perante orange and capture raw images from different trees.
 2. Capture fruits from multiple angles, distances, heights, and lighting conditions.
-3. Label citrus fruits with bounding boxes.
-4. Split the dataset into training, validation, and test sets.
-5. Train a baseline object detection model.
-6. Fine-tune the model using locally captured Perante orange farm images.
-7. Evaluate fruit detection and counting accuracy.
+3. Import or upload images into Databox.
+4. Label visible citrus fruits with bounding boxes in Databox.
+5. Label the visible citrus canopy or fruit-bearing leafy region with a larger bounding box when useful.
+6. Export the labeled dataset from Databox in YOLO format.
+7. Split the dataset into training, validation, and test sets.
+8. Train a baseline object detection model.
+9. Fine-tune the model using locally captured Perante orange farm images.
+10. Evaluate fruit detection and counting accuracy.
 
 Recommended initial labels:
 
 - Citrus fruit
+- Citrus canopy
 - Unclear or occluded fruit
+
+For canopy labeling, the box should focus on the visible leafy or fruit-bearing part of the target tree. It should avoid unnecessary trunk, ground, sky, and background areas where fruits are not expected to appear.
 
 ### 7. Gazebo Simulation Module
 

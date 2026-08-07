@@ -7,15 +7,16 @@ The project will focus on **visible fruit counting for Perante orange trees** us
 The main research scope is:
 
 ```text
-Farmer creates an account
+Databox reusable annotation tool
+-> researcher creates a dataset in Databox
+-> researcher uploads or imports images
+-> researcher labels fruits and citrus canopy regions using bounding boxes
+-> Databox saves annotation coordinates and metadata
+-> Databox exports a YOLO-ready dataset
+-> farmer creates an account
 -> farmer registers farm, crop, trees, and drone profile
 -> dashboard shows farm map and tree locations
 -> farmer can prepare a drone scan mission from the UI
--> researcher uses reusable image dataset platform
--> researcher uploads or captures images
--> researcher draws bounding boxes around target objects
--> system saves annotation coordinates and metadata
--> system exports a YOLO-ready dataset
 -> machine learning model detects visible citrus fruits
 -> counting logic estimates visible fruit count
 -> dashboard stores and displays tree-level results
@@ -25,13 +26,158 @@ The project will not focus on harvest readiness or ripeness estimation. That top
 
 ## Main Goal
 
-To first build the farmer-facing software platform, including account access, farm mapping, tree registration, drone registration, and scan mission UI, then build the reusable image dataset and annotation platform that will support training a computer vision model for visible Perante orange fruit counting.
+To use **Databox**, a separate reusable dataset and annotation tool built by the researcher, for labeling fruits, citrus canopy regions, and other research objects, then use the exported dataset to train a computer vision model and connect the results to a farmer-facing dashboard.
 
 ## Core Components
 
-### 1. Farmer Dashboard and Farm Mapping Platform
+### 1. Databox Dataset and Annotation Tool
 
-The first software priority should be the dashboard that farmers and researchers can actually use before the physical drone is completed. This dashboard becomes the central system where farms, trees, drones, scan requests, images, and AI results will eventually connect.
+Before training the fruit detection model, the project will use **Databox**, a separate reusable dataset and annotation tool built by the researcher. Databox is not limited to this thesis project. It is intended as a general computer vision labeling tool for collecting, organizing, labeling, reviewing, and exporting image datasets.
+
+Main idea:
+
+```text
+Create dataset
+-> upload or capture image
+-> choose label class
+-> draw bounding boxes around fruits, citrus canopy regions, or other objects
+-> save box coordinates and image metadata
+-> mark image as done or reviewed
+-> export labels for machine learning training
+```
+
+Why this should come first:
+
+- Machine learning needs labeled data before the model can be trained.
+- Public datasets may not match local Perante orange trees.
+- Databox gives the researchers control over image quality, labels, review status, and export format.
+- Databox can be reused later for other crops, objects, or robotics/computer vision projects.
+- Databox can be made open source so other researchers can use it to create YOLO-ready datasets.
+
+Suggested pages:
+
+- Dataset list
+- Image upload
+- Image annotation
+- Annotation review
+- Class or label management
+- Annotation type selection
+- YOLO export
+- Dataset split management
+
+Essential features:
+
+- Upload images
+- Store image width, height, filename, source, and notes
+- Draw bounding boxes by dragging over an image
+- Move, resize, edit, or delete boxes
+- Assign a class label to each box
+- Support multiple classes in one dataset, such as fruit and citrus canopy
+- Mark images as unlabeled, in progress, done, or reviewed
+- Save annotation coordinates
+- Export images and labels in YOLO format
+
+Recommended Perante orange classes:
+
+```text
+0 = citrus_fruit
+1 = citrus_canopy
+```
+
+For the first version, both fruits and canopy regions should use **bounding boxes** because standard YOLO object detection learns from rectangular boxes. A fruit box should tightly surround each visible fruit. A canopy box should surround the visible leafy or fruit-bearing area of the target tree. The canopy box should avoid unnecessary trunk, ground, sky, and background areas as much as possible.
+
+Recommended canopy-labeling rule:
+
+```text
+citrus_canopy = one box around the visible leafy or fruit-bearing area of the target tree
+```
+
+This is useful because the model can learn not only "where are the fruits?" but also "where is the fruit-bearing part of the tree?" Later, canopy detection can help the drone or dashboard identify the region where fruit counting should happen before counting fruits inside it.
+
+Optional future annotation types:
+
+- Polygon segmentation for citrus canopy shape
+- Polygon segmentation for fruit masks
+- Keypoints for canopy center
+- Oriented bounding boxes if tree rows or drone angles require rotated boxes
+
+For the current thesis scope, bounding boxes are enough and are easier to train with YOLO.
+
+Suggested database fields:
+
+```text
+datasets
+- id
+- name
+- description
+- project_type
+- created_at
+
+images
+- id
+- dataset_id
+- filename
+- file_path
+- width
+- height
+- source
+- capture_date
+- tree_id
+- status
+- notes
+- created_at
+
+classes
+- id
+- dataset_id
+- name
+- class_index
+
+annotations
+- id
+- image_id
+- class_id
+- annotation_type
+- x_min
+- y_min
+- x_max
+- y_max
+- created_by
+- created_at
+```
+
+YOLO export format:
+
+```text
+class_id center_x center_y width height
+```
+
+The platform can store boxes as pixel coordinates first:
+
+```text
+x_min, y_min, x_max, y_max
+```
+
+Then it can convert them to YOLO's normalized format during export:
+
+```text
+center_x = ((x_min + x_max) / 2) / image_width
+center_y = ((y_min + y_max) / 2) / image_height
+width = (x_max - x_min) / image_width
+height = (y_max - y_min) / image_height
+```
+
+Recommended technology:
+
+- Next.js for the web platform
+- Database such as PostgreSQL, SQLite, or Supabase
+- Local or cloud image storage
+- Canvas-based annotation interface
+- Export function for YOLO datasets
+
+### 2. Farmer Dashboard and Farm Mapping Platform
+
+After the Databox dataset workflow is planned, the next software priority should be the dashboard that farmers and researchers can actually use before the physical drone is completed. This dashboard becomes the central system where farms, trees, drones, scan requests, images, and AI results will eventually connect.
 
 Main idea:
 
@@ -161,119 +307,6 @@ scan_missions
 - notes
 ```
 
-### 2. Reusable Dataset and Annotation Platform
-
-Before training the fruit detection model, the project should first build a platform for collecting, organizing, labeling, reviewing, and exporting image datasets. This platform will be used for the Perante orange project, but it should be designed so it can also support future object-detection research.
-
-Main idea:
-
-```text
-Upload or capture image
--> draw bounding boxes around objects
--> save box coordinates and image metadata
--> mark image as done or reviewed
--> export labels for machine learning training
-```
-
-Why this should come first:
-
-- Machine learning needs labeled data before the model can be trained.
-- Public datasets may not match local Perante orange trees.
-- A custom annotation system gives the researchers control over image quality, labels, review status, and export format.
-- The same platform can be reused later for other crops, objects, or robotics/computer vision projects.
-
-Suggested pages:
-
-- Dataset list
-- Image upload
-- Image annotation
-- Annotation review
-- Class or label management
-- YOLO export
-- Dataset split management
-
-Essential features:
-
-- Upload images
-- Store image width, height, filename, source, and notes
-- Draw bounding boxes by dragging over an image
-- Move, resize, edit, or delete boxes
-- Assign a class label to each box
-- Mark images as unlabeled, in progress, done, or reviewed
-- Save annotation coordinates
-- Export images and labels in YOLO format
-
-Suggested database fields:
-
-```text
-datasets
-- id
-- name
-- description
-- project_type
-- created_at
-
-images
-- id
-- dataset_id
-- filename
-- file_path
-- width
-- height
-- source
-- capture_date
-- tree_id
-- status
-- notes
-- created_at
-
-classes
-- id
-- dataset_id
-- name
-- class_index
-
-annotations
-- id
-- image_id
-- class_id
-- x_min
-- y_min
-- x_max
-- y_max
-- created_by
-- created_at
-```
-
-YOLO export format:
-
-```text
-class_id center_x center_y width height
-```
-
-The platform can store boxes as pixel coordinates first:
-
-```text
-x_min, y_min, x_max, y_max
-```
-
-Then it can convert them to YOLO's normalized format during export:
-
-```text
-center_x = ((x_min + x_max) / 2) / image_width
-center_y = ((y_min + y_max) / 2) / image_height
-width = (x_max - x_min) / image_width
-height = (y_max - y_min) / image_height
-```
-
-Recommended technology:
-
-- Next.js for the web platform
-- Database such as PostgreSQL, SQLite, or Supabase
-- Local or cloud image storage
-- Canvas-based annotation interface
-- Export function for YOLO datasets
-
 ### 3. Dataset Collection
 
 The team must collect local images of Perante orange trees because public fruit datasets may not match local tree structure, fruit appearance, lighting, camera angle, and orchard background.
@@ -294,12 +327,13 @@ Target dataset size:
 
 ### 4. Image Annotation
 
-Each visible Perante orange in the image should be labeled with a bounding box.
+Each visible Perante orange in the image should be labeled with a bounding box. The visible fruit-bearing canopy can also be labeled with a larger bounding box so the model can learn the area where fruits are expected to appear.
 
 Initial class:
 
 ```text
 citrus_fruit
+citrus_canopy
 ```
 
 Optional label:
@@ -308,7 +342,7 @@ Optional label:
 unclear_or_occluded_fruit
 ```
 
-The preferred approach is to use the project's own annotation platform. Existing annotation tools can still be used as references or backup options:
+The preferred approach is to use Databox. Existing annotation tools can still be used as references or backup options:
 
 - Roboflow
 - CVAT
@@ -317,7 +351,7 @@ The preferred approach is to use the project's own annotation platform. Existing
 
 ### 5. Machine Learning Fruit Detection
 
-The project should build an actual machine learning fruit detector by training or fine-tuning an object detection model.
+The project should build an actual machine learning detector by training or fine-tuning an object detection model. The first model can detect fruits only, but Databox should support both fruit and canopy labels so the system can later detect the fruit-bearing tree region before counting fruits.
 
 Recommended model:
 
@@ -335,6 +369,7 @@ Model output:
 
 ```text
 Bounding boxes around visible citrus fruits
+Optional bounding box around the visible citrus canopy
 Confidence score per detection
 Fruit count per image
 ```
@@ -346,6 +381,7 @@ Training steps:
 3. Evaluate detection using precision, recall, F1-score, and mAP.
 4. Fine-tune using more local Perante orange images.
 5. Test on unseen tree images and drone-captured images.
+6. Compare fruit-only detection with fruit-plus-canopy detection if enough canopy labels are available.
 
 ### 6. Fruit Counting Logic
 
@@ -535,9 +571,22 @@ Dashboard metrics:
 - Finalize title and objectives.
 - Review fruit detection, fruit counting, UAV navigation, and Gazebo simulation studies.
 - Confirm that harvest readiness is outside the main scope.
-- Finalize the system architecture for the dataset platform, AI model, drone workflow, simulation, and dashboard.
+- Finalize the system architecture for Databox dataset export, AI model training, drone workflow, simulation, and dashboard.
 
-### Phase 2: Farmer Dashboard and Farm Mapping Platform
+### Phase 2: Databox Dataset Preparation
+
+- Use Databox as the dataset and annotation tool.
+- Create a Perante orange dataset inside Databox.
+- Add image upload or local image import.
+- Add or configure the classes citrus_fruit and citrus_canopy.
+- Use Databox's bounding box annotation interface.
+- Save annotation coordinates and image metadata through Databox.
+- Use image statuses such as unlabeled, in progress, done, and reviewed.
+- Export the dataset from Databox to YOLO format.
+- Keep Databox separate so it can be open sourced and reused for future object-detection research.
+- Test the Databox workflow using sample images before field data collection.
+
+### Phase 3: Farmer Dashboard and Farm Mapping Platform
 
 - Build the Next.js farmer dashboard.
 - Add farmer account access.
@@ -552,22 +601,12 @@ Dashboard metrics:
 - Add "Prepare Scan" or "Start Drone Scan" UI for a selected tree.
 - Add scan status UI such as pending, preparing, scanning, completed, failed, or needs rescan.
 
-### Phase 3: Dataset Platform Development
-
-- Build the reusable image dataset platform.
-- Add image upload and storage.
-- Add dataset and class management.
-- Build the bounding box annotation interface.
-- Save annotation coordinates and image metadata.
-- Add image statuses such as unlabeled, in progress, done, and reviewed.
-- Add export to YOLO format.
-- Test the platform using sample images before field data collection.
-
 ### Phase 4: Dataset Collection and Annotation
 
 - Collect Perante orange tree images.
 - Organize images by tree, date, and capture condition.
-- Use the annotation platform to label fruit bounding boxes.
+- Use Databox to label fruit bounding boxes.
+- Use Databox to label citrus canopy bounding boxes when useful.
 - Review labels for missed, incorrect, or duplicated boxes.
 - Split dataset into training, validation, and test sets.
 
@@ -577,6 +616,7 @@ Dashboard metrics:
 - Evaluate detection accuracy.
 - Improve dataset and labels if detection is weak.
 - Fine-tune model using drone-captured images.
+- Test whether citrus_canopy detection can help isolate the fruit-bearing region before fruit counting.
 
 ### Phase 6: Counting and Duplicate Reduction
 
@@ -614,33 +654,36 @@ Dashboard metrics:
 
 The first complete prototype should include:
 
-1. Farmer account access.
-2. Farm, crop, tree, and drone registration.
-3. Farm map with tree markers and selected-tree details.
-4. Drone health UI with battery, GPS, camera, connection, storage, and mission readiness states.
-5. "Prepare Scan" or "Start Drone Scan" UI for a selected tree.
-6. Reusable Next.js dataset and annotation platform.
-7. Image upload and storage.
-8. Bounding box drawing for object detection labels.
-9. Saved annotation coordinates and metadata.
-10. YOLO dataset export.
-11. A small Perante orange image dataset.
-12. Labeled citrus fruit bounding boxes.
-13. A trained or fine-tuned YOLO fruit detection model.
-14. Fruit count per image.
-15. Tree-level visible fruit count from multiple images.
-16. Basic duplicate-count reduction.
-17. A built or assembled drone platform with RGB camera, GPS support, manual override, and safe supervised flight testing.
-18. Scan result database.
-19. Dashboard showing tree records, images, map position, scan status, and fruit count.
-20. Gazebo simulation showing route planning and circular scan behavior.
+1. Databox reusable Next.js dataset and annotation tool.
+2. Image upload and storage.
+3. Bounding box drawing for object detection labels.
+4. Multi-class labels for citrus_fruit and citrus_canopy.
+5. Saved annotation coordinates and metadata.
+6. YOLO dataset export.
+7. Farmer account access.
+8. Farm, crop, tree, and drone registration.
+9. Farm map with tree markers and selected-tree details.
+10. Drone health UI with battery, GPS, camera, connection, storage, and mission readiness states.
+11. "Prepare Scan" or "Start Drone Scan" UI for a selected tree.
+12. A small Perante orange image dataset.
+13. Labeled citrus fruit bounding boxes.
+14. Labeled citrus canopy bounding boxes.
+15. A trained or fine-tuned YOLO fruit detection model.
+16. Fruit count per image.
+17. Tree-level visible fruit count from multiple images.
+18. Basic duplicate-count reduction.
+19. A built or assembled drone platform with RGB camera, GPS support, manual override, and safe supervised flight testing.
+20. Scan result database.
+21. Dashboard showing tree records, images, map position, scan status, and fruit count.
+22. Gazebo simulation showing route planning and circular scan behavior.
 
 ## Scope Boundaries
 
 Included:
 
-- Reusable image dataset and annotation platform
+- Databox reusable image dataset and annotation tool
 - YOLO-ready annotation export
+- Citrus canopy labeling
 - Perante orange fruit detection
 - Visible fruit counting
 - Duplicate-count reduction
