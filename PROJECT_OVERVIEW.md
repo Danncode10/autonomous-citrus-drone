@@ -178,13 +178,9 @@ Possible mapping tasks:
 
 Possible mapping technologies:
 
-- GPS waypoint mapping
-- Visual SLAM
-- VIO, visual-inertial odometry
-- RTK GPS for more accurate outdoor localization, if available
-- Depth camera or LiDAR-based mapping
-- Photogrammetry for orchard map generation
-- ROS 2 mapping and navigation tools
+- GPS waypoint mapping & QMC5883L compass (Physical Drone)
+- Visual pose association & image camera metadata (Physical Drone)
+- Depth camera and 2D LiDAR simulation (Gazebo Simulation Only)
 
 Important scope note: full reliable autonomous mapping in an unfamiliar outdoor orchard can become a large research problem by itself. A realistic thesis scope can combine manual tree registration, GPS/map waypoints, controlled autonomous scan paths, and incremental map updates.
 
@@ -359,7 +355,7 @@ Possible navigation methods:
 - Visual markers for controlled tests
 - Visual SLAM or VIO
 - Depth camera or LiDAR for obstacle detection
-- ROS 2 with PX4 or ArduPilot
+- ROS 2 with ArduPilot (ArduCopter)
 - Manual-assisted flight with automated image capture for early dataset collection
 
 ## Minimum Viable Prototype (Thesis Proof of Concept)
@@ -551,16 +547,23 @@ The best thesis scope is:
 
 This scope is locally relevant, research-worthy, and buildable. The system can include autonomous navigation and map updating, but the main contribution should be citrus fruit detection for Perante orange trees, tree-level counting, duplicate-count reduction, and dashboard reporting. Gazebo simulation can validate larger orchard navigation while real-world testing focuses on a limited number of trees.
 
-## Recommended Technology Stack for Scaling
+## System Technology Stack
 
-This architecture allows you to deploy $150-$200 hardware units to farms. Even in the event of a total drone crash, the operational loss is limited to cheap off-the-shelf components, while your core intellectual property, computer vision models, and farm databases remain secure in the cloud.
+### 1. Thesis MVP Technology Stack (Academic Defense Setup)
+* **Physical Flight Controller:** SpeedyBee F405 Mini running ArduPilot (ArduCopter).
+* **Companion Computer:** Raspberry Pi Zero 2 W + Raspberry Pi Camera V2.
+* **Local Telemetry & Video Link:** Local Wi-Fi network stream from Pi Zero 2 W to Ground Laptop.
+* **Ground Offboard Processing:** Ground Laptop running Ubuntu 22.04 LTS, ROS 2, OpenCV, YOLOv8, and ByteTrack.
+* **Simulation Engine:** Gazebo Sim integrated with ArduPilot SITL (`ardupilot_gz`).
+* **Database & Web Dashboard:** Local or hosted Supabase (PostgreSQL + Realtime) + Next.js / React map interface.
 
-- **Drone Software:** ArduPilot (Flight Controller) + Python MAVProxy / DroneKit (Raspberry Pi Zero 2 W).
-- **Network Protocol:** HTTP/HTTPS or MQTT over 4G LTE for image uploads and telemetry.
-- **Backend API:** FastAPI (Python) or Node.js hosting the ingestion endpoints.
-- **Database & Realtime Sync:** Supabase (PostgreSQL + Realtime WebSockets + Storage Buckets).
-- **Cloud AI Host:** Serverless GPU endpoints (RunPod, Modal, or AWS Lambda with GPU) for pay-per-execution model inferencing.
-- **Frontend Web App:** Next.js / React + Leaflet.js (for map rendering).
+### 2. Commercial Scaling Technology Stack (Production Roadmap)
+* **Physical Hardware:** Same ~$150 Micro-Drone + Waveshare SIM7600 4G LTE Cellular HAT.
+* **Communication Protocol:** MAVLink over 4G LTE / MQTT for snapshot uploads.
+* **Backend Ingestion API:** FastAPI (Python) hosted on Cloud VPS.
+* **Cloud AI Inference Engine:** Serverless GPU workers (RunPod / AWS EC2) running YOLOv8 asynchronously.
+* **Database & Storage:** Supabase Cloud (PostgreSQL, Storage Buckets, Realtime WebSockets).
+* **User Interface:** Responsive Web App / PWA (Next.js + Leaflet.js) with real-time job queues (`QUEUED`, `PROCESSING`, `COMPLETED`).
 ## Proposed Development Phases
 
 ### Phase 1: Research and Planning
