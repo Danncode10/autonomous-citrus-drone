@@ -15,12 +15,12 @@ This document focuses only on the drone inspection hardware needed for the modif
 | Raspberry Pi Zero W or Raspberry Pi Zero 2 W | Always out of Stock: Get Notified Here [Cytron](https://www.cytron.io/p-raspberry-pi-zero-2-w?currency=PHP&src=raspberrypi), [Element 14](https://ph.element14.com/raspberry-pi/rpi-zero-w-v2/raspberry-pi-kit-64bit-arm-cortex/dp/3838499?rd=raspberry+pi+zero+2+w&ost=Raspberry+Pi+Zero+2+W), [pishop](https://www.pishop.ca/product/raspberry-pi-zero-2-w-with-header/) | PHP 2,000 estimate | 1 |
 | Raspberry Pi Camera Module V2 | [Markerlab](https://makerlab.ph/products/raspberry-pi-camera-module-v2-8-megapixels?variant=42288085401791&country=PH&currency=PHP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=23272569557&gbraid=0AAAAADiCHt1xiQslFpC1l-f3CRMHsFRci&gclid=EAIaIQobChMI6vr93buIlgMVFcFMAh03UylvEAQYASABEgKPBvD_BwE) | PHP 2,299 | 1 |
 | Raspberry Pi Zero camera ribbon cable | TBD | PHP 80-200 estimate | 1 |
-| Matek Optical Flow & Lidar Sensor 3901-L0X | [Shopee](https://shopee.ph/product/779642846/23727761329) | PHP 1,920 | 1 |
+| HGLRC M100-5883 GPS + Compass Module | [Shopee](https://shopee.ph/product/779642846/29163602209?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzDnclO7-bMvX3rynRr0XNyi6EqPr_u0c6t2cJ3FOANFzVs0_vNFl8pkFIOBgI4so46sTu_VmOcjIW0CptTtBBRrOsH90Aqof5m34qISUQtbB8u82P0DD0wKIVX9KOlhEsYPANCTI83SeKj&gad_source=1&gad_campaignid=23914051368&gbraid=0AAAAADPpU9BqsdEdCGNu0Tf1Xt_d5j_21&gclid=EAIaIQobChMI35btz5KOlgMVusRMAh3yvBsAEAQYAiABEgIUnPD_BwE) | PHP 1050  | 1 (required for outdoor deployment) |
 | Front Time-of-Flight distance sensor | TBD | PHP 150-600 estimate | Optional |
-| LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1,004 | 1+ |
+| LiPo battery, 3S 11.1V 650mAh 75C, XT30 | [AliExpress](https://www.aliexpress.com/item/1005007414258002.html?spm=a2g0o.productlist.main.1.31ffuVZxuVZxao&algo_pvid=3d3c94d0-354a-4514-b863-ad752640e064&algo_exp_id=3d3c94d0-354a-4514-b863-ad752640e064-0&pdp_ext_f=%7B%22order%22%3A%2214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PHP%211004.19%211004.19%21%21%2115.99%2115.99%21%400bafc98f17859036007364756e10c2%2112000040653925601%21sea%21PH%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Affa3ea66%3Bm03_new_user%3A-29895&curPageLogUid=D1YWUTrVIgkd&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007414258002%7C_p_origin_prod%3A) | PHP 1005 | 3+ (minimum for field testing) |
 | LiPo battery charger | [Shopee](https://shopee.ph/product/933050849/22523275057?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMHJtu46N4YL1ETOwWAbpdPCpoOnQDXHQJ5OvtcN0M_eDbRA41r_846ydnLzTRf_samdRHEh2GSlumtjiKqmNpcGhlcnRleHTEbgAAAAzt6xHLEel2tixnsm8WgqWDeM7uDzf7iAlc3cFMeLMQOeQxMxoKHdcQobCjOBjOE9j1ExFvvjWLVuSmA0A-0vwQ9jNbPR2T3ok58rVVUGKHb20lh3gm9hZQs1Px3G2UuFdKQAHxjK04aArg&gad_source=1&gad_campaignid=23303611172&gbraid=0AAAAADPpU9AlH-1_7NH_qcuCnpfVm2Vzb&gclid=EAIaIQobChMI24rG3tGIlgMVRF8PAh2YoDaJEAQYASABEgJjtfD_BwE) | PHP 625 | 1 |
 | 5V voltage regulator / BEC for Raspberry Pi | [Amazon](https://www.amazon.com/Module-Quadcopter-Airplane-Servo-Model/dp/B0D97FH1JS/ref=sr_1_1?crid=1S0FWBEGH4I1E&dib=eyJ2IjoiMSJ9.B69bMzHFave2f719qjB8FAEhxFicLXnzucNs-w1iQCgA6KtGndpZjc0mhZ83iFxqTWKB5S_3ZQqmX1EUFbWE9Kr-0mpG1SjWIfHZjpRbpyfofe86-vaTpx7CIb2heEYjQwIuCRgiOcv_HgVy9K189U8H7SJgYeHIvcStgLXGL7hBPkBX7mcIvvRIz0GdfeAXx4BOmEhSvyMBwuf7fHbcMQdbRwrW3P2dlUt01VUxTp0.bo7M3DXeiUGe7qUBevqWMpXpODW3kXBb_PpKJFPX6S0&dib_tag=se&keywords=5V+5A+BEC+2S+6S+drone&qid=1785904092&sprefix=5v+5a+bec+2s+6s%2Caps%2C788&sr=8-1) | PHP 609 | 1 |
-| RC transmitter and receiver / control link | [Shopee, choose "mode2 i6X with iA6B"](https://shopee.ph/Flysky-FS-i6X-10CH-2.4GHz-AFHDS-2A-RC-Transmitter-With-FS-iA6B-FS-iA10B-FS-X6B-FS-A8S-Receiver-For-Rc-Airplane-i.779642846.21405448162) | PHP 3,200-3,850 estimate | 1 |
+| RC transmitter and receiver / control link — replace bundled FS-iA6B receiver with FlySky FS-A8S or FS-X6B (smaller, lighter, micro-stack compatible) | [Shopee, choose "mode2 i6X with iA6B"](https://shopee.ph/Flysky-FS-i6X-10CH-2.4GHz-AFHDS-2A-RC-Transmitter-With-FS-iA6B-FS-iA10B-FS-X6B-FS-A8S-Receiver-For-Rc-Airplane-i.779642846.21405448162) | PHP 3850 estimate | 1 |
 | TPU 95A filament for protective frame | TBD | PHP 700-1,200 estimate | 1 kg spool |
 | PLA or ABS filament for rigid plates | TBD | PHP 600-1,000 estimate | 1 kg spool |
 | 3mm carbon fiber rods or bamboo skewers for frame struts | TBD | PHP 100-600 estimate | TBD |
@@ -116,19 +116,23 @@ Optional alternatives:
 
 ### Navigation and Obstacle Sensors
 
-Recommended minimum sensor:
+Recommended for indoor lab testing only:
 
-- Matek Optical Flow & Lidar Sensor 3901-L0X
+- Matek Optical Flow & Lidar Sensor 3901-L0X (indoor only — the VL53L0X ToF rangefinder is saturated by ambient sunlight, reducing usable range from ~2m indoors to under 0.5m in bright daylight)
+
+Required for outdoor and farm deployment:
+
+- HGLRC M100-5883 GPS + Compass Module (~PHP 1,050) — provides stable outdoor altitude hold, position hold, and Return-To-Home capability
 
 Additional recommended sensor:
 
-- Front Time-of-Flight or LiDAR distance sensor
+- Front Time-of-Flight or LiDAR distance sensor (for obstacle avoidance)
 
 ### Battery and Power
 
 Required components:
 
-- LiPo battery, 3S 11.1V 650mAh 75C, XT30
+- LiPo battery, 3S 11.1V 650mAh or 850mAh 75C, XT30 — minimum 3 batteries required for field testing; a single battery provides approximately 3–4 minutes of flight time; the 850mAh option adds ~15g but extends flight time to approximately 5–6 minutes per charge
 - Battery charger
 - XT30 battery connector or adapter
 - 5V voltage regulator or BEC for Raspberry Pi
@@ -157,6 +161,61 @@ Required or strongly recommended:
 - Safe test area
 - Spare propellers
 
+## Known Constraints and Deployment Caveats
+
+### Outdoor Sensor Limitation
+
+The Matek 3901-L0X uses a VL53L0X Time-of-Flight (ToF) rangefinder that operates on 940nm infrared light. This sensor is designed for indoor environments only. In direct sunlight, ambient infrared light saturates the sensor and its usable range drops from approximately 2 meters indoors to under 0.5 meters outdoors.
+
+**Impact for citrus farm deployment:** Flying over uneven citrus tree canopies, the drone will lose its height reference and drift or crash without a GPS module providing position hold.
+
+**Required fix for outdoor deployment:** Add an HGLRC M100-5883 GPS + Compass Module (~PHP 1,050). The 3901-L0X remains valid for indoor lab testing only.
+
+### Software and Firmware Architecture Decision
+
+This build requires an explicit firmware choice before assembly. Two viable paths are available:
+
+**Option A — CogniFly Native Path (Recommended for current hardware budget):**
+
+- Flash **iNav firmware** onto the SpeedyBee F405 Mini
+- Run `cognifly-python` scripts on the Raspberry Pi Zero 2 W for image capture and MSP command relay
+- Offload all ROS 2 and YOLO computer vision tasks to a ground laptop
+- Advantage: No hardware swap required, stays within the current budget, well-documented CogniFly integration
+- Limitation: Computer vision inference runs on the ground laptop, not onboard
+
+**Option B — PX4 / ROS 2 Native Path (Requires additional hardware investment):**
+
+- Replace the SpeedyBee F405 Mini with an H7-class flight controller such as MicoAir H743 or Matek H743 that natively supports PX4 autopilot
+- Note: The Raspberry Pi Zero 2 W has only 512MB of RAM, which is insufficient for running ROS 2 nodes onboard
+- Advantage: Native PX4 support, standard ROS 2 ecosystem integration
+- Limitation: Adds cost and complexity, requires a flight controller swap
+
+**Current plan:** Option A — iNav on SpeedyBee F405 Mini.
+
+### RC Receiver Size Constraint
+
+The FlySky FS-iA6B bundled with the standard i6X kit is designed for 5-inch freestyle quads and RC aircraft. At approximately 15g and 40×25×15mm, it is too large and heavy for the CogniFly 20×20mm micro-stack.
+
+**Recommended replacement:** FlySky FS-A8S or FlySky FS-X6B — significantly smaller and lighter while remaining fully compatible with the FlySky i6X transmitter over IBUS or SBUS. Alternatively, ExpressLRS 2.4GHz (e.g., RadioMaster RP1) offers superior link reliability in dense foliage environments.
+
+### All-Up Weight and Estimated Flight Time
+
+| Component | Estimated Weight |
+| --- | ---: |
+| CogniFly TPU frame | ~90g |
+| SpeedyBee F405 Mini Stack | ~14g |
+| 4x CADDXFPV 1303 motors | ~26g |
+| Raspberry Pi Zero 2 W + Camera | ~15g |
+| 3S 650mAh LiPo battery | ~60g |
+| BEC, wiring, and hardware | ~20g |
+| **Estimated All-Up Weight (AUW)** | **~225g–240g** |
+
+Motor thrust estimate: 1303 6000KV motors with 3018 props on 3S produce approximately 120g–140g max thrust per motor, approximately 500g total maximum thrust.
+
+Estimated thrust-to-weight ratio: approximately **2.1:1** — flyable but with limited safety margin.
+
+**Estimated flight time per battery: 3–4 minutes.** A minimum of 3 batteries is strongly recommended for any field testing session. Using 850mAh batteries adds approximately 15g but extends flight time to approximately 5–6 minutes per charge.
+
 ## Minimum Hardware Build
 
 Minimum realistic physical prototype:
@@ -168,9 +227,10 @@ Minimum realistic physical prototype:
 - Raspberry Pi Zero W or Raspberry Pi Zero 2 W
 - Raspberry Pi Camera Module V2
 - Raspberry Pi Zero camera ribbon cable
-- Matek Optical Flow & Lidar Sensor 3901-L0X
+- Matek Optical Flow & Lidar Sensor 3901-L0X (indoor use only)
+- HGLRC M100-5883 GPS + Compass Module (required for outdoor deployment)
 - Gemfan Hurricane 3018 3x1.8 propellers
-- LiPo battery, 3S 11.1V 650mAh 75C, XT30
+- LiPo battery, 3S 11.1V 650mAh or 850mAh 75C, XT30 (minimum 3 batteries for field testing)
 - Battery and charger
 - 5V voltage regulator or BEC for Raspberry Pi
 - RC transmitter and receiver or equivalent control link
@@ -181,11 +241,14 @@ Minimum realistic physical prototype:
 
 | Category | Estimated Total |
 | --- | ---: |
-| Drone hardware selected/required subtotal | PHP 22,556.22-25,326.22 |
-| Optional front Time-of-Flight distance sensor | PHP 150-600 |
+| Drone hardware selected/required subtotal (base) | PHP 22,556.22–25,326.22 |
+| HGLRC M100-5883 GPS + Compass (required for outdoor deployment) | ~PHP 1,050 |
+| Extra LiPo batteries — 2 additional units for field testing | ~PHP 2,008–2,400 |
+| Optional front Time-of-Flight distance sensor | PHP 150–600 |
 | Propeller guards / protective frame | TBD |
+| **Outdoor-ready revised estimate** | **~PHP 25,914–29,526** |
 
 Notes:
 
-- The drone subtotal includes the selected flight stack, motors, propellers, Raspberry Pi, camera, Pi Zero camera cable, Matek 3901-L0X, 3S LiPo battery, charger, 5V BEC, RC transmitter/receiver, filament estimates, rods/skewers, fasteners, XT30 connector, battery strap, and zip ties.
+- The base drone subtotal includes the selected flight stack, motors, propellers, Raspberry Pi, camera, Pi Zero camera cable, Matek 3901-L0X, 3S LiPo battery, charger, 5V BEC, RC transmitter/receiver, filament estimates, rods/skewers, fasteners, XT30 connector, battery strap, and zip ties. The outdoor-ready revised estimate additionally includes the HGLRC M100-5883 GPS + Compass Module and 2 extra LiPo batteries for field testing.
 - Shipping fees, vouchers, replacement parts, and price changes are not included.
