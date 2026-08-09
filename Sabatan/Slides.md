@@ -8,6 +8,8 @@ This is a business-pitch deck for the NVSU Business Pitch Competition / Young Fa
 
 Do not present the venture as a company that already solves every crop, vegetable, hydroponic, and poultry problem. Citrus is the first product. The larger farm-intelligence platform is the credible future.
 
+Do not claim that AgriSuri is the first AI-and-drone agriculture company in the Philippines. Other Philippine drone and AI agriculture projects already exist. Instead, present the ambition truthfully: **AgriSuri aims to make AI-powered farm intelligence practical for local farms, beginning with Nueva Vizcaya citrus.**
+
 ## Slide 1: Title / hook
 
 **On-screen text**
@@ -26,7 +28,49 @@ A strong full-slide photo of a real citrus tree or farm in Nueva Vizcaya, with v
 
 AgriSuri helps farms make harvest and buyer decisions before the exact available fruit volume is known. We begin by giving citrus farms an earlier estimate.
 
-## Slide 2: The problem
+## Slide 2: Our vision
+
+**On-screen text**
+
+### We want to make AI-powered farm intelligence practical for Philippine agriculture.
+
+- Monitor plants and farm conditions using AI and computer vision
+- Turn field images into clear, decision-ready insights
+- Build one monitoring platform that can grow across high-value crops and research applications
+
+**Our first step: citrus yield estimation in Nueva Vizcaya.**
+
+**Visual**
+
+A full-width farm landscape or aerial agricultural image. Overlay a restrained network of three labels: **Observe**, **Understand**, and **Act**. Add small, clear icons for AI, camera/drone, and farm data. Do not show many crop categories yet.
+
+**Speaker point**
+
+Agriculture is entering an AI era, but local farms still need practical tools that turn technology into decisions. AgriSuri will build that bridge, starting with one real problem we can solve well.
+
+## Slide 3: Why we start with citrus
+
+**On-screen text**
+
+### Start local. Prove value. Then scale.
+
+Nueva Vizcaya is known for Perante oranges. Citrus gives AgriSuri a focused first market where we can:
+
+- build a local, crop-specific AI dataset
+- work with nearby farms and agricultural partners
+- prove that farmers will pay for useful yield insights
+
+**First product: citrus yield intelligence.**
+
+**Visual**
+
+A simple Nueva Vizcaya map silhouette with a citrus marker beside a high-quality photo of Perante oranges on the tree. Connect the map to the phrase: "Local crop. Local data. Local proof."
+
+**Speaker point**
+
+We are not starting with citrus because our ambition is small. We are starting there because focus makes the wider platform credible.
+
+## Slide 4: The problem
 
 **On-screen text**
 
@@ -46,29 +90,7 @@ One real photo of a worker inspecting a fruit tree. Beside it, use three simple 
 
 The issue is not that farmers lack information. They lack timely, consistent information at the scale needed for planning.
 
-## Slide 3: Our first customer and first use case
-
-**On-screen text**
-
-### We start with citrus farms in Nueva Vizcaya.
-
-First customers:
-
-- Commercial citrus farms
-- Cooperatives
-- Agricultural institutions
-
-First decision we improve: **harvest planning.**
-
-**Visual**
-
-A simple Nueva Vizcaya map silhouette with a citrus marker, plus one photo of Perante oranges. Keep it local and specific.
-
-**Speaker point**
-
-We start narrow on purpose. A local, crop-specific workflow lets us build trust, collect better data, and prove customers will pay before expanding.
-
-## Slide 4: The solution
+## Slide 5: The solution
 
 **On-screen text**
 
@@ -91,7 +113,7 @@ Use a clean diagram with a drone photo or small drone icon above the first step.
 
 AgriSuri is not selling a drone. We are selling a decision-ready report that helps the farm plan.
 
-## Slide 5: What the farm receives
+## Slide 6: What the farm receives
 
 **On-screen text**
 
@@ -110,7 +132,7 @@ A realistic dashboard mockup based on your project: farm map, selected tree/bloc
 
 Be precise: this is a visible fruit-count estimate, not a guaranteed total harvest. That honesty builds trust.
 
-## Slide 6: How we make money
+## Slide 7: How we make money
 
 **On-screen text**
 
@@ -135,7 +157,7 @@ Use the table as the visual. Add a small arrow moving from "service" to "managed
 
 We begin with paid results because it lets us control quality and learn. Recurring seasonal monitoring is the target revenue model.
 
-## Slide 7: Why we can win
+## Slide 8: Why we can win
 
 **On-screen text**
 
@@ -154,7 +176,7 @@ Use a four-part circular diagram around the words "Better farm intelligence": Lo
 
 Other people can buy drones. Our defensible asset is local data plus a repeatable process that produces useful reports.
 
-## Slide 8: The data flywheel
+## Slide 9: The data flywheel
 
 **On-screen text**
 
@@ -177,7 +199,7 @@ Add one short note under the diagram: "Farm-identifiable data stays protected; a
 
 We do not build a business by selling a farm's private records. With permission, data helps improve the AI. In the future, aggregated and anonymized crop insights may serve co-ops, buyers, and agricultural organizations.
 
-## Slide 9: Growth path
+## Slide 10: Growth path
 
 **On-screen text**
 
@@ -190,13 +212,13 @@ We do not build a business by selling a farm's private records. With permission,
 
 **Visual**
 
-A horizontal four-step timeline. Citrus and Nueva Vizcaya should be visually largest at Step 1. Show vegetables and hydroponics as small, muted future icons only at Step 4. Do not include poultry in this deck.
+A horizontal four-step timeline. Citrus and Nueva Vizcaya should be visually largest at Step 1. Show trees, vegetables, crops, research plots, and controlled environments as small, muted future icons only at Step 4. Do not include poultry in this deck until there is a specific, validated monitoring use case.
 
 **Speaker point**
 
 AgriSuri is scalable because the workflow repeats, but we expand only after the first market is working.
 
-## Slide 10: Pilot plan and ask
+## Slide 11: Pilot plan and ask
 
 **On-screen text**
 
@@ -220,7 +242,7 @@ Use a real team photo or a confident photo of the prototype/drone in a citrus-fa
 
 We are not asking people to believe in a distant future. We are asking for the chance to prove a useful, local product with measurable farm value.
 
-## Optional Slide 11: Team
+## Optional Slide 12: Team
 
 Use this only if the competition requires a team introduction or gives enough time.
 
@@ -240,6 +262,28 @@ Suggested role split:
 
 Professional team photos or clean name-and-role layout. Add a small photo of the team testing the project if available.
 
+## Final slide: Closing statement
+
+**On-screen text**
+
+> The future of farming will not be guessed. It will be measured.
+
+**AgriSuri**
+
+AI-powered farm intelligence, starting in Nueva Vizcaya.
+
+**Visual**
+
+Use a clean, full-slide image of a Perante citrus farm at sunrise or a team testing the drone in a real farm setting. The quote should be the only large text.
+
+**Speaker point**
+
+AgriSuri begins with citrus, but the mission is larger: make better farm decisions possible through local data, AI, and practical automation.
+
+**Why this instead of a "be first and get rich" quote**
+
+This closing statement is original to AgriSuri. It sounds confident and ambitious while keeping the focus on the farmer outcome and the venture's purpose.
+
 ## Design rules
 
 - Use real local citrus and farm images whenever possible.
@@ -248,4 +292,4 @@ Professional team photos or clean name-and-role layout. Add a small photo of the
 - Use green, orange, charcoal, and white as a restrained agriculture palette.
 - Say "farm" consistently, not "orchard."
 - Say "visible fruit-count estimate," never promise exact harvest totals.
-- The future platform appears only after Slides 1-7 prove the first citrus business.
+- The future platform appears only after Slides 1-8 prove the first citrus business.
