@@ -209,7 +209,7 @@ Important note: the system should avoid claiming perfect total fruit count becau
 
 ### 6. Dataset and Training Plan
 
-The project will gather raw images from a citrus farm growing Perante orange. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets. The images will be organized and labeled using **Databox**, a separate reusable dataset annotation tool built by the researcher for computer vision datasets.
+The project will gather raw images from a citrus farm growing Perante orange. These images are important because real farm images will match the actual camera angles, lighting, fruit color, foliage density, and terrain conditions better than generic datasets. The images will be organized and labeled using **Databox**, a researcher-customized web dataset annotation tool. Databox is based on a fork of an open-source MakeSense-style image annotation repository, then modified to better support YOLO dataset organization, review workflow, browser-based access, and collaborative labeling from phones, laptops, or other devices.
 
 Suggested dataset process:
 

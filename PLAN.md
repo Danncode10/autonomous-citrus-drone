@@ -14,7 +14,7 @@ Thesis 1 establishes the core software systems, manual dataset collection, basic
 
 ### 1. Databox Dataset and Annotation Tool
 
-Before training the fruit detection model, the project will use **Databox**, a separate reusable dataset and annotation tool built by the researcher. Databox gives the researchers control over image quality, labels, review status, and export format, and can be made open source so other researchers can use it to create YOLO-ready datasets.
+Before training the fruit detection model, the project will use **Databox**, a researcher-customized web dataset and annotation tool. Databox is based on a fork of an open-source MakeSense-style image annotation repository, then modified to better support YOLO dataset organization, review workflow, online access, and collaborative labeling from phones, laptops, or other browser-capable devices. Databox gives the researchers control over image quality, labels, review status, and export format, and can be made open source so other researchers can use it to create YOLO-ready datasets.
 
 **Main Idea:**
 Create dataset -> upload or capture image -> video-to-frame extraction -> choose label class -> draw bounding boxes around fruits or citrus canopy -> save coordinates and metadata -> mark image as reviewed -> export labels for machine learning.
