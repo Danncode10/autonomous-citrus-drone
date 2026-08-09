@@ -2,19 +2,19 @@
 
 ## What we sell
 
-We provide a **Citrus Yield Intelligence Service** for orchards in Nueva Vizcaya.
+We provide a **Citrus Yield Intelligence Service** for farms in Nueva Vizcaya.
 
 Using a guided drone scan and AI fruit detection, we give a farm a simple report showing:
 
 - its estimated visible citrus fruit count
-- an orchard/block map of where the fruit was observed
+- a farm/block map of where the fruit was observed
 - a harvest-planning summary for labor, packing, and buyer discussions
 
-In plain language: **we scan an orchard and turn images into a useful harvest estimate.**
+In plain language: **we scan a farm and turn images into a useful harvest estimate.**
 
 ### Why we start with citrus
 
-We start with citrus, specifically Perante orange orchards in Nueva Vizcaya, because a focused first market lets us build a reliable local dataset, prove that customers will pay, and refine one field workflow before expanding.
+We start with citrus, specifically Perante orange farms in Nueva Vizcaya, because a focused first market lets us build a reliable local dataset, prove that customers will pay, and refine one field workflow before expanding.
 
 We are not claiming to solve every farm-monitoring problem on day one. Citrus is the first product that makes the larger platform credible.
 
@@ -22,7 +22,7 @@ We are not claiming to solve every farm-monitoring problem on day one. Citrus is
 
 ## Who pays us first
 
-Our first customers are commercial citrus orchards, cooperatives, and agricultural institutions in Nueva Vizcaya.
+Our first customers are commercial citrus farms, cooperatives, and agricultural institutions in Nueva Vizcaya.
 
 They are a better starting market than individual small growers because they manage more trees, make larger harvest decisions, and can assign a farm technician to work with the system.
 
@@ -33,7 +33,7 @@ Before harvest, farms need a better answer to: **How much fruit can we expect, a
 That information helps them plan:
 
 - how many workers to prepare
-- when to harvest each orchard block
+- when to harvest each farm block
 - packing and transport needs
 - what volume they can discuss with buyers
 - which areas need a manual field check
@@ -42,9 +42,9 @@ That information helps them plan:
 
 ```mermaid
 flowchart LR
-    Farm["Farm requests a scan"] --> Scan["Guided drone scan of orchard block"]
+    Farm["Farm requests a scan"] --> Scan["Guided drone scan of farm block"]
     Scan --> AI["AI detects visible citrus fruit"]
-    AI --> Report["Yield-estimate report and orchard map"]
+    AI --> Report["Yield-estimate report and farm map"]
     Report --> Decision["Farm plans harvest, labor, packing, and sales"]
 ```
 
@@ -52,12 +52,12 @@ At the start, our team operates or supervises the scan. This protects data quali
 
 ## How we make money
 
-### 1. Orchard scan service: first revenue
+### 1. Farm scan service: first revenue
 
-The farm pays us to scan an orchard block and receive the report.
+The farm pays us to scan a farm block and receive the report.
 
 - Pilot scan: PHP 1,500 to PHP 3,000
-- Standard orchard/block scan: PHP 5,000 to PHP 15,000
+- Standard farm/block scan: PHP 5,000 to PHP 15,000
 - Cooperative, institutional, or larger custom project: PHP 20,000+
 
 These are initial test prices. We will refine them after measuring travel, labor, batteries, repairs, cloud processing, and customer willingness to pay.
@@ -79,7 +79,7 @@ We do **not** start by simply selling or renting drones. A drone flown incorrect
 Anyone can buy a drone. Our advantage is the complete local system:
 
 - Perante orange images and a crop-specific AI model
-- Orchard maps and repeat scan history
+- Farm maps and repeat scan history
 - A reliable field workflow for producing usable images
 - A dashboard that turns images into a clear farm decision
 - Local relationships with Nueva Vizcaya growers and agricultural partners
@@ -92,7 +92,7 @@ This creates a data flywheel:
 
 ```mermaid
 flowchart LR
-    Scan["More orchard scans"] --> Data["Permissioned, quality-checked farm data"]
+    Scan["More farm scans"] --> Data["Permissioned, quality-checked farm data"]
     Data --> Model["Better citrus AI model"]
     Model --> Report["More useful yield estimates"]
     Report --> Customers["More customer trust and repeat scans"]
@@ -117,7 +117,7 @@ This is both an ethical choice and a business advantage. Farmers will share bett
 
 Our company vision is broader than citrus, but our first business is deliberately narrow.
 
-> We are building an AI-powered farm intelligence platform. We begin with drone-based citrus yield estimation for Nueva Vizcaya orchards, then extend the same monitoring workflow to other high-value crops.
+> We are building an AI-powered farm intelligence platform. We begin with drone-based citrus yield estimation for Nueva Vizcaya farms, then extend the same monitoring workflow to other high-value crops.
 
 After citrus customers pay and the workflow is repeatable, we can adapt the platform to other crops and controlled environments such as hydroponics. Every new market must first pass a paid pilot; we will not build every crop solution at once.
 
@@ -131,6 +131,6 @@ This is a second revenue line, not our main first pitch. It helps us earn projec
 
 1. Farms will pay for a citrus yield-estimate scan.
 2. The estimate improves a real decision about harvest, labor, packing, or sales.
-3. We can complete scans safely and consistently in real orchards.
+3. We can complete scans safely and consistently in real farms.
 4. Seasonal monitoring creates repeat customers.
 5. The service is profitable after the real cost of operating it.
