@@ -1,149 +1,136 @@
-# Business Model: AI-Powered Farm Intelligence Platform
+# Business Model: Citrus Yield Intelligence
 
-## The business in one sentence
+## What we sell
 
-> We are building an AI-powered farm intelligence platform. We begin with drone-based citrus yield estimation for Nueva Vizcaya orchards, then extend the same monitoring workflow to other high-value crops.
+We provide a **Citrus Yield Intelligence Service** for orchards in Nueva Vizcaya.
 
-```mermaid
-flowchart TD
-    Vision["AI-powered farm intelligence platform"]
-    Vision --> Entry["First focused product: citrus yield intelligence"]
-    Entry --> Customer["Commercial orchards, co-ops, and institutions"]
-    Customer --> Workflow["Guided drone scan + AI analysis + orchard dashboard"]
-    Workflow --> Outcome["Visible fruit-count estimate and orchard map"]
-    Outcome --> Revenue["Paid scan or seasonal monitoring package"]
-    Revenue --> Phase1["Operator-led service"]
-    Phase1 --> Phase2["Managed on-site system"]
-    Phase2 --> Phase3["Guided self-service with support"]
-    Vision --> Research["Research monitoring system"]
-    Phase3 --> Expansion["Paid, repeatable proof"]
-    Research --> Expansion
-    Expansion --> Crops["Other high-value crops and controlled environments"]
-```
+Using a guided drone scan and AI fruit detection, we give a farm a simple report showing:
 
-## Read this first: the important part
+- its estimated visible citrus fruit count
+- an orchard/block map of where the fruit was observed
+- a harvest-planning summary for labor, packing, and buyer discussions
 
-The company is **not a drone seller** and it is **not a generic data company**.
+In plain language: **we scan an orchard and turn images into a useful harvest estimate.**
 
-It sells decision-ready farm intelligence. The drone is one way to collect observations; the valuable outcome is a reliable answer to a farm decision.
+### Why we start with citrus
 
-Our first answer is:
+We start with citrus, specifically Perante orange orchards in Nueva Vizcaya, because a focused first market lets us build a reliable local dataset, prove that customers will pay, and refine one field workflow before expanding.
 
-> "How much citrus can this orchard realistically harvest, and where should the farm pay attention?"
+We are not claiming to solve every farm-monitoring problem on day one. Citrus is the first product that makes the larger platform credible.
 
-This focus is essential. A broad platform vision is good; trying to build citrus, vegetables, hydroponics, poultry, and research tools at once is not.
+> Important: the result is a visible fruit-count estimate, not a guaranteed total harvest. Some fruit is hidden by leaves and branches.
 
-## First product: Citrus yield intelligence
+## Who pays us first
 
-### Customer
+Our first customers are commercial citrus orchards, cooperatives, and agricultural institutions in Nueva Vizcaya.
 
-Begin with commercial citrus orchards, cooperatives, and agricultural institutions in Nueva Vizcaya, especially those with a designated farm technician.
+They are a better starting market than individual small growers because they manage more trees, make larger harvest decisions, and can assign a farm technician to work with the system.
 
-### Problem
+## Why they would pay
 
-Farms need earlier, more consistent visibility into visible fruit volume so they can plan labor, harvest timing, packing, buyer commitments, and field checks.
+Before harvest, farms need a better answer to: **How much fruit can we expect, and where is it?**
 
-### Solution
+That information helps them plan:
 
-The system maps registered orchard blocks, captures aerial images through a guided drone scan, uses AI to estimate visible fruit counts, and returns a clear orchard report and dashboard history.
+- how many workers to prepare
+- when to harvest each orchard block
+- packing and transport needs
+- what volume they can discuss with buyers
+- which areas need a manual field check
 
-The result must be described honestly as a **visible fruit-count estimate**, not a guaranteed total harvest. Leaves, branches, and canopy structure hide some fruit.
-
-### Customer promise
-
-> Select an orchard block, press Scan, receive a harvest estimate and orchard map.
-
-The customer should not need to become a drone expert. The product needs preset scan paths, a guided checklist, image-quality checks, safe return-to-home behavior, and remote support.
-
-## Revenue model
-
-Start by selling outcomes, then make hardware access more self-service as the system proves reliable.
-
-| Stage | What the customer buys | How we earn |
-| --- | --- | --- |
-| 1. Scan service | We operate the scan and deliver the report. | Per scan, per orchard/block, or seasonal package. |
-| 2. Managed on-site system | The farm has a configured system; we manage setup, analysis, support, and maintenance. | Onboarding fee plus monthly, seasonal, or usage-based service. |
-| 3. Self-service platform | A trained farm technician runs guided scans using purchased or leased hardware. | Hardware sale/lease plus software and support subscription. |
-
-Illustrative early scan prices to validate with customers:
-
-- Pilot or demonstration: PHP 1,500 to PHP 3,000
-- Orchard/block scan: PHP 5,000 to PHP 15,000
-- Larger cooperative, institutional, or custom project: PHP 20,000+
-
-These are starting hypotheses, not final public prices. Every price must cover travel, operator time, batteries, repairs, cloud processing, storage, support, hardware replacement risk, and a healthy margin.
-
-### Why software can be monthly
-
-A monthly fee is justified only if the dashboard continues to help the farm: yield trends, scan history, map-based changes, planning reports, alerts, and management visibility. A one-time fruit count is a report, not yet recurring software.
-
-## Hardware strategy
-
-Do not lead by selling or freely renting drones. Early customers may create poor data through bad flights, poor charging, crashes, or inconsistent image capture, then blame the product.
-
-Start with **supervised autonomy**: we control the workflow and quality, while gradually enabling a farm technician to operate it. Sell or lease hardware only after installation, training, support terms, and repeatable field performance.
-
-If a drone costs about PHP 20,000 to build, a two-month rental at PHP 20,000 cannot be assumed profitable. Calculate the full operating cost before publishing that price.
-
-## Research monitoring system: second revenue line
-
-Researchers, universities, LGUs, and crop-development programs can pay for repeatable plant-monitoring workflows. This is a separate offer that uses the same core platform.
-
-> We design and operate repeatable plant-monitoring workflows that collect, organize, and analyze field data for your research project.
-
-Possible measurements include fruit counts, plant growth, canopy condition, time-series images, crop plots, treatments, trees, vegetables, and hydroponic systems.
-
-The research customer receives a defined monitoring plan, consistent plant/plot IDs, scheduled data collection, dashboard access, quality checks, and exportable images and data.
-
-Charge a one-time study setup fee, then a fee per scan, visit, month, plot, or season. Charge separately for hardware installation and genuinely new computer-vision analysis.
-
-Only accept research projects that reuse a core capability: mapping, repeat monitoring, image capture, computer vision, or reporting. Otherwise the company risks becoming a custom software shop rather than building a scalable product.
-
-## Competitive advantage
-
-The defensible asset is not the drone itself. It is the combination of:
-
-- A local Perante orange dataset and crop-specific AI model
-- Orchard maps and repeat scan history
-- A proven field workflow that creates consistent data
-- Relationships with Nueva Vizcaya farms, co-ops, and researchers
-- A software platform that turns raw imagery into useful decisions
-
-## Expansion rule
-
-The platform can expand to other high-value crops and controlled environments, but only after the first use case is paid and repeatable.
-
-1. Prove that citrus customers pay and use the result.
-2. Build a reliable local dataset and operating playbook.
-3. Choose one adjacent crop with a clear economic decision and similar monitoring needs.
-4. Run paid pilots.
-5. Productize what repeats.
-
-Poultry should not be an early expansion promise. Drone operations near animals raise welfare, safety, and biosecurity concerns and require a specific validated use case.
+## How the service works
 
 ```mermaid
 flowchart LR
-    Broad["Broad company vision"] --> Focus["One first customer + one first problem"] --> Proof["Paid results + repeatable operations"] --> Scale["New crops and self-service platform"]
+    Farm["Farm requests a scan"] --> Scan["Guided drone scan of orchard block"]
+    Scan --> AI["AI detects visible citrus fruit"]
+    AI --> Report["Yield-estimate report and orchard map"]
+    Report --> Decision["Farm plans harvest, labor, packing, and sales"]
 ```
 
-## Research partnership and IP rule
+At the start, our team operates or supervises the scan. This protects data quality while we improve the workflow. Later, trained farm staff can run guided scans, while we provide the software, support, and maintenance.
 
-Research can validate the system, create data, and open grant opportunities. It must not quietly take ownership of the company technology.
+## How we make money
 
-Before a partnership, agree in writing on ownership of existing software and models, access to images and labels, ownership of improvements, confidentiality, publication review, and commercialization rights.
+### 1. Orchard scan service: first revenue
 
-The intended relationship is simple: research strengthens the company; the company retains its core platform and commercial rights.
+The farm pays us to scan an orchard block and receive the report.
 
-## What we must prove next
+- Pilot scan: PHP 1,500 to PHP 3,000
+- Standard orchard/block scan: PHP 5,000 to PHP 15,000
+- Cooperative, institutional, or larger custom project: PHP 20,000+
 
-1. A commercial orchard, cooperative, or institution will pay for a citrus yield-estimate scan.
-2. The estimate influences a real decision about harvest, labor, packing, or sales.
-3. A scan can be completed safely and consistently in a real orchard.
-4. A trained farm technician can eventually produce usable data with guided support.
-5. The service remains profitable after travel, support, processing, and repair costs.
+These are initial test prices. We will refine them after measuring travel, labor, batteries, repairs, cloud processing, and customer willingness to pay.
 
-## Pitch position
+### 2. Seasonal monitoring package: repeat revenue
 
-For a competition or first customer conversation, lead with citrus. Use the platform vision only after the first problem is clear.
+The farm pays for scheduled scans throughout the season. It receives updated estimates, scan history, and comparison reports.
 
-> We help Nueva Vizcaya citrus orchards estimate visible fruit yield using guided drone scans and AI, so they can plan harvest and sales with better information. This is the first application of our AI-powered farm intelligence platform.
+This is the most important long-term service because farms should pay for recurring planning value, not only one report.
+
+### 3. Managed system for larger farms: later revenue
+
+Once the workflow is proven, larger farms can have a configured drone system on-site. We charge for installation, software, support, maintenance, and usage.
+
+We do **not** start by simply selling or renting drones. A drone flown incorrectly creates poor data and damages customer trust. Hardware sales or leasing come after training and reliable guided operations.
+
+## What makes us different
+
+Anyone can buy a drone. Our advantage is the complete local system:
+
+- Perante orange images and a crop-specific AI model
+- Orchard maps and repeat scan history
+- A reliable field workflow for producing usable images
+- A dashboard that turns images into a clear farm decision
+- Local relationships with Nueva Vizcaya growers and agricultural partners
+
+## Data advantage: improving the AI over time
+
+Each completed scan can improve the system. With the farm's permission, images, fruit-count observations, scan conditions, and verified harvest results can be used to train and evaluate better AI models.
+
+This creates a data flywheel:
+
+```mermaid
+flowchart LR
+    Scan["More orchard scans"] --> Data["Permissioned, quality-checked farm data"]
+    Data --> Model["Better citrus AI model"]
+    Model --> Report["More useful yield estimates"]
+    Report --> Customers["More customer trust and repeat scans"]
+    Customers --> Scan
+```
+
+The goal is not to resell a specific farm's raw images or confidential records. Farms must retain control of their identifiable data.
+
+Later, and only with clear consent and appropriate privacy safeguards, we may offer aggregated and anonymized market insights. For example, a cooperative, buyer, or agricultural organization may pay for regional crop-volume trends that do not reveal any individual farm's identity, location, or confidential production data.
+
+Every customer agreement should clearly state:
+
+- what data we collect
+- who owns the raw images and identifiable farm records
+- whether the farm permits model training
+- whether anonymized, aggregated insights may be created
+- how the farm can opt out
+
+This is both an ethical choice and a business advantage. Farmers will share better data when they understand the benefit and trust that we will not expose their operation.
+
+## Where the company goes next
+
+Our company vision is broader than citrus, but our first business is deliberately narrow.
+
+> We are building an AI-powered farm intelligence platform. We begin with drone-based citrus yield estimation for Nueva Vizcaya orchards, then extend the same monitoring workflow to other high-value crops.
+
+After citrus customers pay and the workflow is repeatable, we can adapt the platform to other crops and controlled environments such as hydroponics. Every new market must first pass a paid pilot; we will not build every crop solution at once.
+
+## Research customers: an additional path
+
+Universities, LGUs, and crop researchers may also pay us to set up repeatable plant-monitoring studies. We can collect scheduled images and measurements, organize them by plant or plot, and provide a dashboard and exportable dataset.
+
+This is a second revenue line, not our main first pitch. It helps us earn project income, validate methods, and improve the platform while citrus remains the first commercial use case.
+
+## What we need to prove
+
+1. Farms will pay for a citrus yield-estimate scan.
+2. The estimate improves a real decision about harvest, labor, packing, or sales.
+3. We can complete scans safely and consistently in real orchards.
+4. Seasonal monitoring creates repeat customers.
+5. The service is profitable after the real cost of operating it.
