@@ -92,8 +92,8 @@ height = (y_max - y_min) / image_height
 
 ### 3. Physical Hardware Milestone (Manual Flight)
 - Focus strictly on assembling a manual micro-drone for initial hardware validation.
-- **Hardware Profile:** SpeedyBee F405 Mini flight controller running ArduPilot/Betaflight, motors, ESCs, frame, RC transmitter/receiver.
-- **Scope Restriction:** The physical drone in Thesis 1 will ONLY perform manual RC flight, hovering, and landing. Do NOT include the Raspberry Pi Zero or onboard AI processing on the physical drone during Thesis 1.
+- **Hardware Profile:** SpeedyBee F405 Mini flight controller running ArduPilot/ArduCopter, motors, ESCs, frame, RC transmitter/receiver.
+- **Scope Restriction:** The physical drone in Thesis 1 will ONLY perform manual RC flight, hovering, and landing under ArduPilot-stabilized control. Do NOT include the Raspberry Pi Zero or onboard AI processing on the physical drone during Thesis 1.
 
 ### 4. Farmer Web Dashboard
 Build a Next.js + Supabase dashboard as the central system where farms, trees, drones, scan requests, images, and AI results will eventually connect.
@@ -188,7 +188,7 @@ Thesis 2 focuses on upgrading the physical hardware, refining the computer visio
 
 ### 1. Hardware Upgrade
 - **Companion Computer:** Mount a Raspberry Pi Zero 2 W + Raspberry Pi Camera V2 onto the physical drone.
-- **Flight Controller Integration:** Connect the Pi to the SpeedyBee F405 flight controller.
+- **Flight Controller Integration:** Connect the Pi to the SpeedyBee F405 flight controller running ArduPilot/ArduCopter.
 - Enable MAVLink image triggering for synchronized aerial capture during autonomous flights.
 
 ### 2. Computer Vision Engine

@@ -71,6 +71,7 @@ Optional components:
 Required components:
 
 - SpeedyBee F405 Mini flight controller from the SpeedyBee F405 Mini Stack
+- ArduPilot/ArduCopter firmware on the SpeedyBee F405 Mini
 - 4x CADDXFPV 1303 6000KV 2-4S brushless motors
 - Gemfan Hurricane 3018 3x1.8 3-inch 2-blade propellers, 1.5mm hole T-mount
 - Included BLS 35A 4-in-1 ESC from the SpeedyBee F405 Mini Stack
@@ -176,24 +177,26 @@ The Matek 3901-L0X uses a VL53L0X Time-of-Flight (ToF) rangefinder that operates
 
 ### Software and Firmware Architecture Decision
 
-This build requires an explicit firmware choice before assembly. Two viable paths are available:
+The source-of-truth firmware path for this project is **ArduPilot/ArduCopter on the SpeedyBee F405 Mini**.
 
-**Option A — CogniFly Native Path (Recommended for current hardware budget):**
+This choice matches the RRL and project overview because ArduPilot provides MAVLink telemetry, autonomous mission support, companion-computer integration, rangefinder/GPS support, Lua scripting, and a direct Gazebo SITL workflow through `ardupilot_gz`. These features are required for the thesis architecture: registered-tree missions, circular scan behavior, synchronized camera/telemetry capture, simulation validation, and dashboard mission states.
 
-- Flash **iNav firmware** onto the SpeedyBee F405 Mini
-- Run `cognifly-python` scripts on the Raspberry Pi Zero 2 W for image capture and MSP command relay
-- Offload all ROS 2 and YOLO computer vision tasks to a ground laptop
-- Advantage: No hardware swap required, stays within the current budget, well-documented CogniFly integration
-- Limitation: Computer vision inference runs on the ground laptop, not onboard
+**Current ArduPilot path:**
 
-**Option B — PX4 / ROS 2 Native Path (Requires additional hardware investment):**
+- Flash **ArduPilot/ArduCopter** onto the SpeedyBee F405 Mini
+- Use MAVLink telemetry between the flight controller, Raspberry Pi Zero 2 W, ground laptop, and/or backend
+- Use the Raspberry Pi Zero 2 W for image capture, timestamping, lightweight telemetry handling, and data upload
+- Offload ROS 2, YOLO, duplicate-count reduction, and heavy post-processing to a ground laptop for the thesis MVP
+- Use Gazebo Sim with ArduPilot SITL and `ardupilot_gz` for autonomous mission testing before real-world flights
 
-- Replace the SpeedyBee F405 Mini with an H7-class flight controller such as MicoAir H743 or Matek H743 that natively supports PX4 autopilot
-- Note: The Raspberry Pi Zero 2 W has only 512MB of RAM, which is insufficient for running ROS 2 nodes onboard
-- Advantage: Native PX4 support, standard ROS 2 ecosystem integration
-- Limitation: Adds cost and complexity, requires a flight controller swap
+**Optional early validation only:**
 
-**Current plan:** Option A — iNav on SpeedyBee F405 Mini.
+- Manual RC hover and safety tests may be performed under ArduPilot/ArduCopter before full autonomous integration
+
+**Not the current plan:**
+
+- PX4 is not selected for the present hardware path because it would likely require an H7-class flight controller swap and additional integration cost
+- Full ROS 2 and YOLO inference will not run onboard the Raspberry Pi Zero 2 W because its 512MB RAM and thermal envelope are too limited for reliable sustained processing
 
 ### RC Receiver Size Constraint
 
@@ -225,6 +228,7 @@ Minimum realistic physical prototype:
 
 - Modified CogniFly-based 3D-printable drone frame
 - SpeedyBee F405 Mini flight controller from the SpeedyBee F405 Mini Stack
+- ArduPilot/ArduCopter firmware
 - 4x CADDXFPV 1303 6000KV 2-4S brushless motors
 - Included BLS 35A 4-in-1 ESC from the SpeedyBee F405 Mini Stack
 - Raspberry Pi Zero 2 W (~~Raspberry Pi Zero W~~ - single-core ARMv6 is insufficient)
