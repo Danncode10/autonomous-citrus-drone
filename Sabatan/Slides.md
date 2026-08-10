@@ -4,7 +4,7 @@
 
 This is a business-pitch deck for the NVSU Business Pitch Competition / Young Farmers Challenge. It must make one point clear:
 
-> GrowKita helps Nueva Vizcaya citrus farms estimate visible fruit yield using guided drone scans and AI, so they can plan harvest and sales with better information.
+> GrowKita sells AI-powered farm intelligence through a drone-and-software system, with per-hectare scanning available for farms that want the report without buying the full system.
 
 Do not present the venture as a company that already solves every crop, vegetable, hydroponic, and poultry problem. Citrus is the first product. The larger farm-intelligence platform is the credible future.
 
@@ -94,7 +94,7 @@ The issue is not that farmers lack information. They lack timely, consistent inf
 
 **On-screen text**
 
-### A guided drone scan becomes a harvest estimate.
+### The drone captures the farm. The software turns it into decisions.
 
 1. Scan the farm block
 2. AI detects visible fruit
@@ -107,11 +107,11 @@ flowchart LR
     Scan["Guided drone scan"] --> AI["AI fruit detection"] --> Report["Yield estimate + farm map"] --> Plan["Harvest and sales plan"]
 ```
 
-Use a clean diagram with a drone photo or small drone icon above the first step. This should be the simplest slide in the deck.
+Use a clean diagram with a drone photo or small drone icon above the first step. This should be one of the simplest slides in the deck.
 
 **Speaker point**
 
-GrowKita is not selling a drone. We are selling a decision-ready report that helps the farm plan.
+GrowKita is not only selling hardware. The drone is the tool, the software is the brain, and the report is the value.
 
 ## Slide 6: What the farm receives
 
@@ -136,26 +136,26 @@ Be precise: this is a visible fruit-count estimate, not a guaranteed total harve
 
 **On-screen text**
 
-### Start with a service. Grow into a platform.
+### Two ways to buy GrowKita.
 
-| Now | Next | Later |
+| Full system package | Per-hectare scan service | Support and training |
 | --- | --- | --- |
-| Paid farm scan | Seasonal monitoring | Managed on-site system |
-| We operate or supervise | Repeat scans and reports | Guided farm-staff scans with our software and support |
+| Drone + software + AI model | GrowKita scans the farm | Setup, maintenance, updates |
+| For co-ops, LGUs, research, larger farms | For farms that only need the report | Not required as a monthly subscription |
 
-Initial price tests:
+Price estimates:
 
-- Pilot: PHP 1,500 to PHP 3,000
-- Farm/block scan: PHP 5,000 to PHP 15,000
-- Large/co-op/custom project: PHP 20,000+
+- System package: PHP 100,000 to PHP 150,000
+- Farm survey scan: PHP 5,000 to PHP 10,000 per hectare
+- Co-op/research/custom project: quotation
 
 **Visual**
 
-Use the table as the visual. Add a small arrow moving from "service" to "managed system". Do not put rental or drone-sale prices on this slide yet; those are later operating choices, not the core business.
+Use the table as the visual. Make the two buying paths very clear: buy the system, or pay per hectare for GrowKita to scan and report. Add a small note: "Prices are validation-stage estimates and may change after expert review, prototype costing, and field testing."
 
 **Speaker point**
 
-We begin with paid results because it lets us control quality and learn. Recurring seasonal monitoring is the target revenue model.
+This is easier for the market to understand: customers either buy the capability or pay for the result by hectare. The prices are not final; they are starting estimates we will validate with experts, prototype cost, and real customers.
 
 ## Slide 8: Why we can win
 
@@ -216,7 +216,7 @@ A horizontal four-step timeline. Citrus and Nueva Vizcaya should be visually lar
 
 **Speaker point**
 
-GrowKita is scalable because the workflow repeats, but we expand only after the first market is working.
+GrowKita is scalable because the workflow repeats, but we expand only after the first market is working and the system is reliable enough to sell or operate per hectare.
 
 ## Slide 11: Future applications
 

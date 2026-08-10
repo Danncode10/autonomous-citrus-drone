@@ -1,16 +1,18 @@
-# Business Model: GrowKita - Citrus Yield Intelligence
+# Business Model: GrowKita - AI Farm Intelligence
 
 ## What we sell
 
-GrowKita provides a **Citrus Yield Intelligence Service** for farms in Nueva Vizcaya.
+GrowKita sells an **AI farm intelligence system** that helps farms turn drone scans into decision-ready harvest insights.
 
-Using a guided drone scan and AI fruit detection, we give a farm a simple report showing:
+Our first product is built for citrus farms in Nueva Vizcaya. Using a guided drone scan and AI fruit detection, GrowKita shows:
 
-- its estimated visible citrus fruit count
-- a farm/block map of where the fruit was observed
+- an estimated visible citrus fruit count
+- a farm/block map showing where fruit was observed
 - a harvest-planning summary for labor, packing, and buyer discussions
 
-In plain language: **we scan a farm and turn images into a useful harvest estimate.**
+In plain language: **we do not only sell a drone. We sell farm intelligence.**
+
+The drone is the hardware. The software is the brain. The report is the value.
 
 ### Why we start with citrus
 
@@ -38,41 +40,74 @@ That information helps them plan:
 - what volume they can discuss with buyers
 - which areas need a manual field check
 
-## How the service works
+## How GrowKita works
 
 ```mermaid
 flowchart LR
-    Farm["Farm requests a scan"] --> Scan["Guided drone scan of farm block"]
+    Farm["Farm or institution needs farm data"] --> Access["Buy system or request per-hectare scan"]
+    Access --> Scan["Guided drone scan of farm block"]
     Scan --> AI["AI detects visible citrus fruit"]
     AI --> Report["Yield-estimate report and farm map"]
     Report --> Decision["Farm plans harvest, labor, packing, and sales"]
 ```
 
-At the start, our team operates or supervises the scan. This protects data quality while we improve the workflow. Later, trained farm staff can run guided scans, while we provide the software, support, and maintenance.
+At the start, our team can operate or supervise scans to protect data quality while we improve the workflow. For larger customers, GrowKita can also sell the complete drone-and-software package and train their staff to use it.
 
 ## How we make money
 
-### 1. Farm scan service: first revenue
+### 1. Drone + software package: main product sale
 
-The farm pays us to scan a farm block and receive the report.
+GrowKita sells a complete package to larger farms, cooperatives, universities, LGUs, and research customers:
 
-- Pilot scan: PHP 1,500 to PHP 3,000
-- Standard farm/block scan: PHP 5,000 to PHP 15,000
-- Cooperative, institutional, or larger custom project: PHP 20,000+
+- configured drone
+- GrowKita scanning and dashboard software
+- AI citrus fruit-count model
+- onboarding and training
+- basic documentation and operating workflow
 
-These are initial test prices. We will refine them after measuring travel, labor, batteries, repairs, cloud processing, and customer willingness to pay.
+This is easier for serious customers to understand: they buy the capability, not just a service visit.
 
-### 2. Seasonal monitoring package: repeat revenue
+Initial validation estimate:
 
-The farm pays for scheduled scans throughout the season. It receives updated estimates, scan history, and comparison reports.
+- Drone-and-software system package: around PHP 100,000 to PHP 150,000 depending on drone build, sensors, setup, training, and included support
+- Institutional or research package: custom pricing based on study duration, data needs, and training requirements
 
-This is the most important long-term service because farms should pay for recurring planning value, not only one report.
+These numbers are not final. They must be validated with agricultural experts, possible buyers, prototype cost, field reliability, software scope, training time, and support load.
 
-### 3. Managed system for larger farms: later revenue
+### 2. Per-hectare scanning service: accessible entry offer
 
-Once the workflow is proven, larger farms can have a configured drone system on-site. We charge for installation, software, support, maintenance, and usage.
+Not every farmer will buy a drone-and-software system. For them, GrowKita offers a scanning service priced per hectare.
 
-We do **not** start by simply selling or renting drones. A drone flown incorrectly creates poor data and damages customer trust. Hardware sales or leasing come after training and reliable guided operations.
+The farm pays based on the area scanned and receives the report.
+
+- Farm survey scan: PHP 5,000 to PHP 10,000 per hectare, depending on travel, terrain, farm layout, and report detail
+- Cooperative, institutional, or larger project: custom quotation
+
+Per-hectare pricing is strong because agricultural customers already think in land area. It also makes the offer easier to explain in a pitch.
+
+### 3. Training, maintenance, and support: after-sale revenue
+
+The software does not need to be sold as a mandatory monthly subscription at the start. Instead, we can earn from practical support:
+
+- setup and onboarding
+- operator training
+- maintenance and repair coordination
+- AI model updates
+- data backup and report generation support
+- custom research dashboards or exports
+
+This avoids scaring local buyers with subscription fees while still creating future recurring revenue.
+
+### 4. Seasonal monitoring: repeat service revenue
+
+For farms that want continuous planning support, GrowKita can offer scheduled scans during the season. The value is not the scan alone; it is the comparison over time.
+
+Seasonal monitoring can show:
+
+- changes in visible fruit count
+- farm blocks that need manual checking
+- harvest-readiness trends
+- comparison against previous scans
 
 ## What makes us different
 
@@ -83,6 +118,8 @@ Anyone can buy a drone. Our advantage is the complete local system:
 - A reliable field workflow for producing usable images
 - A dashboard that turns images into a clear farm decision
 - Local relationships with Nueva Vizcaya growers and agricultural partners
+
+This matters because a drone without a good workflow can produce poor data. GrowKita's value is the whole system: hardware, AI, guided scanning, dashboard, report, training, and local crop knowledge.
 
 ## Data advantage: improving the AI over time
 
@@ -125,12 +162,12 @@ After citrus customers pay and the workflow is repeatable, we can adapt the plat
 
 Universities, LGUs, and crop researchers may also pay us to set up repeatable plant-monitoring studies. We can collect scheduled images and measurements, organize them by plant or plot, and provide a dashboard and exportable dataset.
 
-This is a second revenue line, not our main first pitch. It helps us earn project income, validate methods, and improve the platform while citrus remains the first commercial use case.
+This can be sold as a complete automation package: drone setup, software dashboard, data-collection workflow, and study-specific reporting. It helps us earn project income, validate methods, and improve the platform while citrus remains the first commercial use case.
 
 ## What we need to prove
 
-1. Farms will pay for a citrus yield-estimate scan.
-2. The estimate improves a real decision about harvest, labor, packing, or sales.
-3. We can complete scans safely and consistently in real farms.
-4. Seasonal monitoring creates repeat customers.
-5. The service is profitable after the real cost of operating it.
+1. Larger customers will buy the drone-and-software package.
+2. Farms will pay per hectare for a citrus yield-estimate scan.
+3. The estimate improves a real decision about harvest, labor, packing, or sales.
+4. We can complete scans safely and consistently in real farms.
+5. Training and support can create repeat revenue without forcing a subscription.

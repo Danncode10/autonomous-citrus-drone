@@ -20,7 +20,7 @@ Before harvest, farms need to answer three business questions: how much fruit to
 
 ## Slide 5 - The Solution
 
-GrowKita turns a guided farm scan into a clearer estimate. We scan a farm block, our AI detects visible fruit, and the farm receives a map and report that supports harvest and sales planning. We are not simply selling a drone; we are selling a decision-ready result.
+GrowKita turns a guided farm scan into a clearer estimate. The drone captures the farm, the software detects visible fruit, and the report supports harvest and sales planning. The drone is the tool, the software is the brain, and the report is the value.
 
 ## Slide 6 - What the Farm Receives
 
@@ -28,11 +28,11 @@ The farm sees an estimated visible fruit count, a map by farm block, areas that 
 
 ## Slide 7 - How We Make Money
 
-We start as a paid service: a farm pays for a scan and receives a report. Then we move toward seasonal monitoring, where farms pay for repeat scans and comparisons. Over time, trained farm staff can use a managed GrowKita system supported by our software. This creates recurring revenue while we maintain quality.
+GrowKita has two clear ways to earn. Larger customers can buy the drone-and-software package, including training and support. Farms that are not ready to buy the system can pay per hectare for GrowKita to scan their farm and deliver the report. Our starting estimates are around PHP 100,000 to PHP 150,000 for the system, and PHP 5,000 to PHP 10,000 per hectare for a survey scan. These are not final prices; we will validate them with experts, prototype cost, and real customer feedback.
 
 ## Slide 8 - Why We Can Win
 
-The drone is not our moat. Our advantage is the local system around it: crop-specific data, an improving AI model, repeat scan history, a practical field workflow, and trusted partners in Nueva Vizcaya. That is much harder to copy than hardware alone.
+The drone alone is not our advantage. Our advantage is the local system around it: crop-specific data, an improving AI model, repeat scan history, a practical field workflow, training, and trusted partners in Nueva Vizcaya. That is much harder to copy than hardware alone.
 
 ## Slide 9 - The Data Flywheel
 
@@ -40,7 +40,7 @@ With clear farm permission, every quality-checked scan helps improve the citrus 
 
 ## Slide 10 - Growth Path
 
-Our plan is disciplined. First, prove that citrus farms will pay for useful scans. Next, build seasonal monitoring. Then enable guided scans with trained farm staff. Only after that do we run paid pilots for the next crop or controlled environment.
+Our plan is disciplined. First, prove that farms will pay per hectare for useful citrus scans and that larger buyers will consider the full system package. Next, improve reliability and training. Only after that do we run paid pilots for the next crop or controlled environment.
 
 ## Slide 11 - Future Applications
 
@@ -48,7 +48,7 @@ Once the workflow works for citrus, the same platform can be tested in hydroponi
 
 ## Slide 12 - Pilot Plan and Ask
 
-Our next milestone is not a large rollout. It is a strong local proof point: a citrus farm that uses our report to make a better decision and chooses to pay again. We are seeking pilot farms or cooperatives, agricultural mentors, and support for field testing and model validation.
+Our next milestone is not a large rollout. It is a strong local proof point: a citrus farm that uses our report to make a better decision, plus a serious buyer who can evaluate the full drone-and-software package. We are seeking pilot farms, cooperatives, agricultural mentors, and support for field testing and model validation.
 
 ## Slide 13 - Closing / Team
 
