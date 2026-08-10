@@ -1,0 +1,655 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/jpa4ei",
+    "id": "jpa4ei",
+    "slide": 11,
+    "layoutId": "62bac217-7bb5-4f14-a896-68cd8339023e",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "c1f800ee-1152-4c1c-8c9c-c33f9b04969b",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#0C2C20",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "62bac217-7bb5-4f14-a896-68cd8339023e",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "c1f800ee-1152-4c1c-8c9c-c33f9b04969b",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "c1f800ee-1152-4c1c-8c9c-c33f9b04969b",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1gnadc7m",
+      "id": "1",
+      "name": "image-placeholder",
+      "bbox": [
+        760,
+        0,
+        520,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#DDEEDC",
+      "lineColor": "#23835E",
+      "lineWidth": 2
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/edcb2hov",
+      "id": "2",
+      "bbox": [
+        784,
+        324,
+        472,
+        28
+      ],
+      "geometry": "rect",
+      "text": "TEAM AND PROTOTYPE PHOTO",
+      "textPreview": "TEAM AND PROTOTYPE PHOTO",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TEAM AND PROTOTYPE PHOTO"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TEAM AND PROTOTYPE PHOTO",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TEAM AND PROTOTYPE PHOTO",
+              "fontSize": 18,
+              "color": "#0E6B4F",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fe5sbmpg",
+      "id": "3",
+      "bbox": [
+        784,
+        362,
+        472,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Paste a real field-test or team photo",
+      "textPreview": "Paste a real field-test or team photo",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#667085",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Paste a real field-test or team photo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Paste a real field-test or team photo",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#667085",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Paste a real field-test or team photo",
+              "fontSize": 14,
+              "color": "#667085",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ojet8r6d",
+      "id": "4",
+      "bbox": [
+        0,
+        0,
+        800,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#0C2C20",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pknuhw7i",
+      "id": "5",
+      "bbox": [
+        72,
+        112,
+        590,
+        116
+      ],
+      "geometry": "rect",
+      "text": "Our next step: prove value with local farms.",
+      "textPreview": "Our next step: prove value with local farms.",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "fontSize": 44,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Our next step: prove value"
+          },
+          {
+            "index": 2,
+            "text": "with local farms."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Our next step: prove value with local farms.",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Our next step: prove value with local farms.",
+              "fontSize": 44,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2hwb6ho7",
+      "id": "6",
+      "bbox": [
+        72,
+        256,
+        74,
+        6
+      ],
+      "geometry": "rect",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3i5sfmps",
+      "id": "7",
+      "bbox": [
+        72,
+        304,
+        280,
+        26
+      ],
+      "geometry": "rect",
+      "text": "We are seeking",
+      "textPreview": "We are seeking",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#B9D5C5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "We are seeking"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "We are seeking",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#B9D5C5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "We are seeking",
+              "fontSize": 19,
+              "color": "#B9D5C5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7ytcb69",
+      "id": "8",
+      "bbox": [
+        72,
+        360,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d87ulw7u",
+      "id": "9",
+      "bbox": [
+        96,
+        350,
+        572,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Pilot citrus farms or cooperatives",
+      "textPreview": "Pilot citrus farms or cooperatives",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pilot citrus farms or cooperatives"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pilot citrus farms or cooperatives",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pilot citrus farms or cooperatives",
+              "fontSize": 20,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x8vyps3m",
+      "id": "10",
+      "bbox": [
+        72,
+        424,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7mhwn21",
+      "id": "11",
+      "bbox": [
+        96,
+        414,
+        572,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Agricultural mentors and validation partners",
+      "textPreview": "Agricultural mentors and validation partners",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Agricultural mentors and validation partners"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Agricultural mentors and validation partners",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Agricultural mentors and validation partners",
+              "fontSize": 20,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b6dgnilg",
+      "id": "12",
+      "bbox": [
+        72,
+        488,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a54zudkb",
+      "id": "13",
+      "bbox": [
+        96,
+        478,
+        572,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Support for field testing, data collection, and model improvement",
+      "textPreview": "Support for field testing, data collection, and model improvement",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Support for field testing, data collection, and model"
+          },
+          {
+            "index": 2,
+            "text": "improvement"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Support for field testing, data collection, and model improvement",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Support for field testing, data collection, and model improvement",
+              "fontSize": 20,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lcfyts3y",
+      "id": "14",
+      "bbox": [
+        72,
+        575,
+        590,
+        64
+      ],
+      "geometry": "rect",
+      "text": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
+      "textPreview": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#F7D6A9",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SUCCESS = A farm uses our report to make a better"
+          },
+          {
+            "index": 2,
+            "text": "harvest decision and pays to use it again."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#F7D6A9",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
+              "fontSize": 20,
+              "color": "#F7D6A9",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

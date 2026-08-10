@@ -1,20 +1,20 @@
-# PowerPoint Plan: AgriSuri
+# PowerPoint Plan: GrowKita
 
 ## Deck purpose
 
 This is a business-pitch deck for the NVSU Business Pitch Competition / Young Farmers Challenge. It must make one point clear:
 
-> AgriSuri helps Nueva Vizcaya citrus farms estimate visible fruit yield using guided drone scans and AI, so they can plan harvest and sales with better information.
+> GrowKita helps Nueva Vizcaya citrus farms estimate visible fruit yield using guided drone scans and AI, so they can plan harvest and sales with better information.
 
 Do not present the venture as a company that already solves every crop, vegetable, hydroponic, and poultry problem. Citrus is the first product. The larger farm-intelligence platform is the credible future.
 
-Do not claim that AgriSuri is the first AI-and-drone agriculture company in the Philippines. Other Philippine drone and AI agriculture projects already exist. Instead, present the ambition truthfully: **AgriSuri aims to make AI-powered farm intelligence practical for local farms, beginning with Nueva Vizcaya citrus.**
+Do not claim that GrowKita is the first AI-and-drone agriculture company in the Philippines. Other Philippine drone and AI agriculture projects already exist. Instead, present the ambition truthfully: **GrowKita aims to make AI-powered farm intelligence practical for local farms, beginning with Nueva Vizcaya citrus.**
 
 ## Slide 1: Title / hook
 
 **On-screen text**
 
-**AgriSuri**
+**GrowKita**
 
 AI-powered farm intelligence.
 
@@ -26,7 +26,7 @@ A strong full-slide photo of a real citrus tree or farm in Nueva Vizcaya, with v
 
 **Speaker point**
 
-AgriSuri helps farms make harvest and buyer decisions before the exact available fruit volume is known. We begin by giving citrus farms an earlier estimate.
+GrowKita helps farms make harvest and buyer decisions before the exact available fruit volume is known. We begin by giving citrus farms an earlier estimate.
 
 ## Slide 2: Our vision
 
@@ -46,7 +46,7 @@ A full-width farm landscape or aerial agricultural image. Overlay a restrained n
 
 **Speaker point**
 
-Agriculture is entering an AI era, but local farms still need practical tools that turn technology into decisions. AgriSuri will build that bridge, starting with one real problem we can solve well.
+Agriculture is entering an AI era, but local farms still need practical tools that turn technology into decisions. GrowKita will build that bridge, starting with one real problem we can solve well.
 
 ## Slide 3: Why we start with citrus
 
@@ -54,7 +54,7 @@ Agriculture is entering an AI era, but local farms still need practical tools th
 
 ### Start local. Prove value. Then scale.
 
-Nueva Vizcaya is known for Perante oranges. Citrus gives AgriSuri a focused first market where we can:
+Nueva Vizcaya is known for Perante oranges. Citrus gives GrowKita a focused first market where we can:
 
 - build a local, crop-specific AI dataset
 - work with nearby farms and agricultural partners
@@ -111,7 +111,7 @@ Use a clean diagram with a drone photo or small drone icon above the first step.
 
 **Speaker point**
 
-AgriSuri is not selling a drone. We are selling a decision-ready report that helps the farm plan.
+GrowKita is not selling a drone. We are selling a decision-ready report that helps the farm plan.
 
 ## Slide 6: What the farm receives
 
@@ -216,7 +216,7 @@ A horizontal four-step timeline. Citrus and Nueva Vizcaya should be visually lar
 
 **Speaker point**
 
-AgriSuri is scalable because the workflow repeats, but we expand only after the first market is working.
+GrowKita is scalable because the workflow repeats, but we expand only after the first market is working.
 
 ## Slide 11: Pilot plan and ask
 
@@ -268,7 +268,7 @@ Professional team photos or clean name-and-role layout. Add a small photo of the
 
 > The future of farming will not be guessed. It will be measured.
 
-**AgriSuri**
+**GrowKita**
 
 AI-powered farm intelligence, starting in Nueva Vizcaya.
 
@@ -278,11 +278,11 @@ Use a clean, full-slide image of a Perante citrus farm at sunrise or a team test
 
 **Speaker point**
 
-AgriSuri begins with citrus, but the mission is larger: make better farm decisions possible through local data, AI, and practical automation.
+GrowKita begins with citrus, but the mission is larger: make better farm decisions possible through local data, AI, and practical automation.
 
 **Why this instead of a "be first and get rich" quote**
 
-This closing statement is original to AgriSuri. It sounds confident and ambitious while keeping the focus on the farmer outcome and the venture's purpose.
+This closing statement is original to GrowKita. It sounds confident and ambitious while keeping the focus on the farmer outcome and the venture's purpose.
 
 ## Design rules
 

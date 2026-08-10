@@ -1,8 +1,8 @@
-# Business Model: Citrus Yield Intelligence
+# Business Model: GrowKita - Citrus Yield Intelligence
 
 ## What we sell
 
-We provide a **Citrus Yield Intelligence Service** for farms in Nueva Vizcaya.
+GrowKita provides a **Citrus Yield Intelligence Service** for farms in Nueva Vizcaya.
 
 Using a guided drone scan and AI fruit detection, we give a farm a simple report showing:
 
@@ -117,7 +117,7 @@ This is both an ethical choice and a business advantage. Farmers will share bett
 
 Our company vision is broader than citrus, but our first business is deliberately narrow.
 
-> We are building an AI-powered farm intelligence platform. We begin with drone-based citrus yield estimation for Nueva Vizcaya farms, then extend the same monitoring workflow to other high-value crops.
+> GrowKita is building an AI-powered farm intelligence platform. We begin with drone-based citrus yield estimation for Nueva Vizcaya farms, then extend the same monitoring workflow to other high-value crops.
 
 After citrus customers pay and the workflow is repeatable, we can adapt the platform to other crops and controlled environments such as hydroponics. Every new market must first pass a paid pilot; we will not build every crop solution at once.
 

@@ -1,0 +1,237 @@
+{"kind":"deck","id":"pr/670q86","name":"Deck"}
+{"kind":"layout","layoutId":"b0e6895c-0c02-4f55-8a60-4a4ef94e194a","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"e8246b1f-1ef1-4b10-8a26-714b035d4f8c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/0puuw8","slide":1,"title":"HERO FARM PHOTO","textShapes":7}
+{"kind":"shape","id":"sh/hsnm1wry","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/upwn6hsn","slide":1,"name":"image-placeholder","bbox":[770,0,510,720]}
+{"kind":"textbox","id":"sh/fq54zm98","slide":1,"text":"HERO FARM PHOTO","textPreview":"HERO FARM PHOTO","textChars":15,"textLines":1,"bbox":[794,324,462,28]}
+{"kind":"textbox","id":"sh/snul47ah","slide":1,"text":"Perante citrus tree or farm landscape","textPreview":"Perante citrus tree or farm landscape","textChars":37,"textLines":1,"bbox":[794,362,462,24]}
+{"kind":"shape","id":"sh/to3mxcr2","slide":1,"bbox":[0,0,810,720]}
+{"kind":"shape","id":"sh/6lc32xsb","slide":1,"bbox":[72,150,88,7]}
+{"kind":"textbox","id":"sh/7ml4v29w","slide":1,"name":"brand","text":"AgriSuri","textPreview":"AgriSuri","textChars":8,"textLines":1,"bbox":[72,186,600,76]}
+{"kind":"textbox","id":"sh/cjy5gbql","slide":1,"text":"AI-powered farm intelligence.","textPreview":"AI-powered farm intelligence.","textChars":29,"textLines":1,"bbox":[72,280,590,40]}
+{"kind":"textbox","id":"sh/dk7m9gr6","slide":1,"text":"Starting with citrus yield estimation\nfor Nueva Vizcaya farms.","textPreview":"Starting with citrus yield estimation | for Nueva Vizcaya farms.","textChars":62,"textLines":2,"bbox":[72,348,600,88]}
+{"kind":"textbox","id":"sh/p47epknm","slide":1,"text":"NVSU Business Pitch Competition 2026","textPreview":"NVSU Business Pitch Competition 2026","textChars":36,"textLines":1,"bbox":[72,620,500,22]}
+{"kind":"textbox","id":"sh/o3ydwz61","slide":1,"text":"TEAM NAME  |  NUEVA VIZCAYA STATE UNIVERSITY","textPreview":"TEAM NAME  |  NUEVA VIZCAYA STATE UNIVERSITY","textChars":44,"textLines":1,"bbox":[72,654,620,20]}
+{"kind":"notes","id":"nt/0puuw8","slide":1,"text":"Open with the decision, not the drone.\nAgriSuri helps farms plan harvest and buyer commitments before the exact fruit volume is known."}
+{"kind":"slide","id":"sl/hqt6ug","slide":2,"title":"OUR VISION","textShapes":17}
+{"kind":"textbox","id":"sh/5wzy1kz2","slide":2,"name":"kicker","text":"OUR VISION","textPreview":"OUR VISION","textChars":10,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/it8fq5gr","slide":2,"name":"title","text":"Practical AI-powered farm intelligence for Philippine agriculture","textPreview":"Practical AI-powered farm intelligence for Philippine agriculture","textChars":65,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/juhgzahw","slide":2,"bbox":[72,318,70,5]}
+{"kind":"textbox","id":"sh/w7qxovyl","slide":2,"name":"page-marker","text":"AGRI SURI  |  02","textPreview":"AGRI SURI  |  02","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"textbox","id":"sh/hszyx0z6","slide":2,"text":"AgriSuri turns field observations into decisions that farms can act on.","textPreview":"AgriSuri turns field observations into decisions that farms can act on.","textChars":71,"textLines":1,"bbox":[72,184,700,38]}
+{"kind":"shape","id":"sh/u5ofm5gf","slide":2,"name":"image-placeholder","bbox":[824,170,384,390]}
+{"kind":"textbox","id":"sh/v6xgvqh0","slide":2,"text":"FARM LANDSCAPE OR AERIAL IMAGE","textPreview":"FARM LANDSCAPE OR AERIAL IMAGE","textChars":30,"textLines":1,"bbox":[848,329,336,28]}
+{"kind":"textbox","id":"sh/03ah0zyp","slide":2,"text":"Use a real wide farm photo","textPreview":"Use a real wide farm photo","textChars":26,"textLines":1,"bbox":[848,367,336,24]}
+{"kind":"shape","id":"sh/1ojyt4za","slide":2,"bbox":[72,294,74,74]}
+{"kind":"textbox","id":"sh/xczqdc72","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[72,313,74,28]}
+{"kind":"textbox","id":"sh/wbq9k7qx","slide":2,"text":"Observe","textPreview":"Observe","textChars":7,"textLines":1,"bbox":[72,390,160,28]}
+{"kind":"textbox","id":"sh/vqh8bmpc","slide":2,"text":"Capture farm conditions\nwith guided monitoring","textPreview":"Capture farm conditions | with guided monitoring","textChars":46,"textLines":2,"bbox":[72,426,182,54]}
+{"kind":"shape","id":"sh/ap87ih8r","slide":2,"bbox":[304,294,74,74]}
+{"kind":"textbox","id":"sh/9ozq9c76","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[304,313,74,28]}
+{"kind":"textbox","id":"sh/8nqpg7ql","slide":2,"text":"Understand","textPreview":"Understand","textChars":10,"textLines":1,"bbox":[304,390,160,28]}
+{"kind":"textbox","id":"sh/nmh872p0","slide":2,"text":"Use AI and computer vision\nto analyze what is seen","textPreview":"Use AI and computer vision | to analyze what is seen","textChars":50,"textLines":2,"bbox":[304,426,182,54]}
+{"kind":"shape","id":"sh/mlo7ex8f","slide":2,"bbox":[536,294,74,74]}
+{"kind":"textbox","id":"sh/tkjqlw7a","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[536,313,74,28]}
+{"kind":"textbox","id":"sh/sja9cb6p","slide":2,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[536,390,160,28]}
+{"kind":"textbox","id":"sh/snitofe1","slide":2,"text":"Deliver clear insights\nfor farm decisions","textPreview":"Deliver clear insights | for farm decisions","textChars":41,"textLines":2,"bbox":[536,426,182,54]}
+{"kind":"textbox","id":"sh/dorahkfm","slide":2,"name":"label","text":"FIRST STEP: CITRUS YIELD ESTIMATION","textPreview":"FIRST STEP: CITRUS YIELD ESTIMATION","textChars":35,"textLines":1,"bbox":[72,550,356,36]}
+{"kind":"textbox","id":"sh/ql0bm5wv","slide":2,"text":"A platform vision, proven through one focused first product.","textPreview":"A platform vision, proven through one focused first product.","textChars":60,"textLines":1,"bbox":[72,675,1050,20]}
+{"kind":"notes","id":"nt/hqt6ug","slide":2,"text":"Agriculture is entering an AI era, but local farms need practical tools, not technology for its own sake.\nOur first step is citrus yield estimation in Nueva Vizcaya."}
+{"kind":"slide","id":"sl/u1uc7l","slide":3,"title":"WHY CITRUS","textShapes":13}
+{"kind":"textbox","id":"sh/xcjqh83a","slide":3,"name":"kicker","text":"WHY CITRUS","textPreview":"WHY CITRUS","textChars":10,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/a9s76t4z","slide":3,"name":"title","text":"Start local. Prove value. Then scale.","textPreview":"Start local. Prove value. Then scale.","textChars":37,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/ba18fyl4","slide":3,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/o7ap4jmt","slide":3,"name":"page-marker","text":"AGRI SURI  |  03","textPreview":"AGRI SURI  |  03","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"shape","id":"sh/98jqdo3e","slide":3,"name":"image-placeholder","bbox":[72,180,430,360]}
+{"kind":"textbox","id":"sh/ml872t4n","slide":3,"text":"PERANTE ORANGES ON TREE","textPreview":"PERANTE ORANGES ON TREE","textChars":23,"textLines":1,"bbox":[96,324,382,28]}
+{"kind":"textbox","id":"sh/nm18byl8","slide":3,"text":"Paste a clear local citrus photo","textPreview":"Paste a clear local citrus photo","textChars":32,"textLines":1,"bbox":[96,362,382,24]}
+{"kind":"shape","id":"sh/83u9gn2x","slide":3,"name":"map-placeholder","bbox":[542,180,290,360]}
+{"kind":"textbox","id":"sh/t43qps3i","slide":3,"text":"NUEVA VIZCAYA","textPreview":"NUEVA VIZCAYA","textChars":13,"textLines":1,"bbox":[570,314,234,24]}
+{"kind":"textbox","id":"sh/lw7q94nq","slide":3,"text":"PASTE A SIMPLE\nPROVINCE MAP HERE","textPreview":"PASTE A SIMPLE | PROVINCE MAP HERE","textChars":32,"textLines":2,"bbox":[572,358,230,52]}
+{"kind":"textbox","id":"sh/0vypgz65","slide":3,"text":"Citrus gives AgriSuri a focused first market.","textPreview":"Citrus gives AgriSuri a focused first market.","textChars":45,"textLines":1,"bbox":[880,194,300,66]}
+{"kind":"shape","id":"sh/zupo7e5k","slide":3,"bbox":[882,308,10,10]}
+{"kind":"textbox","id":"sh/ytg7e9oz","slide":3,"text":"Build a local, crop-specific AI dataset","textPreview":"Build a local, crop-specific AI dataset","textChars":39,"textLines":1,"bbox":[906,298,298,38]}
+{"kind":"shape","id":"sh/ds7654ne","slide":3,"bbox":[882,380,10,10]}
+{"kind":"textbox","id":"sh/crypcz69","slide":3,"text":"Work with nearby farms and agricultural partners","textPreview":"Work with nearby farms and agricultural partners","textChars":48,"textLines":1,"bbox":[906,370,298,38]}
+{"kind":"shape","id":"sh/bqpo3upo","slide":3,"bbox":[882,452,10,10]}
+{"kind":"textbox","id":"sh/qpg7apo3","slide":3,"text":"Prove farmers will pay for yield insights","textPreview":"Prove farmers will pay for yield insights","textChars":41,"textLines":1,"bbox":[906,442,298,38]}
+{"kind":"textbox","id":"sh/xobqhony","slide":3,"name":"label","text":"LOCAL CROP. LOCAL DATA. LOCAL PROOF.","textPreview":"LOCAL CROP. LOCAL DATA. LOCAL PROOF.","textChars":36,"textLines":1,"bbox":[72,578,408,36]}
+{"kind":"textbox","id":"sh/wnipoj6d","slide":3,"text":"First product: citrus yield intelligence.","textPreview":"First product: citrus yield intelligence.","textChars":41,"textLines":1,"bbox":[72,675,1050,20]}
+{"kind":"notes","id":"nt/u1uc7l","slide":3,"text":"Nueva Vizcaya's Perante orange focus makes this a practical local entry point.\n[Sources]\n- PROJECT_OVERVIEW.md (local crop focus)"}
+{"kind":"slide","id":"sl/jz2y3z","slide":4,"title":"THE PROBLEM","textShapes":10}
+{"kind":"textbox","id":"sh/6povqdg3","slide":4,"name":"kicker","text":"THE PROBLEM","textPreview":"THE PROBLEM","textChars":11,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/tsfu1sfu","slide":4,"name":"title","text":"Before harvest, farms are forced to estimate.","textPreview":"Before harvest, farms are forced to estimate.","textChars":45,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/sr6dsny9","slide":4,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/jmdcvixs","slide":4,"name":"page-marker","text":"AGRI SURI  |  04","textPreview":"AGRI SURI  |  04","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"shape","id":"sh/y14bmdg7","slide":4,"name":"image-placeholder","bbox":[750,170,458,400]}
+{"kind":"textbox","id":"sh/5ovuxsfi","slide":4,"text":"WORKER INSPECTING FRUIT TREE","textPreview":"WORKER INSPECTING FRUIT TREE","textChars":28,"textLines":1,"bbox":[774,334,410,28]}
+{"kind":"textbox","id":"sh/knmdonyx","slide":4,"text":"Paste a real field-inspection photo","textPreview":"Paste a real field-inspection photo","textChars":35,"textLines":1,"bbox":[774,372,410,24]}
+{"kind":"textbox","id":"sh/bydcryxg","slide":4,"text":"Farms need earlier answers to three costly questions.","textPreview":"Farms need earlier answers to three costly questions.","textChars":53,"textLines":1,"bbox":[72,192,600,38]}
+{"kind":"shape","id":"sh/ax4bitgv","slide":4,"bbox":[72,276,18,54]}
+{"kind":"textbox","id":"sh/sna947ut","slide":4,"text":"How much fruit can we expect?","textPreview":"How much fruit can we expect?","textChars":29,"textLines":1,"bbox":[116,283,550,36]}
+{"kind":"shape","id":"sh/tojqdcby","slide":4,"bbox":[72,368,18,54]}
+{"kind":"textbox","id":"sh/6lsr2xcn","slide":4,"text":"How many workers should we prepare?","textPreview":"How many workers should we prepare?","textChars":35,"textLines":1,"bbox":[116,375,550,36]}
+{"kind":"shape","id":"sh/rm18b2t8","slide":4,"bbox":[72,460,18,54]}
+{"kind":"textbox","id":"sh/4zq907uh","slide":4,"text":"What volume can we commit to buyers?","textPreview":"What volume can we commit to buyers?","textChars":36,"textLines":1,"bbox":[116,467,550,36]}
+{"kind":"textbox","id":"sh/5kzq9cb2","slide":4,"text":"Manual counting is slow, inconsistent, and difficult across many trees.","textPreview":"Manual counting is slow, inconsistent, and difficult across many trees.","textChars":71,"textLines":1,"bbox":[72,578,600,48]}
+{"kind":"notes","id":"nt/jz2y3z","slide":4,"text":"The issue is not that farmers lack information. They lack timely, consistent information at the scale needed for planning."}
+{"kind":"slide","id":"sl/p18gx1","slide":5,"title":"THE SOLUTION","textShapes":13}
+{"kind":"textbox","id":"sh/x4natk3e","slide":5,"name":"kicker","text":"THE SOLUTION","textPreview":"THE SOLUTION","textChars":12,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/a1wry54n","slide":5,"name":"title","text":"A scan becomes a harvest estimate.","textPreview":"A scan becomes a harvest estimate.","textChars":34,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/b25sral8","slide":5,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/k7et4zmp","slide":5,"name":"page-marker","text":"AGRI SURI  |  05","textPreview":"AGRI SURI  |  05","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"textbox","id":"sh/l87ax43a","slide":5,"text":"AgriSuri sells a decision-ready report, not simply a drone flight.","textPreview":"AgriSuri sells a decision-ready report, not simply a drone flight.","textChars":66,"textLines":1,"bbox":[72,186,920,32]}
+{"kind":"shape","id":"sh/y5wb2p4z","slide":5,"name":"process-arrow","bbox":[306,358,70,28]}
+{"kind":"shape","id":"sh/z65svul4","slide":5,"name":"process-arrow","bbox":[600,358,70,28]}
+{"kind":"shape","id":"sh/8vyt8zm1","slide":5,"name":"process-arrow","bbox":[894,358,70,28]}
+{"kind":"shape","id":"sh/9w7a143m","slide":5,"name":"process-node","bbox":[72,300,226,148]}
+{"kind":"textbox","id":"sh/l4v2d4ne","slide":5,"text":"Guided scan","textPreview":"Guided scan","textChars":11,"textLines":1,"bbox":[90,332,190,36]}
+{"kind":"textbox","id":"sh/k3m14zm9","slide":5,"text":"Scan the citrus\nfarm block","textPreview":"Scan the citrus | farm block","textChars":26,"textLines":2,"bbox":[88,378,194,44]}
+{"kind":"shape","id":"sh/z2tkbu5o","slide":5,"name":"process-node","bbox":[366,300,226,148]}
+{"kind":"textbox","id":"sh/y1kj2p43","slide":5,"text":"AI detection","textPreview":"AI detection","textChars":12,"textLines":1,"bbox":[384,332,190,36]}
+{"kind":"textbox","id":"sh/98v2honq","slide":5,"text":"Detect visible\nfruit in images","textPreview":"Detect visible | fruit in images","textChars":30,"textLines":2,"bbox":[382,378,194,44]}
+{"kind":"shape","id":"sh/87m18jm5","slide":5,"name":"process-node","bbox":[660,300,226,148]}
+{"kind":"textbox","id":"sh/76dkfe5k","slide":5,"text":"Farm report","textPreview":"Farm report","textChars":11,"textLines":1,"bbox":[678,332,190,36]}
+{"kind":"textbox","id":"sh/m54j694z","slide":5,"text":"Yield estimate\nand farm map","textPreview":"Yield estimate | and farm map","textChars":27,"textLines":2,"bbox":[676,378,194,44]}
+{"kind":"shape","id":"sh/pcbi5knm","slide":5,"name":"process-node","bbox":[954,300,226,148]}
+{"kind":"textbox","id":"sh/obi1wfm1","slide":5,"text":"Better plan","textPreview":"Better plan","textChars":11,"textLines":1,"bbox":[972,332,190,36]}
+{"kind":"textbox","id":"sh/gfm1cfux","slide":5,"text":"Harvest, labor,\npacking, and sales","textPreview":"Harvest, labor, | packing, and sales","textChars":34,"textLines":2,"bbox":[970,378,194,44]}
+{"kind":"textbox","id":"sh/hgv2lkv2","slide":5,"text":"The early workflow is operated or supervised by AgriSuri to protect data quality.","textPreview":"The early workflow is operated or supervised by AgriSuri to protect data quality.","textChars":81,"textLines":1,"bbox":[72,675,1050,20]}
+{"kind":"notes","id":"nt/p18gx1","slide":5,"text":"The product is a useful report and planning insight. The drone is how we collect consistent evidence."}
+{"kind":"slide","id":"sl/g78ipn","slide":6,"title":"WHAT THE FARM RECEIVES","textShapes":12}
+{"kind":"textbox","id":"sh/3ih0fipc","slide":6,"name":"kicker","text":"WHAT THE FARM RECEIVES","textPreview":"WHAT THE FARM RECEIVES","textChars":22,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/ojq18nqx","slide":6,"name":"title","text":"A report a farm can act on.","textPreview":"A report a farm can act on.","textChars":27,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/pkzihs7i","slide":6,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/qlsjax83","slide":6,"name":"page-marker","text":"AGRI SURI  |  06","textPreview":"AGRI SURI  |  06","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"shape","id":"sh/bm10j2po","slide":6,"name":"image-placeholder","bbox":[72,184,610,388]}
+{"kind":"textbox","id":"sh/cna1c7q9","slide":6,"text":"DASHBOARD SCREENSHOT","textPreview":"DASHBOARD SCREENSHOT","textChars":20,"textLines":1,"bbox":[96,342,562,28]}
+{"kind":"textbox","id":"sh/dojilc7e","slide":6,"text":"Paste your actual project dashboard or mockup","textPreview":"Paste your actual project dashboard or mockup","textChars":45,"textLines":1,"bbox":[96,380,562,24]}
+{"kind":"textbox","id":"sh/6pozyt8z","slide":6,"text":"Clear outputs for a better harvest decision.","textPreview":"Clear outputs for a better harvest decision.","textChars":44,"textLines":1,"bbox":[744,194,420,64]}
+{"kind":"shape","id":"sh/rqx07y94","slide":6,"bbox":[746,304,10,10]}
+{"kind":"textbox","id":"sh/bupk7upw","slide":6,"text":"Estimated visible fruit count","textPreview":"Estimated visible fruit count","textChars":29,"textLines":1,"bbox":[770,294,396,38]}
+{"kind":"shape","id":"sh/atgjyp8b","slide":6,"bbox":[746,366,10,10]}
+{"kind":"textbox","id":"sh/xw729472","slide":6,"text":"Map by farm block","textPreview":"Map by farm block","textChars":17,"textLines":1,"bbox":[770,356,396,38]}
+{"kind":"shape","id":"sh/cvyl0zqh","slide":6,"bbox":[746,428,10,10]}
+{"kind":"textbox","id":"sh/n6pk3upk","slide":6,"text":"Areas needing a manual check","textPreview":"Areas needing a manual check","textChars":28,"textLines":1,"bbox":[770,418,396,38]}
+{"kind":"shape","id":"sh/25wjup8f","slide":6,"bbox":[746,490,10,10]}
+{"kind":"textbox","id":"sh/p8725k7q","slide":6,"text":"Scan history for seasonal comparison","textPreview":"Scan history for seasonal comparison","textChars":36,"textLines":1,"bbox":[770,480,396,38]}
+{"kind":"textbox","id":"sh/o7y1wzq5","slide":6,"name":"label","text":"VISIBLE FRUIT-COUNT ESTIMATE","textPreview":"VISIBLE FRUIT-COUNT ESTIMATE","textChars":28,"textLines":1,"bbox":[744,568,310,36]}
+{"kind":"textbox","id":"sh/f25kzapo","slide":6,"text":"Be precise: results are a visible fruit-count estimate, not a guaranteed total harvest.","textPreview":"Be precise: results are a visible fruit-count estimate, not a guaranteed total harvest.","textChars":87,"textLines":1,"bbox":[72,675,1050,20]}
+{"kind":"notes","id":"nt/g78ipn","slide":6,"text":"Honesty builds trust: leaves and branches can hide fruit, so we use the phrase visible fruit-count estimate."}
+{"kind":"slide","id":"sl/s0pme9","slide":7,"title":"BUSINESS MODEL","textShapes":15}
+{"kind":"textbox","id":"sh/43ml4vup","slide":7,"name":"kicker","text":"BUSINESS MODEL","textPreview":"BUSINESS MODEL","textChars":14,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/3id4bqtk","slide":7,"name":"title","text":"Start with a service. Grow into a platform.","textPreview":"Start with a service. Grow into a platform.","textChars":43,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/2hk32lcz","slide":7,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/d8vmh0bm","slide":7,"name":"page-marker","text":"AGRI SURI  |  07","textPreview":"AGRI SURI  |  07","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"shape","id":"sh/c7ml8vu1","slide":7,"name":"revenue-stage","bbox":[72,206,334,260]}
+{"kind":"textbox","id":"sh/r6d4fatg","slide":7,"text":"NOW","textPreview":"NOW","textChars":3,"textLines":1,"bbox":[96,232,280,20]}
+{"kind":"textbox","id":"sh/q54365cv","slide":7,"text":"Paid farm scan","textPreview":"Paid farm scan","textChars":14,"textLines":1,"bbox":[96,280,282,58]}
+{"kind":"textbox","id":"sh/1cfmlkbi","slide":7,"text":"We operate or supervise\nthe scan and report.","textPreview":"We operate or supervise | the scan and report.","textChars":44,"textLines":2,"bbox":[96,364,282,54]}
+{"kind":"shape","id":"sh/0b6lcfax","slide":7,"name":"revenue-stage","bbox":[450,206,334,260]}
+{"kind":"textbox","id":"sh/i9o76hg7","slide":7,"text":"NEXT","textPreview":"NEXT","textChars":4,"textLines":1,"bbox":[474,232,280,20]}
+{"kind":"textbox","id":"sh/3ax8zmhs","slide":7,"text":"Seasonal monitoring","textPreview":"Seasonal monitoring","textChars":19,"textLines":1,"bbox":[474,280,282,58]}
+{"kind":"textbox","id":"sh/4b6p87yd","slide":7,"text":"Repeat scans, history,\nand comparison reports.","textPreview":"Repeat scans, history, | and comparison reports.","textChars":46,"textLines":2,"bbox":[474,364,282,54]}
+{"kind":"shape","id":"sh/5czq1cfy","slide":7,"name":"revenue-stage","bbox":[828,206,334,260]}
+{"kind":"textbox","id":"sh/qd8rahgj","slide":7,"text":"LATER","textPreview":"LATER","textChars":5,"textLines":1,"bbox":[852,232,280,20]}
+{"kind":"textbox","id":"sh/reh83mx4","slide":7,"text":"Managed on-site system","textPreview":"Managed on-site system","textChars":22,"textLines":1,"bbox":[852,280,282,58]}
+{"kind":"textbox","id":"sh/sfq9cryp","slide":7,"text":"Guided farm-staff scans\nwith software and support.","textPreview":"Guided farm-staff scans | with software and support.","textChars":50,"textLines":2,"bbox":[852,364,282,54]}
+{"kind":"textbox","id":"sh/dgzq5wfu","slide":7,"text":"Initial price tests","textPreview":"Initial price tests","textChars":19,"textLines":1,"bbox":[72,524,260,26]}
+{"kind":"textbox","id":"sh/6h47yxgz","slide":7,"text":"Pilot: PHP 1,500-3,000     |     Farm/block scan: PHP 5,000-15,000     |     Large/co-op/custom: PHP 20,000+","textPreview":"Pilot: PHP 1,500-3,000     |     Farm/block scan: PHP 5,000-15,000     |     Large/co-op/custom: PHP 20,000+","textChars":108,"textLines":1,"bbox":[72,560,1100,28]}
+{"kind":"textbox","id":"sh/7id8rihk","slide":7,"text":"Prices are hypotheses to validate against operating cost and customer willingness to pay.","textPreview":"Prices are hypotheses to validate against operating cost and customer willingness to pay.","textChars":89,"textLines":1,"bbox":[72,675,1050,20]}
+{"kind":"notes","id":"nt/s0pme9","slide":7,"text":"We begin with paid results because that keeps quality under our control.\nSeasonal monitoring is the repeat-revenue goal."}
+{"kind":"slide","id":"sl/75jbbt","slide":8,"title":"WHY WE CAN WIN","textShapes":11}
+{"kind":"textbox","id":"sh/832x0vm5","slide":8,"name":"kicker","text":"WHY WE CAN WIN","textPreview":"WHY WE CAN WIN","textChars":14,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/7itw7a5k","slide":8,"name":"title","text":"Our advantage is the system, not the drone.","textPreview":"Our advantage is the system, not the drone.","textChars":43,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/6hkfy54z","slide":8,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/lgre50ne","slide":8,"name":"page-marker","text":"AGRI SURI  |  08","textPreview":"AGRI SURI  |  08","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"shape","id":"sh/kfixwvm9","slide":8,"name":"image-placeholder","bbox":[72,190,330,346]}
+{"kind":"textbox","id":"sh/je9w3q5o","slide":8,"text":"PERANTE CITRUS OR FIELD TEST PHOTO","textPreview":"PERANTE CITRUS OR FIELD TEST PHOTO","textChars":34,"textLines":1,"bbox":[96,327,282,28]}
+{"kind":"textbox","id":"sh/yd0ful43","slide":8,"text":"Use a real project or local farm image","textPreview":"Use a real project or local farm image","textChars":38,"textLines":1,"bbox":[96,365,282,24]}
+{"kind":"shape","id":"sh/5cvyhk3y","slide":8,"name":"center","bbox":[692,300,210,210]}
+{"kind":"textbox","id":"sh/4bmx8fmd","slide":8,"text":"LOCAL\nSYSTEM","textPreview":"LOCAL | SYSTEM","textChars":12,"textLines":2,"bbox":[720,390,154,48]}
+{"kind":"shape","id":"sh/u5kj21of","slide":8,"name":"advantage","bbox":[480,224,200,62]}
+{"kind":"textbox","id":"sh/v6tkb6p0","slide":8,"text":"Local data","textPreview":"Local data","textChars":10,"textLines":1,"bbox":[492,243,176,24]}
+{"kind":"shape","id":"sh/g7214b6l","slide":8,"name":"advantage","bbox":[910,224,200,62]}
+{"kind":"textbox","id":"sh/hsb2dg76","slide":8,"text":"AI model","textPreview":"AI model","textChars":8,"textLines":1,"bbox":[922,243,176,24]}
+{"kind":"shape","id":"sh/610jyhoj","slide":8,"name":"advantage","bbox":[480,528,200,62]}
+{"kind":"textbox","id":"sh/72tk7mp4","slide":8,"text":"Field workflow","textPreview":"Field workflow","textChars":14,"textLines":1,"bbox":[492,547,176,24]}
+{"kind":"shape","id":"sh/83210r6p","slide":8,"name":"advantage","bbox":[910,528,200,62]}
+{"kind":"textbox","id":"sh/t4b29w7a","slide":8,"text":"Trusted partners","textPreview":"Trusted partners","textChars":16,"textLines":1,"bbox":[922,547,176,24]}
+{"kind":"textbox","id":"sh/qx43alon","slide":8,"text":"Perante orange dataset, farm maps, repeat scan history, and the NVSU agricultural network create a local advantage.","textPreview":"Perante orange dataset, farm maps, repeat scan history, and the NVSU agricultural network create a local advantage.","textChars":115,"textLines":1,"bbox":[430,166,750,30]}
+{"kind":"notes","id":"nt/75jbbt","slide":8,"text":"Anyone can buy a drone. The defensible asset is local data plus a repeatable workflow that produces useful reports."}
+{"kind":"slide","id":"sl/rkfqzu","slide":9,"title":"DATA FLYWHEEL","textShapes":13}
+{"kind":"textbox","id":"sh/7qp07e1g","slide":9,"name":"kicker","text":"DATA FLYWHEEL","textPreview":"DATA FLYWHEEL","textChars":13,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/8ryh0j21","slide":9,"name":"title","text":"Every permissioned scan improves the system.","textPreview":"Every permissioned scan improves the system.","textChars":44,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/ts7i9ojm","slide":9,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/y1wzupkz","slide":9,"name":"page-marker","text":"AGRI SURI  |  09","textPreview":"AGRI SURI  |  09","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"textbox","id":"sh/jm5g3u1k","slide":9,"text":"Customer trust turns data collection into a compounding product advantage.","textPreview":"Customer trust turns data collection into a compounding product advantage.","textChars":74,"textLines":1,"bbox":[72,184,970,34]}
+{"kind":"shape","id":"sh/knehwz25","slide":9,"name":"process-arrow","bbox":[264,344,66,28]}
+{"kind":"shape","id":"sh/lo7y54jq","slide":9,"name":"process-arrow","bbox":[528,344,66,28]}
+{"kind":"shape","id":"sh/axwzqpk3","slide":9,"name":"process-arrow","bbox":[792,344,66,28]}
+{"kind":"shape","id":"sh/by5gzu1o","slide":9,"name":"data-node","bbox":[72,300,198,118]}
+{"kind":"textbox","id":"sh/vidsfi5c","slide":9,"text":"More farm scans","textPreview":"More farm scans","textChars":15,"textLines":1,"bbox":[88,328,166,28]}
+{"kind":"textbox","id":"sh/uh4rmdor","slide":9,"text":"Real-world images\nand scan conditions","textPreview":"Real-world images | and scan conditions","textChars":37,"textLines":2,"bbox":[90,362,162,34]}
+{"kind":"shape","id":"sh/hkvah8ni","slide":9,"name":"data-node","bbox":[336,300,198,118]}
+{"kind":"textbox","id":"sh/wjm9o36x","slide":9,"text":"Trusted data","textPreview":"Trusted data","textChars":12,"textLines":1,"bbox":[352,328,166,28]}
+{"kind":"textbox","id":"sh/jmdsji5o","slide":9,"text":"Quality-checked data\nwith clear consent","textPreview":"Quality-checked data | with clear consent","textChars":39,"textLines":2,"bbox":[354,362,162,34]}
+{"kind":"shape","id":"sh/il4bqdo3","slide":9,"name":"data-node","bbox":[600,300,198,118]}
+{"kind":"textbox","id":"sh/5ofalsne","slide":9,"text":"Better citrus AI","textPreview":"Better citrus AI","textChars":16,"textLines":1,"bbox":[616,328,166,28]}
+{"kind":"textbox","id":"sh/4nmtsn69","slide":9,"text":"Improved detection\nand evaluation","textPreview":"Improved detection | and evaluation","textChars":33,"textLines":2,"bbox":[618,362,162,34]}
+{"kind":"shape","id":"sh/zqts7ep4","slide":9,"name":"data-node","bbox":[864,300,198,118]}
+{"kind":"textbox","id":"sh/ypkretoz","slide":9,"text":"Better reports","textPreview":"Better reports","textChars":14,"textLines":1,"bbox":[880,328,166,28]}
+{"kind":"textbox","id":"sh/258vm187","slide":9,"text":"More useful insight\nand repeat customers","textPreview":"More useful insight | and repeat customers","textChars":40,"textLines":2,"bbox":[882,362,162,34]}
+{"kind":"textbox","id":"sh/36hcvmps","slide":9,"text":"Farm-identifiable data stays protected. Any aggregate insight product requires clear consent.","textPreview":"Farm-identifiable data stays protected. Any aggregate insight product requires clear consent.","textChars":93,"textLines":1,"bbox":[156,550,968,32]}
+{"kind":"notes","id":"nt/rkfqzu","slide":9,"text":"We do not build a business by reselling a farm's private records.\nWith consent, data improves the AI. Later, aggregated and anonymized insights may serve co-ops, buyers, and agricultural organizations."}
+{"kind":"slide","id":"sl/e0wsoe","slide":10,"title":"GROWTH PATH","textShapes":17}
+{"kind":"textbox","id":"sh/ra5obyx4","slide":10,"name":"kicker","text":"GROWTH PATH","textPreview":"GROWTH PATH","textChars":11,"textLines":1,"bbox":[72,42,540,22]}
+{"kind":"textbox","id":"sh/sbe543yp","slide":10,"name":"title","text":"Citrus first. Farm intelligence next.","textPreview":"Citrus first. Farm intelligence next.","textChars":37,"textLines":1,"bbox":[72,76,920,52]}
+{"kind":"shape","id":"sh/dw76d8fu","slide":10,"bbox":[72,140,70,5]}
+{"kind":"textbox","id":"sh/exgn6tgf","slide":10,"name":"page-marker","text":"AGRI SURI  |  10","textPreview":"AGRI SURI  |  10","textChars":16,"textLines":1,"bbox":[1030,45,178,20]}
+{"kind":"shape","id":"sh/fypofyx0","slide":10,"bbox":[140,374,1000,5]}
+{"kind":"shape","id":"sh/0zy583yl","slide":10,"bbox":[140,340,72,72]}
+{"kind":"textbox","id":"sh/1076h8f6","slide":10,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[140,360,72,24]}
+{"kind":"textbox","id":"sh/u1cnu9gb","slide":10,"text":"Prove paid citrus scans","textPreview":"Prove paid citrus scans","textChars":23,"textLines":1,"bbox":[84,240,184,74]}
+{"kind":"textbox","id":"sh/v2l43exw","slide":10,"text":"Nueva Vizcaya","textPreview":"Nueva Vizcaya","textChars":13,"textLines":1,"bbox":[78,434,196,38]}
+{"kind":"shape","id":"sh/rax8721c","slide":10,"bbox":[450,340,72,72]}
+{"kind":"textbox","id":"sh/q9orexkr","slide":10,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[450,360,72,24]}
+{"kind":"textbox","id":"sh/dczq9cji","slide":10,"text":"Build seasonal monitoring","textPreview":"Build seasonal monitoring","textChars":25,"textLines":1,"bbox":[394,240,184,74]}
+{"kind":"textbox","id":"sh/cb69g72x","slide":10,"text":"Repeat reports","textPreview":"Repeat reports","textChars":14,"textLines":1,"bbox":[388,434,196,38]}
+{"kind":"shape","id":"sh/3mx8321g","slide":10,"bbox":[760,340,72,72]}
+{"kind":"textbox","id":"sh/2lo7axkv","slide":10,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[760,360,72,24]}
+{"kind":"textbox","id":"sh/p8fq5sj6","slide":10,"text":"Enable guided farm-staff scans","textPreview":"Enable guided farm-staff scans","textChars":30,"textLines":1,"bbox":[704,240,184,74]}
+{"kind":"textbox","id":"sh/476pc72l","slide":10,"text":"Software + support","textPreview":"Software + support","textChars":18,"textLines":1,"bbox":[698,434,196,38]}
+{"kind":"shape","id":"sh/fid8zi14","slide":10,"bbox":[1070,340,72,72]}
+{"kind":"textbox","id":"sh/uh476dkj","slide":10,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1070,360,72,24]}
+{"kind":"textbox","id":"sh/id4rid4b","slide":10,"text":"Run paid pilots for the next crop","textPreview":"Run paid pilots for the next crop","textChars":33,"textLines":1,"bbox":[1014,240,184,74]}
+{"kind":"textbox","id":"sh/jed8ri5w","slide":10,"text":"Research + controlled environments","textPreview":"Research + controlled environments","textChars":34,"textLines":1,"bbox":[1008,434,196,38]}
+{"kind":"textbox","id":"sh/kfm9knmh","slide":10,"name":"label","text":"DO NOT BUILD EVERY CROP SOLUTION AT ONCE","textPreview":"DO NOT BUILD EVERY CROP SOLUTION AT ONCE","textChars":40,"textLines":1,"bbox":[336,570,608,36]}
+{"kind":"textbox","id":"sh/5gvatsn2","slide":10,"text":"Expand only after the first use case is paid and repeatable.","textPreview":"Expand only after the first use case is paid and repeatable.","textChars":60,"textLines":1,"bbox":[72,675,1050,20]}
+{"kind":"notes","id":"nt/e0wsoe","slide":10,"text":"The platform is scalable because the workflow repeats, but we expand only after the first market is working."}
+{"kind":"slide","id":"sl/fiyd9o","slide":11,"title":"TEAM AND PROTOTYPE PHOTO","textShapes":8}
+{"kind":"shape","id":"sh/qp4vq1w7","slide":11,"name":"image-placeholder","bbox":[760,0,520,720]}
+{"kind":"textbox","id":"sh/dsve1wfy","slide":11,"text":"TEAM AND PROTOTYPE PHOTO","textPreview":"TEAM AND PROTOTYPE PHOTO","textChars":24,"textLines":1,"bbox":[784,324,472,28]}
+{"kind":"textbox","id":"sh/crmxsred","slide":11,"text":"Paste a real field-test or team photo","textPreview":"Paste a real field-test or team photo","textChars":37,"textLines":1,"bbox":[784,362,472,24]}
+{"kind":"shape","id":"sh/zuxw36x4","slide":11,"bbox":[0,0,800,720]}
+{"kind":"textbox","id":"sh/et4fu1wj","slide":11,"text":"Our next step: prove value with local farms.","textPreview":"Our next step: prove value with local farms.","textChars":44,"textLines":1,"bbox":[72,112,590,116]}
+{"kind":"shape","id":"sh/1gfe5gfu","slide":11,"bbox":[72,256,74,6]}
+{"kind":"textbox","id":"sh/0v6xwbep","slide":11,"text":"We are seeking","textPreview":"We are seeking","textChars":14,"textLines":1,"bbox":[72,304,280,26]}
+{"kind":"shape","id":"sh/fytwrmxk","slide":11,"bbox":[72,360,10,10]}
+{"kind":"textbox","id":"sh/uxkvihwz","slide":11,"text":"Pilot citrus farms or cooperatives","textPreview":"Pilot citrus farms or cooperatives","textChars":34,"textLines":1,"bbox":[96,350,572,38]}
+{"kind":"shape","id":"sh/kb2po3y1","slide":11,"bbox":[72,424,10,10]}
+{"kind":"textbox","id":"sh/5cb6x8fm","slide":11,"text":"Agricultural mentors and validation partners","textPreview":"Agricultural mentors and validation partners","textChars":44,"textLines":1,"bbox":[96,414,572,38]}
+{"kind":"shape","id":"sh/i907mdgv","slide":11,"bbox":[72,488,10,10]}
+{"kind":"textbox","id":"sh/ja9ovixg","slide":11,"text":"Support for field testing, data collection, and model improvement","textPreview":"Support for field testing, data collection, and model improvement","textChars":65,"textLines":1,"bbox":[96,478,572,38]}
+{"kind":"textbox","id":"sh/sf2psnyx","slide":11,"text":"SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.","textPreview":"SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.","textChars":92,"textLines":1,"bbox":[72,575,590,64]}
+{"kind":"notes","id":"nt/fiyd9o","slide":11,"text":"We are asking for a chance to prove a useful local product with measurable farm value."}
+{"kind":"slide","id":"sl/2dquww","slide":12,"title":"CLOSING BACKGROUND PHOTO","textShapes":5}
+{"kind":"shape","id":"sh/03q1c7m9","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/z2hk325o","slide":12,"name":"image-placeholder","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/y18jax43","slide":12,"text":"CLOSING BACKGROUND PHOTO","textPreview":"CLOSING BACKGROUND PHOTO","textChars":24,"textLines":1,"bbox":[24,324,1232,28]}
+{"kind":"textbox","id":"sh/9sj29c3q","slide":12,"text":"Paste a real citrus-farm sunrise or team field-test image","textPreview":"Paste a real citrus-farm sunrise or team field-test image","textChars":57,"textLines":1,"bbox":[24,362,1232,24]}
+{"kind":"shape","id":"sh/8rq1g7m5","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/n6hk72l0","slide":12,"bbox":[510,182,260,6]}
+{"kind":"textbox","id":"sh/m58jex4f","slide":12,"text":"The future of farming\nwill not be guessed.\nIt will be measured.","textPreview":"The future of farming | will not be guessed. | It will be measured.","textChars":63,"textLines":3,"bbox":[250,250,780,210]}
+{"kind":"textbox","id":"sh/pwfix8nm","slide":12,"text":"AGRI SURI","textPreview":"AGRI SURI","textChars":9,"textLines":1,"bbox":[450,520,380,24]}
+{"kind":"textbox","id":"sh/ob614nm1","slide":12,"text":"AI-powered farm intelligence, starting in Nueva Vizcaya.","textPreview":"AI-powered farm intelligence, starting in Nueva Vizcaya.","textChars":56,"textLines":1,"bbox":[250,560,780,26]}
+{"kind":"notes","id":"nt/2dquww","slide":12,"text":"This is an original AgriSuri closing statement.\nEnd on the mission: local data, AI, and practical automation for better farm decisions."}
