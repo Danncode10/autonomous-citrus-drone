@@ -1,0 +1,18 @@
+{
+  "outputSlides": [
+    { "outputSlide": 1, "sourceSlide": 1, "narrativeRole": "opening thesis", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 2, "sourceSlide": 2, "narrativeRole": "vision", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 3, "sourceSlide": 3, "narrativeRole": "local entry point", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 4, "sourceSlide": 4, "narrativeRole": "problem", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 5, "sourceSlide": 5, "narrativeRole": "solution", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 6, "sourceSlide": 6, "narrativeRole": "farm report", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 7, "sourceSlide": 7, "narrativeRole": "business model", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 8, "sourceSlide": 8, "narrativeRole": "advantage", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 9, "sourceSlide": 9, "narrativeRole": "data flywheel", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 10, "sourceSlide": 10, "narrativeRole": "growth path", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 11, "sourceSlide": 10, "narrativeRole": "future applications", "reuseMode": "duplicate-slide", "editTargets": [{ "sourceElementId": "all slide 10 text elements", "action": "rewrite", "reason": "Reuse the growth timeline layout for adjacent applications." }] },
+    { "outputSlide": 12, "sourceSlide": 11, "narrativeRole": "pilot ask", "reuseMode": "preserve-only", "editTargets": [] },
+    { "outputSlide": 13, "sourceSlide": 12, "narrativeRole": "closing", "reuseMode": "preserve-only", "editTargets": [] }
+  ],
+  "omittedSourceSlides": []
+}

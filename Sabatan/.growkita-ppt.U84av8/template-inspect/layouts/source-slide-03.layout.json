@@ -1,0 +1,1078 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ofy9wn61",
+    "id": "ofy9wn61",
+    "slide": 3,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "backgroundColor": "#FFF9F1",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e10f2twf",
+      "id": "20",
+      "name": "kicker",
+      "bbox": [
+        72,
+        42,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "WHY CITRUS",
+      "textPreview": "WHY CITRUS",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "WHY CITRUS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "WHY CITRUS",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#0E6B4F",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WHY CITRUS",
+              "fontSize": 13,
+              "color": "#0E6B4F",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cza94vmx",
+      "id": "2",
+      "name": "title",
+      "bbox": [
+        72,
+        76,
+        920,
+        52
+      ],
+      "geometry": "rect",
+      "text": "Start local. Prove value. Then scale.",
+      "textPreview": "Start local. Prove value. Then scale.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Start local. Prove value. Then scale."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Start local. Prove value. Then scale.",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#173B2C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Start local. Prove value. Then scale.",
+              "fontSize": 38,
+              "color": "#173B2C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0jax03i",
+      "id": "3",
+      "name": "Rectangle 2",
+      "bbox": [
+        72,
+        140,
+        70,
+        5
+      ],
+      "geometry": "rect",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/298ryl4v",
+      "id": "4",
+      "name": "page-marker",
+      "bbox": [
+        1030,
+        45,
+        178,
+        20
+      ],
+      "geometry": "rect",
+      "text": "GROWKITA  |  03",
+      "textPreview": "GROWKITA  |  03",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GROWKITA  |  03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GROWKITA  |  03",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "color": "#667085",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GROWKITA  |  03",
+              "fontSize": 11,
+              "color": "#667085",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ah8rqlg",
+      "id": "5",
+      "name": "image-placeholder",
+      "bbox": [
+        72,
+        180,
+        430,
+        360
+      ],
+      "geometry": "rect",
+      "fillColor": "#DDEEDC",
+      "lineColor": "#23835E",
+      "lineWidth": 2
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/obq90bml",
+      "id": "6",
+      "name": "Rectangle 5",
+      "bbox": [
+        96,
+        324,
+        382,
+        28
+      ],
+      "geometry": "rect",
+      "text": "PERANTE ORANGES ON TREE",
+      "textPreview": "PERANTE ORANGES ON TREE",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PERANTE ORANGES ON TREE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PERANTE ORANGES ON TREE",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PERANTE ORANGES ON TREE",
+              "fontSize": 18,
+              "color": "#0E6B4F",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pcjqtg36",
+      "id": "7",
+      "name": "Rectangle 6",
+      "bbox": [
+        96,
+        362,
+        382,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Paste a clear local citrus photo",
+      "textPreview": "Paste a clear local citrus photo",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Paste a clear local citrus photo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Paste a clear local citrus photo",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#667085",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Paste a clear local citrus photo",
+              "fontSize": 14,
+              "color": "#667085"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m5cra54z",
+      "id": "8",
+      "name": "map-placeholder",
+      "bbox": [
+        542,
+        180,
+        290,
+        360
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D5E2DA",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n6ls3alk",
+      "id": "9",
+      "name": "Rectangle 8",
+      "bbox": [
+        570,
+        314,
+        234,
+        24
+      ],
+      "geometry": "rect",
+      "text": "NUEVA VIZCAYA",
+      "textPreview": "NUEVA VIZCAYA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "NUEVA VIZCAYA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "NUEVA VIZCAYA",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "NUEVA VIZCAYA",
+              "fontSize": 18,
+              "color": "#0E6B4F",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n2l4fq98",
+      "id": "10",
+      "name": "Rectangle 9",
+      "bbox": [
+        572,
+        358,
+        230,
+        52
+      ],
+      "geometry": "rect",
+      "text": "PASTE A SIMPLE\nPROVINCE MAP HERE",
+      "textPreview": "PASTE A SIMPLE | PROVINCE MAP HERE",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PASTE A SIMPLE"
+          },
+          {
+            "index": 2,
+            "text": "PROVINCE MAP HERE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PASTE A SIMPLE",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#667085",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PASTE A SIMPLE",
+              "fontSize": 16,
+              "color": "#667085",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "PROVINCE MAP HERE",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#667085",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PROVINCE MAP HERE",
+              "fontSize": 16,
+              "color": "#667085",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m1c3mlsn",
+      "id": "11",
+      "name": "Rectangle 10",
+      "bbox": [
+        880,
+        194,
+        300,
+        66
+      ],
+      "geometry": "rect",
+      "text": "Citrus gives GrowKita a focused first market.",
+      "textPreview": "Citrus gives GrowKita a focused first market.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Citrus gives GrowKita"
+          },
+          {
+            "index": 2,
+            "text": "a focused first market."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Citrus gives GrowKita a focused first market.",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "color": "#173B2C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Citrus gives GrowKita a focused first market.",
+              "fontSize": 26,
+              "color": "#173B2C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/943mhgre",
+      "id": "12",
+      "name": "Oval 11",
+      "bbox": [
+        882,
+        308,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83ulovat",
+      "id": "13",
+      "name": "Rectangle 12",
+      "bbox": [
+        906,
+        298,
+        298,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Build a local, crop-specific AI dataset",
+      "textPreview": "Build a local, crop-specific AI dataset",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Build a local, crop-specific AI"
+          },
+          {
+            "index": 2,
+            "text": "dataset"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Build a local, crop-specific AI dataset",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#173B2C"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Build a local, crop-specific AI dataset",
+              "fontSize": 18,
+              "color": "#173B2C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6l4jq94",
+      "id": "14",
+      "name": "Oval 13",
+      "bbox": [
+        882,
+        380,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5c3ql8z",
+      "id": "15",
+      "name": "Rectangle 14",
+      "bbox": [
+        906,
+        370,
+        298,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Work with nearby farms and agricultural partners",
+      "textPreview": "Work with nearby farms and agricultural partners",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Work with nearby farms and"
+          },
+          {
+            "index": 2,
+            "text": "agricultural partners"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Work with nearby farms and agricultural partners",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#173B2C"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Work with nearby farms and agricultural partners",
+              "fontSize": 18,
+              "color": "#173B2C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x8nml0ra",
+      "id": "16",
+      "name": "Oval 15",
+      "bbox": [
+        882,
+        452,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7ulsvqp",
+      "id": "17",
+      "name": "Rectangle 16",
+      "bbox": [
+        906,
+        442,
+        298,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Prove farmers will pay for yield insights",
+      "textPreview": "Prove farmers will pay for yield insights",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Prove farmers will pay for yield"
+          },
+          {
+            "index": 2,
+            "text": "insights"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Prove farmers will pay for yield insights",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#173B2C"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Prove farmers will pay for yield insights",
+              "fontSize": 18,
+              "color": "#173B2C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ja54na9g",
+      "id": "18",
+      "name": "label",
+      "bbox": [
+        72,
+        578,
+        408,
+        36
+      ],
+      "geometry": "roundRect",
+      "text": "LOCAL CROP. LOCAL DATA. LOCAL PROOF.",
+      "textPreview": "LOCAL CROP. LOCAL DATA. LOCAL PROOF.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LOCAL CROP. LOCAL DATA. LOCAL PROOF."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LOCAL CROP. LOCAL DATA. LOCAL PROOF.",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LOCAL CROP. LOCAL DATA. LOCAL PROOF.",
+              "fontSize": 13,
+              "color": "#0E6B4F",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#DDEEDC",
+      "lineColor": "#DDEEDC",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i9w3u58v",
+      "id": "19",
+      "name": "Rectangle 18",
+      "bbox": [
+        72,
+        675,
+        1050,
+        20
+      ],
+      "geometry": "rect",
+      "text": "First product: citrus yield intelligence.",
+      "textPreview": "First product: citrus yield intelligence.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "First product: citrus yield intelligence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "First product: citrus yield intelligence.",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "color": "#667085"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "First product: citrus yield intelligence.",
+              "fontSize": 11,
+              "color": "#667085"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/o32dw321",
+      "id": "21",
+      "name": "Picture 20",
+      "bbox": [
+        70.07,
+        176.07,
+        432.73,
+        365.33
+      ],
+      "contentType": "image/jpeg",
+      "imageCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0.36699
+      },
+      "asset": {
+        "assetId": "/ppt/media/image3.jpeg",
+        "contentType": "image/jpeg",
+        "byteLength": 155148
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image3.jpeg",
+        "contentType": "image/jpeg",
+        "byteLength": 155148
+      }
+    },
+    {
+      "order": 21,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/n2tc3y1g",
+      "id": "22",
+      "name": "Picture 21",
+      "bbox": [
+        541.67,
+        163.47,
+        290.13,
+        407.27
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image4.png",
+        "contentType": "image/png",
+        "byteLength": 102111
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image4.png",
+        "contentType": "image/png",
+        "byteLength": 102111
+      }
+    }
+  ],
+  "composeRuns": []
+}

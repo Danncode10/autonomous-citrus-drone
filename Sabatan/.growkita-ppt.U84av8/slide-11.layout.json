@@ -2,15 +2,15 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/jpa4ei",
-    "id": "jpa4ei",
+    "aid": "sl/xif5i2",
+    "id": "xif5i2",
     "slide": 11,
-    "layoutId": "62bac217-7bb5-4f14-a896-68cd8339023e",
+    "layoutId": "c318b56c-8a5a-4c0e-9cce-db2021a8528b",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "c1f800ee-1152-4c1c-8c9c-c33f9b04969b",
+    "masterLayoutId": "cccc099f-e04b-4920-826c-7c77245623f4",
     "masterLayoutName": "Master",
-    "backgroundColor": "#0C2C20",
+    "backgroundColor": "#FFF9F1",
     "frame": {
       "left": 0,
       "top": 0,
@@ -45,15 +45,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "62bac217-7bb5-4f14-a896-68cd8339023e",
+      "id": "c318b56c-8a5a-4c0e-9cce-db2021a8528b",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "c1f800ee-1152-4c1c-8c9c-c33f9b04969b",
+      "parentLayoutId": "cccc099f-e04b-4920-826c-7c77245623f4",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "c1f800ee-1152-4c1c-8c9c-c33f9b04969b",
+      "id": "cccc099f-e04b-4920-826c-7c77245623f4",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,14 +64,276 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1gnadc7m",
+      "aid": "sh/h4365wji",
       "id": "1",
+      "name": "kicker",
+      "bbox": [
+        72,
+        42,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "FUTURE APPLICATIONS",
+      "textPreview": "FUTURE APPLICATIONS",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FUTURE APPLICATIONS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FUTURE APPLICATIONS",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#0E6B4F",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "FUTURE APPLICATIONS",
+              "fontSize": 13,
+              "color": "#0E6B4F",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u1c7ahkr",
+      "id": "2",
+      "name": "title",
+      "bbox": [
+        72,
+        76,
+        920,
+        52
+      ],
+      "geometry": "rect",
+      "text": "One monitoring platform. More farm applications.",
+      "textPreview": "One monitoring platform. More farm applications.",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#173B2C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "One monitoring platform. More farm applications."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "One monitoring platform. More farm applications.",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#173B2C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "One monitoring platform. More farm applications.",
+              "fontSize": 38,
+              "color": "#173B2C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f2lo3m1c",
+      "id": "3",
+      "bbox": [
+        72,
+        140,
+        70,
+        5
+      ],
+      "geometry": "rect",
+      "fillColor": "#F28C28",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/47epgrit",
+      "id": "4",
+      "name": "page-marker",
+      "bbox": [
+        1030,
+        45,
+        178,
+        20
+      ],
+      "geometry": "rect",
+      "text": "GROWKITA  |  11",
+      "textPreview": "GROWKITA  |  11",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "+mn-lt",
+        "color": "#667085",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GROWKITA  |  11"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GROWKITA  |  11",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "color": "#667085",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GROWKITA  |  11",
+              "fontSize": 11,
+              "color": "#667085",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p8nq9wje",
+      "id": "5",
+      "bbox": [
+        72,
+        184,
+        990,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Citrus is the first product. These are adjacent use cases to validate through paid pilots.",
+      "textPreview": "Citrus is the first product. These are adjacent use cases to validate through paid pilots.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#667085",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Citrus is the first product. These are adjacent use cases to validate through paid pilots."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Citrus is the first product. These are adjacent use cases to validate through paid pilots.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#667085"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Citrus is the first product. These are adjacent use cases to validate through paid pilots.",
+              "fontSize": 23,
+              "color": "#667085"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25w7eh0n",
+      "id": "6",
       "name": "image-placeholder",
       "bbox": [
-        760,
-        0,
-        520,
-        720
+        72,
+        264,
+        334,
+        194
       ],
       "geometry": "rect",
       "fillColor": "#DDEEDC",
@@ -79,20 +341,20 @@
       "lineWidth": 2
     },
     {
-      "order": 2,
+      "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/edcb2hov",
-      "id": "2",
+      "aid": "sh/365o7m18",
+      "id": "7",
       "bbox": [
-        784,
-        324,
-        472,
+        96,
+        325,
+        286,
         28
       ],
       "geometry": "rect",
-      "text": "TEAM AND PROTOTYPE PHOTO",
-      "textPreview": "TEAM AND PROTOTYPE PHOTO",
+      "text": "HYDROPONIC TOWER IMAGE",
+      "textPreview": "HYDROPONIC TOWER IMAGE",
       "resolvedFontSize": 18,
       "resolvedTextStyle": {
         "fontSize": 18,
@@ -112,14 +374,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "TEAM AND PROTOTYPE PHOTO"
+            "text": "HYDROPONIC TOWER IMAGE"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "TEAM AND PROTOTYPE PHOTO",
+          "text": "HYDROPONIC TOWER IMAGE",
           "resolvedTextStyle": {
             "fontSize": 18,
             "color": "#0E6B4F",
@@ -129,7 +391,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "TEAM AND PROTOTYPE PHOTO",
+              "text": "HYDROPONIC TOWER IMAGE",
               "fontSize": 18,
               "color": "#0E6B4F",
               "bold": true,
@@ -142,20 +404,20 @@
       "lineWidth": 0
     },
     {
-      "order": 3,
+      "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fe5sbmpg",
-      "id": "3",
+      "aid": "sh/cvepkbi5",
+      "id": "8",
       "bbox": [
-        784,
-        362,
-        472,
+        96,
+        363,
+        286,
         24
       ],
       "geometry": "rect",
-      "text": "Paste a real field-test or team photo",
-      "textPreview": "Paste a real field-test or team photo",
+      "text": "Paste a relevant real photo",
+      "textPreview": "Paste a relevant real photo",
       "resolvedFontSize": 14,
       "resolvedTextStyle": {
         "fontSize": 14,
@@ -174,14 +436,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "Paste a real field-test or team photo"
+            "text": "Paste a relevant real photo"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Paste a real field-test or team photo",
+          "text": "Paste a relevant real photo",
           "resolvedTextStyle": {
             "fontSize": 14,
             "color": "#667085",
@@ -190,7 +452,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Paste a real field-test or team photo",
+              "text": "Paste a relevant real photo",
               "fontSize": 14,
               "color": "#667085",
               "alignment": "center"
@@ -202,200 +464,27 @@
       "lineWidth": 0
     },
     {
-      "order": 4,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/ojet8r6d",
-      "id": "4",
-      "bbox": [
-        0,
-        0,
-        800,
-        720
-      ],
-      "geometry": "rect",
-      "fillColor": "#0C2C20",
-      "lineWidth": 0
-    },
-    {
-      "order": 5,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/pknuhw7i",
-      "id": "5",
-      "bbox": [
-        72,
-        112,
-        590,
-        116
-      ],
-      "geometry": "rect",
-      "text": "Our next step: prove value with local farms.",
-      "textPreview": "Our next step: prove value with local farms.",
-      "resolvedFontSize": 44,
-      "resolvedTextStyle": {
-        "fontSize": 44,
-        "typeface": "+mn-lt",
-        "color": "#FFFFFF",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 2,
-        "lines": [
-          {
-            "index": 1,
-            "text": "Our next step: prove value"
-          },
-          {
-            "index": 2,
-            "text": "with local farms."
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "Our next step: prove value with local farms.",
-          "resolvedTextStyle": {
-            "fontSize": 44,
-            "color": "#FFFFFF",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "Our next step: prove value with local farms.",
-              "fontSize": 44,
-              "color": "#FFFFFF",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 6,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/2hwb6ho7",
-      "id": "6",
-      "bbox": [
-        72,
-        256,
-        74,
-        6
-      ],
-      "geometry": "rect",
-      "fillColor": "#F28C28",
-      "lineWidth": 0
-    },
-    {
-      "order": 7,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/3i5sfmps",
-      "id": "7",
-      "bbox": [
-        72,
-        304,
-        280,
-        26
-      ],
-      "geometry": "rect",
-      "text": "We are seeking",
-      "textPreview": "We are seeking",
-      "resolvedFontSize": 19,
-      "resolvedTextStyle": {
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#B9D5C5",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "We are seeking"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "We are seeking",
-          "resolvedTextStyle": {
-            "fontSize": 19,
-            "color": "#B9D5C5",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "We are seeking",
-              "fontSize": 19,
-              "color": "#B9D5C5",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 8,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/c7ytcb69",
-      "id": "8",
-      "bbox": [
-        72,
-        360,
-        10,
-        10
-      ],
-      "geometry": "ellipse",
-      "fillColor": "#F28C28",
-      "lineWidth": 0
-    },
-    {
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d87ulw7u",
+      "aid": "sh/dwnqdgja",
       "id": "9",
       "bbox": [
-        96,
-        350,
-        572,
-        38
+        72,
+        492,
+        334,
+        24
       ],
       "geometry": "rect",
-      "text": "Pilot citrus farms or cooperatives",
-      "textPreview": "Pilot citrus farms or cooperatives",
-      "resolvedFontSize": 20,
+      "text": "HYDROPONICS",
+      "textPreview": "HYDROPONICS",
+      "resolvedFontSize": 17,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "fontSize": 17,
         "typeface": "+mn-lt",
-        "color": "#FFFFFF",
-        "alignment": "left",
+        "color": "#F28C28",
+        "bold": true,
+        "alignment": "center",
         "insets": {
           "top": 4.8,
           "right": 9.6,
@@ -408,24 +497,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "Pilot citrus farms or cooperatives"
+            "text": "HYDROPONICS"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Pilot citrus farms or cooperatives",
+          "text": "HYDROPONICS",
           "resolvedTextStyle": {
-            "fontSize": 20,
-            "color": "#FFFFFF"
+            "fontSize": 17,
+            "color": "#F28C28",
+            "bold": true,
+            "alignment": "center"
           },
           "runs": [
             {
               "index": 1,
-              "text": "Pilot citrus farms or cooperatives",
-              "fontSize": 20,
-              "color": "#FFFFFF"
+              "text": "HYDROPONICS",
+              "fontSize": 17,
+              "color": "#F28C28",
+              "bold": true,
+              "alignment": "center"
             }
           ],
           "marginLeft": 0
@@ -437,38 +530,749 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/x8vyps3m",
+      "aid": "sh/ts3ytsvu",
       "id": "10",
       "bbox": [
-        72,
-        424,
-        10,
-        10
+        90,
+        530,
+        298,
+        46
       ],
-      "geometry": "ellipse",
-      "fillColor": "#F28C28",
+      "geometry": "rect",
+      "text": "Repeat plant observations\nand growth tracking",
+      "textPreview": "Repeat plant observations | and growth tracking",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#173B2C",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Repeat plant observations"
+          },
+          {
+            "index": 2,
+            "text": "and growth tracking"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Repeat plant observations",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#173B2C",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Repeat plant observations",
+              "fontSize": 17,
+              "color": "#173B2C",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "and growth tracking",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#173B2C",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "and growth tracking",
+              "fontSize": 17,
+              "color": "#173B2C",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
       "lineWidth": 0
     },
     {
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/c7mhwn21",
+      "aid": "sh/sruxkne9",
       "id": "11",
+      "name": "image-placeholder",
       "bbox": [
-        96,
-        414,
-        572,
-        38
+        454,
+        264,
+        334,
+        194
       ],
       "geometry": "rect",
-      "text": "Agricultural mentors and validation partners",
-      "textPreview": "Agricultural mentors and validation partners",
-      "resolvedFontSize": 20,
+      "fillColor": "#DDEEDC",
+      "lineColor": "#23835E",
+      "lineWidth": 2
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqlgrido",
+      "id": "12",
+      "bbox": [
+        478,
+        325,
+        286,
+        28
+      ],
+      "geometry": "rect",
+      "text": "TREE OR CROP-FIELD IMAGE",
+      "textPreview": "TREE OR CROP-FIELD IMAGE",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "fontSize": 18,
         "typeface": "+mn-lt",
-        "color": "#FFFFFF",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TREE OR CROP-FIELD IMAGE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TREE OR CROP-FIELD IMAGE",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TREE OR CROP-FIELD IMAGE",
+              "fontSize": 18,
+              "color": "#0E6B4F",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65cfidw3",
+      "id": "13",
+      "bbox": [
+        478,
+        363,
+        286,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Paste a relevant real photo",
+      "textPreview": "Paste a relevant real photo",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#667085",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Paste a relevant real photo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Paste a relevant real photo",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#667085",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Paste a relevant real photo",
+              "fontSize": 14,
+              "color": "#667085",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1wnyxsvq",
+      "id": "14",
+      "bbox": [
+        454,
+        492,
+        334,
+        24
+      ],
+      "geometry": "rect",
+      "text": "TREES AND CROPS",
+      "textPreview": "TREES AND CROPS",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TREES AND CROPS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TREES AND CROPS",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TREES AND CROPS",
+              "fontSize": 17,
+              "color": "#0E6B4F",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvuxone5",
+      "id": "15",
+      "bbox": [
+        472,
+        530,
+        298,
+        46
+      ],
+      "geometry": "rect",
+      "text": "Inventory, canopy change,\nand targeted field checks",
+      "textPreview": "Inventory, canopy change, | and targeted field checks",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#173B2C",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Inventory, canopy change,"
+          },
+          {
+            "index": 2,
+            "text": "and targeted field checks"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Inventory, canopy change,",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#173B2C",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Inventory, canopy change,",
+              "fontSize": 17,
+              "color": "#173B2C",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "and targeted field checks",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#173B2C",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "and targeted field checks",
+              "fontSize": 17,
+              "color": "#173B2C",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fulgvidk",
+      "id": "16",
+      "name": "image-placeholder",
+      "bbox": [
+        836,
+        264,
+        334,
+        194
+      ],
+      "geometry": "rect",
+      "fillColor": "#DDEEDC",
+      "lineColor": "#23835E",
+      "lineWidth": 2
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/etcfmxwz",
+      "id": "17",
+      "bbox": [
+        860,
+        325,
+        286,
+        28
+      ],
+      "geometry": "rect",
+      "text": "POULTRY OR LIVESTOCK-FACILITY IMAGE",
+      "textPreview": "POULTRY OR LIVESTOCK-FACILITY IMAGE",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "POULTRY OR"
+          },
+          {
+            "index": 2,
+            "text": "LIVESTOCK-FACILITY IMAGE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "POULTRY OR LIVESTOCK-FACILITY IMAGE",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "POULTRY OR LIVESTOCK-FACILITY IMAGE",
+              "fontSize": 18,
+              "color": "#0E6B4F",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h0jel8vm",
+      "id": "18",
+      "bbox": [
+        860,
+        363,
+        286,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Paste a relevant real photo",
+      "textPreview": "Paste a relevant real photo",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#667085",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Paste a relevant real photo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Paste a relevant real photo",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#667085",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Paste a relevant real photo",
+              "fontSize": 14,
+              "color": "#667085",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wzaxc3e1",
+      "id": "19",
+      "bbox": [
+        836,
+        492,
+        334,
+        24
+      ],
+      "geometry": "rect",
+      "text": "ANIMAL FACILITIES",
+      "textPreview": "ANIMAL FACILITIES",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ANIMAL FACILITIES"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ANIMAL FACILITIES",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ANIMAL FACILITIES",
+              "fontSize": 17,
+              "color": "#0E6B4F",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jexs3mx",
+      "id": "20",
+      "bbox": [
+        854,
+        530,
+        298,
+        46
+      ],
+      "geometry": "rect",
+      "text": "Monitor zones and operations,\nsubject to welfare validation",
+      "textPreview": "Monitor zones and operations, | subject to welfare validation",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#173B2C",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Monitor zones and operations,"
+          },
+          {
+            "index": 2,
+            "text": "subject to welfare validation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Monitor zones and operations,",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#173B2C",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Monitor zones and operations,",
+              "fontSize": 17,
+              "color": "#173B2C",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "subject to welfare validation",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#173B2C",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "subject to welfare validation",
+              "fontSize": 17,
+              "color": "#173B2C",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9kny183i",
+      "id": "21",
+      "name": "label",
+      "bbox": [
+        380,
+        622,
+        520,
+        36
+      ],
+      "geometry": "roundRect",
+      "text": "FUTURE PILOTS, VALIDATED WITH CUSTOMERS",
+      "textPreview": "FUTURE PILOTS, VALIDATED WITH CUSTOMERS",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#0E6B4F",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FUTURE PILOTS, VALIDATED WITH CUSTOMERS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FUTURE PILOTS, VALIDATED WITH CUSTOMERS",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#0E6B4F",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "FUTURE PILOTS, VALIDATED WITH CUSTOMERS",
+              "fontSize": 13,
+              "color": "#0E6B4F",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#DDEEDC",
+      "lineColor": "#DDEEDC",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mhcfqt4r",
+      "id": "22",
+      "bbox": [
+        72,
+        675,
+        1050,
+        20
+      ],
+      "geometry": "rect",
+      "text": "The shared workflow: observe, organize data, analyze with AI, and return a useful decision.",
+      "textPreview": "The shared workflow: observe, organize data, analyze with AI, and return a useful decision.",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "+mn-lt",
+        "color": "#667085",
         "alignment": "left",
         "insets": {
           "top": 4.8,
@@ -482,167 +1286,24 @@
         "lines": [
           {
             "index": 1,
-            "text": "Agricultural mentors and validation partners"
+            "text": "The shared workflow: observe, organize data, analyze with AI, and return a useful decision."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Agricultural mentors and validation partners",
+          "text": "The shared workflow: observe, organize data, analyze with AI, and return a useful decision.",
           "resolvedTextStyle": {
-            "fontSize": 20,
-            "color": "#FFFFFF"
+            "fontSize": 11,
+            "color": "#667085"
           },
           "runs": [
             {
               "index": 1,
-              "text": "Agricultural mentors and validation partners",
-              "fontSize": 20,
-              "color": "#FFFFFF"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 12,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/b6dgnilg",
-      "id": "12",
-      "bbox": [
-        72,
-        488,
-        10,
-        10
-      ],
-      "geometry": "ellipse",
-      "fillColor": "#F28C28",
-      "lineWidth": 0
-    },
-    {
-      "order": 13,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/a54zudkb",
-      "id": "13",
-      "bbox": [
-        96,
-        478,
-        572,
-        38
-      ],
-      "geometry": "rect",
-      "text": "Support for field testing, data collection, and model improvement",
-      "textPreview": "Support for field testing, data collection, and model improvement",
-      "resolvedFontSize": 20,
-      "resolvedTextStyle": {
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#FFFFFF",
-        "alignment": "left",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 2,
-        "lines": [
-          {
-            "index": 1,
-            "text": "Support for field testing, data collection, and model"
-          },
-          {
-            "index": 2,
-            "text": "improvement"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "Support for field testing, data collection, and model improvement",
-          "resolvedTextStyle": {
-            "fontSize": 20,
-            "color": "#FFFFFF"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "Support for field testing, data collection, and model improvement",
-              "fontSize": 20,
-              "color": "#FFFFFF"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 14,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/lcfyts3y",
-      "id": "14",
-      "bbox": [
-        72,
-        575,
-        590,
-        64
-      ],
-      "geometry": "rect",
-      "text": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
-      "textPreview": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
-      "resolvedFontSize": 20,
-      "resolvedTextStyle": {
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#F7D6A9",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 2,
-        "lines": [
-          {
-            "index": 1,
-            "text": "SUCCESS = A farm uses our report to make a better"
-          },
-          {
-            "index": 2,
-            "text": "harvest decision and pays to use it again."
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
-          "resolvedTextStyle": {
-            "fontSize": 20,
-            "color": "#F7D6A9",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "SUCCESS = A farm uses our report to make a better harvest decision and pays to use it again.",
-              "fontSize": 20,
-              "color": "#F7D6A9",
-              "bold": true
+              "text": "The shared workflow: observe, organize data, analyze with AI, and return a useful decision.",
+              "fontSize": 11,
+              "color": "#667085"
             }
           ],
           "marginLeft": 0

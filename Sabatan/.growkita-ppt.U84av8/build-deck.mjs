@@ -289,7 +289,29 @@ async function main() {
     addNotes(slide, ["The platform is scalable because the workflow repeats, but we expand only after the first market is working."]);
   }
 
-  // 11. Ask
+  // 11. Future applications
+  {
+    const slide = presentation.slides.add();
+    slide.background.fill = C.cream;
+    header(slide, "One monitoring platform. More farm applications.", "Future applications", 11);
+    text(slide, "Citrus is the first product. These are adjacent use cases to validate through paid pilots.", { left: 72, top: 184, width: 990, height: 34 }, { fontSize: 23, color: C.gray });
+    const applications = [
+      ["HYDROPONICS", "Hydroponic tower image", "Repeat plant observations\nand growth tracking"],
+      ["TREES AND CROPS", "Tree or crop-field image", "Inventory, canopy change,\nand targeted field checks"],
+      ["ANIMAL FACILITIES", "Poultry or livestock-facility image", "Monitor zones and operations,\nsubject to welfare validation"],
+    ];
+    applications.forEach((app, i) => {
+      const x = 72 + i * 382;
+      imagePlaceholder(slide, x, 264, 334, 194, app[1], "Paste a relevant real photo");
+      text(slide, app[0], { left: x, top: 492, width: 334, height: 24 }, { fontSize: 17, bold: true, color: i === 0 ? C.orange : C.green, alignment: "center" });
+      text(slide, app[2], { left: x + 18, top: 530, width: 298, height: 46 }, { fontSize: 17, color: C.ink, alignment: "center" });
+    });
+    pill(slide, "FUTURE PILOTS, VALIDATED WITH CUSTOMERS", 380, 622, 520, C.leaf, C.green);
+    footer(slide, "The shared workflow: observe, organize data, analyze with AI, and return a useful decision.");
+    addNotes(slide, ["These are future applications, not current features.", "Each one must earn its place through a paid pilot and appropriate welfare, safety, and biosecurity validation."]);
+  }
+
+  // 12. Ask
   {
     const slide = presentation.slides.add();
     slide.background.fill = C.dark;
@@ -303,7 +325,7 @@ async function main() {
     addNotes(slide, ["We are asking for a chance to prove a useful local product with measurable farm value."]);
   }
 
-  // 12. Closing
+  // 13. Closing
   {
     const slide = presentation.slides.add();
     slide.background.fill = C.dark;

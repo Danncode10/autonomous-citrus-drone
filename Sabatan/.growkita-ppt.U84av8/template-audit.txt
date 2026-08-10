@@ -1,0 +1,4 @@
+Source deck: WPS backup from 2026-08-10 08:38:56, confirmed to contain the user's manually inserted citrus photos, Nueva Vizcaya map, and GrowKita mobile dashboard image.
+Source structure: 12 slides; custom slide-local text, shapes, and images; no inherited master elements visible in the inspected layouts.
+Preservation rule: slides 1-10 and 12-13 must remain visually and structurally unchanged. The added future-applications slide duplicates source slide 10 to preserve typography, spacing, colors, and slide chrome.
+Insertion contract: duplicate source slide 10, rewrite only its existing text elements, and place the duplicate after source slide 10. No source images or manually placed visuals are modified.

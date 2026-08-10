@@ -218,7 +218,27 @@ A horizontal four-step timeline. Citrus and Nueva Vizcaya should be visually lar
 
 GrowKita is scalable because the workflow repeats, but we expand only after the first market is working.
 
-## Slide 11: Pilot plan and ask
+## Slide 11: Future applications
+
+**On-screen text**
+
+### One monitoring platform. More farm applications.
+
+After citrus proves the workflow, GrowKita can validate adjacent use cases:
+
+- **Hydroponics:** repeat plant observations and growth tracking
+- **Trees and crops:** plant inventory, canopy change, and targeted field checks
+- **Animal facilities:** monitoring of zones and operations, subject to welfare and biosecurity validation
+
+**Visual**
+
+Use three equal, simple image frames: a hydroponic tower, a tree/crop field, and a poultry or livestock facility. Under every image, show one concise outcome. Add a small footer: "Future pilots, validated with customers."
+
+**Speaker point**
+
+The shared capability is not just a drone. It is the repeatable workflow: observe, organize data, analyze with AI, and return a useful decision. Each new use case must earn its place through a paid pilot.
+
+## Slide 12: Pilot plan and ask
 
 **On-screen text**
 
@@ -242,7 +262,7 @@ Use a real team photo or a confident photo of the prototype/drone in a citrus-fa
 
 We are not asking people to believe in a distant future. We are asking for the chance to prove a useful, local product with measurable farm value.
 
-## Optional Slide 12: Team
+## Optional Slide 13: Team
 
 Use this only if the competition requires a team introduction or gives enough time.
 
