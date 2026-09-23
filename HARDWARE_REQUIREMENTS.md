@@ -15,7 +15,7 @@ The project requires a physical target for the drone to scan. Since functional h
 
 | Device | Link | Price | Quantity |
 | --- | --- | ---: | ---: |
-| CogniFly-based 3D-printable drone frame STL files | <https://github.com/thecognifly/CogniFly-STL> | TBD | 1 |
+| Standard 3-inch open-prop frame | [JeNo 3-inch](https://github.com/WE-are-FPV/JeNo-3-3.5) / [MFR 3-inch](https://www.printables.com/model/568802-mfr-3-inch-fpv-race-drone-frame) | PHP 800-1200 | 1 |
 | SpeedyBee F405 Mini Stack, FC + BLS 35A 4-in-1 ESC | [Shopee](https://shopee.ph) | PHP 5,342 | 1 |
 | CADDXFPV 1303 6000KV 2-4S brushless motors | [Banggood](https://ph.banggood.com) | PHP 3,609.07 | 4 |
 | Gemfan Hurricane 3018 3x1.8 3-inch 2-blade propellers, 1.5mm hole T-mount | [Banggood](https://ph.banggood.com) | PHP 168.15 | 4 pairs |
@@ -36,11 +36,12 @@ The project requires a physical target for the drone to scan. Since functional h
 
 ## Drone Inspection Hardware
 
-The focus here is on the modified CogniFly-based 3D-printable drone platform, its onboard electronics, and the hardware needed for field deployment.
+The focus here is on a standard 3-inch drone platform, its onboard electronics, and the hardware needed for field deployment.
 
-Reference repositories:
-- CogniFly project page: <https://thecognifly.github.io/>
-- CogniFly STL files: <https://github.com/thecognifly/CogniFly-STL>
+Reference open-source frames (highly regarded by the FPV/research community):
+- JeNo 3-inch Frame (GitHub): <https://github.com/WE-are-FPV/JeNo-3-3.5> (Robust carbon-fiber / 3D-printable open-source design)
+- Pancronos FPV-3D-print (GitHub): <https://github.com/Pancronos/FPV-3D-print> (Collection of fully 3D-printable 3-inch frames)
+- MFR 3-inch FPV race drone (Printables): <https://www.printables.com/model/568802-mfr-3-inch-fpv-race-drone-frame> (Well-documented purely 3D-printable frame)
 
 ### Onboard Computer
 Required board:
@@ -80,7 +81,7 @@ This choice matches the project overview because ArduPilot provides MAVLink tele
 ## Minimum Hardware Build
 
 Minimum realistic physical prototype:
-- Modified CogniFly-based 3D-printable drone frame
+- Standard 3-inch carbon fiber or 3D-printable open-prop drone frame
 - SpeedyBee F405 Mini flight controller
 - ArduPilot/ArduCopter firmware
 - 4x CADDXFPV 1303 6000KV 2-4S brushless motors
