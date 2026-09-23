@@ -2,7 +2,7 @@
 
 ## Project Direction
 
-The project focuses on **visible fruit counting for Perante orange trees** using a drone-mounted camera, computer vision, orchard mapping, Gazebo simulation, and a web dashboard. 
+The project focuses on **visual inspection of hydroponic towers for lettuce and empty pots** using a drone-mounted camera, computer vision, GPS alignment, and a web dashboard. 
 
 The project is restructured into two main phases to accommodate both software foundations and hardware integration: **Thesis 1 (Foundations & Simulation)** and **Thesis 2 (Integration & Deployment)**.
 
@@ -10,101 +10,48 @@ The project is restructured into two main phases to accommodate both software fo
 
 ## Thesis 1 (Foundations & Simulation)
 
-Thesis 1 establishes the core software systems, manual dataset collection, basic hardware assembly (manual flight only), and simulated autonomous capabilities.
+Thesis 1 establishes the core software systems, manual dataset collection, basic hardware assembly (manual flight only), and simulated capabilities.
 
 ### 1. Databox Dataset and Annotation Tool
 
-Before training the fruit detection model, the project will use **Databox**, a researcher-customized web dataset and annotation tool. Databox is based on a fork of an open-source MakeSense-style image annotation repository, then modified to better support YOLO dataset organization, review workflow, online access, and collaborative labeling from phones, laptops, or other browser-capable devices. Databox gives the researchers control over image quality, labels, review status, and export format, and can be made open source so other researchers can use it to create YOLO-ready datasets.
+Before training the detection model, the project will use **Databox**, a researcher-customized web dataset and annotation tool. Databox gives the researchers control over image quality, labels, review status, and export format, and can be used to create YOLO-ready datasets.
 
 **Main Idea:**
-Create dataset -> upload or capture image -> video-to-frame extraction -> choose label class -> draw bounding boxes around fruits or citrus canopy -> save coordinates and metadata -> mark image as reviewed -> export labels for machine learning.
+Create dataset -> upload or capture image -> video-to-frame extraction -> choose label class -> draw bounding boxes around lettuce, empty pots, and the frame -> save coordinates and metadata -> mark image as reviewed -> export labels for machine learning.
 
-**Recommended Perante orange classes:**
+**Recommended classes:**
 ```text
-0 = citrus_fruit
-1 = citrus_canopy
+0 = lettuce
+1 = empty_pot
+2 = tower_frame
 ```
 
 **Bounding Box Rules:**
-- Both fruits and canopy regions use bounding boxes (YOLO object detection learns from rectangular boxes).
-- A fruit box should tightly surround each visible fruit.
-- A canopy box should surround the visible leafy or fruit-bearing area of the target tree, avoiding unnecessary trunk, ground, sky, and background areas as much as possible. This helps the model learn the region where fruit counting should happen.
-
-**Suggested Database Fields (Databox):**
-```text
-datasets
-- id
-- name
-- description
-- project_type
-- created_at
-
-images
-- id
-- dataset_id
-- filename
-- file_path
-- width
-- height
-- source
-- capture_date
-- tree_id
-- status
-- notes
-- created_at
-
-classes
-- id
-- dataset_id
-- name
-- class_index
-
-annotations
-- id
-- image_id
-- class_id
-- annotation_type
-- x_min
-- y_min
-- x_max
-- y_max
-- created_by
-- created_at
-```
-
-**Bounding Box Math & YOLO Export Format:**
-The platform stores boxes as pixel coordinates first:
-```text
-x_min, y_min, x_max, y_max
-```
-Then it converts them to YOLO's normalized format during export (`class_id center_x center_y width height`):
-```text
-center_x = ((x_min + x_max) / 2) / image_width
-center_y = ((y_min + y_max) / 2) / image_height
-width = (x_max - x_min) / image_width
-height = (y_max - y_min) / image_height
-```
+- A box should tightly surround each visible lettuce head or empty pot.
+- The tower frame can be labeled to help the drone identify the overall structure.
 
 ### 2. Manual Dataset Collection
-- Collect initial ground-level images and videos of Perante orange trees manually using handheld cameras/phones.
-- Capture from multiple sides, distances, and lighting conditions. Include easy, medium, and difficult cases (occluded fruits).
+- Assemble a physical structural frame (downloaded/3D printed or DIY) to serve as the hydroponic tower.
+- Place lettuce and empty pots in the frame.
+- Collect initial ground-level images and videos manually using handheld cameras/phones.
+- Capture from multiple sides, distances, and lighting conditions.
 - Use Databox to annotate this initial dataset for early machine learning development.
 
 ### 3. Physical Hardware Milestone (Manual Flight)
 - Focus strictly on assembling a manual micro-drone for initial hardware validation.
-- **Hardware Profile:** SpeedyBee F405 Mini flight controller running ArduPilot/ArduCopter, motors, ESCs, frame, RC transmitter/receiver.
+- **Hardware Profile:** CogniFly-based frame, SpeedyBee F405 Mini flight controller running ArduPilot/ArduCopter, motors, ESCs, RC transmitter/receiver.
 - **Scope Restriction:** The physical drone in Thesis 1 will ONLY perform manual RC flight, hovering, and landing under ArduPilot-stabilized control. Do NOT include the Raspberry Pi Zero or onboard AI processing on the physical drone during Thesis 1.
 
 ### 4. Farmer Web Dashboard
-Build a Next.js + Supabase dashboard as the central system where farms, trees, drones, scan requests, images, and AI results will eventually connect.
+Build a Next.js + Supabase dashboard as the central system where farms, towers, drones, scan requests, images, and AI results will eventually connect.
 
 **Core Workflow:**
-Farmer account -> farm registration -> crop registration -> tree registration -> interactive map location -> simulated drone scan UI -> scan records.
+Farmer account -> farm registration -> tower registration (with GPS coordinates) -> interactive map location -> simulated drone scan UI -> scan records.
 
 **Features & Map (Leaflet):**
-- Farm registration and crop/tree details.
-- Interactive map using Leaflet with OpenStreetMap tiles to place tree markers on a farm map.
-- Simulated drone mission states (`QUEUED`, `PROCESSING`, `COMPLETED`), showing simulated battery and GPS status while the drone is not yet fully autonomous.
+- Farm and tower registration.
+- Interactive map using Leaflet with OpenStreetMap tiles to place tower markers based on their GPS coordinates.
+- Simulated drone mission states (`QUEUED`, `PROCESSING`, `COMPLETED`).
 
 **Suggested Database Fields (Dashboard):**
 ```text
@@ -120,28 +67,15 @@ farms
 - user_id
 - name
 - location_name
-- map_center_lat
-- map_center_lng
 - notes
 
-crops
+towers
 - id
 - farm_id
-- name
-- variety
-- notes
-
-trees
-- id
-- farm_id
-- crop_id
-- tree_code
-- tree_name
+- tower_code
 - latitude
 - longitude
-- local_x
-- local_y
-- approximate_height
+- total_slots
 - notes
 - status
 
@@ -149,10 +83,7 @@ drones
 - id
 - farm_id
 - drone_name
-- camera_type
-- gps_supported
 - status
-- battery_percent
 - gps_status
 - camera_status
 - last_seen_at
@@ -160,25 +91,20 @@ drones
 scan_missions
 - id
 - farm_id
-- tree_id
+- tower_id
 - drone_id
 - status
 - requested_by
 - requested_at
-- started_at
 - completed_at
-- notes
+- lettuce_count
+- empty_pot_count
 ```
 
-### 5. Gazebo Simulation Engine
-Use Gazebo Sim with ArduPilot SITL to test autonomous capabilities entirely in software before risking the physical drone.
-
-**Simulation Tasks:**
-- Build a Gazebo orchard environment with virtual trees, terrain, and obstacles.
-- Spawn a simulated drone model.
-- Test autonomous navigation from launch point to a selected tree.
-- Simulate a circular scan path around the tree canopy.
-- Test obstacle avoidance around trunks, branches, and nearby trees in software.
+### 5. Gazebo Simulation (Development Tool)
+While not a primary objective, Gazebo Sim with ArduPilot SITL can be used to safely test vertical camera scanning logic in software before risking the physical drone.
+- Test autonomous GPS navigation from launch point to a selected tower's GPS coordinate.
+- Simulate an up/down vertical scan path along the tower frame.
 
 ---
 
@@ -188,31 +114,30 @@ Thesis 2 focuses on upgrading the physical hardware, refining the computer visio
 
 ### 1. Hardware Upgrade
 - **Companion Computer:** Mount a Raspberry Pi Zero 2 W + Raspberry Pi Camera V2 onto the physical drone.
-- **Flight Controller Integration:** Connect the Pi to the SpeedyBee F405 flight controller running ArduPilot/ArduCopter.
-- Enable MAVLink image triggering for synchronized aerial capture during autonomous flights.
+- **Flight Controller Integration:** Connect the Pi to the SpeedyBee F405 flight controller. Add the GPS module.
+- Enable MAVLink image triggering for synchronized capture during autonomous vertical flights.
 
 ### 2. Computer Vision Engine
-- Train YOLOv8 on the Databox-exported dataset containing `citrus_fruit` and `citrus_canopy` classes.
-- **Duplicate-Count Reduction:** Add ByteTrack / multi-frame association to track detections between nearby frames and avoid counting the same fruit repeatedly while the drone moves.
+- Train YOLOv8 on the Databox-exported dataset containing `lettuce`, `empty_pot`, and `tower_frame` classes.
 
 ### 3. Pipeline Integration
 Connect the entire workflow end-to-end:
 ```text
 Aerial capture (RPi Camera) 
--> Offboard processing engine (Ground Laptop for MVP / Cloud GPU for Production) 
+-> Offboard processing engine (Ground Laptop for MVP) 
 -> Supabase DB 
 -> Real-time Dashboard updates
 ```
-- The drone captures images and sends them to the processing engine.
-- YOLOv8 and ByteTrack process the images, generating visible fruit count estimates.
+- The drone captures images during the vertical scan and sends them to the processing engine.
+- YOLOv8 processes the images, generating lettuce and empty pot counts.
 - Results are saved to Supabase and immediately reflected on the Farmer Dashboard.
 
 ### 4. Field Validation
-Conduct outdoor supervised flight tests on physical Perante orange trees in Nueva Vizcaya.
+Conduct outdoor supervised flight tests on the physical structural frame in an open, obstacle-free space.
 
 **Evaluation Metrics:**
-- **Computer Vision:** Precision, recall, F1-score, mAP, and counting error per tree.
-- **Drone Navigation:** Navigation success rate, obstacle avoidance success rate, and average scan time per tree.
+- **Computer Vision:** Precision, recall, and counting error per tower for lettuce and empty pots.
+- **Drone Navigation:** GPS alignment accuracy and successful vertical scanning.
 - **Dashboard:** Reliable telemetry display and scan result storage.
 
 ---
@@ -222,26 +147,25 @@ Conduct outdoor supervised flight tests on physical Perante orange trees in Nuev
 **Included:**
 - Databox reusable image dataset and annotation tool
 - YOLO-ready annotation export
-- Citrus canopy labeling and Perante orange fruit detection
-- Visible fruit counting with duplicate-count reduction
-- Drone image/video capture workflow
-- Gazebo simulation for route planning and circular scans
-- Orchard map and web dashboard
+- Detection of lettuce and empty pots
+- GPS-based navigation to a hydroponic tower in an open space
+- Vertical drone image/video capture workflow
+- Web dashboard with tower registration and GPS mapping
 
 **Not included in the main scope:**
-- Harvest readiness estimation or ripeness classification
+- Complex obstacle avoidance or navigation in cluttered environments
+- Large-scale spatial orchard mapping
+- Functional hydroponic watering systems (a structural frame is sufficient for testing detection)
 - Disease and pest detection
-- Exact 3D coordinate mapping of every individual fruit
-- Fully autonomous large-scale farm deployment
 
 ## Recommended Thesis Claim
 
 The project should claim:
 
-> The system estimates the visible fruit count of registered Perante orange trees using drone-captured images or video, machine learning-based fruit detection, duplicate-count reduction, and orchard mapping.
+> The system automates the visual inspection of hydroponic towers in an open space using drone-captured images to detect lettuce and empty pots, aligned via GPS, and displayed on a web dashboard.
 
 The project should avoid claiming:
 
-> The system counts every fruit on the tree perfectly.
+> The drone can navigate complex cluttered environments or avoid unpredictable obstacles.
 
-This is important because some fruits may be hidden by leaves, branches, or other fruits.
+This is important because the project has been explicitly simplified to focus on GPS alignment and vertical scanning in an open, controlled space.
