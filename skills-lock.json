@@ -1,0 +1,2663 @@
+{
+  "version": 1,
+  "skills": {
+    "AgentDB Advanced Features": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentdb-advanced/SKILL.md",
+      "computedHash": "a71e532aecf5ee10c59ff63780b0221f3fa11109b18732363e00e62b21f2fda6"
+    },
+    "AgentDB Learning Plugins": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentdb-learning/SKILL.md",
+      "computedHash": "4e9acf390bf6c08f09100263a6dd2baaf1ff3f936a6b06e5d2deb418daa78f9d"
+    },
+    "AgentDB Memory Patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentdb-memory-patterns/SKILL.md",
+      "computedHash": "f9f6d8831e5297c884a1349462c98ac9c8ac2d2f7abd313337d07c353f16eb0d"
+    },
+    "AgentDB Performance Optimization": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentdb-optimization/SKILL.md",
+      "computedHash": "6e83dead35cd92485909c7dd18b7efc1af34100c1935a98ad2a195a32824f93b"
+    },
+    "AgentDB Vector Search": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentdb-vector-search/SKILL.md",
+      "computedHash": "6eb16d3dc33b400e71fbd49ce4299f0ce04513393d83015b3203d749fdd31d9c"
+    },
+    "DannFlow Masterplan & Architecture Orchestrator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dannflow-masterplan/SKILL.md",
+      "computedHash": "9ea55be9f86e1d010d37cb1ded2c2b7157db94dfe4fb6e814493e3ed0f7551b2"
+    },
+    "DannFlow Task Orchestrator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dannflow-task/SKILL.md",
+      "computedHash": "af2738e5f81c9cde40253f75a86f6ccb7a19253a78f887cdbec25998a2c3d055"
+    },
+    "DannFlow Upstream Synchronizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dannflow-update/SKILL.md",
+      "computedHash": "04a9811693d313eeb71749b442bc88e2378028baaf59d5e1c030f7c3d4ceee9f"
+    },
+    "Hooks Automation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/hooks-automation/SKILL.md",
+      "computedHash": "bfe312f328221298301f4989537b1d98b089a2cb27bf2bc11a72800d9c5d52a8"
+    },
+    "JuanStack Vertical Onboarding & DNA Configurator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dannflow-juanstack-init/SKILL.md",
+      "computedHash": "e883699e53ca8e3557f33e97cdb7df5607c5c9d14ce360d9f8e411625fd3aabb"
+    },
+    "Pair Programming": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/pair-programming/SKILL.md",
+      "computedHash": "7c7f26805364a0868a1f393298ef2326b4aba94a976b754506bc20267affcdce"
+    },
+    "ReasoningBank Intelligence": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/reasoningbank-intelligence/SKILL.md",
+      "computedHash": "ec30bab631a5123fea28d25c070e3d958020b53655a5d573d2c73b3649df6ed1"
+    },
+    "ReasoningBank with AgentDB": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/reasoningbank-agentdb/SKILL.md",
+      "computedHash": "da173616e2ff18f29ce37d45d7331ef7aa27fb8d519e177427c24f8e020355d4"
+    },
+    "Skill Builder": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skill-builder/SKILL.md",
+      "computedHash": "50c2dba5ab17b483cc6e6ae3cd816a57205e0dc8c3135ee6297454598bf0b586"
+    },
+    "Supabase RLS Guardian": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/supabase-rls-guardian/SKILL.md",
+      "computedHash": "9ecb13acf51120583fa1088f9272ec1dfe5680dfe4f14ecc75ade3880f311731"
+    },
+    "Swarm Orchestration": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swarm-orchestration/SKILL.md",
+      "computedHash": "3a812d20a0d1ebd29641eccee88e142c3a33f05fdc34c417eab2504a4cd6981b"
+    },
+    "V3 CLI Modernization": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-cli-modernization/SKILL.md",
+      "computedHash": "9eced3efe40f1adee13ad575243f5d5940ba214bfa7c8b494ab47318044f561f"
+    },
+    "V3 Core Implementation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-core-implementation/SKILL.md",
+      "computedHash": "f09d9b1f6cfbc69c894bca5a83dbbc773303fe1366bae379a1ae889dc15bf9a0"
+    },
+    "V3 DDD Architecture": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-ddd-architecture/SKILL.md",
+      "computedHash": "6a83864a39cc712bd77d3d506208077c0ab7b6163170a820784046071fad080c"
+    },
+    "V3 Deep Integration": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-integration-deep/SKILL.md",
+      "computedHash": "1c633cf87fd37f74e91552bc32f88eac132283cca4d9c9adb86505f68231987f"
+    },
+    "V3 MCP Optimization": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-mcp-optimization/SKILL.md",
+      "computedHash": "399f3f0352f7366ddc7efb439f0121a27b7b87da6f95daa3814c90403dd567ab"
+    },
+    "V3 Memory Unification": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-memory-unification/SKILL.md",
+      "computedHash": "269a1f84ba401ebc54bf79c1950ccc5a434a57d0e5c417cce6c0855e4562cff5"
+    },
+    "V3 Performance Optimization": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-performance-optimization/SKILL.md",
+      "computedHash": "625bc06eb7462b3ef1d6fc5dabb77052065cc453b3f65be9c58bf2ead71220c6"
+    },
+    "V3 Security Overhaul": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-security-overhaul/SKILL.md",
+      "computedHash": "d589df79f5f2e62ecf420cae39c0d77bb1a7379022be6d5af24d1e83760d159d"
+    },
+    "V3 Swarm Coordination": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/v3-swarm-coordination/SKILL.md",
+      "computedHash": "3ca8b2cc3fd3986d7d7def5119e14176200ebb291814a657912a5607fed05c40"
+    },
+    "Verification & Quality Assurance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/verification-quality/SKILL.md",
+      "computedHash": "301c1f888a0267edf3bf66e0c6a69b1f6f9cb4ea072330b68eb79db637b825ae"
+    },
+    "a11y-architect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/a11y-architect/SKILL.md",
+      "computedHash": "dd422b0c417677fed8617a732bec1753b063b62e9c95c782f53c1069c4c4da84"
+    },
+    "accessibility": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/accessibility/SKILL.md",
+      "computedHash": "b480cfd582a4fa30e8b52eaab3bcb490653a05f9049efb8a5186f064cc33aa3e"
+    },
+    "agent-architecture-audit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-architecture-audit/SKILL.md",
+      "computedHash": "8db8e5f849a924a58080345423ad6ed5f383a3bbd7b6f8ba842cf2dc917ebda2"
+    },
+    "agent-eval": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-eval/SKILL.md",
+      "computedHash": "bdb82f2fd2f3e65fbf410b6af61c1041249935324193e37712e620ec8df11d3c"
+    },
+    "agent-evaluator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-evaluator/SKILL.md",
+      "computedHash": "fb2f3846b6f97b6f4e2b34857308046f85a4416e5a10710d5771f9fad59c082b"
+    },
+    "agent-harness-construction": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-harness-construction/SKILL.md",
+      "computedHash": "e034f38aa212f6eedb43382ce1c22c4af4fa3fc0545faa4fe09a3754a4c5a3df"
+    },
+    "agent-introspection-debugging": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-introspection-debugging/SKILL.md",
+      "computedHash": "a362c8480d33f227f25a156969ecc2106287d242126f15246a4b13f1c4288bac"
+    },
+    "agent-payment-x402": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-payment-x402/SKILL.md",
+      "computedHash": "a9f3aea6ccd760a9c320779b39e50774661583693fc9f4804436bf0e14c1d404"
+    },
+    "agent-self-evaluation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-self-evaluation/SKILL.md",
+      "computedHash": "bcc8ed05d3eea9639df955093e5aa1509f6e1088f8e129235e2f3992033971be"
+    },
+    "agent-sort": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-sort/SKILL.md",
+      "computedHash": "111c86b5627f9fe6ea58a2dc0077acf71d7f9bc427732b5bfb16d5b9e9e66edd"
+    },
+    "agentic-engineering": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentic-engineering/SKILL.md",
+      "computedHash": "b215d46696142ffc2c6baa24fb4a8ba7e44b131ba505aa6b3684ffd572a4cf7a"
+    },
+    "agentic-os": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agentic-os/SKILL.md",
+      "computedHash": "69757eea3f094e9eb00af786e14ec56f06d9b359ebaf9b9467442f90a3529de6"
+    },
+    "ai-first-engineering": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ai-first-engineering/SKILL.md",
+      "computedHash": "5f6094a0be04df1f1183701fa545131d5851a736b925132a9f7549eff437bbb7"
+    },
+    "ai-healer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ai-healer/SKILL.md",
+      "computedHash": "5cb64bd37fa798212c31ba3d8b79b079e6c806996f5fbd115d41954faeb05752"
+    },
+    "ai-regression-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ai-regression-testing/SKILL.md",
+      "computedHash": "ffa6db9bcee7b4ad5c6a1e7a79b75038acb33aab21f78f24ba62e67a0f1f569f"
+    },
+    "android-clean-architecture": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/android-clean-architecture/SKILL.md",
+      "computedHash": "80779b595f194a1ca3d59e36cbf4b29f426faaf90cf9c41dfd61a80442214890"
+    },
+    "angular-developer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/angular-developer/SKILL.md",
+      "computedHash": "426a527c6bbb67cddc3fcad2add109280e364aca5e8b4d4305bbda9538cdaecc"
+    },
+    "api-connector-builder": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/api-connector-builder/SKILL.md",
+      "computedHash": "421c7465754c0ded144f320c4d8c296377af47dd6f2666f9f88aa19e10814f41"
+    },
+    "api-design": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/api-design/SKILL.md",
+      "computedHash": "f3c716e9ee0a1076496629807ee311c1b81b358e84d86956abcbc91e6b995e8f"
+    },
+    "architect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/architect/SKILL.md",
+      "computedHash": "7beda7bd2164ce109bbed5f0b31caf6119bfc7f29e187965ff73ce791dd1ef8b"
+    },
+    "architecture-decision-records": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/architecture-decision-records/SKILL.md",
+      "computedHash": "8291e07421c0bac735aafb1107f8b43d3efb17197489936bacd36f09657a9307"
+    },
+    "article-writing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/article-writing/SKILL.md",
+      "computedHash": "728cf7d0c32b65162d86133a8351398657207dad5d8ef68d031d4a5934a0d4df"
+    },
+    "auto-doc-orchestrator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/auto-doc-orchestrator/SKILL.md",
+      "computedHash": "80faeb493b07f6a960de682f5d0b227f456bcdfaca9bfdaed34af1e0a4116b7c"
+    },
+    "automation-audit-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/automation-audit-ops/SKILL.md",
+      "computedHash": "382b359357e68de65979461cf17c8703508ad7f05cf231ab47541c75a719dcab"
+    },
+    "autonomous-agent-harness": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/autonomous-agent-harness/SKILL.md",
+      "computedHash": "e66c8292a154af12990423c7c41aca786ec1ffd8bcbffda50423fd1e5c3d26ca"
+    },
+    "autonomous-loops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/autonomous-loops/SKILL.md",
+      "computedHash": "e00040c9d35182538078928a80b5c2b2480d35ccf4405b4fb51aa290d57f80f3"
+    },
+    "backend-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/backend-patterns/SKILL.md",
+      "computedHash": "45bf0c6abd0549b56142690f49437bc59c7b4f55b62dc7717ef295ec6ed6617f"
+    },
+    "benchmark": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/benchmark/SKILL.md",
+      "computedHash": "e9259b5dfe4954a8d0efa7d8087884feef27d3c2015bbd8be72956b888e8fb68"
+    },
+    "benchmark-methodology": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/benchmark-methodology/SKILL.md",
+      "computedHash": "1393c3a0813269cfb19683ddd8eb087568a0fb705745645654224bb56c7dfabd"
+    },
+    "benchmark-optimization-loop": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/benchmark-optimization-loop/SKILL.md",
+      "computedHash": "15a61c35e58c804334c622b4bbad6a043a4ef4ca88fe7114d23e9d982b80b6a2"
+    },
+    "blender-motion-state-inspection": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/blender-motion-state-inspection/SKILL.md",
+      "computedHash": "dd620dca99aedd7079553f49ba97f4d24d26672195cc4aa5f4ebf2bb8bf9bc1c"
+    },
+    "blueprint": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/blueprint/SKILL.md",
+      "computedHash": "783ea8a784bb08fe8bac72f1db5642bb665bba9326c5286d1017c0f354d42a6c"
+    },
+    "brand-discovery": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/brand-discovery/SKILL.md",
+      "computedHash": "9dbfecde77acfd093e3468e95b615432aa7b56f3e6226c0b9b8c3d8c0ecc16d6"
+    },
+    "brand-voice": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/brand-voice/SKILL.md",
+      "computedHash": "d2a2d29814a36bb98e4e9f2ef6dc724e2152e935f3d32019f3e2e554ff91ddef"
+    },
+    "browser": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/browser/SKILL.md",
+      "computedHash": "4a3eb9508deeda7710b5e9ee167ad046a8c435711f10fbaa49e66069b8080191"
+    },
+    "browser-qa": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/browser-qa/SKILL.md",
+      "computedHash": "52f96649546a642899d9eab90046691b9f9d394a0b00056dcc72cdd61b37dbd9"
+    },
+    "build-error-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/build-error-resolver/SKILL.md",
+      "computedHash": "4112886d1f16085509bba3cd4a7b0e4efa08ed72e99637a350614230a08dd854"
+    },
+    "bun-runtime": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/bun-runtime/SKILL.md",
+      "computedHash": "73b3c91579ddd2f2dd7ebcf215774ea0de07823c1fe8de4b88b3225833bfa5cd"
+    },
+    "canary-watch": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/canary-watch/SKILL.md",
+      "computedHash": "cc57f6ada90455bc46d77df3a0c60613a5d39c5bf6a261ebb4a0bf2fd67e298f"
+    },
+    "carrier-relationship-management": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/carrier-relationship-management/SKILL.md",
+      "computedHash": "ed946398d7b196cf4170438b75f938b03cd6cc5052c75d65a313fabe41ced28b"
+    },
+    "chief-of-staff": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/chief-of-staff/SKILL.md",
+      "computedHash": "c1e3da6b1ff30c70c16a7bde087dd4c5406cd7986180c20b20e8db29f81ad93e"
+    },
+    "cisco-ios-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cisco-ios-patterns/SKILL.md",
+      "computedHash": "57281d030d5f0cc2127f069d3e15eb0577791ebba70ee1ce6011b00355d20813"
+    },
+    "ck": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ck/SKILL.md",
+      "computedHash": "f79ac838fa5241cf69b7ffeb59d6f1836bbe4e92d6d75d971003b57006897320"
+    },
+    "claude-devfleet": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/claude-devfleet/SKILL.md",
+      "computedHash": "1dbbcbef0541e9c961f15fb171d7aed33e851f3a9f69c40075d714a374250bb9"
+    },
+    "click-path-audit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/click-path-audit/SKILL.md",
+      "computedHash": "5a3e02c991de328feb1f5e614697deb30a3965169d19a68b90036cedeffabaaa"
+    },
+    "clickhouse-io": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/clickhouse-io/SKILL.md",
+      "computedHash": "7c0ec24c7704e5cc06126b4af437727d18e4048a7983799c664b3d59b7101937"
+    },
+    "code-architect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/code-architect/SKILL.md",
+      "computedHash": "5eb564ca988fdbbb23fbe6c29eb6c90e91223b65617716a990165331fed99810"
+    },
+    "code-explorer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/code-explorer/SKILL.md",
+      "computedHash": "bdf900589182223692a04f871df699d8b58cfb22f4ff50b634f29937f62344cb"
+    },
+    "code-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/code-reviewer/SKILL.md",
+      "computedHash": "b2e840f77d56b6310b0b381d592a56f1281aa33d8f36313ba0c8c7087d3d3342"
+    },
+    "code-simplifier": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/code-simplifier/SKILL.md",
+      "computedHash": "7d26abaaaa1fd05c06356897b5d5504fd48857e16b5a4176c83c8049f8b8c36d"
+    },
+    "code-tour": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/code-tour/SKILL.md",
+      "computedHash": "56c08378d67747b96e9fbe97914a630dc973db6b952b9e6afbf2012d6fb0d479"
+    },
+    "codebase-onboarding": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/codebase-onboarding/SKILL.md",
+      "computedHash": "c14dccb7906a8543f0b34126978911f8efcbd717a5b9efd3ce2b4e68ebb8b227"
+    },
+    "codehealth-mcp": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/codehealth-mcp/SKILL.md",
+      "computedHash": "b6578f825bebed7e8a727ba05bf6072719033ea078235508f79448d5c218b423"
+    },
+    "coding-standards": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/coding-standards/SKILL.md",
+      "computedHash": "94f8d33db00faef148fb7a9f88c2e37e4d2afe109cdb9978b06fe280892de405"
+    },
+    "comment-analyzer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/comment-analyzer/SKILL.md",
+      "computedHash": "c67ee4c3cadac5781277c68082dbe19c2a0e6b2f7e79ab0b9584a8d6aa715a85"
+    },
+    "competitive-platform-analysis": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/competitive-platform-analysis/SKILL.md",
+      "computedHash": "579fbd15adba4c34961d3ffb222d15f90e78d6574bc353532c2573b415e87112"
+    },
+    "competitive-report-structure": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/competitive-report-structure/SKILL.md",
+      "computedHash": "ae5f25b5517c9e11930f26bad3ad0de809f98b909ba264cf61c931844d1edb28"
+    },
+    "compose-multiplatform-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/compose-multiplatform-patterns/SKILL.md",
+      "computedHash": "d42483b2fcf3d9aec758a9605aab0041d1cdd1fe2813fe23b13c95c4dbe36fed"
+    },
+    "config-gc": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/config-gc/SKILL.md",
+      "computedHash": "4cce33836af459b1d31536bb8456d90e535dae8c2b180e443052c204c61969ef"
+    },
+    "configure-ecc": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/configure-ecc/SKILL.md",
+      "computedHash": "447bd5f464a8904709114eb59fc5628d2823351938fd10d7d8cb55eba27973cb"
+    },
+    "connections-optimizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/connections-optimizer/SKILL.md",
+      "computedHash": "6fc656c2521891019ec1ec2e690617f5434f5d80545c6f0b3bfc0ec36fcb71bd"
+    },
+    "content-engine": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/content-engine/SKILL.md",
+      "computedHash": "75bd75aff09c8ca965600df5c58a9e00d72a2c57166976ca45449c726d32e825"
+    },
+    "content-hash-cache-pattern": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/content-hash-cache-pattern/SKILL.md",
+      "computedHash": "82ef0d1b8d4d2959a7ab0975f891e4ca467d2483db5bdb3c2fcc34930462da3d"
+    },
+    "context-budget": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/context-budget/SKILL.md",
+      "computedHash": "b66f9dea9c1dc8ea220b641503613009de537129f4eb5ca1f8edbf7acd708f42"
+    },
+    "continuous-agent-loop": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/continuous-agent-loop/SKILL.md",
+      "computedHash": "37300fa3a77bac6ea20cc93afe8cbf7eb765c5343ccf8a633610d774b6d8a409"
+    },
+    "continuous-learning": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/continuous-learning/SKILL.md",
+      "computedHash": "f3b65ee4a5354d19f8da430ad4151eda99223d741555249996cdabca061b352c"
+    },
+    "continuous-learning-v2": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/continuous-learning-v2/SKILL.md",
+      "computedHash": "5dabde03ab2d0ad06499d55009a7e2ca67a224fe41f70c633bdf446643871421"
+    },
+    "contract-first": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/contract-first/SKILL.md",
+      "computedHash": "eff3867d673796e583b2dd873440e9adee2783e095e0a11943e5af12eb9876e2"
+    },
+    "conversation-analyzer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/conversation-analyzer/SKILL.md",
+      "computedHash": "f4ecc0061de59f5ffa1b26df8dfd6ee7523e93b7ccfb48338baf2d9b88a7f1c2"
+    },
+    "cost-aware-llm-pipeline": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cost-aware-llm-pipeline/SKILL.md",
+      "computedHash": "db1d2f7bf333955c9e2e76715ded7232fa8685f426dafcd9be191d0e848cd31e"
+    },
+    "cost-tracking": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cost-tracking/SKILL.md",
+      "computedHash": "8b440e3466dc9cbfaca4542c1ce998437eadfb04824c1bd1263355a670c67742"
+    },
+    "council": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/council/SKILL.md",
+      "computedHash": "7c2d224f8613646bf39e0360c199a681e504f808891050046936d0bac33417e7"
+    },
+    "council-multi-model": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/council-multi-model/SKILL.md",
+      "computedHash": "60580ea5f8c99de9648cfb7636b84104f7cc2d771e75b1142ba25714b6fdf9c6"
+    },
+    "counterparty-channel-discipline": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/counterparty-channel-discipline/SKILL.md",
+      "computedHash": "ec00de0d05b1773789e46dbe7dbe63f37050217683e1e97bd7eefe38412607ae"
+    },
+    "cpp-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cpp-build-resolver/SKILL.md",
+      "computedHash": "510346371c3e5e7444e8004cc8ec3de7326806a603f9d851ff15cf88cd43139a"
+    },
+    "cpp-coding-standards": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cpp-coding-standards/SKILL.md",
+      "computedHash": "e8c59d13fe23b088e24dcf6b77845823c5b5636b5c52434550f9b1837bc44ac3"
+    },
+    "cpp-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cpp-reviewer/SKILL.md",
+      "computedHash": "1286c066d6764f05c36e60e314d746481121078756724d5e8386fc6f9010e084"
+    },
+    "cpp-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cpp-testing/SKILL.md",
+      "computedHash": "fbe37695056aa5cf9454f8cf6d883f38c3bca0324ca7aeb288db2fe3b887e97d"
+    },
+    "crosspost": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/crosspost/SKILL.md",
+      "computedHash": "4d943775cdc1cc208e857e4b0e2f687571456533362ba88a368c6092ab2243a4"
+    },
+    "csharp-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/csharp-reviewer/SKILL.md",
+      "computedHash": "f396640ea2588b15177a316173bd71bf636eac5e5ea51887e124ab7cd44fd4fb"
+    },
+    "csharp-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/csharp-testing/SKILL.md",
+      "computedHash": "ae79893902d6f651bf06edca052022b259bdbefaff3d7809c6240ec385916e21"
+    },
+    "customer-billing-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/customer-billing-ops/SKILL.md",
+      "computedHash": "6e545e36eb3c83a82f4d004957009421de370b771ffe4e5aa3bdd1239c2a429f"
+    },
+    "customs-trade-compliance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/customs-trade-compliance/SKILL.md",
+      "computedHash": "3616ed2f8ddfd5bba919f5d1583dd28afae2d7f090c037c4707cc3de153595bb"
+    },
+    "dannflow-synchronizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dannflow-synchronizer/SKILL.md",
+      "computedHash": "0a3ad4e3b86001b026b2d63372c76f0d6bdc6d5329ef8754b20fac4f01ca0986"
+    },
+    "dannskills": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dannskills/SKILL.md",
+      "computedHash": "46e2c6f70a28e80b4d0c2f4db29399be9c821baf49b78bed3566e298d67e76d3"
+    },
+    "dart-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dart-build-resolver/SKILL.md",
+      "computedHash": "1ae3303b515ab657ceaf795640b766e8420448ef9c2b9bc23a35eae0eda22fa5"
+    },
+    "dart-flutter-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dart-flutter-patterns/SKILL.md",
+      "computedHash": "4bb83a6ffdb5e29794fe9d1e5259d5d30614c9d11f181cfc3642602fa082b35d"
+    },
+    "dashboard-builder": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dashboard-builder/SKILL.md",
+      "computedHash": "9c79dbd111962e40661543ff3f52082eafc05a3c46ed4824df55be93e43c7574"
+    },
+    "data-scraper-agent": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/data-scraper-agent/SKILL.md",
+      "computedHash": "c89f4d66835fb15fa13bf3fad075cd7497ebed1c43768e5c8cabcc655e852c89"
+    },
+    "data-throughput-accelerator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/data-throughput-accelerator/SKILL.md",
+      "computedHash": "dbe609d8e486a187f4d1ec74ac23f5b6eaed3ca28fd1c494b415ed4a1c8500fd"
+    },
+    "database-migrations": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/database-migrations/SKILL.md",
+      "computedHash": "e1a8e4f73e07aadb7a2bbf5c3d25884b6a5b04ceb731a5ad0097d31f04dbbfcb"
+    },
+    "database-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/database-reviewer/SKILL.md",
+      "computedHash": "1425b7b2ac1fa47193cbc55901406f3c701c668c506569092387aa4bfdc1d071"
+    },
+    "deep-research": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/deep-research/SKILL.md",
+      "computedHash": "da2c42bb20ad68a62b7ed1d9839dcee9c7d0852ffa16f2f361d1ad04d0df8698"
+    },
+    "defi-amm-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/defi-amm-security/SKILL.md",
+      "computedHash": "e8c06f29ee86871d8e85993bf338fac44e1d5ca784f6a4410891a96e3a6f7b0c"
+    },
+    "delivery-gate": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/delivery-gate/SKILL.md",
+      "computedHash": "3bf9bb3d2e07fc040a182c480258dc8d283f1386450d71f01a5fe7b0a377fa51"
+    },
+    "deployment-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/deployment-patterns/SKILL.md",
+      "computedHash": "e57b83943c1f9477924720aaefd9caf5bc69d3e8b6875d85559d6e545b3cc5cc"
+    },
+    "design-system": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/design-system/SKILL.md",
+      "computedHash": "cf8cdf26522e767726171f3487f1179538d2aecf3f14fc4533ef220296dfc4e4"
+    },
+    "dev-team": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dev-team/SKILL.md",
+      "computedHash": "436f635df13d548ea487db2fdc51fcbb0a5d56fdad091c6d319f23fdaa6964a4"
+    },
+    "django-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-build-resolver/SKILL.md",
+      "computedHash": "adee9f9a3c484b01d6db243757f69f8d08579cb1687879be633771395dd0c116"
+    },
+    "django-celery": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-celery/SKILL.md",
+      "computedHash": "50445431aef614f506a7d14c922c8af122c243c3e16a993aed43a33a6f50658e"
+    },
+    "django-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-patterns/SKILL.md",
+      "computedHash": "93fc4501b3dfc6fae1e40dc8b0114681838e308ddb865966bfcd57125df7b2d5"
+    },
+    "django-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-reviewer/SKILL.md",
+      "computedHash": "2bcf4db459f5081f27f340002129ba07e3c2a073dc780032b1eeb07337af671e"
+    },
+    "django-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-security/SKILL.md",
+      "computedHash": "9bb29e8ddc48d8a0ab4ed4c42732586c1b5af8e09340ca58ac759a39f493639f"
+    },
+    "django-tdd": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-tdd/SKILL.md",
+      "computedHash": "65809c76dd072aa8d59c32d9119987429e15047b5ea4708003de145327710db4"
+    },
+    "django-verification": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/django-verification/SKILL.md",
+      "computedHash": "ba79c4bc0e32d9819df2747b998ac924f69cf7eec771da72400ea7de7e86bfaf"
+    },
+    "dmux-workflows": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dmux-workflows/SKILL.md",
+      "computedHash": "b401e2f7fa2dc65085a820844a2280b6d113ba196f69495d049b30a5e31b9e4f"
+    },
+    "doc-updater": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/doc-updater/SKILL.md",
+      "computedHash": "5a0fb9b6fd85af2d98ece34e34362932718c338c6a95fc68c05ee45f13185964"
+    },
+    "docker-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/docker-patterns/SKILL.md",
+      "computedHash": "af6deba271429bcb5198a7e56a4f71f948509e06037e6a3210d0ad5f516eeb29"
+    },
+    "docs-lookup": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/docs-lookup/SKILL.md",
+      "computedHash": "b6ba257176406d36a75e19a932da3495e4e429a4fd5e8acd77ff469d3f079c5b"
+    },
+    "documentation-lookup": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/documentation-lookup/SKILL.md",
+      "computedHash": "314fb416b723fbae96c9b35e53400ed0f72aedb43e79493a9cf8aba3b04ffff0"
+    },
+    "dotnet-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dotnet-patterns/SKILL.md",
+      "computedHash": "a7ff4b3b27a3b4d18de7fa523c39f3df0e60c44e43048d8fa144991bff80b7a5"
+    },
+    "dynamic-workflow-mode": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/dynamic-workflow-mode/SKILL.md",
+      "computedHash": "38772eac4090be070844fedf223de54a03f15de5255d4aaa4e847019297c94fb"
+    },
+    "e2e-runner": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/e2e-runner/SKILL.md",
+      "computedHash": "bbc59c621e8dfb74d453bf7f4a361acd89903751acc9a27a92e33f1535c66e67"
+    },
+    "e2e-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/e2e-testing/SKILL.md",
+      "computedHash": "ae1a9cb885532edccb80682df28f269ada8bda86deedd00b282a82b03e011b2e"
+    },
+    "ecc-guide": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ecc-guide/SKILL.md",
+      "computedHash": "407d6a1b6bd6d869c8f2422e2ee2e7d4fba9f3bf5fac67b0d0a99a867c8bec1d"
+    },
+    "ecc-recipes": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ecc-recipes/SKILL.md",
+      "computedHash": "79072f430dafe5bee28d53b13238f8f73222e13be52b80814761625a3839e5d5"
+    },
+    "ecc-tools-cost-audit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ecc-tools-cost-audit/SKILL.md",
+      "computedHash": "d50152da4b2323b40e79347967cd22ca248d91d023f254f07e229847a61aee11"
+    },
+    "ecosystem-manager": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ecosystem-manager/SKILL.md",
+      "computedHash": "e58317d03b8145eac5792241c9f1882ec32cc73f16ba89e4cd0ae96aef0858f1"
+    },
+    "email-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/email-ops/SKILL.md",
+      "computedHash": "531061ebd92c5798c90b39aa68b6384997519d14fa264ea1c526c9c749c8c03e"
+    },
+    "energy-procurement": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/energy-procurement/SKILL.md",
+      "computedHash": "5c3aef82ad406b1cfb039f62a16c83436cd36c6cb4a430a8f8e04182972f4835"
+    },
+    "enterprise-agent-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/enterprise-agent-ops/SKILL.md",
+      "computedHash": "8a943db6c8a5d58175a0df99af18531066cab6502f6ea05c8cb8466061467f34"
+    },
+    "error-handling": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/error-handling/SKILL.md",
+      "computedHash": "e89b12cae662a2c96c0d16b08a2c8f1318213438910e0af1d45750a702968c96"
+    },
+    "esign-field-placement": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/esign-field-placement/SKILL.md",
+      "computedHash": "f61eb6f19c69d86f8f044d0f8df8962df090f46430585b98dba4c4e210b48e0c"
+    },
+    "eval-harness": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/eval-harness/SKILL.md",
+      "computedHash": "746ac8f969e26094709c11d11e202edb8377c62a04b76974257f2a1347403634"
+    },
+    "evm-token-decimals": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/evm-token-decimals/SKILL.md",
+      "computedHash": "6864bea78f28edbcb1a1237474dc1cd089f262fd89e1e29a99a9ea8ecff1dd52"
+    },
+    "exa-search": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/exa-search/SKILL.md",
+      "computedHash": "17c89ff45f8bac5793281b4a8e1d5f3e5b6e8a8e2d5ab21f5fc51b409afc1463"
+    },
+    "fal-ai-media": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/fal-ai-media/SKILL.md",
+      "computedHash": "51e8146cb99207c8d8f7e5c8634c4eea8e0a58e8de643a9746c4671ace62fbad"
+    },
+    "fastapi-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/fastapi-patterns/SKILL.md",
+      "computedHash": "88b3727902263469db5fb9a4f170714ab9e6d5e49d4c959d98420d009fca3e30"
+    },
+    "fastapi-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/fastapi-reviewer/SKILL.md",
+      "computedHash": "877f500a647beb3b77f814c52f16fd1aef9129e5f18485c0a3b8dd1781a57d3e"
+    },
+    "finance-billing-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/finance-billing-ops/SKILL.md",
+      "computedHash": "0bd2441aa035530fc4ea1501e45ec9dae337bdb7e369fb46e22d95b8e3cbd69b"
+    },
+    "flox-environments": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/flox-environments/SKILL.md",
+      "computedHash": "3403f688b7db97e1cf10b74b6aecbaa5a2d48586ba7c739eb49f0e2fcdfb6a30"
+    },
+    "flutter-dart-code-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/flutter-dart-code-review/SKILL.md",
+      "computedHash": "a5bbf2fda0e54df51e75e9316e8f341a64a1be9473137408f60244b6d0d777b7"
+    },
+    "flutter-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/flutter-reviewer/SKILL.md",
+      "computedHash": "d260def5890a5f28f6655e7d466fd6a81f06c87497ea412e847fea95cda6813c"
+    },
+    "foundation-models-on-device": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/foundation-models-on-device/SKILL.md",
+      "computedHash": "93757445848f9c74a1bc6f173397c10e017d017d9f7888203e9055995be69581"
+    },
+    "frontend-a11y": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/frontend-a11y/SKILL.md",
+      "computedHash": "822c925563e37abb79298c3146577c3dc4565612196f84f6e5f8dc3531e31837"
+    },
+    "frontend-design-direction": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/frontend-design-direction/SKILL.md",
+      "computedHash": "5e37a3a8e90de1da40881a2ed80de2a7246b46201cc325598c1b60fb3e8c4cfe"
+    },
+    "frontend-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/frontend-patterns/SKILL.md",
+      "computedHash": "cda7d74619e78bc6c58e7f7f4fa7a9d831ec71ae4629550e4d7b53876692e4d3"
+    },
+    "frontend-slides": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/frontend-slides/SKILL.md",
+      "computedHash": "f4dd7114a89e06994bbac66c7e29e2e8e5b786dde2dc5e6450e81e55347b58de"
+    },
+    "fsharp-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/fsharp-reviewer/SKILL.md",
+      "computedHash": "4e922728aa723ee44ba2ee7e77bf6a564916d9d626901101cf78bffdaa03a301"
+    },
+    "fsharp-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/fsharp-testing/SKILL.md",
+      "computedHash": "cfb678b2dcf4c0dc460315eb4fd381de14501f5636985d491d7b278f3f5f1a23"
+    },
+    "gan-evaluator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/gan-evaluator/SKILL.md",
+      "computedHash": "79ac4276983898cda5d784ab6e798b454fe0850c5110dab345e88ac54745d25b"
+    },
+    "gan-generator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/gan-generator/SKILL.md",
+      "computedHash": "e532ed1314d97dc0b29d1b792e51dd3788542f7d80eb39c8687d04f5c266cdc3"
+    },
+    "gan-planner": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/gan-planner/SKILL.md",
+      "computedHash": "f5ae811ffd7d899fd114128bcc016184ac194df8c5363915889cfa7cc0ba3703"
+    },
+    "gan-style-harness": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/gan-style-harness/SKILL.md",
+      "computedHash": "c706dd8fc7d199b770a8f17e784ababa533b23bcd3e09f9a9c19828945c1d09a"
+    },
+    "gateguard": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/gateguard/SKILL.md",
+      "computedHash": "f959f8b6ed5b3b9feebe82d567b7d3078d1699c1e5d669dcd4e736763695105f"
+    },
+    "generating-python-installer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/generating-python-installer/SKILL.md",
+      "computedHash": "d56c6357b28216dbda0ea6c6ac6a23a8ce1521b8f0da7d4dca7cb9c808f92181"
+    },
+    "gget": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/scientific-pkg-gget/SKILL.md",
+      "computedHash": "d1b7f3a2d6f2b8f72da784fe469c8bdb154c9184c661cd19461020b5399f02be"
+    },
+    "git-workflow": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/git-workflow/SKILL.md",
+      "computedHash": "6f22b67ff0574f6f5a2c90a0ef31e73ebbf671bab5f113b8f0bc05693f1be529"
+    },
+    "github-code-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-code-review/SKILL.md",
+      "computedHash": "c410e93c3b047e3b51e74acdd7683273afef0e728ec1e9434fd528d69e85e86b"
+    },
+    "github-multi-repo": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-multi-repo/SKILL.md",
+      "computedHash": "4586600d470da38b35e4646033274eb58b259b802967e5938d34ffd3e398ffd5"
+    },
+    "github-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-ops/SKILL.md",
+      "computedHash": "c5819edfe55a6d135966efc8e6f09ee081dace2eff1d269121041e592877726f"
+    },
+    "github-project-management": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-project-management/SKILL.md",
+      "computedHash": "57d6d4b9b6feb6fd69945395d19677a6e20fbdf4d2cd2112afb9b574399cf183"
+    },
+    "github-release-management": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-release-management/SKILL.md",
+      "computedHash": "beba8b11d11b532489a49e900007c042ad455235912da531a7d25be977f18e6d"
+    },
+    "github-workflow-automation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-workflow-automation/SKILL.md",
+      "computedHash": "5a6816af3feaa1f3da453c6c24d64715afc242e79bbe50cdc2ec096222473ff9"
+    },
+    "go-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/go-build-resolver/SKILL.md",
+      "computedHash": "b58f5d4aaa8116f047949115d8b1ab47818f57f87c1cfe370944f302de1d6922"
+    },
+    "go-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/go-reviewer/SKILL.md",
+      "computedHash": "e4cdf0051bb76202930177eeeba3d28ed7bacec268171f8c91da3dae95ac9466"
+    },
+    "golang-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/golang-patterns/SKILL.md",
+      "computedHash": "8cbfb90287390c9f09d46d5266f0e7f61ba5bd74400c1431b74a334be7bfdd6f"
+    },
+    "golang-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/golang-testing/SKILL.md",
+      "computedHash": "12195f2589c4a7b741523bed09db8b64f243c635b4c78297136c6becd7b1e032"
+    },
+    "google-workspace-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/google-workspace-ops/SKILL.md",
+      "computedHash": "b1b317fdee45543857bd26354b85b5c516d643e4e3a4fdda95a64f25fca04f54"
+    },
+    "growth-log": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/growth-log/SKILL.md",
+      "computedHash": "db6d96db082005de0747b004e9c69bd018bb3b78fdd2d4d685514e10ef0d9dea"
+    },
+    "harmonyos-app-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/harmonyos-app-resolver/SKILL.md",
+      "computedHash": "92e5099cf1a4cba867989a5acfa1746fb1707817e036d83ace02388dc4dacf9a"
+    },
+    "harness-optimizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/harness-optimizer/SKILL.md",
+      "computedHash": "81d20a43fac0c1545a076be8ffe2ce1a988ff6f45fe64583f424b8558993d7d3"
+    },
+    "healthcare-cdss-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/healthcare-cdss-patterns/SKILL.md",
+      "computedHash": "e9eaec115b554b99be2bcbe13955450c74482d8198f6fcc0109e84fdcca6efdb"
+    },
+    "healthcare-emr-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/healthcare-emr-patterns/SKILL.md",
+      "computedHash": "d9e752a67714027d3d9032f80ae250ce31bbda363bd72b13f677cb27b293a8bf"
+    },
+    "healthcare-eval-harness": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/healthcare-eval-harness/SKILL.md",
+      "computedHash": "10d8f1952df86c6616b59274bb7b2fa9f00e64e12b71c227fcb1b351522570e9"
+    },
+    "healthcare-phi-compliance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/healthcare-phi-compliance/SKILL.md",
+      "computedHash": "ec927614356e38be7d70c0b0082300eb60d23fb73075fc407f1170d315aaf89a"
+    },
+    "healthcare-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/healthcare-reviewer/SKILL.md",
+      "computedHash": "d43d4410308e985a271a8c74644cba0fad80e0ece8b694ea47552e777a706689"
+    },
+    "hermes-imports": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/hermes-imports/SKILL.md",
+      "computedHash": "785eb69c553eb91668ac9f76096c84cdc644537e9f264e6010963be983609e62"
+    },
+    "hexagonal-architecture": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/hexagonal-architecture/SKILL.md",
+      "computedHash": "9bcc7b90143ab607eb6dbac67df028c9d8c7303e787395da5b2ef311f52e55eb"
+    },
+    "hipaa-compliance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/hipaa-compliance/SKILL.md",
+      "computedHash": "0ecb65c32b59eb1f328fea8666b832059e252763f4c3db1d75b8060eb87076eb"
+    },
+    "homelab-architect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/homelab-architect/SKILL.md",
+      "computedHash": "850ea942398d3daae0edf0885ad504d41aece795f99c7415931feb7449a4260b"
+    },
+    "homelab-network-readiness": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/homelab-network-readiness/SKILL.md",
+      "computedHash": "d7aa9716485ced92d5ef32da9a3f62c40cecf7c215b9ff4c61fb4f9b79ddda90"
+    },
+    "homelab-network-setup": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/homelab-network-setup/SKILL.md",
+      "computedHash": "5b18c84191063c837f87717a871fa793dc0e497c282c86c0f4b1093137bc1a64"
+    },
+    "homelab-pihole-dns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/homelab-pihole-dns/SKILL.md",
+      "computedHash": "6397ac26b23c433b9122bd314cc32154d40c1c7b60c5f247292b1fb9a2db660a"
+    },
+    "homelab-vlan-segmentation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/homelab-vlan-segmentation/SKILL.md",
+      "computedHash": "16d70e9c4fdf3b5a010db8b808f98f6196c4f6467459334e843f2df691110676"
+    },
+    "homelab-wireguard-vpn": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/homelab-wireguard-vpn/SKILL.md",
+      "computedHash": "e96d9fafcaa808c530c24bfb033d8f34f0867c61150071dceb196a1bb2d96978"
+    },
+    "hookify-rules": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/hookify-rules/SKILL.md",
+      "computedHash": "daf3d4ef51f03ec60da2d7df7dac0c4e7523ac43d8ec722e9548e4c728a7f9e6"
+    },
+    "inherit-legacy-style": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/inherit-legacy-style/SKILL.md",
+      "computedHash": "9218f6ce24c56b23434c124da0ea231d28b09ee3d1aaf6fc698d1c0f544cdcfd"
+    },
+    "intent-driven-development": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/intent-driven-development/SKILL.md",
+      "computedHash": "d6e4de51ec724a67d51264b09d06d8208c8046453b8a46dbf9a8e9a2dea1d7c6"
+    },
+    "inventory-demand-planning": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/inventory-demand-planning/SKILL.md",
+      "computedHash": "7339f44371674c1e2c5290677a27868ca593dd6ee5e353d24f1d6665e38ba1c5"
+    },
+    "investor-materials": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/investor-materials/SKILL.md",
+      "computedHash": "e1d1c0e530a2f45bb442ffef95aab0eaef5d91757189be9b1d98311268c5308d"
+    },
+    "investor-outreach": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/investor-outreach/SKILL.md",
+      "computedHash": "7a4e527a37fcdcdb808e8469ad6b1e53154fc7f62e3c1d2ea84607f857652d9c"
+    },
+    "ios-icon-gen": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ios-icon-gen/SKILL.md",
+      "computedHash": "6201a419bdf725a1e0381378911e270f1fa9a0bcdf3ee80ff56a2ab3230c4adb"
+    },
+    "iterative-retrieval": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/iterative-retrieval/SKILL.md",
+      "computedHash": "674abe0f014a341eb1880db8d224652d518532789a590b941f8e9326510897a6"
+    },
+    "ito-baskets": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ito-baskets/SKILL.md",
+      "computedHash": "fb4486ed68b135a4ae7e6961a77e3d4a12cd98a73e834bed8ad3955948ce44ba"
+    },
+    "ito-compute": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ito-compute/SKILL.md",
+      "computedHash": "817741162bf08ba24bfd1b36045025b88924f12846a26375bdbdcdcb2bd5d2d7"
+    },
+    "ito-inference": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ito-inference/SKILL.md",
+      "computedHash": "a784d2d1806c46f6349067c92a5251e7b70c5584861518e9f578f9467164bb20"
+    },
+    "ito-training": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ito-training/SKILL.md",
+      "computedHash": "80286221ed1072b41ac35bf957c30a4a7a88ceb29bad53146a5dbcc6f42ec743"
+    },
+    "java-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/java-build-resolver/SKILL.md",
+      "computedHash": "fa8d160c2766bc0ed32ed301480845160e4496d717351da1cb5451ed7cc04d13"
+    },
+    "java-coding-standards": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/java-coding-standards/SKILL.md",
+      "computedHash": "c45cf8f0b87d44804e582fe0d103e154214961bcae4c5e1cb473d2f20d529096"
+    },
+    "java-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/java-reviewer/SKILL.md",
+      "computedHash": "ae8410c6341bf8baa9f0a63ac6a0c301286c77814b87cee8545e35d9cbcdf6ea"
+    },
+    "jira-integration": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/jira-integration/SKILL.md",
+      "computedHash": "88cd7147e73f66aca80e10364e4af44feda3c8d04816de7505941e7386aee0d1"
+    },
+    "jpa-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/jpa-patterns/SKILL.md",
+      "computedHash": "b006c947d019f2e90ec305a9d08d1b4b74fc56c4f245d5796abac316931d871c"
+    },
+    "knowledge-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/knowledge-ops/SKILL.md",
+      "computedHash": "079208df75a63108c94791c2e90baa2fa937a1333fe165447af12c8cabad60ad"
+    },
+    "kotlin-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-build-resolver/SKILL.md",
+      "computedHash": "e08d805f4dd76adb542b72463cfc92db084d644dca5ffd0c92c78debb26d1d6f"
+    },
+    "kotlin-coroutines-flows": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-coroutines-flows/SKILL.md",
+      "computedHash": "54bcdc709902f6befca567861a1e3ce7effa0214f9862cf9e492dc30c583e905"
+    },
+    "kotlin-exposed-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-exposed-patterns/SKILL.md",
+      "computedHash": "b16804b33a2d98b837a504b9864af44915423b4145ebc48755a06526e5d69f53"
+    },
+    "kotlin-ktor-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-ktor-patterns/SKILL.md",
+      "computedHash": "2c379bb26946179a48ad2c3b49c9460b0a0309a80709f03693ab8a3ef480e582"
+    },
+    "kotlin-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-patterns/SKILL.md",
+      "computedHash": "13278a2dcaa94b4173e9dcb7de73e4272e2ed8422580735b3c01a67a0a9b2ef6"
+    },
+    "kotlin-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-reviewer/SKILL.md",
+      "computedHash": "7201a6f68c828bd31d135ae63df04f8ed2f7c86e5ff2b4fb46293eebb992b715"
+    },
+    "kotlin-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kotlin-testing/SKILL.md",
+      "computedHash": "b873fd7d21ff27f949d55a8a167dea5b4a53b70b3979829fb60136b659bb36f7"
+    },
+    "kubernetes-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kubernetes-patterns/SKILL.md",
+      "computedHash": "6fd59a4251b58b5c38edd9727affbed1fb808b9d88b5f7fb2745eae45ec4973f"
+    },
+    "laravel-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/laravel-patterns/SKILL.md",
+      "computedHash": "58d3d0c9c98dff80c4a4e0d28e7b3ddf8cbb2b941338a4d3780aff53f52f146e"
+    },
+    "laravel-plugin-discovery": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/laravel-plugin-discovery/SKILL.md",
+      "computedHash": "37de064b97a53a24437e3d78a9fae84736a4cd945b02b0ef023fb4d2148ad987"
+    },
+    "laravel-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/laravel-security/SKILL.md",
+      "computedHash": "37312e1d7d543c7e0b926c74c4bde87cb95300d7c8549e0a3974c9c44a34a84c"
+    },
+    "laravel-tdd": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/laravel-tdd/SKILL.md",
+      "computedHash": "2b30678c04801d14ef4b0f5449430d1a524222061283b0ee88aec5e77b10d3b3"
+    },
+    "laravel-verification": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/laravel-verification/SKILL.md",
+      "computedHash": "a5a1c2fdb15fbfa05f78cdb8368a62b6b405c5d44eb56e93e637acf446d3f1a1"
+    },
+    "latency-critical-systems": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/latency-critical-systems/SKILL.md",
+      "computedHash": "f06aa2b60f8c7d9bb25bf896815b3bb8e467aba5dc492fd9b61aa90a09d1fe5d"
+    },
+    "lead-intelligence": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/lead-intelligence/SKILL.md",
+      "computedHash": "e5690d81f5b358e206973c5511fde3d0dedf61a9645aebe88a04519661267c52"
+    },
+    "liquid-glass-design": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/liquid-glass-design/SKILL.md",
+      "computedHash": "bbfb0a30ce18048f07072183d844b005ca729f27784096455ea7f8add25b92d3"
+    },
+    "literature-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/scientific-thinking-literature-review/SKILL.md",
+      "computedHash": "66644aafa3f87ecd3c10d552081cbf1a47e39213c0dd91520f894c430c4833cc"
+    },
+    "living-docs-governance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/living-docs-governance/SKILL.md",
+      "computedHash": "50889830c691343bec3f5dce22ffe9d042fdf387291a27a3b89f02c7e8a5f5a2"
+    },
+    "llm-trading-agent-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/llm-trading-agent-security/SKILL.md",
+      "computedHash": "f4c8d1b53d352a466b9d3116a4b49d81ec496c880bcd1a19ab37888bd12a7a99"
+    },
+    "logistics-exception-management": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/logistics-exception-management/SKILL.md",
+      "computedHash": "5c0f3246410a17b7a2d23115f13fb4e848c77a7234ab4671f392652986170e01"
+    },
+    "loop-design-check": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/loop-design-check/SKILL.md",
+      "computedHash": "6b2ca93a996dfb0deabdfb32d9b36377ba896fc6df85e51fc3a5b03de4d8f24c"
+    },
+    "loop-operator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/loop-operator/SKILL.md",
+      "computedHash": "fc592dcf3ca1dd3e1e532593aca6224d82d65f36fc3f84a6d77982650a5ddb1d"
+    },
+    "mailtrap-email-integration": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/mailtrap-email-integration/SKILL.md",
+      "computedHash": "a9fdbba110d6287fe62d042767d37b4748f1e5710b2e1905a25f39a8bbb139bf"
+    },
+    "make-interfaces-feel-better": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/make-interfaces-feel-better/SKILL.md",
+      "computedHash": "bd14931fa4a2739cc81633027dfc829d10034c81a6d63ebd4baa39512df28cfb"
+    },
+    "manim-video": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/manim-video/SKILL.md",
+      "computedHash": "e9dc71f3a899e54362b18688e097140f00d749db8046852c8bdc3ff1a73699b4"
+    },
+    "market-research": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/market-research/SKILL.md",
+      "computedHash": "dd5734185f2126d79332ab51830886944aa9efe01ecc4a067abd802fff5bd661"
+    },
+    "marketing-agent": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/marketing-agent/SKILL.md",
+      "computedHash": "ec798c04cee4ff6741367bd47148b7e61af276a932dbe376fa2ba4f14f5bb950"
+    },
+    "marketing-campaign": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/marketing-campaign/SKILL.md",
+      "computedHash": "235c4ee2050594e7de2835dc810c38dafc7d044f71b6cee261f6b0e13e988ce8"
+    },
+    "master-agreement-generator": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/master-agreement-generator/SKILL.md",
+      "computedHash": "02c481d8d027338960f2fbeddb9873b2917468df012e74fc3d8c527f27179c1a"
+    },
+    "mcp-server-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/mcp-server-patterns/SKILL.md",
+      "computedHash": "aa1deeeda3f595c7e01c4a83daa8bce63f0ab406ebd9932a56003d5d6b44b28e"
+    },
+    "messages-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/messages-ops/SKILL.md",
+      "computedHash": "5e8e189c64bd3ac5387d2a14c320768f7661942893660e6e3555c590ef573365"
+    },
+    "ml-adoption-playbook": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ml-adoption-playbook/SKILL.md",
+      "computedHash": "730d73cbe08c7a12735871ddab603f9d3811dcbdb45ffdf682cecbf9a5c1e213"
+    },
+    "mle-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/mle-reviewer/SKILL.md",
+      "computedHash": "191d0078d9425f17b8e8e87c552dc8c7165b8f77ead03c399a9a87899b85b71f"
+    },
+    "mle-workflow": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/mle-workflow/SKILL.md",
+      "computedHash": "b38883ff6e7ad2ba0eec03b8cb982440bc34ee92cf8a60e08ebd3fd035126550"
+    },
+    "motion-advanced": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/motion-advanced/SKILL.md",
+      "computedHash": "38502b809de1d53e5c47ae65eafb7a70a6624ed25d578c403ca858c6fa25eb90"
+    },
+    "motion-foundations": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/motion-foundations/SKILL.md",
+      "computedHash": "f76298f3fcc5f20001c8e78cfa36384469c5a583cb25e8ce60a76d3912608d99"
+    },
+    "motion-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/motion-patterns/SKILL.md",
+      "computedHash": "71d7279a0651e6cb95a0fe804c77cb7bfa88befba1cbd1c60c05d23feada4dcc"
+    },
+    "mysql-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/mysql-patterns/SKILL.md",
+      "computedHash": "b65108a285e00639f5e3e5acffa942d79a1a823ecc843f8c8f062cffea3f4576"
+    },
+    "nanoclaw-repl": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nanoclaw-repl/SKILL.md",
+      "computedHash": "127bfe5457d07418af5795e5320f114533e589db7e7e6aa73e30564e995397e6"
+    },
+    "nasiko-control-plane": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nasiko-control-plane/SKILL.md",
+      "computedHash": "1a08c9a5cb1c285e23d1185da7d658d47f54f9bc720447398550e5d8aa8911a7"
+    },
+    "nestjs-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nestjs-patterns/SKILL.md",
+      "computedHash": "838807825d825b067786a83ad714872139cb53123acf6cf11335fd23f8f75c4e"
+    },
+    "netmiko-ssh-automation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/netmiko-ssh-automation/SKILL.md",
+      "computedHash": "f0c425ee303ba35688a5a5b80ff477aa6de00d39a0a57e324b7c3d4abaa6eba5"
+    },
+    "network-architect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/network-architect/SKILL.md",
+      "computedHash": "41b535f610f6d025d8c371a140a7811e7ce3de19e493dfd7015c24e92566e780"
+    },
+    "network-bgp-diagnostics": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/network-bgp-diagnostics/SKILL.md",
+      "computedHash": "4bee53f75aed88f81585cdb3591e6c8726bf4a38a6817a9a87c53ac5b4f2657a"
+    },
+    "network-config-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/network-config-reviewer/SKILL.md",
+      "computedHash": "7f69f0b3b846f0682cf4e256651933a421ad2a9d42316d25a3303c5b5a4b2d78"
+    },
+    "network-config-validation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/network-config-validation/SKILL.md",
+      "computedHash": "872e2d40709862a13be71402765d047c28a785eb2875ebc280a226d76df3e9aa"
+    },
+    "network-interface-health": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/network-interface-health/SKILL.md",
+      "computedHash": "b21f0bd7ac918f0a23dc7d070ce6d1d8266fc3fc8f43557c241d03dfa25f7e44"
+    },
+    "network-troubleshooter": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/network-troubleshooter/SKILL.md",
+      "computedHash": "6c0dfd04cd79d4cc8683dda6f992c50e8507c60996a65a601e5a362a9b9d1761"
+    },
+    "nextjs-turbopack": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nextjs-turbopack/SKILL.md",
+      "computedHash": "f60e27a5d1f56989dc1dd8790e51066cb74cea73367562a0e3cc57eafb1711a6"
+    },
+    "nodejs-keccak256": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nodejs-keccak256/SKILL.md",
+      "computedHash": "a92cfcb36a67e40068b2084867d21aa00b6e54cf58281ffd52c04f838e4fb152"
+    },
+    "nutrient-document-processing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nutrient-document-processing/SKILL.md",
+      "computedHash": "bc4c5db6ed080a1588166364fcaa0e86cda18b708363b93c16d14485fd682093"
+    },
+    "nuxt4-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/nuxt4-patterns/SKILL.md",
+      "computedHash": "fb63d029610d16afd331b6049a284432a73ca88f4e9c12e4867eb206ca73521d"
+    },
+    "openclaw-persona-forge": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/openclaw-persona-forge/SKILL.md",
+      "computedHash": "8ddba361ce80b123129d25928d9d3995312faca1373aad0dc3b90b64886f08ca"
+    },
+    "opensource-forker": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/opensource-forker/SKILL.md",
+      "computedHash": "3a9bb5ba974942d701710cfe78f35db44ab112e62259d46fa8fbabfcfcbc8224"
+    },
+    "opensource-packager": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/opensource-packager/SKILL.md",
+      "computedHash": "454dd248f9e993ba0860f400d16601397ef4c30ac3a7626928c677a8ffe9facf"
+    },
+    "opensource-pipeline": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/opensource-pipeline/SKILL.md",
+      "computedHash": "2e6217c2ab6d038ffa4aa1bb9c74512ed1df96465500f9c57e04eb9fa66248e5"
+    },
+    "opensource-sanitizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/opensource-sanitizer/SKILL.md",
+      "computedHash": "70b56f315de672149c7280922d898cf8d3738cca4070bbfd5f0dcc3294832920"
+    },
+    "operator-approval-loop": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/operator-approval-loop/SKILL.md",
+      "computedHash": "b7ec758ef3899baf7b43eaf66ccce10f3d0c8ed17b4e38d1091bac98574bdebd"
+    },
+    "orch-add-feature": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/orch-add-feature/SKILL.md",
+      "computedHash": "04307a09373ca515d90ac5c98e8431166685266d54f025e12ab966ab3ee8af32"
+    },
+    "orch-build-mvp": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/orch-build-mvp/SKILL.md",
+      "computedHash": "16fd4776b5d02815c2ab3c319f0d228157c0e4bda225db216afe9de66fe1c255"
+    },
+    "orch-change-feature": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/orch-change-feature/SKILL.md",
+      "computedHash": "e3365c448c67665c63c473dab34b63efd1603b12e092954ba8675a7d16f2f527"
+    },
+    "orch-fix-defect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/orch-fix-defect/SKILL.md",
+      "computedHash": "331cb2b8d311b5279442e36f6184fe6bb42a78337825ceb20b945a14d1dbea26"
+    },
+    "orch-pipeline": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/orch-pipeline/SKILL.md",
+      "computedHash": "df59df96b8d45cc7e2baf02fbc233043cc6652e37c887758ac7d7c26f6754d2b"
+    },
+    "orch-refine-code": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/orch-refine-code/SKILL.md",
+      "computedHash": "2e2437996bba1619a8a6ab3f96cbb1b294cc65cc7294437a40503a97074a5de4"
+    },
+    "parallel-execution-optimizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/parallel-execution-optimizer/SKILL.md",
+      "computedHash": "14302b61afa9834fcfca431d84235d9e8b163aab77c2df3bb00babb0c53d02ee"
+    },
+    "performance-optimizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/performance-optimizer/SKILL.md",
+      "computedHash": "347cf15fcbfca703fd38acb1ef8e0149b9585e564c4c9c725291f22bfb23c5b7"
+    },
+    "perl-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/perl-patterns/SKILL.md",
+      "computedHash": "f7bcd324ffed5ab7369e82dec6219096e1c12d0f1475d5b7559a87e6e546ae1d"
+    },
+    "perl-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/perl-security/SKILL.md",
+      "computedHash": "77e2225000244af6fc0bee2f6216eb26024964aa204dcb863d8b3c0127dab8f3"
+    },
+    "perl-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/perl-testing/SKILL.md",
+      "computedHash": "054f34cce1b211583b23081af4101223d6370ee11d10f08f02c6acb9f264b972"
+    },
+    "php-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/php-reviewer/SKILL.md",
+      "computedHash": "a797e36e5c04fc58e1fae85a6021c9a150513f59627add29410e37af636adb7a"
+    },
+    "plan-canvas": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/plan-canvas/SKILL.md",
+      "computedHash": "8ccf80124e3f041524d3f61cb3e8137e7440128aa9e7adfb53c282e05ca98a08"
+    },
+    "plan-orchestrate": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/plan-orchestrate/SKILL.md",
+      "computedHash": "e9d971a287df730f560b088ad68ff241136ca5d64a66b5bc395e26421babdb76"
+    },
+    "plankton-code-quality": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/plankton-code-quality/SKILL.md",
+      "computedHash": "c0e572a1e475ed4375f85cd98fdf5e50d055e778dda9423711c1e42f288b67cd"
+    },
+    "planner": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/planner/SKILL.md",
+      "computedHash": "fd6f44d73a38fae8a0684b407027b8ffda17d72ab1089c2e6e652c6bb7162a33"
+    },
+    "postgres-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/postgres-patterns/SKILL.md",
+      "computedHash": "5ec6a4f0504f15fe9464ccaed3ab51afcb52345b9456f36b65afc4e5af1fc6aa"
+    },
+    "pr-test-analyzer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/pr-test-analyzer/SKILL.md",
+      "computedHash": "1076fec7a124d67609a36cb5faf5eab2356a469b83d826fd64ede5ee60cbe5ed"
+    },
+    "prediction-market-oracle-research": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/prediction-market-oracle-research/SKILL.md",
+      "computedHash": "a685f737e86f7fdff87e0043b4ddb4ffcece7dc8f3e9224c61a4b7550fbdca55"
+    },
+    "prediction-market-risk-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/prediction-market-risk-review/SKILL.md",
+      "computedHash": "5a1014c40357b0ba3214eb3c80c92da1e5ebebf293502f474f457fb167d938ef"
+    },
+    "prisma-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/prisma-patterns/SKILL.md",
+      "computedHash": "7a6f32a743898eb338d79ca80d324096c06cfedaf509c870b110e32a7aff3c3e"
+    },
+    "product-capability": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/product-capability/SKILL.md",
+      "computedHash": "126569a04b17b0f86c41f9566fc397c6c9ab3bd5895875165a5ff4bbc896a125"
+    },
+    "product-lens": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/product-lens/SKILL.md",
+      "computedHash": "36017ff87e303b4173ef512421dfa87e1aca8956d51da6428b5b3ad5e017da65"
+    },
+    "production-audit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/production-audit/SKILL.md",
+      "computedHash": "3c38cf12fdb504f6ce53fa9d33f4f0fff1aee3df8e96fbb4fdb76831b5fd51ce"
+    },
+    "production-scheduling": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/production-scheduling/SKILL.md",
+      "computedHash": "124539275bf37a86de4f19f97328280104fccc47330453d0b2bd80e4aca2455b"
+    },
+    "project-flow-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/project-flow-ops/SKILL.md",
+      "computedHash": "604b378b55c2be5a8a9dee0564515c12f3f8090890b2ad19f6f2f957e6331c96"
+    },
+    "prompt-optimizer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/prompt-optimizer/SKILL.md",
+      "computedHash": "0b755ab400b415ad26131d902806d8a837447d6e8dcef904952f464c66c9760c"
+    },
+    "pubmed-database": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/scientific-db-pubmed-database/SKILL.md",
+      "computedHash": "71087ab138906903d5f01a6dec9f0e0dbea6c86bb35fe14eead49e436c304e95"
+    },
+    "python-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/python-patterns/SKILL.md",
+      "computedHash": "3ce7d51e18d3e2fa79635e569e73a8d269bc484ff1095fae7c414543f023e95e"
+    },
+    "python-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/python-reviewer/SKILL.md",
+      "computedHash": "ae4c9c358c471e0d4c8c86c2ec2409608a515acf3f4f62bb31248baac3e5cff8"
+    },
+    "python-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/python-testing/SKILL.md",
+      "computedHash": "6e28d59012e98e0f8afe387807074730267047dddc1c1df2934fb5c061b21428"
+    },
+    "pytorch-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/pytorch-build-resolver/SKILL.md",
+      "computedHash": "296bb227beafba278bf92a2986fb195ff973c0c44942fb14fdd22d9b0d70eefd"
+    },
+    "pytorch-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/pytorch-patterns/SKILL.md",
+      "computedHash": "eb170710a86bc3bc292ad27fddbdf15e46f707eab139e192bad59099cb47586a"
+    },
+    "quality-nonconformance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/quality-nonconformance/SKILL.md",
+      "computedHash": "5fc2ae968c6798005508eb1b3cfd7190645174271fd468fb76894c3054baf219"
+    },
+    "quarkus-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/quarkus-patterns/SKILL.md",
+      "computedHash": "e3a53e06dd7d464e14afd70a8787ed295c306fc345348a928249888c8ca8286d"
+    },
+    "quarkus-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/quarkus-security/SKILL.md",
+      "computedHash": "e83f8a1ce938ad80fb9d8b25de3f6b05e4d691f51049d302681422bbc611a02f"
+    },
+    "quarkus-tdd": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/quarkus-tdd/SKILL.md",
+      "computedHash": "798241f5c38560804e11aa43d9f28740e60c61b097088777a275c77862aae085"
+    },
+    "quarkus-verification": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/quarkus-verification/SKILL.md",
+      "computedHash": "2ba5bdb26d563b619a00d288933a5091e09af0ba3c5b6a8361a6b2c5e15ac3e4"
+    },
+    "rag-pipeline-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rag-pipeline-reviewer/SKILL.md",
+      "computedHash": "9b76a5fb9a185f2a33c51d862142255aeeecbd3fa1ecdd22cb9e958ce213efac"
+    },
+    "rails-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rails-patterns/SKILL.md",
+      "computedHash": "c6fcfae4ac7281392245caa91396cb9d037755a2a6125b027c4327df8b1d5141"
+    },
+    "ralphinho-rfc-pipeline": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ralphinho-rfc-pipeline/SKILL.md",
+      "computedHash": "04ad4ed7fd3bd842ca776892752509f8ec6dfee211807826703312ae060c960a"
+    },
+    "react-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react-build-resolver/SKILL.md",
+      "computedHash": "24b11ab9356f2bd80e2f886384617a310b5c49f0e12ce90baa3e7df5b55bbd43"
+    },
+    "react-native-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react-native-patterns/SKILL.md",
+      "computedHash": "f109f2aabfaae343dd3b81195812f431d12a22ce63c32c0457515f9097fa38ea"
+    },
+    "react-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react-patterns/SKILL.md",
+      "computedHash": "44d2c6304ff7ea20643a0203b74de9c7a42e1f70a2b73a5762500dea385dfc44"
+    },
+    "react-performance": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react-performance/SKILL.md",
+      "computedHash": "7b5b19e9c15a6b442fa0e7a0a1cb7ced951ab5872a96ff876b099b6bdfc9ae86"
+    },
+    "react-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react-reviewer/SKILL.md",
+      "computedHash": "196a64d865c4c31c19529b205cd0e1d0d009042ccc81130708c64fb1e5e4789a"
+    },
+    "react-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react-testing/SKILL.md",
+      "computedHash": "59bd15f26f018d6629557108f936ab691af887508ae71b9d339855e49e337012"
+    },
+    "recsys-pipeline-architect": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/recsys-pipeline-architect/SKILL.md",
+      "computedHash": "d968a9e7216c993c44e0f531d087d9316092ee8a996903983e402d6163a5c467"
+    },
+    "recursive-decision-ledger": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/recursive-decision-ledger/SKILL.md",
+      "computedHash": "af6d6f2b44b95bbd0df7ca1809070cb655331b79050bc3832916e2bbef462b45"
+    },
+    "redis-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/redis-patterns/SKILL.md",
+      "computedHash": "d1f3d83a812af5cd451ecf57a8609e698ea3c4937b2e44c92af22cb5a0523611"
+    },
+    "refactor-cleaner": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/refactor-cleaner/SKILL.md",
+      "computedHash": "54675ae65916d0ab8e1cd02d37492cc428f70c6be9544a31bd95c0c77c2074ba"
+    },
+    "regex-vs-llm-structured-text": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/regex-vs-llm-structured-text/SKILL.md",
+      "computedHash": "2370f85e28b23262fed15ff0832c4289b58d45e50d78e09dd129264ced0252f4"
+    },
+    "remotion-video-creation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/remotion-video-creation/SKILL.md",
+      "computedHash": "bc1054b481bf128749aeb5ecacabd6529e87657dfd84c8f3ec0c4c4fd5111daf"
+    },
+    "repo-scan": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/repo-scan/SKILL.md",
+      "computedHash": "ad947b186c5c6ac795cb770b1bfb2411d8531c8bb1a83686ffeb1940cb5615fa"
+    },
+    "research-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/research-ops/SKILL.md",
+      "computedHash": "8eda19085a385b59fbc11a7749c44a0e9d864f6fb81d2ab1d71cc62230cdba6c"
+    },
+    "returns-reverse-logistics": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/returns-reverse-logistics/SKILL.md",
+      "computedHash": "3e580ec5f3a73a9dc9826701a3c1d97917061e036be416cdee3d48827b6b7111"
+    },
+    "rules-distill": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rules-distill/SKILL.md",
+      "computedHash": "44e50e207895b92ef1f9d03f7f6196723619e05b80df43d5fd2585a79d42a4fd"
+    },
+    "rust-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rust-build-resolver/SKILL.md",
+      "computedHash": "8af8991942f588b3b85fd9fb5118d24f79c437053cb9faa61b1751724f7888a9"
+    },
+    "rust-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rust-patterns/SKILL.md",
+      "computedHash": "7119b88682b5773ef83ac6d01153ac2a0683be28b01ea46a2b0512fe74b30420"
+    },
+    "rust-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rust-reviewer/SKILL.md",
+      "computedHash": "0b0210695eb234cbd46a521fbebd0b4e10374aa45855e0a97b36c52e904111a2"
+    },
+    "rust-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/rust-testing/SKILL.md",
+      "computedHash": "bd66d6441ff6d3a6acb89c902cd6a01bf58410aec3ecbc43d45409b3a3788ac8"
+    },
+    "safety-guard": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/safety-guard/SKILL.md",
+      "computedHash": "de4a3845d79a635b3e887057e87257dfd08b9c5331386c4bb606658fa73ab384"
+    },
+    "santa-method": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/santa-method/SKILL.md",
+      "computedHash": "d6159f94287d608dbf0da4cb109343b688247c01379524a73443902b3aad7c0a"
+    },
+    "scholar-evaluation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/scientific-thinking-scholar-evaluation/SKILL.md",
+      "computedHash": "3208cf3582165e27d35c8af9a31b7da4bbc3d50dff0bbd83aae5ca1e4bf5f3f3"
+    },
+    "search-first": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/search-first/SKILL.md",
+      "computedHash": "c82ffe228acdc70bb4d641d391f811d3d3ea5ba467b9ffe88e6dc4cd71c7b416"
+    },
+    "security-bounty-hunter": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/security-bounty-hunter/SKILL.md",
+      "computedHash": "8fb0e05278d01d4f55fc486b7ef70b06beee1fdf3dd98eb39fae9d651c723256"
+    },
+    "security-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/security-review/SKILL.md",
+      "computedHash": "90f2b514aa106496fd0911d2a0e0ef5aac28515ce218a82574984ad7d9d6b4d2"
+    },
+    "security-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/security-reviewer/SKILL.md",
+      "computedHash": "59fc34dedb8a3dcb4e20fe7efecab81fa7aaf4b17326b84278b1bf8afe511f7b"
+    },
+    "security-scan": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/security-scan/SKILL.md",
+      "computedHash": "5e79fba8b1645970faff3db070f1edf72de3a52011ba3a25bb8be5a61b0cd7ec"
+    },
+    "seo-specialist": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/seo-specialist/SKILL.md",
+      "computedHash": "7c525525bb2cd0d0e09d022b366edfd21a7c6518b6900d614928538a1f1cad81"
+    },
+    "silent-failure-hunter": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/silent-failure-hunter/SKILL.md",
+      "computedHash": "00f0855b95be4e921156b4707ffc40edacbcb72fab7c0ef396c76713a9a4ca3f"
+    },
+    "skill-comply": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skill-comply/SKILL.md",
+      "computedHash": "cc8c78a3a6612443284b38976be5669380382985adae12ea39dbb4a0ba98bc0d"
+    },
+    "skill-scout": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skill-scout/SKILL.md",
+      "computedHash": "01312193cd23fdc0c8eb65a8b507bd9a63c3474805451c088e500dd6903d4b2c"
+    },
+    "skill-search": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skill-search/SKILL.md",
+      "computedHash": "1023dbabfed28bac71560b31da67862e6c14d5c0b47d6737a278a036bc811a00"
+    },
+    "skill-stocktake": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skill-stocktake/SKILL.md",
+      "computedHash": "d9dd20f314bed4fa750487ffee68eb0af957926c4b9bc2ee86e7c6c1aaaff336"
+    },
+    "social-graph-ranker": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/social-graph-ranker/SKILL.md",
+      "computedHash": "b91461027ba59d38ed9746b5fa3302ae9b28611a4a705962670d935a3d3387ce"
+    },
+    "social-publisher": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/social-publisher/SKILL.md",
+      "computedHash": "2df1232a3bfd2e4b0b1d6706fa79ec6d687d7b25248d1216709e72bcdcb9459e"
+    },
+    "source-command-adopt-dannflow": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-adopt-dannflow/SKILL.md",
+      "computedHash": "47dd49279cfec57f394199ce44e6ac625c8b2c4f191546afd44da5f512891160"
+    },
+    "source-command-agents-agent-capabilities": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-agent-capabilities/SKILL.md",
+      "computedHash": "c6f261e596fbedb19582da65eaf445ef9d7ddd47d48b6db35dec040c8c0c9bce"
+    },
+    "source-command-agents-agent-types": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-agent-types/SKILL.md",
+      "computedHash": "db1f660fa05b74fcf4cc54c0349606d9b1fd0cfdf3245899b86b91bab906c1f5"
+    },
+    "source-command-agents-health": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-health/SKILL.md",
+      "computedHash": "07732877243099d38b70182c1e11e09bf1e1c1ab8a318eac3e5c7463ab305cc3"
+    },
+    "source-command-agents-list": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-list/SKILL.md",
+      "computedHash": "53e2934e6ba1bc40a8cb7b785442ef3044d6ac585f0f830f6623cf6f00d03670"
+    },
+    "source-command-agents-logs": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-logs/SKILL.md",
+      "computedHash": "7fd140daa854f6eb6763cfad4b74f52bbacdc3159239c4275387cf005f368bc6"
+    },
+    "source-command-agents-metrics": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-metrics/SKILL.md",
+      "computedHash": "c8fc3f1cf4d51ec2056549ebbb66244979d85d7f3d431b0f5fd1bd8269f9a750"
+    },
+    "source-command-agents-pool": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-pool/SKILL.md",
+      "computedHash": "41d0837efe9b0bed7d98561984a0e15365eb4eeeaa55e720510a6a5cb50fbf33"
+    },
+    "source-command-agents-spawn": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-spawn/SKILL.md",
+      "computedHash": "be6fc35a3a16e984f35351f9a8f8117ca59859f7bb586cf827394522020a7d16"
+    },
+    "source-command-agents-status": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-status/SKILL.md",
+      "computedHash": "f69c8163d5a323e1963f9898273805f296080d57ce2718d8f74d9170506454b1"
+    },
+    "source-command-agents-stop": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-agents-stop/SKILL.md",
+      "computedHash": "c9600a5c3e939073d62c80d7ccacdc3fd8a1e619ce9a66e4997d070d15dd03a1"
+    },
+    "source-command-checkpoint": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-checkpoint/SKILL.md",
+      "computedHash": "1a51d7d2067d71b6d9a9c6b33788d1a7800c8974677b394c1544befb2deee5cb"
+    },
+    "source-command-claude-flow-help": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-claude-flow-help/SKILL.md",
+      "computedHash": "2071c37734fb9278f176267e2abfb5d42bd00bda0bb59b67427bf64aed7a2d85"
+    },
+    "source-command-claude-flow-memory": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-claude-flow-memory/SKILL.md",
+      "computedHash": "f26fc21cb3965d7516ae6d6a7acd4214121f67cc525b12e04f440e4acfa5d8a9"
+    },
+    "source-command-claude-flow-swarm": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-claude-flow-swarm/SKILL.md",
+      "computedHash": "537f754c9667efd0541efe9e2a1f2b865939417f12003000905daf492fbbfb5b"
+    },
+    "source-command-cleanup": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-cleanup/SKILL.md",
+      "computedHash": "54ac0e56180cc97c9eed3164c7ccf40465a12ef3ec0fcd4777d3bbfbfc40bc5e"
+    },
+    "source-command-commit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-commit/SKILL.md",
+      "computedHash": "bddb5722b4f55dcb769c6fbae487082ba27d9183c4e837c68449783be21c0a4b"
+    },
+    "source-command-design-project": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-design-project/SKILL.md",
+      "computedHash": "5c76f0dcb71b2c7ec06c7090534fcbb0d2be192ece38094e9363833ea912b8bc"
+    },
+    "source-command-explain-schema": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-explain-schema/SKILL.md",
+      "computedHash": "fe4a1a61c0bb6669c19f2610fc9ad946e13d06b4dfb93daae7692d3678f2396f"
+    },
+    "source-command-init-claude": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-init-claude/SKILL.md",
+      "computedHash": "a02247b7e6c7ca2055c3f2b20bf5c478b224e377e96e36f472875d5efea36693"
+    },
+    "source-command-init-update": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-init-update/SKILL.md",
+      "computedHash": "63ec9cd5b7271f2c314085ea44437114912ddb3692252bedc7783135993ea0c2"
+    },
+    "source-command-masterplan-task": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-masterplan-task/SKILL.md",
+      "computedHash": "d2d73ec4d6ecb035910af2b0392de7733afb8c21d60ab102416b92d2c34672fe"
+    },
+    "source-command-no-conflict": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-no-conflict/SKILL.md",
+      "computedHash": "6b8043b7e93175f02b287ff9c58392ab11250a196717bceb8992223068f7f7ce"
+    },
+    "source-command-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-review/SKILL.md",
+      "computedHash": "0d39a8ddf9d077267b44afa14b92da9189903ccce8d18a4ad894fa657e4e27e8"
+    },
+    "source-command-rls-check": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-rls-check/SKILL.md",
+      "computedHash": "6bb23d79a41ab8339f79f52e8db6353fa7ecc055e5c5343db4d2fb4d3ad89b23"
+    },
+    "source-command-security-audit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-security-audit/SKILL.md",
+      "computedHash": "abf9733bae0bdbf56d7a805170276bda6f29b066ed156e3ae77544ad0d200f51"
+    },
+    "source-command-sparc-ask": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-ask/SKILL.md",
+      "computedHash": "c34efdde8ad76dffa1bf504c119012758ce98620055fd538c8ed9805d311fa44"
+    },
+    "source-command-sparc-code": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-code/SKILL.md",
+      "computedHash": "e2423689dcb09127d1c9b48ef09018eaba3582ec1139708734a57e09158e831c"
+    },
+    "source-command-sparc-debug": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-debug/SKILL.md",
+      "computedHash": "d12073b8b8c5c801ecb8acdeb89b22119271c38b8b999ea9a0aa3f5e14d6dad2"
+    },
+    "source-command-sparc-devops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-devops/SKILL.md",
+      "computedHash": "df8a17d87d80e592fd2f27082d5c8cb531581b3b124dfbd12b6dec4eb9e2cc38"
+    },
+    "source-command-sparc-docs-writer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-docs-writer/SKILL.md",
+      "computedHash": "620b47e374bce8660459c09ad82acedcf54508003ff171a934b4c7e7b6cae56e"
+    },
+    "source-command-sparc-integration": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-integration/SKILL.md",
+      "computedHash": "0e76dbc8752a89a2244e42897e36dfa67ce3b2fabdea77dee83f16df3805b533"
+    },
+    "source-command-sparc-mcp": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-mcp/SKILL.md",
+      "computedHash": "1353cf170303ecf4013180aeb8e60edf21990de4ae6c163db9a0208cdac924cb"
+    },
+    "source-command-sparc-post-deployment-monitoring-mode": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-post-deployment-monitoring-mode/SKILL.md",
+      "computedHash": "53461892b89d21c3025f9eb494f659081bc1d3b3a98f6321ba60a047325992ac"
+    },
+    "source-command-sparc-refinement-optimization-mode": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-refinement-optimization-mode/SKILL.md",
+      "computedHash": "5f8c93d3313ff7d716624cabba9f2e61817f958e5019b5d433271354ba74d46a"
+    },
+    "source-command-sparc-security-review": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-security-review/SKILL.md",
+      "computedHash": "002ddad841d9763e4ec09d8ca0a7c4546a978df30c90e98e0b9127875edf00b4"
+    },
+    "source-command-sparc-sparc": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-sparc/SKILL.md",
+      "computedHash": "f86f6369abce594b8cfa390dbd0d0a014475651b6ba728a5fb230d85b25ed78d"
+    },
+    "source-command-sparc-spec-pseudocode": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-spec-pseudocode/SKILL.md",
+      "computedHash": "094a30b3e59372a8ce7e42d63c16f8fb5b7104129875b46e4110bdee87201569"
+    },
+    "source-command-sparc-tutorial": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sparc-tutorial/SKILL.md",
+      "computedHash": "9f46a42b4d5b13f82aaedb3625ede661ad0c4cd63acfbb33dae929dd2998b81b"
+    },
+    "source-command-sync-commands": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sync-commands/SKILL.md",
+      "computedHash": "7fda1ba561c030f332fc62126381bd769f198d00f512d9d40e57416bf44abae1"
+    },
+    "source-command-sync-to-upstream": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sync-to-upstream/SKILL.md",
+      "computedHash": "a85f7fbcb0d0a465d061ee145256af5391daf05eb6a39df2449ae4b20562c2f9"
+    },
+    "source-command-sync-types": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-sync-types/SKILL.md",
+      "computedHash": "ff44a89237e4ca07d7d12417b9453d4446dfcf67cb32fa142e3e8da60c5cfce9"
+    },
+    "source-command-update-dannflow": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/source-command-update-dannflow/SKILL.md",
+      "computedHash": "2062d4c31fabfe4a722a3cb1abcaec708e0b31f9c77ed7a0af310fa8bb738b0b"
+    },
+    "sparc-methodology": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/sparc-methodology/SKILL.md",
+      "computedHash": "8c35ac1d9580b5b1918a4c383102fbf150b3ae546c1b5ea468cdf5c3543f98b4"
+    },
+    "spec-miner": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/spec-miner/SKILL.md",
+      "computedHash": "2887f86cefeb7790301ba6cc9fa6efacb4b764c8e0192bf789cb5e205d90720e"
+    },
+    "springboot-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/springboot-patterns/SKILL.md",
+      "computedHash": "5902ed569b83996c1c3cc48d973f35702fadec46445a2988847d4ed725b488c5"
+    },
+    "springboot-security": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/springboot-security/SKILL.md",
+      "computedHash": "c518a86c3a473e0545c35065d82284d13a5d99d6f7a0e17780594f3a44af38ad"
+    },
+    "springboot-tdd": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/springboot-tdd/SKILL.md",
+      "computedHash": "37566744c3850a2bc683ea1734c4ecf67d84c7604e6b3df57b76e978479edfc8"
+    },
+    "springboot-verification": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/springboot-verification/SKILL.md",
+      "computedHash": "5a2abe74331daccf722b452d9c85d2ec7dc4777a901f33b91e007b6102b84b05"
+    },
+    "strategic-compact": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/strategic-compact/SKILL.md",
+      "computedHash": "6ac2f97bfa282fc9b2d1e4cdf0f395dfb1cffe47660b6a3e30cbc2099feb7a04"
+    },
+    "stream-chain": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/stream-chain/SKILL.md",
+      "computedHash": "cbd209f2cd002485251a6cfff55b0232f691c35827fda80c6dccedaa5a644f62"
+    },
+    "swarm-advanced": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swarm-advanced/SKILL.md",
+      "computedHash": "f50d4bf23df692fa60d2f33aa1155a72c165b41ec74f19eebb2771ce4ddbf30f"
+    },
+    "swift-actor-persistence": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swift-actor-persistence/SKILL.md",
+      "computedHash": "cdecd5bd059d03fdbdda8ac2789f2622e2b78513ff4943654e375e89bb2bf467"
+    },
+    "swift-build-resolver": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swift-build-resolver/SKILL.md",
+      "computedHash": "176a1947efb426d486c9dc0051bf603f5731210080047072b981b3a0e6f59b9d"
+    },
+    "swift-concurrency-6-2": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swift-concurrency-6-2/SKILL.md",
+      "computedHash": "abe75afe9f7e73a65df5c6bdd94c89de60f85dd401259267e8fe6221a9ce2db6"
+    },
+    "swift-protocol-di-testing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swift-protocol-di-testing/SKILL.md",
+      "computedHash": "6386b2f947394f12bb4fa829cd53cd1670d82b02e6787b205c03b59767a67fcf"
+    },
+    "swift-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swift-reviewer/SKILL.md",
+      "computedHash": "d4095baf4ca279ee701c755007508ee45b4ca8edf993b2c57b0190763a07301c"
+    },
+    "swiftui-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/swiftui-patterns/SKILL.md",
+      "computedHash": "9d2196debaca96e2a7e6b040081274cca22c02a41ec1ea35f0eabb3c5ae9730e"
+    },
+    "taste": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/taste/SKILL.md",
+      "computedHash": "f39fb3d84bc7dff1710817ff7ea70b4720adab6551401472219aa8d48b494d31"
+    },
+    "taste-application": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/taste-application/SKILL.md",
+      "computedHash": "68b44721cd45583c377faa4b28e558412f721fc31809632fa9733c523b67795e"
+    },
+    "taste-distillation": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/taste-distillation/SKILL.md",
+      "computedHash": "5f8008cf6fd19bf231e46dd7203f95e367564f2ad5040eb743a4202c76e6b6a3"
+    },
+    "tasteforge-video": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tasteforge-video/SKILL.md",
+      "computedHash": "3473c2829ce84e0aa1e032d7619003f369af56bc33f251317e1179c879bed554"
+    },
+    "tdd-guide": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tdd-guide/SKILL.md",
+      "computedHash": "4c0c4b3601b8c07fb086e1a2b6b2e0e43855e23575b05e7aeb248764b402f492"
+    },
+    "tdd-workflow": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tdd-workflow/SKILL.md",
+      "computedHash": "7c6445a897dd34666b31bdec734404dc146d10488881a48a39974a1ad89d1ceb"
+    },
+    "team-agent-orchestration": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/team-agent-orchestration/SKILL.md",
+      "computedHash": "4d686c9077d0df94ba331f3ac87f82eedccf9d5297de322d715bef679ec90aa6"
+    },
+    "team-builder": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/team-builder/SKILL.md",
+      "computedHash": "055cafbe89f07b6a60a66b22b569663be7357695444fa3abbb626442e40e6956"
+    },
+    "terminal-opener": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/terminal-opener/SKILL.md",
+      "computedHash": "c24555bffacf5f0aacaa2a7806aa78246df216662fbdb6cdb66bebc98c6eef2a"
+    },
+    "terminal-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/terminal-ops/SKILL.md",
+      "computedHash": "3f29e7aeb87614042c37130b5e1d70ac4abb05ad8736da528b0ca2209cef3470"
+    },
+    "tinystruct-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tinystruct-patterns/SKILL.md",
+      "computedHash": "381ff74c8b0961b2d79771bcb05d62727eddca8a86ee4962e98c66a5c515d714"
+    },
+    "token-budget-advisor": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/token-budget-advisor/SKILL.md",
+      "computedHash": "c0c6cd04552e3a8a4fa074a516ce3b645606b4d3b54fe13f34952aab463ee1d1"
+    },
+    "type-design-analyzer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/type-design-analyzer/SKILL.md",
+      "computedHash": "df72ad6f4665987bd3fdd885dafd279926f14ed941c7e3bc5c10b2a37e55926a"
+    },
+    "typescript-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/typescript-reviewer/SKILL.md",
+      "computedHash": "e86c5f6ce1554dad94ae8165e39768e4c3b1c6256eb8d3481ee6dfb2cc94e178"
+    },
+    "ui-demo": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ui-demo/SKILL.md",
+      "computedHash": "ef1ef19b86f1d5c88d395cd43200b0613a71102065c7ff8370201143b18a5ee6"
+    },
+    "ui-to-vue": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ui-to-vue/SKILL.md",
+      "computedHash": "0d0d251631c16ed07426cb17b0a79ce0689002c14f1a79f693f62ac27fe4dcd0"
+    },
+    "uncloud": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/uncloud/SKILL.md",
+      "computedHash": "8cda7f13e4542056ed89fac6bd207bb2cd116d3f84d67977587ca9a0d401e06c"
+    },
+    "unified-memory": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/unified-memory/SKILL.md",
+      "computedHash": "2a159d316a24f3990d4ccbbe00c36e45ec1289d653cd7d4b75226768b86a67f1"
+    },
+    "unified-notifications-ops": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/unified-notifications-ops/SKILL.md",
+      "computedHash": "c36aad1908bb05d9f38ac61e304f307a89c89b8c736a9e4c31903a6f6622e74f"
+    },
+    "uspto-database": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/scientific-db-uspto-database/SKILL.md",
+      "computedHash": "cf8e851136ccffb5854fe317328fa45fd80ac1fbcf52d6bea353d5600ac506a7"
+    },
+    "verification-loop": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/verification-loop/SKILL.md",
+      "computedHash": "18e7a80e867972c6230ee7682e13df41f9bb4e25c86e5000b5da178d9f9663d5"
+    },
+    "video-editing": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/video-editing/SKILL.md",
+      "computedHash": "021c5b9207697949a1a40c936617793e3db0cb03904f3c3388e153337c290da1"
+    },
+    "videodb": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/videodb/SKILL.md",
+      "computedHash": "1a63377153e902d049355df33d5d26aa685c66efc9f432f3051208ff938dcb29"
+    },
+    "visa-doc-translate": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/visa-doc-translate/SKILL.md",
+      "computedHash": "9bc1c68cac4d8e16f5127faca88cad3961559ca491ed2c8ab2781293906144e1"
+    },
+    "vite-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/vite-patterns/SKILL.md",
+      "computedHash": "cfebf85e0290f0c71645b215c33fc47dce247263a715648de8ae4c57c370e93d"
+    },
+    "vue-patterns": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/vue-patterns/SKILL.md",
+      "computedHash": "0fd03b3c1f40323f61b65f6033cdb6e332e8367cbccb11b2b02159f5a10679ba"
+    },
+    "vue-reviewer": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/vue-reviewer/SKILL.md",
+      "computedHash": "12018ab5248f8bc73adaaae509c8b947213bb840a4a59ea59f7e5fe1ddb14915"
+    },
+    "windows-desktop-e2e": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/windows-desktop-e2e/SKILL.md",
+      "computedHash": "9a7dad552c7ddcc29e43b65f1c05516a1905f6962fdca56ed6b14f80dad974d9"
+    },
+    "workspace-surface-audit": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/workspace-surface-audit/SKILL.md",
+      "computedHash": "32edb2adcca0bd52d9d2ae460a46ed77c352624830aeb9d7fabf93467a8b1b9f"
+    },
+    "x-api": {
+      "source": "danncode10/dannflow",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/x-api/SKILL.md",
+      "computedHash": "49719765302c7df3c687e084e7c487a57c532ce980e2f138760db09ecc734ba9"
+    }
+  }
+}
