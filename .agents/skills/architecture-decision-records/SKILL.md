@@ -74,6 +74,7 @@ What becomes easier or more difficult to do because of this change?
 
 When a decision moment is detected:
 
+0. **Diagram Alignment** — The `diagrams/` folder is the definitive source of truth. If you identify a mismatch, flaw, or suboptimal design between the code and the diagram, you MUST NOT silently deviate. You must state the issue to the user (e.g., "I found a mismatch" or "I suggest my plan is better"), ask for alignment, and edit the .drawio and README.md files first before proceeding.
 1. **Initialize (first time only)** — if `docs/adr/` does not exist, ask the user for confirmation before creating the directory, a `README.md` seeded with the index table header (see ADR Index Format below), and a blank `template.md` for manual use. Do not create files without explicit consent.
 2. **Identify the decision** — extract the core architectural choice being made
 3. **Gather context** — what problem prompted this? What constraints exist?

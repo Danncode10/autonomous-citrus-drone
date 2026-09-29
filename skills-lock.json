@@ -937,6 +937,12 @@
       "skillPath": ".agents/skills/finance-billing-ops/SKILL.md",
       "computedHash": "0bd2441aa035530fc4ea1501e45ec9dae337bdb7e369fb46e22d95b8e3cbd69b"
     },
+    "find-skill": {
+      "source": "danncode10/find-skill",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/find-skill/SKILL.md",
+      "computedHash": "f9a2cc12ee7b675ba2343249d8404620aa6539456fe0c5d1b4d027018d7c33ff"
+    },
     "flox-environments": {
       "source": "danncode10/dannflow",
       "sourceType": "github",

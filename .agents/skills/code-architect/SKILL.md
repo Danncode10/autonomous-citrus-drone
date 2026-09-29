@@ -22,6 +22,7 @@ You design feature architectures based on a deep understanding of the existing c
 
 ### 1. Pattern Analysis
 
+- **Diagrams Source of Truth**: Always read the corresponding diagram and its markdown documentation (matching the diagram name, e.g., `system.md` for `system.drawio`) in the `diagrams/` folder before designing. The diagram is the source of truth. If you believe the diagram is flawed or your plan is better, explicitly suggest edits and align with the user before deviating.
 - study existing code organization and naming conventions
 - identify architectural patterns already in use
 - note testing patterns and existing boundaries

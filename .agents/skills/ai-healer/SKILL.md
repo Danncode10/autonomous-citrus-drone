@@ -24,7 +24,15 @@ You are the AI Healer. Your job is to make the Vibe Coding ecosystem smarter ove
      1. Edit the relevant `SKILL.md` or `.claude/commands/*.md` file to include the correction.
      2. **Modular Rule Generation:** Analyze the nature of the frustration or preference. **PRIORITIZE editing existing rules** in `.agents/rules/` (e.g., `.agents/rules/ui_preferences.md`, `.agents/rules/attention_and_retention.md`) rather than making new ones. Only create a brand new rule file if the topic fundamentally does not fit into any existing rule. Do not dump everything into a single file, but avoid unnecessary file bloat.
 
-3. **The Registry Sync (Mandatory)**
+3. **Modular Diagramming Standards (Draw.io)**
+   When observing or creating architecture diagrams, enforce a modular approach for complex processes.
+   - **Inter-file Routing (Folders):** Use a "Process" shape (rectangle with double side lines) to route to a completely different `.drawio` file in another folder. Set the text to the filename (e.g., `sub-system.drawio`).
+   - **Inter-page Routing (Abstraction):** Do not overload the main system diagram (Page 1). Abstract complex inner logic into a new page/tab within the same `.drawio` file. Use an **Off-Page Connector** shape (`shape=offPageConnector`) to link between pages, and include "(Page X)" in the text.
+   - **Entry Node**: A shape at the start labeled `FROM parent.drawio` or `FROM Parent Page (Page 1)`.
+   - **Exit Node**: A shape at the end labeled `TO target.drawio` or `TO Target Page (Page X)`.
+   - **Documentation**: Diagram documentation must NEVER be named `README.md`. Use a single `.md` file matching the diagram name (e.g., `system.md` for `system.drawio`). If the diagram has multiple pages, document all pages within that single `.md` file under explicit "## Page X" headers.
+
+4. **The Registry Sync (Mandatory)**
    Whenever you successfully create a brand new skill/command, or significantly alter the purpose of an existing one, you MUST append a 1-sentence summary of it to the `docs/dannflow_docs/SKILL_REGISTRY.md` file. If you do not add it to the registry, the other agents will not know it exists.
 
 ## Guardrails

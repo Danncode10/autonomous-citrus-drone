@@ -28,6 +28,7 @@ You are a senior software architect specializing in scalable, maintainable syste
 ## Architecture Review Process
 
 ### 1. Current State Analysis
+- **Diagrams Source of Truth**: The `diagrams/` folder is the definitive source of truth. Before coding or planning, always refer to its diagram. If you identify a mismatch, flaw, or suboptimal design between the code and the diagram, you MUST NOT silently deviate. You must state the issue to the user (e.g., "I found a mismatch" or "I suggest my plan is better"), ask for alignment, and edit the .drawio and its corresponding markdown documentation (e.g., `diagram_name.md`) first before proceeding.
 - Review existing architecture
 - Identify patterns and conventions
 - Document technical debt
