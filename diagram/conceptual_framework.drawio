@@ -1,0 +1,158 @@
+<mxfile host="65bd71144e">
+    <diagram id="conceptual-framework" name="Conceptual Framework">
+        <mxGraphModel dx="1846" dy="1234" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="user" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="-187" y="110" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="block5" value="BLOCK 5: WEB DASHBOARD &amp;amp; USER INTERFACE (Next.js Application)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#1abc9c;fontColor=#ffffff;strokeColor=#0e6655;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="40" width="360" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5_i1" value="Tower Registration Module&amp;#10;(Input GPS &amp;amp; Capacity)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
+                    <mxGeometry x="20" y="50" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5_i2" value="Scan Request Trigger&amp;#10;(Command to Drone)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
+                    <mxGeometry x="190" y="50" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5_i3" value="Real-Time Analytics&amp;#10;(Occupancy Rates, etc.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
+                    <mxGeometry x="20" y="120" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5_i4" value="Research Dataset Export&amp;#10;(Download CSV/Images)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
+                    <mxGeometry x="190" y="120" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="block4" value="BLOCK 4: CENTRALIZED BACKEND &amp;amp; DATABASE" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f39c12;fontColor=#ffffff;strokeColor=#d68910;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="801" y="40" width="280" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4_i1" value="PostgreSQL / Supabase" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fdebd0;strokeColor=#f39c12;fontColor=#000000;" parent="block4" vertex="1">
+                    <mxGeometry x="20" y="50" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4_i2" value="Tower Data Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#f39c12;fontColor=#000000;" parent="block4" vertex="1">
+                    <mxGeometry x="140" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4_i3" value="Tagged Image Repository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#f39c12;fontColor=#000000;" parent="block4" vertex="1">
+                    <mxGeometry x="140" y="90" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4_i4" value="Historical Logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#f39c12;fontColor=#000000;" parent="block4" vertex="1">
+                    <mxGeometry x="140" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="block2" value="BLOCK 2: AUTONOMOUS MICRO-DRONE SYSTEM" style="swimlane;whiteSpace=wrap;html=1;fillColor=#3498db;fontColor=#ffffff;strokeColor=#2980b9;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="-105" y="320" width="360" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2_i1" value="Flight Controller (ArduPilot)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6eaf8;strokeColor=#3498db;fontColor=#000000;" parent="block2" vertex="1">
+                    <mxGeometry x="20" y="40" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2_i2" value="GPS Module (Waypoint Nav)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6eaf8;strokeColor=#3498db;fontColor=#000000;" parent="block2" vertex="1">
+                    <mxGeometry x="190" y="40" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2_i3" value="Onboard Camera (RGB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6eaf8;strokeColor=#3498db;fontColor=#000000;" parent="block2" vertex="1">
+                    <mxGeometry x="20" y="90" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2_i4" value="Raspberry Pi Companion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6eaf8;strokeColor=#3498db;fontColor=#000000;" parent="block2" vertex="1">
+                    <mxGeometry x="190" y="90" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2_i5" value="Local Wi-Fi Telemetry Transmitter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6eaf8;strokeColor=#3498db;fontColor=#000000;" parent="block2" vertex="1">
+                    <mxGeometry x="20" y="140" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="block1" value="BLOCK 1: PHYSICAL ENVIRONMENT (Hydroponic Tower)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#2ecc71;fontColor=#ffffff;strokeColor=#27ae60;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="497" y="320" width="280" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="b1_i1" value="Physical Tower Structure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f5e3;strokeColor=#2ecc71;fontColor=#000000;" parent="block1" vertex="1">
+                    <mxGeometry x="20" y="40" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="b1_i2" value="Unique Tower ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f5e3;strokeColor=#2ecc71;fontColor=#000000;" parent="block1" vertex="1">
+                    <mxGeometry x="20" y="80" width="115" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="b1_i3" value="GPS Coordinates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f5e3;strokeColor=#2ecc71;fontColor=#000000;" parent="block1" vertex="1">
+                    <mxGeometry x="145" y="80" width="115" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="b1_i4" value="Vertical Pipe Slots&amp;#10;(Lettuce Heads &amp;amp; Empty Pots)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f5e3;strokeColor=#2ecc71;fontColor=#000000;" parent="block1" vertex="1">
+                    <mxGeometry x="20" y="120" width="240" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="block3" value="BLOCK 3: GROUND PROCESSING &amp;amp; COMPUTER VISION (Edge Inference)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#9b59b6;fontColor=#ffffff;strokeColor=#8e44ad;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="191" y="676" width="834" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3_i1" value="Local Ground Laptop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8daef;strokeColor=#9b59b6;fontColor=#000000;" parent="block3" vertex="1">
+                    <mxGeometry x="8" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3_i2" value="Wi-Fi Telemetry Receiver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8daef;strokeColor=#9b59b6;fontColor=#000000;" parent="block3" vertex="1">
+                    <mxGeometry x="155" y="42" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3_i3" value="YOLOv8 Model&amp;#10;(Detects Lettuce vs Empty)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8daef;strokeColor=#9b59b6;fontColor=#000000;" parent="block3" vertex="1">
+                    <mxGeometry x="442" y="40" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3_i4" value="Slot Occupancy &amp;amp; Confidence&amp;#10;Score Calculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8daef;strokeColor=#9b59b6;fontColor=#000000;" parent="block3" vertex="1">
+                    <mxGeometry x="652" y="40" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ground_yolo" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="block3" source="b3_i2" target="b3_i3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ground_yolo_label" value="Runs inference" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_ground_yolo" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_yolo_calc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="block3" source="b3_i3" target="b3_i4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_user_web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="user" target="block5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_user_web_label" value="Inputs GPS coordinates &amp;amp;&amp;#10;sends scan requests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_user_web" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+                        <mxPoint x="20" y="-11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_web_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="block5" target="block4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_web_db_label" value="Saves registered&amp;#10;tower metadata" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_web_db" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-15" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_db_web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="block4" target="block5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_db_web_label" value="Feeds real-time analytics &amp;amp;&amp;#10;datasets (CSV/Image Export)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_db_web" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="15" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_web_drone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="block5" target="block2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_web_drone_label" value="Sends flight trigger command&amp;#10;(GPS Waypoints)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_web_drone" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_drone_tower" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="block2" target="block1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_drone_tower_label" value="Navigates via GPS &amp;amp;&amp;#10;captures vertical frames" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_drone_tower" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-15" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_drone_ground" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="block2" target="block3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_drone_ground_label" value="Streams raw images&amp;#10;(Wi-Fi Telemetry)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_drone_ground" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="15" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_ground_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.9;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="block3" target="block4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ground_db_label" value="Ingests slot counts, images,&amp;#10;timestamps (YOLO Inference Results)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_ground_db" vertex="1" connectable="0">
+                    <mxGeometry x="0.1" y="-2" relative="1" as="geometry">
+                        <mxPoint x="76" y="16" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
