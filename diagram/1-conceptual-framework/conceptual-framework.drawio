@@ -1,0 +1,180 @@
+<mxfile host="65bd71144e">
+    <diagram id="fig1" name="Figure 1 - Conceptual Framework">
+        <mxGraphModel dx="973" dy="1003" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="907" pageHeight="738" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="c1" style="endArrow=none;html=1;dashed=1;dashPattern=1 3;strokeColor=#7F7F7F;strokeWidth=1.5;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="12" y="16" as="sourcePoint"/>
+                        <mxPoint x="12" y="16" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="458" y="16"/>
+                            <mxPoint x="458" y="221.12"/>
+                            <mxPoint x="624" y="221.12"/>
+                            <mxPoint x="624" y="694.28"/>
+                            <mxPoint x="12" y="694.28"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c2" value="Offline (local Wi-Fi)" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#7F7F7F;fontStyle=2;fontSize=17;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="24" y="22" width="148.88" height="19.72" as="geometry"/>
+                </mxCell>
+                <mxCell id="c3" style="endArrow=none;html=1;dashed=1;dashPattern=1 3;strokeColor=#7F7F7F;strokeWidth=1.5;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="466" y="16" as="sourcePoint"/>
+                        <mxPoint x="466" y="16" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="912" y="16"/>
+                            <mxPoint x="912" y="694.28"/>
+                            <mxPoint x="632" y="694.28"/>
+                            <mxPoint x="632" y="229.12"/>
+                            <mxPoint x="466" y="229.12"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c4" value="Online (internet)" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#7F7F7F;fontStyle=2;fontSize=17;align=right;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="770.88" y="22" width="129.12" height="19.72" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1g" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="364" y="147.12" as="sourcePoint"/>
+                        <mxPoint x="228" y="147.12" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a1q" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="228" y="199.12" as="sourcePoint"/>
+                        <mxPoint x="364" y="199.12" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a2" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="147.12" as="sourcePoint"/>
+                        <mxPoint x="696" y="147.12" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="364" y="436.24" as="sourcePoint"/>
+                        <mxPoint x="228" y="436.24" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a4" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="68" y="416.24" as="sourcePoint"/>
+                        <mxPoint x="68" y="292.24" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a5" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="228" y="578.64" as="sourcePoint"/>
+                        <mxPoint x="364" y="578.64" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a5b" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="228" y="662.28" as="sourcePoint"/>
+                        <mxPoint x="364" y="662.28" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a6" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="440.24" as="sourcePoint"/>
+                        <mxPoint x="696" y="268.24" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="600" y="440.24"/>
+                            <mxPoint x="600" y="268.24"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a7" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="856" y="292.24" as="sourcePoint"/>
+                        <mxPoint x="856" y="416.24" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a7b" style="endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;jumpStyle=arc;jumpSize=8;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="696" y="464.24" as="sourcePoint"/>
+                        <mxPoint x="520" y="292.24" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="652" y="464.24"/>
+                            <mxPoint x="652" y="332.24"/>
+                            <mxPoint x="520" y="332.24"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b1" value="&lt;b&gt;Hydroponic Tower&lt;br&gt;+ Tower Unit&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:18px&quot;&gt;Tower frame with&lt;br&gt;lettuce, empty pots, and&lt;br&gt;ArUco markers&lt;br&gt;&lt;hr style=&quot;border:none;border-top:1px solid #7F7F7F;margin:3px 18px;&quot;&gt;Tower Unit: ESP32 +&lt;br&gt;GPS module + e-paper&lt;br&gt;QR display + Generate&lt;br&gt;button&lt;br&gt;&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.6;fontFamily=Cambria;fontColor=#000000;fontSize=19;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="32" y="54" width="196" height="238.24" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="b2" target="c11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2" value="&lt;b&gt;Farmer + Web&lt;br&gt;Application&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:18px&quot;&gt;Smartphone scans the&lt;br&gt;QR code (tower ID, GPS&lt;br&gt;coordinates, checksum)&lt;br&gt;to register the tower&lt;br&gt;and request a scan&lt;br&gt;&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.6;fontFamily=Cambria;fontColor=#000000;fontSize=19;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="364" y="54" width="196" height="238.24" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3" value="&lt;b&gt;Database&lt;br&gt;(Supabase)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:18px&quot;&gt;Stores towers, locations,&lt;br&gt;scan missions, and&lt;br&gt;results&lt;br&gt;&lt;/span&gt;" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.6;fontFamily=Cambria;fontColor=#000000;fontSize=19;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="696" y="54" width="196" height="238.24" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4" value="&lt;b&gt;Drone&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:18px&quot;&gt;Flight controller:&lt;br&gt;SpeedyBee F405 Mini&lt;br&gt;(ArduPilot) +&lt;br&gt;GPS/compass&lt;br&gt;&lt;hr style=&quot;border:none;border-top:1px solid #7F7F7F;margin:3px 18px;&quot;&gt;Raspberry Pi Zero 2 W&lt;br&gt;+ Pi Camera V2: records&lt;br&gt;backup, streams video,&lt;br&gt;visual alignment (QR +&lt;br&gt;ArUco)&lt;br&gt;&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.6;fontFamily=Cambria;fontColor=#000000;fontSize=19;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="32" y="416.24" width="196" height="264.04" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5" value="&lt;b&gt;Ground Laptop&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:18px&quot;&gt;Live YOLOv8 detection&lt;br&gt;(tower frame, lettuce,&lt;br&gt;empty pot)&lt;br&gt;↓&lt;br&gt;Slot matching by face,&lt;br&gt;level, position&lt;br&gt;↓&lt;br&gt;Slot availability&lt;br&gt;&lt;hr style=&quot;border:none;border-top:1px solid #7F7F7F;margin:3px 18px;&quot;&gt;Local offline cache&lt;br&gt;&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.6;fontFamily=Cambria;fontColor=#000000;fontSize=19;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="364" y="416.24" width="196" height="264.04" as="geometry"/>
+                </mxCell>
+                <mxCell id="b6" value="&lt;b&gt;Web Dashboard&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:18px&quot;&gt;Tower map, per-pot&lt;br&gt;results, scan history,&lt;br&gt;upload (Sync Center)&lt;br&gt;&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.6;fontFamily=Cambria;fontColor=#000000;fontSize=19;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="696" y="416.24" width="196" height="264.04" as="geometry"/>
+                </mxCell>
+                <mxCell id="c5" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="284.8" y="161.92" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="c6" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="616.8" y="135.92" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="c7" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="284.8" y="425.04" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="c8" value="5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="284.8" y="567.44" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="c9" value="press Generate" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="238.25" y="118.24" width="115.5" height="24.88" as="geometry"/>
+                </mxCell>
+                <mxCell id="c10" value="QR with tower ID&lt;br&gt;+ location" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="228.28" y="203.12" width="135.44" height="45.76" as="geometry"/>
+                </mxCell>
+                <mxCell id="c11" value="register tower /&lt;br&gt;request scan" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="566.23" y="88.36" width="123.54" height="45.76" as="geometry"/>
+                </mxCell>
+                <mxCell id="c12" value="mission (tower&lt;br&gt;GPS, face A first)" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="231.51" y="449.24" width="128.98" height="45.76" as="geometry"/>
+                </mxCell>
+                <mxCell id="c13" value="live video +&lt;br&gt;telemetry over&lt;br&gt;local Wi-Fi" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="238.51" y="499" width="114.98" height="66.64" as="geometry"/>
+                </mxCell>
+                <mxCell id="c14" value="backup recording&lt;br&gt;after landing&lt;br&gt;(gap filling)" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="227.48" y="591.64" width="137.04" height="66.64" as="geometry"/>
+                </mxCell>
+                <mxCell id="c15" value="GPS approach → YOLO tower&lt;br&gt;detection → QR/ArUco alignment&lt;br&gt;→ full-tower scan, face by face,&lt;br&gt;bottom to top" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="92" y="306.24" width="254.4" height="87.52" as="geometry"/>
+                </mxCell>
+                <mxCell id="c16" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="68.6" y="306.94" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="c17" value="upload when internet&lt;br&gt;is available" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=right;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="426.86" y="344.24" width="167.14" height="45.76" as="geometry"/>
+                </mxCell>
+                <mxCell id="c18" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="403.46" y="344.94" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="c19" value="updated lettuce and&lt;br&gt;empty pot counts&lt;br&gt;per tower" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Cambria;spacing=0;fontColor=#000000;fontSize=18;align=right;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="694.18" y="306.24" width="153.82" height="66.64" as="geometry"/>
+                </mxCell>
+                <mxCell id="c20" value="7" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" parent="1" vertex="1">
+                    <mxGeometry x="670.78" y="306.94" width="22.4" height="22.4" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
