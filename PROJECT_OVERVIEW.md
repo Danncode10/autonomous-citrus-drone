@@ -12,7 +12,7 @@ This project introduces an autonomous drone-based inspection system that utilize
 
 Once aligned with the target plant slots, the drone captures images and automatically uploads this visual telemetry and inspection data to a centralized web platform. Through this web dashboard, farmers can seamlessly track inspection history and visually monitor their crops (specifically lettuce) and identify available empty pots without manual intervention.
 
-To simplify the hardware and focus on the core inspection mechanics, the drone will operate in an open, obstacle-free space, eliminating the need for complex obstacle avoidance algorithms. For the physical testing phase, the project will utilize a structural frame for the hydroponic tower (which can be downloaded and 3D printed or assembled). This frame serves strictly as a physical target for the drone to detect slots and plants, meaning it does not need a functional hydroponic watering system to validate the drone's scanning capabilities. Both the drone and the tower frames will utilize GPS coordinates to ensure accurate open-space alignment.
+To simplify the hardware and focus on the core inspection mechanics, the drone will operate in an open, obstacle-free space, eliminating the need for complex obstacle avoidance algorithms. For the physical testing phase, the project will utilize a structural frame for the hydroponic tower (which can be downloaded and 3D printed or assembled). This frame serves strictly as a physical target for the drone to detect slots and plants, meaning it does not need a functional hydroponic watering system to validate the drone's scanning capabilities. Towers are equipped with small displays showing dynamic QR codes. By scanning this QR code, the tower automatically registers its unique ID and current GPS location to the web dashboard. Both the drone and the tower frames will utilize these GPS coordinates to ensure accurate open-space alignment.
 
 ## Problem Statement
 
@@ -22,12 +22,12 @@ A drone-based inspection system can help farmers collect tower-level data more e
 
 ## Main Objective
 
-To design and develop an autonomous drone-based monitoring system that uses GPS to align with registered hydroponic towers in an open space, vertically scans the structure, detects lettuce and empty pots using computer vision, and displays tower-level records through a web-based dashboard.
+To design and develop an autonomous drone-based monitoring system that uses GPS to align with hydroponic towers registered via QR code scanning in an open space, vertically scans the structure, detects lettuce and empty pots using computer vision, and displays tower-level records through a web-based dashboard.
 
 ## Specific Objectives
 
 1. Build a hydroponic tower monitoring model where each tower has an ID, GPS location, inspection history, and slot attributes.
-2. Create a web dashboard where a farmer can register hydroponic towers and request or view drone inspection results.
+2. Create a web dashboard where a farmer can automatically register hydroponic towers via QR scanning and request or view drone inspection results.
 3. Use a drone-mounted camera to capture images or video while vertically scanning a registered hydroponic tower.
 4. Train or fine-tune a computer vision model to detect lettuce and empty pots on the tower.
 5. Estimate tower-level information such as available planting slots and occupied slots.
@@ -46,10 +46,10 @@ The physical testing environment will consist of:
 
 ## System Concept
 
-The farmer registers a hydroponic tower in the web dashboard, logging its GPS coordinates. The drone uses this GPS location to navigate toward the tower in the open space. Once aligned, it performs a vertical scan, captures images of the slots, and updates the system with lettuce and empty pot counts.
+The farmer registers a hydroponic tower by scanning a dynamic QR code on the tower's small display, which automatically syncs its ID and GPS coordinates to the web dashboard. The drone uses this GPS location to navigate toward the tower in the open space. Once aligned, it performs a vertical scan, captures images of the slots, and updates the system with lettuce and empty pot counts.
 
 ```text
-Web Dashboard Tower Registration (with GPS)
+QR Code Scan (Tower Display) -> Web Dashboard Auto-Registration
         |
         v
 Drone Mission Planning
@@ -97,7 +97,7 @@ Example data:
 The web dashboard is the farmer-facing control and reporting system.
 
 Expected dashboard features:
-- Register towers and input their GPS coordinates.
+- Automatically register towers via QR code scanning (syncing GPS).
 - Select a tower for inspection.
 - View tower-level records and inspection history.
 - Display latest tower image captures.
@@ -154,8 +154,8 @@ While not a core specific objective, Gazebo will be used as a development tool. 
 
 ## Minimum Viable Prototype (Thesis Proof of Concept)
 
-1. Web dashboard for registering towers with GPS coordinates.
-2. A physical structural frame to serve as the hydroponic tower target.
+1. Web dashboard for automatically registering towers via QR code scanning.
+2. A physical structural frame with a small QR display to serve as the hydroponic tower target.
 3. Drone-mounted camera with GPS navigation capabilities.
 4. Vertical scan workflow.
 5. Computer vision model that detects lettuce and empty pots.
@@ -193,7 +193,7 @@ While not a core specific objective, Gazebo will be used as a development tool. 
 
 ### Phase 4: Web Dashboard and Database
 - Create database schema for towers and slots.
-- Build tower registration workflow (including GPS coordinates).
+- Build tower auto-registration workflow (QR code & GPS sync).
 - Build scan result views.
 
 ### Phase 5: Drone Inspection Flight

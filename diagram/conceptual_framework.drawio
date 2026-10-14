@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="conceptual-framework" name="Conceptual Framework">
-        <mxGraphModel dx="1846" dy="1234" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="2045" dy="1234" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,7 +10,7 @@
                 <mxCell id="block5" value="BLOCK 5: WEB DASHBOARD &amp;amp; USER INTERFACE (Next.js Application)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#1abc9c;fontColor=#ffffff;strokeColor=#0e6655;startSize=30;" parent="1" vertex="1">
                     <mxGeometry x="120" y="40" width="360" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="b5_i1" value="Tower Registration Module&amp;#10;(Input GPS &amp;amp; Capacity)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
+                <mxCell id="b5_i1" value="Tower Registration Module&amp;#10;(QR Auto-Registration)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
                     <mxGeometry x="20" y="50" width="150" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="b5_i2" value="Scan Request Trigger&amp;#10;(Command to Drone)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1f2eb;strokeColor=#1abc9c;fontColor=#000000;" parent="block5" vertex="1">
@@ -85,72 +85,131 @@
                 <mxCell id="b3_i4" value="Slot Occupancy &amp;amp; Confidence&amp;#10;Score Calculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8daef;strokeColor=#9b59b6;fontColor=#000000;" parent="block3" vertex="1">
                     <mxGeometry x="652" y="40" width="180" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_ground_yolo" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="block3" source="b3_i2" target="b3_i3" edge="1">
+                <mxCell id="e_ground_yolo" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="block3" source="b3_i2" target="b3_i3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_ground_yolo_label" value="Runs inference" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_ground_yolo" vertex="1" connectable="0">
+                <mxCell id="e_ground_yolo_label" value="Runs inference" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_ground_yolo" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint y="-10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_yolo_calc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="block3" source="b3_i3" target="b3_i4" edge="1">
+                <mxCell id="e_yolo_calc" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="block3" source="b3_i3" target="b3_i4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_user_web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="user" target="block5" edge="1">
+                <mxCell id="e_user_web" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="user" target="block5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_user_web_label" value="Inputs GPS coordinates &amp;amp;&amp;#10;sends scan requests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_user_web" vertex="1" connectable="0">
+                <mxCell id="e_user_web_label" value="Inputs GPS coordinates &amp;amp;&amp;#10;sends scan requests" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_user_web" vertex="1" connectable="0">
                     <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
                         <mxPoint x="20" y="-11" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_web_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="block5" target="block4" edge="1">
+                <mxCell id="e_web_db" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="block5" target="block4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_web_db_label" value="Saves registered&amp;#10;tower metadata" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_web_db" vertex="1" connectable="0">
+                <mxCell id="e_web_db_label" value="Saves registered&amp;#10;tower metadata" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_web_db" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint y="-15" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_db_web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="block4" target="block5" edge="1">
+                <mxCell id="e_db_web" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="block4" target="block5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_db_web_label" value="Feeds real-time analytics &amp;amp;&amp;#10;datasets (CSV/Image Export)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_db_web" vertex="1" connectable="0">
+                <mxCell id="e_db_web_label" value="Feeds real-time analytics &amp;amp;&amp;#10;datasets (CSV/Image Export)" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_db_web" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint y="15" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_web_drone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="block5" target="block2" edge="1">
+                <mxCell id="e_web_drone" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="block5" target="block2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_web_drone_label" value="Sends flight trigger command&amp;#10;(GPS Waypoints)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_web_drone" vertex="1" connectable="0">
+                <mxCell id="e_web_drone_label" value="Sends flight trigger command&amp;#10;(GPS Waypoints)" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_web_drone" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint y="10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_drone_tower" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="block2" target="block1" edge="1">
+                <mxCell id="e_drone_tower" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="block2" target="block1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_drone_tower_label" value="Navigates via GPS &amp;amp;&amp;#10;captures vertical frames" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_drone_tower" vertex="1" connectable="0">
+                <mxCell id="e_drone_tower_label" value="Navigates via GPS &amp;amp;&amp;#10;captures vertical frames" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_drone_tower" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint y="-15" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_drone_ground" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="block2" target="block3" edge="1">
+                <mxCell id="e_drone_ground" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="block2" target="block3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_drone_ground_label" value="Streams raw images&amp;#10;(Wi-Fi Telemetry)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_drone_ground" vertex="1" connectable="0">
+                <mxCell id="e_drone_ground_label" value="Streams raw images&amp;#10;(Wi-Fi Telemetry)" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_drone_ground" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint y="15" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="e_ground_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.9;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="block3" target="block4" edge="1">
+                <mxCell id="e_ground_db" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.9;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="block3" target="block4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_ground_db_label" value="Ingests slot counts, images,&amp;#10;timestamps (YOLO Inference Results)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_ground_db" vertex="1" connectable="0">
+                <mxCell id="e_ground_db_label" value="Ingests slot counts, images,&amp;#10;timestamps (YOLO Inference Results)" style="edgeLabel;html=1;labelBackgroundColor=#ffffff;fontColor=#333333;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e_ground_db" vertex="1" connectable="0">
                     <mxGeometry x="0.1" y="-2" relative="1" as="geometry">
                         <mxPoint x="76" y="16" as="offset"/>
                     </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="conceptual-framework-workflow" name="System Concept Workflow">
+        <mxGraphModel dx="792" dy="802" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="step1" value="Tower Auto-Registration&amp;#10;(QR Code Scan &amp;amp; GPS Sync)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1abc9c;fontColor=#ffffff;strokeColor=#0e6655;" parent="1" vertex="1">
+                    <mxGeometry x="48" y="43" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step2" value="Drone Mission Planning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;fontColor=#ffffff;strokeColor=#2980b9;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="43" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step3" value="Autonomous GPS Navigation&amp;#10;to Tower" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;fontColor=#ffffff;strokeColor=#2980b9;" parent="1" vertex="1">
+                    <mxGeometry x="572" y="43" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step4" value="Vertical Scan of Tower Slots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;fontColor=#ffffff;strokeColor=#2980b9;" parent="1" vertex="1">
+                    <mxGeometry x="572" y="148" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step5" value="Image Capture" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;fontColor=#ffffff;strokeColor=#8e44ad;" parent="1" vertex="1">
+                    <mxGeometry x="314" y="148" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step6" value="Computer Vision Detection&amp;#10;(Lettuce / Empty Pot)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;fontColor=#ffffff;strokeColor=#8e44ad;" parent="1" vertex="1">
+                    <mxGeometry x="46" y="148" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step7" value="Slot Availability Estimate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;fontColor=#ffffff;strokeColor=#d68910;" parent="1" vertex="1">
+                    <mxGeometry x="46" y="258" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="step8" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f39c12;fontColor=#ffffff;strokeColor=#d68910;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="248" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="step9" value="Dashboard Records and History" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1abc9c;fontColor=#ffffff;strokeColor=#0e6655;" parent="1" vertex="1">
+                    <mxGeometry x="572" y="258" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step1" target="step2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step2" target="step3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step3" target="step4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step4" target="step5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step5" target="step6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step6" target="step7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step7" target="step8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;html=1;" parent="1" source="step8" target="step9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
