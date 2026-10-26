@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 09 · Locale and Participants</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1.1fr; gap: 24px; }
+
+  .col-label { display: flex; align-items: center; gap: 12px; color: var(--forest); margin-bottom: 16px; }
+  .col-label .ico { width: 22px; height: 22px; }
+  .col { display: flex; flex-direction: column; }
+
+  .places { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .place { flex: 1; padding: 26px 30px; display: grid; grid-template-columns: 64px 1fr; gap: 22px; align-items: center; }
+  .place > .ico { width: 64px; height: 64px; padding: 15px; border-radius: 16px; background: var(--leaf-soft); color: var(--forest); }
+  .place .k { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .place h3 { margin-top: 8px; font-size: 30px; font-weight: 700; color: var(--forest); }
+  .place p { margin-top: 10px; font-size: 24px; line-height: 1.4; color: #34433a; }
+  .why { padding: 22px 28px; border-radius: 18px; background: var(--forest); color: #d5e5da; font-size: 21px; line-height: 1.42; }
+  .why b { color: #fff; }
+
+  .people { flex: 1; padding: 28px 32px; display: flex; flex-direction: column; }
+  table { width: 100%; border-collapse: collapse; font-size: 26px; }
+  th { text-align: left; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0 0 14px; border-bottom: 1.5px solid var(--line); }
+  th:not(:first-child), td:not(:first-child) { text-align: center; }
+  td { padding: 34px 0; border-bottom: 1.5px solid #ece8de; color: #2f3d35; }
+  td:first-child { font-weight: 700; color: var(--forest); }
+  td small { display: block; margin-top: 4px; font-size: 18px; font-weight: 500; color: var(--muted); }
+  tr.total td { border-bottom: none; font-weight: 800; color: var(--forest); }
+  .todo { font-size: 20px; }
+
+  .facts { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .fact { padding: 18px 20px; border-radius: 16px; background: var(--leaf-tint); }
+  .fact .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--leaf-deep); }
+  .fact .v { margin-top: 6px; font-size: 23px; font-weight: 700; color: var(--forest); }
+  .fact p { margin-top: 4px; font-size: 18px; line-height: 1.38; color: var(--muted); }
+</style>
+</head>
+<body data-num="09" data-part="method" data-eyebrow="Locale and Participants">
+<div class="slide">
+  <h1 class="title">Where we test, and who evaluates</h1>
+
+  <div class="content">
+    <section class="col">
+      <div class="label col-label"><span class="ico"><i data-lucide="map-pin"></i></span>Research locale</div>
+      <div class="places">
+        <article class="card place">
+          <span class="ico"><i data-lucide="plane-takeoff"></i></span>
+          <div>
+            <div class="k">Flight tests</div>
+            <h3><span class="todo">[testing site]</span></h3>
+            <p>An open, obstacle-free outdoor area with a GPS signal.</p>
+          </div>
+        </article>
+        <article class="card place">
+          <span class="ico"><i data-lucide="sprout"></i></span>
+          <div>
+            <div class="k">Needs assessment interviews</div>
+            <h3><span class="todo">[farm name and location]</span></h3>
+            <p>Hydroponic farmers who will describe how they monitor towers today.</p>
+          </div>
+        </article>
+        <div class="why"><b>Why this site:</b> it allows safe drone operation and a clear view of the structural tower frame.</div>
+      </div>
+    </section>
+
+    <section class="col">
+      <div class="label col-label"><span class="ico"><i data-lucide="users"></i></span>Respondents</div>
+      <div class="card people">
+        <table>
+          <thead><tr><th>Respondents</th><th>Population</th><th>Total enumeration</th></tr></thead>
+          <tbody>
+            <tr><td>Hydroponic Farmers<small>Owners, managers and workers</small></td><td><span class="todo">[no.]</span></td><td><span class="todo">[no.]</span></td></tr>
+            <tr><td>IT Experts<small>CITE, Nueva Vizcaya State University</small></td><td><span class="todo">[no.]</span></td><td><span class="todo">[no.]</span></td></tr>
+            <tr class="total"><td>Total</td><td><span class="todo">[no.]</span></td><td><span class="todo">[no.]</span></td></tr>
+          </tbody>
+        </table>
+        <div class="facts">
+          <div class="fact"><div class="k">Sampling technique</div><div class="v">Purposive sampling</div><p>Direct experience in hydroponic farming or system development</p></div>
+          <div class="fact"><div class="k">Sample size</div><div class="v">Total enumeration</div><p>Every identified respondent takes part</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

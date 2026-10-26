@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 06 · Significance of the Study</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 20px; }
+
+  .who { padding: 28px 30px; display: flex; flex-direction: column; }
+  .who header { display: flex; align-items: center; justify-content: space-between; }
+  .who .ico { width: 60px; height: 60px; padding: 14px; border-radius: 16px; background: var(--leaf-soft); color: var(--forest); }
+  .who h3 { margin-top: 22px; font-size: 29px; font-weight: 700; color: var(--forest); letter-spacing: -0.01em; line-height: 1.2; }
+  .who p { margin-top: 12px; font-size: 24px; line-height: 1.42; color: #34433a; }
+
+  .tag.practical { color: var(--leaf-deep); background: var(--leaf-soft); }
+  .tag.academic { color: #2f5d8a; background: #e3edf7; }
+  .tag.technical { color: var(--gold-deep); background: var(--gold-soft); }
+  .tag.community { color: #7a4a8c; background: #f1e6f5; }
+
+  /* The study's own contribution gets the dark card. */
+  .who.feature { background: var(--forest); border-color: var(--forest); }
+  .who.feature h3 { color: #fff; }
+  .who.feature p { color: #d5e5da; }
+  .who.feature .ico { background: var(--gold); color: var(--forest); }
+</style>
+</head>
+<body data-num="06" data-part="solution" data-eyebrow="Significance of the Study">
+<div class="slide">
+  <h1 class="title">Who benefits, and how</h1>
+
+  <div class="content">
+    <article class="card who">
+      <header><span class="ico"><i data-lucide="sprout"></i></span><span class="tag practical">Practical</span></header>
+      <h3>Hydroponic Farmers</h3>
+      <p>Less time checking towers pot by pot, especially the upper levels. Updated counts guide replanting, harvesting and space use.</p>
+    </article>
+    <article class="card who">
+      <header><span class="ico"><i data-lucide="clipboard-check"></i></span><span class="tag practical">Practical</span></header>
+      <h3>Farm Managers and Workers</h3>
+      <p>A clear per-tower record of occupancy and inspection history, with fewer counting errors.</p>
+    </article>
+    <article class="card who feature">
+      <header><span class="ico"><i data-lucide="crosshair"></i></span><span class="tag technical">Technical</span></header>
+      <h3>Technical Contribution</h3>
+      <p>Extends marker-based drone alignment from landing pads to the vertical faces of a tower, and maps each detection to its exact slot.</p>
+    </article>
+    <article class="card who">
+      <header><span class="ico"><i data-lucide="graduation-cap"></i></span><span class="tag academic">Academic</span></header>
+      <h3>Students and Researchers</h3>
+      <p>A reference for drone-based crop monitoring. The labeled dataset can support future plant health, pest or harvest-readiness studies.</p>
+    </article>
+    <article class="card who">
+      <header><span class="ico"><i data-lucide="book-open"></i></span><span class="tag academic">Academic</span></header>
+      <h3>Academic Community</h3>
+      <p>Adds to knowledge on smart farming, robotics and applied computer vision in local agriculture.</p>
+    </article>
+    <article class="card who">
+      <header><span class="ico"><i data-lucide="landmark"></i></span><span class="tag community">Community</span></header>
+      <h3>Local Community and Agricultural Offices</h3>
+      <p>Guides the promotion of affordable urban and vertical farming technology for food security.</p>
+    </article>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

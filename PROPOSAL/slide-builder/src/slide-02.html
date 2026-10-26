@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 02 · Background of the Study</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 72px 1.08fr;
+    grid-template-rows: 1fr auto;
+    gap: 26px 0;
+  }
+
+  .col-label { margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
+  .problem .col-label { color: var(--red); }
+  .approach .col-label { color: var(--leaf-deep); }
+
+  .problem { display: flex; flex-direction: column; }
+  .problem .cards { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .problem .card {
+    flex: 1;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    padding: 22px 28px;
+  }
+  .problem .card .ico {
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+    border-radius: 14px;
+    background: var(--paper);
+    color: var(--forest);
+  }
+  .problem .card.blind { border-color: #e7b9ad; background: #fffaf8; }
+  .problem .card.blind .ico { background: var(--red-soft); color: var(--red); }
+  .card h3 { font-size: 25px; font-weight: 700; color: var(--forest); letter-spacing: -0.01em; }
+  .card p { margin-top: 6px; font-size: 23px; line-height: 1.4; color: #34433a; }
+
+  .bridge { display: flex; align-items: center; justify-content: center; }
+  .bridge .ico {
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: #fff;
+  }
+
+  .approach {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-radius: 24px;
+    padding: 28px 34px 30px;
+  }
+  .approach .col-label { margin-bottom: 12px; }
+  .lead { font-size: 27px; font-weight: 600; line-height: 1.34; color: var(--forest); letter-spacing: -0.01em; }
+  .lead b { color: var(--leaf-deep); }
+
+  .steps { list-style: none; margin-top: 22px; flex: 1; display: grid; grid-template-rows: repeat(4, 1fr); gap: 12px; }
+  .steps li {
+    display: grid;
+    grid-template-columns: 50px 58px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 0 22px;
+    border-radius: 16px;
+    background: var(--leaf-tint);
+  }
+  .steps .n { font-family: var(--mono); font-size: 24px; font-weight: 700; color: var(--gold-deep); }
+  .steps .ico { width: 54px; height: 54px; padding: 12px; border-radius: 14px; background: var(--forest); color: #fff; }
+  .steps h4 { font-size: 23px; font-weight: 700; color: var(--forest); }
+  .steps p { font-size: 20px; color: var(--muted); margin-top: 2px; line-height: 1.3; }
+
+  .strip {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 20px 28px;
+    border-radius: 18px;
+    background: var(--forest);
+    color: #fff;
+  }
+  .strip .why { display: flex; align-items: center; gap: 18px; flex: 1; font-size: 22px; line-height: 1.35; }
+  .strip .why .ico { width: 30px; height: 30px; color: var(--gold); }
+  .strip .why b { color: #fff; }
+  .strip .why span { color: #c9dbd1; }
+  .sdgs { display: flex; gap: 10px; }
+  .sdg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px 8px 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .sdg i {
+    font-style: normal;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 19px;
+    color: #fff;
+  }
+</style>
+</head>
+<body data-num="02" data-part="problem" data-eyebrow="Background of the Study">
+<div class="slide">
+  <h1 class="title">Towers grow upward. Pot checks are still manual.</h1>
+
+  <div class="content">
+    <section class="problem">
+      <div class="label col-label"><span class="ico" style="width:22px;height:22px"><i data-lucide="triangle-alert"></i></span>The problem</div>
+      <div class="cards">
+        <div class="card">
+          <span class="ico"><i data-lucide="layers"></i></span>
+          <div>
+            <h3>Farms are going vertical</h3>
+            <p>Hydroponic towers stack crops in tiers to save land, and every tier adds pots to check. <span class="cite">(Despommier, 2010)</span></p>
+          </div>
+        </div>
+        <div class="card">
+          <span class="ico"><i data-lucide="clipboard-pen"></i></span>
+          <div>
+            <h3>Monitoring is still by hand</h3>
+            <p>A lettuce farm in Iloilo recorded its data manually, with inconsistent results. <span class="cite">(Domingo, 2022)</span></p>
+          </div>
+        </div>
+        <div class="card blind">
+          <span class="ico"><i data-lucide="eye-off"></i></span>
+          <div>
+            <h3>Sensors can't see empty pots</h3>
+            <p>IoT sensors track temperature, pH and nutrients, but cannot tell a planted pot from an empty one. <span class="cite">(Chowdhury et al., 2020)</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bridge"><span class="ico"><i data-lucide="arrow-right"></i></span></div>
+
+    <section class="approach">
+      <div class="label col-label"><span class="ico" style="width:22px;height:22px"><i data-lucide="lightbulb"></i></span>Our approach</div>
+      <p class="lead">A small drone flies to each registered tower, scans <b>every face, bottom to top</b>, and YOLOv8 counts <b>lettuce heads and empty pots</b>.</p>
+      <ol class="steps">
+        <li>
+          <span class="n">01</span><span class="ico"><i data-lucide="qr-code"></i></span>
+          <div><h4>QR code tower registration</h4><p>Tower unit shows a QR with the tower ID and GPS location</p></div>
+        </li>
+        <li>
+          <span class="n">02</span><span class="ico"><i data-lucide="crosshair"></i></span>
+          <div><h4>GPS + ArUco marker alignment</h4><p>GPS reaches the tower; markers hold distance, height and face</p></div>
+        </li>
+        <li>
+          <span class="n">03</span><span class="ico"><i data-lucide="scan-eye"></i></span>
+          <div><h4>Live YOLOv8 detection</h4><p>Ground laptop maps each lettuce and empty pot to its slot</p></div>
+        </li>
+        <li>
+          <span class="n">04</span><span class="ico"><i data-lucide="layout-dashboard"></i></span>
+          <div><h4>Offline-first web dashboard</h4><p>Works on local Wi-Fi; syncs when internet is available</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <div class="strip">
+      <div class="why">
+        <span class="ico"><i data-lucide="sprout"></i></span>
+        <div><b>Why it matters:</b> <span>slot availability for every tower without manual walk-throughs, at low cost, with no internet needed at the farm.</span></div>
+      </div>
+      <div class="sdgs">
+        <div class="sdg"><i style="background:#dda63a">2</i>Zero Hunger</div>
+        <div class="sdg"><i style="background:#fd6925">9</i>Industry &amp; Innovation</div>
+        <div class="sdg"><i style="background:#fd9d24">11</i>Sustainable Cities</div>
+        <div class="sdg"><i style="background:#bf8b2e">12</i>Responsible Production</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 05 · Research Objectives</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 22px; }
+
+  .general {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 26px 34px;
+    border-radius: 22px;
+    background: var(--forest);
+    color: #fff;
+  }
+  .general .label { color: var(--gold); display: flex; flex-direction: column; gap: 12px; }
+  .general .label .ico { width: 44px; height: 44px; color: var(--gold); }
+  .general p { font-size: 23px; line-height: 1.45; color: #e3ece6; }
+  .general p b { color: #fff; font-weight: 700; }
+
+  .specific-head { display: flex; justify-content: space-between; align-items: center; }
+  .specific-head .label { color: var(--forest); }
+  .specific-head small { font-size: 17px; color: var(--muted); font-weight: 500; }
+
+  .objectives { flex: 1; display: grid; grid-template-rows: repeat(5, 1fr); gap: 10px; list-style: none; }
+  .objectives li {
+    display: grid;
+    grid-template-columns: 64px 300px 1fr 230px;
+    align-items: center;
+    gap: 24px;
+    padding: 0 26px;
+  }
+  .objectives .n { font-family: var(--mono); font-size: 32px; font-weight: 700; color: var(--gold-deep); }
+  .objectives h4 { font-size: 23px; font-weight: 700; color: var(--forest); line-height: 1.2; }
+  .objectives p { font-size: 19.5px; line-height: 1.4; color: #2f3d35; }
+  .objectives .phase {
+    justify-self: end;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 16px; font-weight: 600; color: var(--leaf-deep);
+    background: var(--leaf-soft);
+    padding: 7px 12px; border-radius: 10px;
+    white-space: nowrap;
+  }
+  .objectives .phase .ico { width: 18px; height: 18px; }
+</style>
+</head>
+<body data-num="05" data-part="solution" data-eyebrow="Research Objectives">
+<div class="slide">
+  <h1 class="title">What this study sets out to do</h1>
+
+  <div class="content">
+    <section class="general">
+      <div class="label"><span class="ico"><i data-lucide="target"></i></span>General objective</div>
+      <p>To design and develop an autonomous drone-based monitoring system that <b>registers vertical hydroponic towers through a location-based QR code</b>, navigates to each tower using GPS, aligns itself using computer vision and visual markers, <b>scans every face of the tower</b> in an open space, <b>detects lettuce plants and empty planting pots</b> using computer vision, and displays tower-level records on a web-based dashboard.</p>
+    </section>
+
+    <div class="specific-head">
+      <span class="label">Specific objectives</span>
+      <small>RAD phase where each objective is achieved</small>
+    </div>
+
+    <ol class="objectives">
+      <li class="card">
+        <span class="n">01</span>
+        <h4>Baseline requirements</h4>
+        <p>Identify the existing tools, processes and challenges in monitoring vertical hydroponic farming to establish the system's baseline requirements.</p>
+        <span class="phase"><span class="ico"><i data-lucide="clipboard-list"></i></span>Requirements Planning</span>
+      </li>
+      <li class="card">
+        <span class="n">02</span>
+        <h4>Tower unit &amp; web dashboard</h4>
+        <p>Design and develop a tower unit that generates a location-based QR code, and a web dashboard for QR-based tower registration, scan requests and inspection records.</p>
+        <span class="phase"><span class="ico"><i data-lucide="pencil-ruler"></i></span>Design · Construction</span>
+      </li>
+      <li class="card">
+        <span class="n">03</span>
+        <h4>Navigation &amp; alignment</h4>
+        <p>Develop an autonomous navigation and alignment method that combines GPS waypoints, YOLOv8 tower detection, and QR code and ArUco marker positioning to scan every face of a tower.</p>
+        <span class="phase"><span class="ico"><i data-lucide="hammer"></i></span>Rapid Construction</span>
+      </li>
+      <li class="card">
+        <span class="n">04</span>
+        <h4>Detection &amp; integration</h4>
+        <p>Develop a YOLOv8 model that detects lettuce heads and empty pots from live aerial video, matches each to its exact pot, and integrates it with drone telemetry, the offline cache and the web dashboard.</p>
+        <span class="phase"><span class="ico"><i data-lucide="hammer"></i></span>Rapid Construction</span>
+      </li>
+      <li class="card">
+        <span class="n">05</span>
+        <h4>Evaluation</h4>
+        <p>Evaluate the system in terms of detection and counting accuracy, alignment and scan success, and its usefulness, ease of use and user satisfaction.</p>
+        <span class="phase"><span class="ico"><i data-lucide="flask-conical"></i></span>Cutover</span>
+      </li>
+    </ol>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

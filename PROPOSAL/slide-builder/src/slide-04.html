@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 04 · Conceptual Framework (IPO)</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; padding-bottom: 20px; }
+
+  .ipo {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 520px 56px 1fr 56px 400px;
+  }
+
+  .col { display: flex; flex-direction: column; min-height: 0; }
+  .col-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .col-head .label { color: var(--forest); }
+  .col-head small { font-size: 18px; color: var(--muted); font-weight: 500; }
+  .col-head .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); }
+
+  .arrow { display: flex; align-items: center; justify-content: center; padding-top: 40px; }
+  .arrow .ico { width: 40px; height: 40px; color: var(--leaf); }
+
+  /* Input */
+  .inputs { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .in { flex: 1; padding: 16px 20px; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; }
+  .in .ico { width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: var(--leaf-soft); color: var(--forest); align-self: start; }
+  .in h4 { font-size: 22px; font-weight: 700; color: var(--forest); }
+  .in p { font-size: 20px; line-height: 1.38; color: #34433a; margin-top: 2px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+  .chips span { font-size: 17px; font-weight: 600; padding: 4px 10px; border-radius: 8px; background: var(--paper); border: 1px solid var(--line); color: var(--forest); }
+
+  /* Process */
+  .phases { flex: 1; display: flex; flex-direction: column; gap: 14px; }
+  .phases > .phase { flex: 1; }
+  .phases > .cycle { flex: 2; }
+  .cycle .phase { flex: 1; }
+  .phase { padding: 16px 22px; display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: center; }
+  .phase .n {
+    width: 50px; height: 50px; border-radius: 14px;
+    display: grid; place-items: center;
+    font-family: var(--mono); font-size: 22px; font-weight: 700;
+    background: var(--forest); color: #fff;
+  }
+  .phase h4 { font-size: 23px; font-weight: 700; color: var(--forest); }
+  .phase p { font-size: 20px; line-height: 1.38; color: #34433a; margin-top: 2px; }
+
+  .cycle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border: 2.5px dashed var(--leaf);
+    border-radius: 22px;
+    background: var(--leaf-tint);
+  }
+  .cycle .tab {
+    position: absolute;
+    top: -15px;
+    right: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: var(--leaf);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .cycle .tab .ico { width: 16px; height: 16px; }
+
+  /* Output */
+  .out {
+    flex: 1;
+    border-radius: 22px;
+    background: var(--forest);
+    color: #fff;
+    padding: 28px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .out .sys { font-size: 29px; font-weight: 800; line-height: 1.2; letter-spacing: -0.015em; }
+  .out .sub { margin-top: auto; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #9fb8ab; }
+  .metrics { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .metric {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px; border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 23px; font-weight: 600;
+  }
+  .metric .ico { width: 44px; height: 44px; padding: 8px; border-radius: 10px; background: var(--gold); color: var(--forest); }
+
+  .feedback { height: 62px; flex: none; position: relative; }
+  .feedback > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .feedback .note {
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 18px;
+    background: var(--paper);
+    font-size: 19px; font-weight: 600; color: var(--leaf-deep);
+    white-space: nowrap;
+  }
+  .feedback .note .ico { width: 22px; height: 22px; }
+</style>
+</head>
+<body data-num="04" data-part="solution" data-eyebrow="Conceptual Framework · Input–Process–Output">
+<div class="slide">
+  <h1 class="title">From farmer needs to a working inspection system</h1>
+
+  <div class="content">
+    <div class="ipo">
+      <section class="col">
+        <div class="col-head"><span class="dot"></span><span class="label">Input</span></div>
+        <div class="inputs">
+          <div class="card in">
+            <span class="ico"><i data-lucide="users"></i></span>
+            <div><h4>Problem</h4><p>Interviews with hydroponic farmers on how they monitor towers today</p></div>
+          </div>
+          <div class="card in">
+            <span class="ico"><i data-lucide="book-open"></i></span>
+            <div><h4>Knowledge</h4><p>Literature on vertical farming, computer vision, UAVs and markers</p></div>
+          </div>
+          <div class="card in">
+            <span class="ico"><i data-lucide="cpu"></i></span>
+            <div>
+              <h4>Hardware</h4>
+              <div class="chips">
+                <span>SpeedyBee F405 Mini</span><span>GPS + compass</span><span>Pi Zero 2 W</span>
+                <span>Pi Camera V2</span><span>ESP32 tower unit</span><span>e-paper QR</span>
+                <span>ArUco markers</span><span>Ground laptop</span>
+              </div>
+            </div>
+          </div>
+          <div class="card in">
+            <span class="ico"><i data-lucide="code-xml"></i></span>
+            <div>
+              <h4>Software</h4>
+              <div class="chips"><span>YOLOv8</span><span>ArduPilot</span><span>OpenCV</span><span>Supabase</span><span>Next.js</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="arrow"><span class="ico"><i data-lucide="chevrons-right"></i></span></div>
+
+      <section class="col">
+        <div class="col-head"><span class="dot"></span><span class="label">Process</span><small>Rapid Application Development</small></div>
+        <div class="phases">
+          <div class="card phase">
+            <span class="n">1</span>
+            <div><h4>Requirements Planning</h4><p>Gather farmer needs; finalize components, scope and evaluation criteria</p></div>
+          </div>
+          <div class="cycle">
+            <span class="tab"><span class="ico"><i data-lucide="refresh-cw"></i></span>Repeated cycle</span>
+            <div class="card phase">
+              <span class="n">2</span>
+              <div><h4>User Design</h4><p>Architecture, database, dashboard UI and mission flow; full-tower scan simulated in Gazebo + SITL</p></div>
+            </div>
+            <div class="card phase">
+              <span class="n">3</span>
+              <div><h4>Rapid Construction</h4><p>Build drone and tower unit, label dataset, train YOLOv8, develop streaming, alignment and dashboard</p></div>
+            </div>
+          </div>
+          <div class="card phase">
+            <span class="n">4</span>
+            <div><h4>Cutover</h4><p>End-to-end outdoor tests: precision, recall, mAP@50, counting error, scan success; user evaluation</p></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="arrow"><span class="ico"><i data-lucide="chevrons-right"></i></span></div>
+
+      <section class="col">
+        <div class="col-head"><span class="dot"></span><span class="label">Output</span></div>
+        <div class="out">
+          <div class="sys">Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration</div>
+          <div class="sub">Reports for every tower</div>
+          <div class="metrics">
+            <div class="metric"><span class="ico"><i data-lucide="sprout"></i></span>Lettuce count</div>
+            <div class="metric"><span class="ico"><i data-lucide="circle-dashed"></i></span>Empty pot count</div>
+            <div class="metric"><span class="ico"><i data-lucide="gauge"></i></span>Slot availability</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Feedback loop: from the Output column back up into the Input column. -->
+    <div class="feedback">
+      <svg viewBox="0 0 1728 62">
+        <defs>
+          <marker id="head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#3e9b4f"/>
+          </marker>
+        </defs>
+        <path d="M1528 4 V30 Q1528 46 1512 46 H276 Q260 46 260 30 V10"
+              fill="none" stroke="#3e9b4f" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#head)"/>
+      </svg>
+      <div class="note"><span class="ico"><i data-lucide="rotate-ccw"></i></span>Feedback: flight tests, detection tests and user evaluations refine the next iteration</div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

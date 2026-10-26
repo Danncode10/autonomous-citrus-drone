@@ -1,0 +1,132 @@
+/* Section divider slides: a full-bleed Google Flow photo under a forest-green shade,
+   with the part title on the left and a five-part progress rail along the bottom. */
+
+.section { padding: 0; background: #0f3326; color: #fff; overflow: hidden; }
+
+.section .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.section .shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 36, 27, 0.95) 0%, rgba(11, 36, 27, 0.86) 32%, rgba(11, 36, 27, 0.4) 58%, rgba(11, 36, 27, 0) 78%),
+    linear-gradient(0deg, rgba(11, 36, 27, 0.85) 0%, rgba(11, 36, 27, 0) 32%);
+}
+
+.section .copy {
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 190px;
+  width: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section .part {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.section .part span {
+  padding: 6px 12px;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+
+.section h1 {
+  margin-top: 30px;
+  font-size: 136px;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.section .tease {
+  margin-top: 30px;
+  max-width: 780px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #d5e5da;
+}
+
+.section .covers { margin-top: 52px; list-style: none; display: flex; flex-wrap: wrap; gap: 12px; }
+.section .covers li {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #eef5f0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.section .rail {
+  position: absolute;
+  left: 120px;
+  right: 120px;
+  bottom: 76px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.section .rail li {
+  display: flex;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 3px solid rgba(255, 255, 255, 0.22);
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+.section .rail li b { font-family: var(--mono); font-weight: 700; }
+.section .rail li.done { border-color: var(--leaf); color: #9fd6a9; }
+.section .rail li.active { border-color: var(--gold); color: #fff; }
+.section .rail li.active b { color: var(--gold); }
+
+/* Placeholder shown until the photo file exists in figures/flow/. */
+.section .missing { display: none; }
+.section.no-photo {
+  background:
+    radial-gradient(circle at 78% 40%, rgba(62, 155, 79, 0.28), transparent 55%),
+    linear-gradient(135deg, #0f3326, #174a37);
+}
+.section.no-photo .missing {
+  position: absolute;
+  right: 120px;
+  top: 120px;
+  bottom: 210px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  border: 2.5px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 28px;
+  font-size: 22px;
+  color: #cfe0d6;
+}
+.section .missing .ico { width: 64px; height: 64px; color: var(--gold); }
+.section .missing b { font-size: 26px; color: #fff; }
+.section .missing code {
+  font-family: var(--mono);
+  font-size: 19px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--gold);
+}

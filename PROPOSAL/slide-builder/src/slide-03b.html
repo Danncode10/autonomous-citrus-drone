@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 03b · Related Literature: Navigation, Processing and Data</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="rrl.css">
+<style>
+  .rrl > div { padding-top: 12px; padding-bottom: 12px; }
+</style>
+</head>
+<body data-num="03b" data-part="problem" data-eyebrow="Related Literature · Navigation, Processing &amp; Data">
+<div class="slide">
+  <h1 class="title">Drones can align precisely, but only for landing.</h1>
+
+  <div class="content">
+    <div class="rrl">
+      <div class="th">Author</div>
+      <div class="th">Key findings</div>
+      <div class="th">Relevance to this study</div>
+
+      <div class="who"><span>Aslan et al. (2022)</span><span>Stefas et al. (2019)</span></div>
+      <div class="what">Agricultural UAVs focus on open fields and orchards; GPS is unreliable close to the ground.</div>
+      <div class="why"><p><span class="tag gap">Gap</span>No UAV study inspects a single vertical structure.</p></div>
+
+      <div class="who"><span>GPS.gov (n.d.)</span><span>Wubben et al. (2019)</span><span>Andrzejewski et al. (2026)</span></div>
+      <div class="what">GPS is accurate to a few meters; ArUco markers with a Raspberry Pi and ArduPilot enable precise landing.</div>
+      <div class="why">
+        <p><span class="tag adopted">Adopted</span>GPS gets near; markers do the final alignment.</p>
+        <p><span class="tag gap">Gap</span>Landing pads only, not vertical faces.</p>
+      </div>
+
+      <div class="who"><span>Garrido-Jurado et al. (2014)</span><span>Lepetit et al. (2009)</span></div>
+      <div class="what">ArUco markers are detected even when partly hidden; EPnP / solvePnP gives the camera pose from four corners.</div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>Distance, height and face alignment on the tower.</p></div>
+
+      <div class="who"><span>Benoit-Cattin et al. (2020)</span><span>Zhu &amp; Chen (2026)</span></div>
+      <div class="what">CNNs on a Raspberry Pi can thermally throttle; offloading depends on Wi-Fi quality (15–45 ms latency).</div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>YOLOv8 on the ground laptop; close-range corrections on the Pi.</p></div>
+
+      <div class="who"><span>Kleppmann et al. (2019)</span><span>Mirandilla-Santos (2021)</span></div>
+      <div class="what">Local-first software keeps working offline; rural Philippine connectivity is uneven.</div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>Offline cache with farmer-initiated sync.</p></div>
+    </div>
+
+    <div class="legend">
+      <span><span class="tag adopted">Adopted</span>used in our design</span>
+      <span><span class="tag gap">Gap</span>not yet addressed</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

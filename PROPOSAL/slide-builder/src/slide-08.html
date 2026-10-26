@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 08 · Research Methodology</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 22px; }
+
+  .design { flex: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .design > div { display: flex; align-items: center; gap: 16px; padding: 18px 22px; }
+  .design .ico { width: 48px; height: 48px; padding: 11px; border-radius: 12px; background: var(--leaf-soft); color: var(--forest); }
+  .design .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .design .v { font-size: 22px; font-weight: 700; color: var(--forest); margin-top: 2px; }
+  .design .v span { font-weight: 500; color: var(--muted); }
+
+  /* Four RAD phases in a row; phases 2 and 3 sit inside the repeated-cycle frame. */
+  .phases { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 2.06fr 1fr; gap: 16px; align-items: stretch; }
+  .cycle {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 14px;
+    border: 2.5px dashed var(--leaf);
+    border-radius: 24px;
+    background: var(--leaf-tint);
+  }
+  .cycle .tab {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: var(--leaf);
+    color: #fff;
+    font-size: 16px; font-weight: 700;
+    white-space: nowrap;
+  }
+  .cycle .tab .ico { width: 17px; height: 17px; }
+  .solo { padding: 14px 0; display: flex; }
+  .solo .phase { flex: 1; }
+
+  .phase { padding: 30px 28px; display: flex; flex-direction: column; justify-content: flex-start; }
+  .phase .n {
+    width: 52px; height: 52px; border-radius: 14px;
+    display: grid; place-items: center;
+    font-family: var(--mono); font-size: 23px; font-weight: 700;
+    background: var(--forest); color: #fff;
+  }
+  .phase h3 { margin-top: 20px; font-size: 30px; font-weight: 700; color: var(--forest); line-height: 1.2; }
+  .phase ul { margin-top: 20px; list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .phase li { position: relative; padding-left: 22px; font-size: 24px; line-height: 1.38; color: #34433a; }
+  .phase li::before { content: ''; position: absolute; left: 2px; top: 13px; width: 9px; height: 9px; border-radius: 50%; background: var(--leaf); }
+
+  .stages { display: grid; grid-template-columns: auto 1fr 1fr; gap: 16px; align-items: stretch; }
+  .stages .label { display: flex; align-items: center; color: var(--forest); padding-right: 6px; }
+  .stage { display: flex; align-items: center; gap: 16px; padding: 16px 22px; border-radius: 16px; background: var(--forest); color: #fff; }
+  .stage b { font-family: var(--mono); font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
+  .stage span { font-size: 19px; line-height: 1.35; color: #d5e5da; }
+</style>
+</head>
+<body data-num="08" data-part="method" data-eyebrow="Research Methodology · Research Design">
+<div class="slide">
+  <h1 class="title">Built in short cycles, tested before every flight</h1>
+
+  <div class="content">
+    <div class="design">
+      <div class="card"><span class="ico"><i data-lucide="hammer"></i></span><div><div class="k">Design</div><div class="v">Developmental research</div></div></div>
+      <div class="card"><span class="ico"><i data-lucide="split"></i></span><div><div class="k">Approach</div><div class="v">Mixed-method <span>· interviews, tests and ratings</span></div></div></div>
+      <div class="card"><span class="ico"><i data-lucide="refresh-cw"></i></span><div><div class="k">Model</div><div class="v">RAD <span>· Martin (1991)</span></div></div></div>
+    </div>
+
+    <div class="phases">
+      <div class="solo">
+        <article class="card phase">
+          <span class="n">1</span>
+          <h3>Requirements Planning</h3>
+          <ul>
+            <li>Interviews with hydroponic farmers</li>
+            <li>Site observation sheet</li>
+            <li>Select and assess components</li>
+            <li>SWOT analysis</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cycle">
+        <span class="tab"><span class="ico"><i data-lucide="refresh-cw"></i></span>Repeated until the prototype is accepted</span>
+        <article class="card phase">
+          <span class="n">2</span>
+          <h3>User Design</h3>
+          <ul>
+            <li>System architecture and database</li>
+            <li>Dashboard UI and mission flow</li>
+            <li>Full-tower scan simulated in Gazebo + ArduPilot SITL</li>
+          </ul>
+        </article>
+        <article class="card phase">
+          <span class="n">3</span>
+          <h3>Rapid Construction</h3>
+          <ul>
+            <li>Build drone, tower frame and tower unit</li>
+            <li>Label dataset in Supabox; train YOLOv8</li>
+            <li>Streaming, alignment and dashboard</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="solo">
+        <article class="card phase">
+          <span class="n">4</span>
+          <h3>Cutover</h3>
+          <ul>
+            <li>Model, flight, streaming and sync tests</li>
+            <li>End-to-end outdoor test</li>
+            <li>User evaluation and final documentation</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div class="stages">
+      <span class="label">Construction stages</span>
+      <div class="stage"><b>Stage 1</b><span>Dashboard, tower unit, dataset, Gazebo simulation, manual flight</span></div>
+      <div class="stage"><b>Stage 2</b><span>Pi + camera and GPS on the drone, visual alignment, full pipeline</span></div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

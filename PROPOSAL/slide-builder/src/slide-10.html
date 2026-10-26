@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 10 · Research Instruments</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 20px; }
+
+  .tools { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .tool { padding: 26px 26px; display: flex; flex-direction: column; }
+  .tool .ico { width: 58px; height: 58px; padding: 13px; border-radius: 15px; background: var(--leaf-soft); color: var(--forest); }
+  .tool .who { margin-top: 22px; font-family: var(--mono); font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--leaf-deep); }
+  .tool h3 { margin-top: 8px; font-size: 29px; font-weight: 700; color: var(--forest); line-height: 1.2; }
+  .tool p { margin-top: 16px; font-size: 24px; line-height: 1.42; color: #34433a; }
+  .tool .chips { margin-top: auto; padding-top: 16px; display: flex; flex-wrap: wrap; gap: 7px; }
+  .tool .chips span { font-size: 19px; font-weight: 600; padding: 6px 12px; border-radius: 8px; background: var(--paper); border: 1px solid var(--line); color: var(--forest); }
+  .tool.system { background: var(--forest); border-color: var(--forest); }
+  .tool.system .ico { background: var(--gold); color: var(--forest); }
+  .tool.system .who { color: var(--gold); }
+  .tool.system h3 { color: #fff; }
+  .tool.system p { color: #d5e5da; }
+  .tool.system .chips span { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18); color: #eef5f0; }
+
+  .validation { display: grid; grid-template-columns: 200px 1fr; gap: 14px; }
+  .validation .label { display: flex; align-items: center; color: var(--forest); }
+  .check { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; }
+  .check .ico { width: 40px; height: 40px; padding: 9px; border-radius: 50%; flex: none; }
+  .check.ok .ico { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .check.pending { border-style: dashed; border-color: var(--gold); background: #fffcf3; }
+  .check.pending .ico { background: var(--gold-soft); color: var(--gold-deep); }
+  .check h4 { font-size: 21px; font-weight: 700; color: var(--forest); display: flex; align-items: center; gap: 10px; }
+  .check p { margin-top: 4px; font-size: 18px; line-height: 1.36; color: var(--muted); }
+  .tag.confirm { color: var(--gold-deep); background: var(--gold-soft); font-size: 12px; padding: 3px 8px; }
+</style>
+</head>
+<body data-num="10" data-part="method" data-eyebrow="Research Instruments">
+<div class="slide">
+  <h1 class="title">Three instruments, plus system performance tests</h1>
+
+  <div class="content">
+    <div class="tools">
+      <article class="card tool">
+        <span class="ico"><i data-lucide="mic"></i></span>
+        <div class="who">Farmers</div>
+        <h3>Interview Questionnaire</h3>
+        <p>Six parts covering how farmers monitor towers today, rated challenges, and their views on the proposed system.</p>
+        <div class="chips"><span>Profile</span><span>Farm setup</span><span>Practices</span><span>Challenges · 5-pt</span><span>Views</span><span>Open-ended</span></div>
+      </article>
+      <article class="card tool">
+        <span class="ico"><i data-lucide="clipboard-list"></i></span>
+        <div class="who">Researchers, on site</div>
+        <h3>Site Observation Sheet</h3>
+        <p>Records the physical conditions of the towers and the area where the drone will fly.</p>
+        <div class="chips"><span>Tower height</span><span>Pots per level</span><span>Open space</span><span>Obstacles</span><span>Light and wind</span><span>GPS signal</span></div>
+      </article>
+      <article class="card tool">
+        <span class="ico"><i data-lucide="star"></i></span>
+        <div class="who">Farmers and IT experts</div>
+        <h3>USE Questionnaire</h3>
+        <p>Adapted from Lund (2001), from a 7-point to a 5-point Likert scale, with open-ended comments.</p>
+        <div class="chips"><span>Usefulness</span><span>Ease of use</span><span>Satisfaction</span></div>
+      </article>
+      <article class="card tool system">
+        <span class="ico"><i data-lucide="gauge"></i></span>
+        <div class="who">The system</div>
+        <h3>System Evaluation Tool</h3>
+        <p>Test logs from detection and flight trials in the outdoor testing area.</p>
+        <div class="chips"><span>Precision · Recall</span><span>mAP@50</span><span>Counting error</span><span>Slot matching</span><span>Alignment</span><span>Scan success</span><span>Stream delay</span><span>Flight time</span></div>
+      </article>
+    </div>
+
+    <div class="validation">
+      <span class="label">Validation</span>
+      <div class="card check ok">
+        <span class="ico"><i data-lucide="user-check"></i></span>
+        <div><h4>Adviser review</h4><p>The interview questionnaire is submitted to the thesis adviser for suggestions and approval before data gathering.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

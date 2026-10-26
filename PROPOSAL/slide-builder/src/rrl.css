@@ -1,0 +1,54 @@
+/* Literature table shared by slides 03a and 03b. */
+
+.content { display: flex; flex-direction: column; gap: 18px; }
+
+.rrl {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr 600px;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.rrl > div {
+  padding: 18px 26px;
+  border-top: 1.5px solid #ece8de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rrl .th {
+  border-top: none;
+  background: var(--forest);
+  color: #c9dbd1;
+  font-family: var(--mono);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.rrl .who {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.38;
+  color: var(--forest);
+  background: var(--leaf-tint);
+}
+.rrl .who span { display: block; }
+
+.rrl .what { font-size: 23px; line-height: 1.42; color: #2f3d35; }
+
+.rrl .why { font-size: 23px; line-height: 1.42; color: #2f3d35; display: flex; flex-direction: column; gap: 8px; }
+.rrl .why p { display: flex; gap: 12px; align-items: baseline; }
+.rrl .why .tag { flex: none; min-width: 108px; justify-content: center; }
+
+.legend { display: flex; justify-content: flex-end; gap: 26px; font-size: 18px; color: var(--muted); }
+.legend span { display: flex; align-items: center; gap: 10px; }

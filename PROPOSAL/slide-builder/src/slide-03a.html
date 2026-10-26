@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 03a · Related Literature: Monitoring and Detection</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="rrl.css">
+</head>
+<body data-num="03a" data-part="problem" data-eyebrow="Related Literature · Monitoring &amp; Detection">
+<div class="slide">
+  <h1 class="title">Sensors and detectors exist. None counts empty pots.</h1>
+
+  <div class="content">
+    <div class="rrl">
+      <div class="th">Author</div>
+      <div class="th">Key findings</div>
+      <div class="th">Relevance to this study</div>
+
+      <div class="who"><span>Chowdhury et al. (2020)</span><span>Domingo (2022)</span><span>Santiago et al. (2025)</span></div>
+      <div class="what">IoT systems monitor and control growing conditions such as temperature, light, pH, EC and water level; Chowdhury et al. display them on web and mobile apps.</div>
+      <div class="why"><p><span class="tag gap">Gap</span>They reduce maintenance work, but none checks whether a pot holds a plant.</p></div>
+
+      <div class="who"><span>Domingo (2022)</span></div>
+      <div class="what">A lettuce farm in Iloilo recorded its farm data by hand, with inconsistent results.</div>
+      <div class="why"><p><span class="tag evidence">Evidence</span>Local monitoring is still manual.</p></div>
+
+      <div class="who"><span>Wang, Wu &amp; Shen (2024)</span></div>
+      <div class="what">YOLOv8n detected hydroponic lettuce heads at about 99% precision and recall, trained on 2,240 video frames.</div>
+      <div class="why">
+        <p><span class="tag adopted">Adopted</span>YOLOv8 for detecting lettuce.</p>
+        <p><span class="tag gap">Gap</span>No empty-pot class; stable camera only.</p>
+      </div>
+
+      <div class="who"><span>Zhang et al. (2022)</span><span>Villacrés et al. (2023)</span></div>
+      <div class="what">ByteTrack keeps low-score boxes to reduce missed and broken tracks; tracking quality drives counting error.</div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>Count each pot once; check counting error against manual counts.</p></div>
+    </div>
+
+    <div class="legend">
+      <span><span class="tag adopted">Adopted</span>used in our design</span>
+      <span><span class="tag gap">Gap</span>not yet addressed</span>
+      <span><span class="tag evidence">Evidence</span>supports the problem</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

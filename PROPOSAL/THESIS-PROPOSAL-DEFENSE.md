@@ -23,7 +23,7 @@ Target length: **18 minutes** of presentation, then open forum. The talk follows
 | 10 | Research Instruments | **Method** | 0:45 | Fernandez | Three instruments plus system performance tests. |
 | 11 | Data Gathering Procedure | **Method** | 0:45 | Fernandez | Approval → interviews → build and test → user evaluation. |
 | 12 | Statistical Treatment | **Method** | 1:00 | Fernandez | Weighted mean and SD for users; precision, recall, mAP@50 and counting error for the system. |
-| 13 | Proposed System Architecture | **Build** | 2:00 | Lopez | Seven-step flow from QR registration to dashboard; offline-first. |
+| 13 | Proposed System Architecture | **System** | 2:00 | Lopez | Seven-step flow from QR registration to dashboard; offline-first. |
 | 14 | Project Timeline | **Plan** | 0:30 | Lopez | When each RAD phase happens. |
 | 15 | Expected Output | **Plan** | 0:30 | Lopez | Deliverables and benefits. |
 | 16 | Budget Requirements | **Plan** | 0:30 | Lopez | About ₱27,700 to ₱29,500 in hardware. |
@@ -43,7 +43,7 @@ Target length: **18 minutes** of presentation, then open forum. The talk follows
 * College of Information Technology Education
 * Adviser: Bernadeth B. Liggayu, MIT
 * Nueva Vizcaya State University
-* `[Date of Proposal Defense]`
+* November 3, 2026
 
 *Visual:* NVSU and CITE logos. Use Figure 5 (conceptual illustration of the drone at the tower) as the background image.
 

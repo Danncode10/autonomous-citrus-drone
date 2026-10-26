@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 03c · Research Gap</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; }
+
+  .pillars { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .pillar { padding: 28px 28px 26px; display: flex; flex-direction: column; }
+  .pillar header { display: flex; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1.5px solid #ece8de; }
+  .pillar header .ico { width: 58px; height: 58px; padding: 13px; border-radius: 14px; background: var(--leaf-soft); color: var(--forest); }
+  .pillar h3 { font-size: 27px; font-weight: 700; color: var(--forest); line-height: 1.15; }
+
+  .row { margin-top: 22px; display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+  .row.no { margin-top: auto; padding: 16px; margin-left: -16px; margin-right: -16px; margin-bottom: -10px; border-radius: 14px; background: #fff7f4; }
+  .row .ico { width: 36px; height: 36px; padding: 7px; border-radius: 50%; }
+  .row.yes .ico { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .row.no .ico { background: var(--red-soft); color: var(--red); }
+  .row .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .row.yes .k { color: var(--leaf-deep); }
+  .row.no .k { color: var(--red); }
+  .row p { font-size: 25px; line-height: 1.34; margin-top: 4px; color: #2f3d35; }
+  .row.no p { font-size: 26px; font-weight: 700; color: var(--ink); }
+  .row .src { margin-top: 12px; font-size: 18px; line-height: 1.4; color: var(--muted); font-weight: 500; }
+
+  /* Four lines converge from the pillars into the band below. */
+  .converge { height: 74px; flex: none; }
+  .converge svg { width: 100%; height: 100%; overflow: visible; }
+
+  .band {
+    flex: none;
+    border-radius: 24px;
+    background: var(--forest);
+    color: #fff;
+    padding: 28px 34px;
+    display: flex;
+    flex-direction: column;
+  }
+  .band-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .band h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; }
+  .band h2 em { font-style: normal; color: var(--gold); }
+  .band .setting { font-size: 18px; color: #b9cfc3; font-weight: 500; }
+
+  .combo { margin-top: 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .combo div {
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .combo .ico { width: 52px; height: 52px; padding: 11px; border-radius: 12px; background: var(--gold); color: var(--forest); }
+  .combo p { font-size: 22px; font-weight: 600; line-height: 1.32; }
+</style>
+</head>
+<body data-num="03c" data-part="problem" data-eyebrow="Research Gap">
+<div class="slide">
+  <h1 class="title">Each piece exists. No study puts them together.</h1>
+
+  <div class="content">
+    <div class="pillars">
+      <article class="card pillar">
+        <header><span class="ico"><i data-lucide="cpu"></i></span><h3>IoT monitoring</h3></header>
+        <div class="row yes"><span class="ico"><i data-lucide="check"></i></span><div><div class="k">Covers</div><p>Growing conditions: temperature, pH, nutrients</p><div class="src">Chowdhury et al., 2020<br>Domingo, 2022</div></div></div>
+        <div class="row no"><span class="ico"><i data-lucide="x"></i></span><div><div class="k">Missing</div><p>Whether each pot holds a plant</p></div></div>
+      </article>
+      <article class="card pillar">
+        <header><span class="ico"><i data-lucide="scan-eye"></i></span><h3>Lettuce detection</h3></header>
+        <div class="row yes"><span class="ico"><i data-lucide="check"></i></span><div><div class="k">Covers</div><p>Lettuce heads from stable, fixed cameras</p><div class="src">Wang et al., 2024<br>Petropoulou et al., 2023</div></div></div>
+        <div class="row no"><span class="ico"><i data-lucide="x"></i></span><div><div class="k">Missing</div><p>Empty pots and slot positions</p></div></div>
+      </article>
+      <article class="card pillar">
+        <header><span class="ico"><i data-lucide="map"></i></span><h3>Agricultural UAVs</h3></header>
+        <div class="row yes"><span class="ico"><i data-lucide="check"></i></span><div><div class="k">Covers</div><p>Open fields and orchard rows</p><div class="src">Aslan et al., 2022<br>Stefas et al., 2019</div></div></div>
+        <div class="row no"><span class="ico"><i data-lucide="x"></i></span><div><div class="k">Missing</div><p>Inspecting a single vertical tower</p></div></div>
+      </article>
+      <article class="card pillar">
+        <header><span class="ico"><i data-lucide="crosshair"></i></span><h3>Marker-based UAVs</h3></header>
+        <div class="row yes"><span class="ico"><i data-lucide="check"></i></span><div><div class="k">Covers</div><p>Precision landing on ground pads</p><div class="src">Wubben et al., 2019<br>Andrzejewski et al., 2026</div></div></div>
+        <div class="row no"><span class="ico"><i data-lucide="x"></i></span><div><div class="k">Missing</div><p>Holding position beside a vertical face</p></div></div>
+      </article>
+    </div>
+
+    <div class="converge">
+      <svg viewBox="0 0 1728 74" preserveAspectRatio="none">
+        <g fill="none" stroke="#3e9b4f" stroke-width="3" stroke-dasharray="7 7">
+          <path d="M210 0 C210 40 520 34 760 74"/>
+          <path d="M647 0 C647 40 800 40 840 74"/>
+          <path d="M1081 0 C1081 40 928 40 888 74"/>
+          <path d="M1518 0 C1518 40 1208 34 968 74"/>
+        </g>
+      </svg>
+    </div>
+
+    <section class="band">
+      <div class="band-head">
+        <h2>This study <em>combines all four</em> in one low-cost system</h2>
+        <span class="setting">Lettuce towers · open outdoor area · Philippine setting</span>
+      </div>
+      <div class="combo">
+        <div><span class="ico"><i data-lucide="qr-code"></i></span><p>QR code + GPS registration of each tower</p></div>
+        <div><span class="ico"><i data-lucide="navigation"></i></span><p>Layered navigation: GPS → YOLOv8 → ArUco</p></div>
+        <div><span class="ico"><i data-lucide="grid-3x3"></i></span><p>Face-by-face scan that maps every pot to its slot</p></div>
+        <div><span class="ico"><i data-lucide="wifi-off"></i></span><p>Offline-first dashboard for intermittent internet</p></div>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

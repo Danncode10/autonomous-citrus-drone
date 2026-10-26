@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 07 · Scope and Delimitation</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .col { padding: 30px 34px; display: flex; flex-direction: column; }
+  .col-head { display: flex; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1.5px solid #ece8de; }
+  .col-head .ico { width: 54px; height: 54px; padding: 12px; border-radius: 14px; }
+  .col-head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+  .col-head small { margin-left: auto; font-size: 18px; color: var(--muted); font-weight: 500; }
+
+  .scope .col-head .ico { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .scope h2 { color: var(--forest); }
+  .limits { background: #fbfaf6; }
+  .limits .col-head .ico { background: var(--red-soft); color: var(--red); }
+  .limits h2 { color: var(--red); }
+
+  .items { list-style: none; flex: 1; display: flex; flex-direction: column; justify-content: space-around; padding-top: 10px; }
+  .items li { display: grid; grid-template-columns: 34px 1fr; gap: 16px; align-items: start; font-size: 22px; line-height: 1.42; color: #2f3d35; }
+  .items li .ico { width: 34px; height: 34px; padding: 7px; border-radius: 50%; margin-top: 1px; }
+  .scope .items .ico { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .limits .items .ico { background: var(--red-soft); color: var(--red); }
+  .items b { color: var(--ink); font-weight: 700; }
+  .todo { font-size: 19px; }
+</style>
+</head>
+<body data-num="07" data-part="solution" data-eyebrow="Scope and Delimitation">
+<div class="slide">
+  <h1 class="title">What we will build, and what we leave out</h1>
+
+  <div class="content">
+    <section class="card col scope">
+      <div class="col-head"><span class="ico"><i data-lucide="circle-check"></i></span><h2>Scope</h2><small>Included</small></div>
+      <ul class="items">
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Tower registration</b> by QR code from an ESP32 tower unit with GPS and an e-paper display</div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Autonomous scan:</b> GPS to the tower, YOLOv8 + QR + ArUco alignment, every face bottom to top</div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Live detection</b> of lettuce and empty pots on the ground laptop, matched by face, level and position</div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Offline cache and dashboard:</b> SQLite cache, farmer-initiated upload to Supabase, Next.js web dashboard</div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Evaluation:</b> detection, counting, slot matching, alignment, scan success, streaming, flight time, and user ratings</div></li>
+      </ul>
+    </section>
+
+    <section class="card col limits">
+      <div class="col-head"><span class="ico"><i data-lucide="circle-minus"></i></span><h2>Delimitations</h2><small>Excluded or limited</small></div>
+      <ul class="items">
+        <li><span class="ico"><i data-lucide="minus"></i></span><div><b>Prototype only:</b> a structural frame, with no working watering or nutrient system</div></li>
+        <li><span class="ico"><i data-lucide="minus"></i></span><div><b>Lettuce only,</b> classified as occupied or empty; no disease, pest, growth-stage or weight assessment</div></li>
+        <li><span class="ico"><i data-lucide="minus"></i></span><div><b>Open outdoor area with GPS:</b> no obstacle avoidance, indoor or GPS-denied flight; 2D RGB video only, no LiDAR</div></li>
+        <li><span class="ico"><i data-lucide="minus"></i></span><div><b>Within Wi-Fi range</b> (<span class="todo">[Wi-Fi range, m]</span>); about 3–5 minutes of flight per battery, one tower per flight</div></li>
+        <li><span class="ico"><i data-lucide="minus"></i></span><div><b>Fair weather only:</b> wind ≤ <span class="todo">[max wind, km/h]</span>; no rain or night flights; no cellular, cloud GPU or commercial deployment</div></li>
+      </ul>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

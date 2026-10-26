@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 01 · Title</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .slide { padding: 0; flex-direction: row; }
+
+  .panel {
+    width: 1130px;
+    flex: none;
+    background: var(--forest);
+    color: #fff;
+    padding: 72px 96px 68px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Faint contour rings, a nod to the drone's orbit around the tower. */
+  .panel::after {
+    content: '';
+    position: absolute;
+    right: -260px;
+    bottom: -260px;
+    width: 720px;
+    height: 720px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 90px rgba(255, 255, 255, 0.025), 0 0 0 180px rgba(255, 255, 255, 0.02);
+  }
+
+  .brand { display: flex; align-items: center; gap: 22px; }
+  .brand img { width: 92px; height: 92px; border-radius: 50%; background: #fff; padding: 4px; }
+  .brand-name { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+  .brand-sub { font-size: 20px; font-weight: 500; color: #b9cfc3; margin-top: 4px; }
+
+  .kicker {
+    margin-top: 76px;
+    font-family: var(--mono);
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .kicker::before { content: ''; width: 44px; height: 3px; background: var(--gold); }
+
+  .thesis-title {
+    margin-top: 24px;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: -0.03em;
+  }
+  .thesis-title span {
+    display: block;
+    margin-top: 14px;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: #9fd6a9;
+  }
+
+  .team { margin-top: auto; }
+  .team .label { color: #9fb8ab; font-size: 16px; }
+  .names {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 40px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .names .lead { display: flex; align-items: center; gap: 12px; }
+  .names .lead em {
+    font-style: normal;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--forest);
+    background: var(--gold);
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .meta {
+    margin-top: 44px;
+    padding-top: 30px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.16);
+    display: grid;
+    grid-template-columns: 1.05fr 1.2fr 1fr;
+    gap: 32px;
+  }
+  .meta .label { color: #9fb8ab; font-size: 15px; }
+  .meta div div:last-child { margin-top: 8px; font-size: 22px; font-weight: 600; line-height: 1.3; }
+
+  .art {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 48px 36px;
+  }
+  .art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .art figcaption { display: none; }
+
+  /* Fallback until figures/flow/title-hero.jpg exists. */
+  .art.line-art img { position: static; height: 915px; width: auto; mix-blend-mode: multiply; }
+  .art.line-art figcaption { display: block; margin-top: 10px; font-size: 16px; color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body data-frame="none">
+<div class="slide">
+  <section class="panel">
+    <div class="brand">
+      <img src="../../figures/nvsu-logo.jpg" alt="NVSU logo">
+      <div>
+        <div class="brand-name">Nueva Vizcaya State University</div>
+        <div class="brand-sub">College of Information Technology Education</div>
+      </div>
+    </div>
+
+    <div class="kicker">Thesis Proposal Defense</div>
+    <h1 class="thesis-title">
+      Computer Vision and Autonomous Drone Inspection for Hydroponic Towers
+      <span>with Web Dashboard Integration</span>
+    </h1>
+
+    <div class="team">
+      <div class="label">Researchers</div>
+      <div class="names">
+        <div class="lead">Lester Dann G. Lopez <em>Leader</em></div>
+        <div>Rhoan Joy M. Marvilla</div>
+        <div>Prince Daniel A. Valentino</div>
+        <div>Joshua Jing A. Fernandez</div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div><div class="label">Program</div><div>BS Computer Science<br>BSCS 4B</div></div>
+      <div><div class="label">Thesis Adviser</div><div>Bernadeth B. Liggayu, MIT</div></div>
+      <div><div class="label">Date</div><div>November 3, 2026</div></div>
+    </div>
+  </section>
+
+  <figure class="art">
+    <img src="../../figures/flow/title-hero.jpg" alt="Drone scanning a hydroponic tower"
+         onerror="this.onerror = null; this.closest('.art').classList.add('line-art'); this.src = '../../figures/fig5-system-illustration.jpg';">
+    <figcaption>Conceptual illustration of the proposed system</figcaption>
+  </figure>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>
