@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 13 · Proposed System Architecture</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 18px; }
+
+  /* Seven steps from Figure 1, snaking left-to-right then right-to-left. */
+  .flow { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 34px; }
+  .row { display: grid; gap: 40px; position: relative; }
+  .row.top { grid-template-columns: repeat(4, 1fr); }
+  .row.bottom { grid-template-columns: repeat(3, 1fr); direction: rtl; }
+  .row.bottom > * { direction: ltr; }
+
+  .node { position: relative; padding: 20px 22px; display: flex; flex-direction: column; }
+  .node header { display: flex; align-items: center; justify-content: space-between; }
+  .node .n { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--gold-deep); }
+  .zone { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; border-radius: 7px; }
+  .zone.off { color: var(--leaf-deep); background: var(--leaf-soft); }
+  .zone.on { color: #2f5d8a; background: #e3edf7; }
+  .node .ico { margin-top: 12px; width: 48px; height: 48px; padding: 11px; border-radius: 13px; background: var(--forest); color: #fff; }
+  .node h3 { margin-top: 12px; font-size: 23px; font-weight: 700; color: var(--forest); line-height: 1.2; }
+  .node p { margin-top: 6px; font-size: 18px; line-height: 1.38; color: #34433a; }
+  .node.online { border-color: #bcd2e8; }
+  .node.online .ico { background: #2f5d8a; }
+
+  /* Arrows between nodes. */
+  .row.top .node:not(:last-child)::after,
+  .row.bottom .node:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 26px; height: 26px;
+    background: var(--leaf);
+    clip-path: polygon(0 20%, 60% 20%, 60% 0, 100% 50%, 60% 100%, 60% 80%, 0 80%);
+  }
+  .row.top .node:not(:last-child)::after { right: -34px; }
+  .row.bottom .node:not(:last-child)::after { left: -34px; transform: scaleX(-1); }
+  .row.top .node:last-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -32px;
+    width: 26px; height: 26px;
+    background: var(--leaf);
+    clip-path: polygon(20% 0, 80% 0, 80% 60%, 100% 60%, 50% 100%, 0 60%, 20% 60%);
+  }
+
+  .features { display: grid; grid-template-columns: 190px repeat(6, 1fr); gap: 12px; align-items: stretch; }
+  .features .label { display: flex; align-items: center; color: var(--forest); }
+  .feat { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; background: var(--forest); color: #eef5f0; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .feat .ico { width: 26px; height: 26px; flex: none; color: var(--gold); }
+
+  .legend { display: flex; gap: 22px; justify-content: flex-end; font-size: 17px; color: var(--muted); margin-top: -6px; }
+  .legend span { display: flex; align-items: center; gap: 8px; }
+</style>
+</head>
+<body data-num="13" data-part="build" data-eyebrow="Proposed System Architecture">
+<div class="slide">
+  <h1 class="title">From a QR code on the tower to a count on the dashboard</h1>
+
+  <div class="content">
+    <div class="flow">
+      <div class="row top">
+        <article class="card node">
+          <header><span class="n">01</span><span class="zone off">Offline</span></header>
+          <span class="ico"><i data-lucide="qr-code"></i></span>
+          <h3>Tower unit</h3>
+          <p>Farmer presses Generate; the ESP32 averages its GPS and shows a QR with tower ID, coordinates and checksum on e-paper.</p>
+        </article>
+        <article class="card node online">
+          <header><span class="n">02</span><span class="zone on">Online</span></header>
+          <span class="ico"><i data-lucide="smartphone"></i></span>
+          <h3>Register and request</h3>
+          <p>The farmer scans the QR with a phone, registers the tower in Supabase and requests a scan.</p>
+        </article>
+        <article class="card node">
+          <header><span class="n">03</span><span class="zone off">Offline</span></header>
+          <span class="ico"><i data-lucide="navigation"></i></span>
+          <h3>Fly to the tower</h3>
+          <p>The ground laptop sends the mission; the drone flies by GPS waypoint to an approach point.</p>
+        </article>
+        <article class="card node">
+          <header><span class="n">04</span><span class="zone off">Offline</span></header>
+          <span class="ico"><i data-lucide="crosshair"></i></span>
+          <h3>Align and scan</h3>
+          <p>YOLOv8 finds the tower; the Pi uses the QR and ArUco markers to hold distance, height and face, scanning each face bottom to top.</p>
+        </article>
+      </div>
+
+      <div class="row bottom">
+        <article class="card node">
+          <header><span class="n">05</span><span class="zone off">Offline</span></header>
+          <span class="ico"><i data-lucide="scan-eye"></i></span>
+          <h3>Detect and match</h3>
+          <p>Live video over local Wi-Fi to the ground laptop; YOLOv8 finds lettuce and empty pots and matches each to its pot. Saved in the offline cache.</p>
+        </article>
+        <article class="card node online">
+          <header><span class="n">06</span><span class="zone on">Online</span></header>
+          <span class="ico"><i data-lucide="cloud-upload"></i></span>
+          <h3>Sync</h3>
+          <p>When the farmer chooses and internet is available, the Sync Center uploads the results to Supabase.</p>
+        </article>
+        <article class="card node online">
+          <header><span class="n">07</span><span class="zone on">Online</span></header>
+          <span class="ico"><i data-lucide="layout-dashboard"></i></span>
+          <h3>View results</h3>
+          <p>The Next.js dashboard shows lettuce and empty pot counts per tower on a phone or computer.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><span class="zone off">Offline</span>local Wi-Fi, no internet needed</span>
+      <span><span class="zone on">Online</span>needs internet</span>
+    </div>
+
+    <div class="features">
+      <span class="label">Dashboard features</span>
+      <div class="feat"><span class="ico"><i data-lucide="qr-code"></i></span>Register towers by QR</div>
+      <div class="feat"><span class="ico"><i data-lucide="map"></i></span>Tower map (Leaflet)</div>
+      <div class="feat"><span class="ico"><i data-lucide="send"></i></span>Request scans</div>
+      <div class="feat"><span class="ico"><i data-lucide="radio"></i></span>Follow a scan live</div>
+      <div class="feat"><span class="ico"><i data-lucide="cloud-upload"></i></span>Upload cached scans</div>
+      <div class="feat"><span class="ico"><i data-lucide="history"></i></span>Inspection history</div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 11 · Data Gathering Procedure</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 22px; }
+
+  /* Five steps joined by a line, in the order Chapter 1 describes them. */
+  .steps { flex: 1; position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; list-style: none; }
+  .steps::before { content: ''; position: absolute; left: 6%; right: 6%; top: 36px; height: 3px; background: var(--leaf); opacity: 0.35; }
+  .step { position: relative; display: flex; flex-direction: column; }
+  .step .n {
+    align-self: flex-start;
+    width: 72px; height: 72px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--forest); color: #fff;
+    border: 6px solid var(--paper);
+  }
+  .step .n .ico { width: 30px; height: 30px; }
+  .step .card { margin-top: 14px; flex: 1; padding: 30px 26px; }
+  .step .k { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
+  .step h3 { margin-top: 8px; font-size: 29px; font-weight: 700; color: var(--forest); line-height: 1.2; }
+  .step ul { margin-top: 20px; list-style: none; display: flex; flex-direction: column; gap: 18px; }
+  .step li { position: relative; padding-left: 22px; font-size: 24px; line-height: 1.38; color: #34433a; }
+  .step li::before { content: ''; position: absolute; left: 2px; top: 13px; width: 9px; height: 9px; border-radius: 50%; background: var(--leaf); }
+
+  .ethics { display: grid; grid-template-columns: 180px repeat(4, 1fr); gap: 14px; align-items: stretch; }
+  .ethics .label { display: flex; align-items: center; color: var(--forest); }
+  .rule { display: flex; gap: 14px; align-items: center; padding: 16px 18px; border-radius: 16px; background: var(--forest); color: #d5e5da; font-size: 18px; line-height: 1.35; }
+  .rule .ico { width: 34px; height: 34px; flex: none; color: var(--gold); }
+  .rule b { color: #fff; }
+</style>
+</head>
+<body data-num="11" data-part="method" data-eyebrow="Data Gathering Procedure">
+<div class="slide">
+  <h1 class="title">From approval to evaluation, in five steps</h1>
+
+  <div class="content">
+    <ol class="steps">
+      <li class="step">
+        <span class="n"><span class="ico"><i data-lucide="stamp"></i></span></span>
+        <div class="card">
+          <div class="k">Step 1</div>
+          <h3>Secure approval</h3>
+          <ul>
+            <li>Questionnaire submitted to the adviser for suggestions and approval</li>
+            <li>Letter of request; approvals from school authorities and farm owners</li>
+          </ul>
+        </div>
+      </li>
+      <li class="step">
+        <span class="n"><span class="ico"><i data-lucide="mic"></i></span></span>
+        <div class="card">
+          <div class="k">Step 2</div>
+          <h3>Interview farmers</h3>
+          <ul>
+            <li>Face-to-face, about 15 minutes each</li>
+            <li>Purpose explained; informed consent obtained</li>
+            <li>Audio recorded only with permission</li>
+          </ul>
+        </div>
+      </li>
+      <li class="step">
+        <span class="n"><span class="ico"><i data-lucide="camera"></i></span></span>
+        <div class="card">
+          <div class="k">Step 3</div>
+          <h3>Observe the site</h3>
+          <ul>
+            <li>Fill in the site observation sheet</li>
+            <li>Photograph the towers, without people</li>
+            <li>Add tower images to the Supabox dataset</li>
+          </ul>
+        </div>
+      </li>
+      <li class="step">
+        <span class="n"><span class="ico"><i data-lucide="plane-takeoff"></i></span></span>
+        <div class="card">
+          <div class="k">Step 4</div>
+          <h3>Test the system</h3>
+          <ul>
+            <li>After development, run test flights and detection tests in the testing area</li>
+            <li>Record the results</li>
+          </ul>
+        </div>
+      </li>
+      <li class="step">
+        <span class="n"><span class="ico"><i data-lucide="star"></i></span></span>
+        <div class="card">
+          <div class="k">Step 5</div>
+          <h3>User evaluation</h3>
+          <ul>
+            <li>Respondents are shown how to use the system</li>
+            <li>They answer the USE Questionnaire</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <div class="ethics">
+      <span class="label">Ethics</span>
+      <div class="rule"><span class="ico"><i data-lucide="hand"></i></span><div><b>Voluntary.</b> Respondents may skip questions or stop at any time</div></div>
+      <div class="rule"><span class="ico"><i data-lucide="lock"></i></span><div><b>Data Privacy Act of 2012</b> (RA 10173); farms stay anonymous unless they agree</div></div>
+      <div class="rule"><span class="ico"><i data-lucide="shield-check"></i></span><div><b>CAAP PCAR Part 11.</b> Supervised flights, 30 m from non-participants, RC override</div></div>
+      <div class="rule"><span class="ico"><i data-lucide="sparkles"></i></span><div><b>AI tools.</b> Outputs reviewed by researchers; no personal data shared</div></div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 15 · Expected Output</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1.55fr 1fr; gap: 22px; }
+
+  .col-label { display: flex; align-items: center; gap: 12px; color: var(--forest); margin-bottom: 14px; }
+  .col-label .ico { width: 22px; height: 22px; }
+  .col { display: flex; flex-direction: column; }
+
+  .deliver { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); gap: 14px; }
+  .item { padding: 22px 24px; display: grid; grid-template-columns: 54px 1fr; gap: 18px; align-items: center; }
+  .item .ico { width: 54px; height: 54px; padding: 12px; border-radius: 14px; background: var(--leaf-soft); color: var(--forest); }
+  .item h3 { font-size: 24px; font-weight: 700; color: var(--forest); line-height: 1.2; }
+  .item p { margin-top: 6px; font-size: 19px; line-height: 1.38; color: #34433a; }
+
+  .result { flex: 1; padding: 32px 32px; border-radius: 22px; background: var(--forest); color: #fff; display: flex; flex-direction: column; }
+  .result .k { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+  .result h2 { margin-top: 10px; font-size: 30px; font-weight: 800; line-height: 1.2; letter-spacing: -0.015em; }
+  .metrics { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
+  .metric { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: 16px; background: rgba(255, 255, 255, 0.08); font-size: 24px; font-weight: 600; }
+  .metric .ico { width: 48px; height: 48px; padding: 11px; border-radius: 12px; background: var(--gold); color: var(--forest); }
+  .result p { margin-top: auto; padding-top: 24px; font-size: 20px; line-height: 1.42; color: #d5e5da; }
+  .result p b { color: #fff; }
+</style>
+</head>
+<body data-num="15" data-part="plan" data-eyebrow="Expected Output">
+<div class="slide">
+  <h1 class="title">What we will deliver</h1>
+
+  <div class="content">
+    <section class="col">
+      <div class="label col-label"><span class="ico"><i data-lucide="package-check"></i></span>Deliverables</div>
+      <div class="deliver">
+        <article class="card item">
+          <span class="ico"><i data-lucide="plane"></i></span>
+          <div><h3>Inspection drone</h3><p>SpeedyBee F405 Mini with ArduPilot, Raspberry Pi Zero 2 W and Pi Camera V2</p></div>
+        </article>
+        <article class="card item">
+          <span class="ico"><i data-lucide="qr-code"></i></span>
+          <div><h3>Tower unit and tower frame</h3><p>ESP32, GPS and e-paper QR display; frame with lettuce, empty pots and ArUco markers</p></div>
+        </article>
+        <article class="card item">
+          <span class="ico"><i data-lucide="scan-eye"></i></span>
+          <div><h3>YOLOv8 model and dataset</h3><p>Trained on lettuce, empty pot and tower frame images labeled in Supabox</p></div>
+        </article>
+        <article class="card item">
+          <span class="ico"><i data-lucide="hard-drive"></i></span>
+          <div><h3>Local dashboard</h3><p>Live Scan view, SQLite offline cache and Sync Center on the ground laptop</p></div>
+        </article>
+        <article class="card item">
+          <span class="ico"><i data-lucide="layout-dashboard"></i></span>
+          <div><h3>Web dashboard</h3><p>Next.js and Supabase: tower map, scan requests, history and exportable datasets</p></div>
+        </article>
+        <article class="card item">
+          <span class="ico"><i data-lucide="file-text"></i></span>
+          <div><h3>Test results and documentation</h3><p>Performance and user evaluation results, issues and recommendations, final manuscript</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="col">
+      <div class="label col-label"><span class="ico"><i data-lucide="sprout"></i></span>Output</div>
+      <div class="result">
+        <div class="k">A working system that reports</div>
+        <h2>For every registered tower</h2>
+        <div class="metrics">
+          <div class="metric"><span class="ico"><i data-lucide="sprout"></i></span>Lettuce count</div>
+          <div class="metric"><span class="ico"><i data-lucide="circle-dashed"></i></span>Empty pot count</div>
+          <div class="metric"><span class="ico"><i data-lucide="gauge"></i></span>Slot availability</div>
+        </div>
+        <p><b>So farmers can</b> plan replanting, harvesting and space use without checking every tower pot by pot.</p>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

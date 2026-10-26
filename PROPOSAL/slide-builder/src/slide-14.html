@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 14 · Project Timeline</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 16px; }
+
+  /* Activities in the order Chapter 1 describes; dates are placeholders until set. */
+  .plan { flex: 1; display: grid; grid-template-rows: auto repeat(8, 1fr); background: var(--card); border: 1.5px solid var(--line); border-radius: 22px; overflow: hidden; }
+  .plan > div { display: grid; grid-template-columns: 70px 260px 1fr 330px; align-items: center; padding: 0 28px; border-top: 1.5px solid #ece8de; }
+  .plan .th { border-top: none; background: var(--forest); color: #c9dbd1; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 14px; padding-bottom: 14px; }
+  .plan .n { font-family: var(--mono); font-size: 20px; font-weight: 700; color: var(--gold-deep); }
+  .plan .phase { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--leaf-deep); }
+  .plan .what { font-size: 21px; color: #2f3d35; }
+  .plan .what b { color: var(--forest); }
+  .plan .when { justify-self: end; }
+  .plan .done { background: var(--leaf-tint); }
+  .plan .done .when span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--leaf-deep); font-size: 20px; }
+  .plan .done .when .ico { width: 22px; height: 22px; }
+  .plan .cycle .phase::after { content: ' ↻'; color: var(--leaf); }
+  .todo { font-size: 18px; }
+
+  .note { display: flex; align-items: center; gap: 12px; font-size: 18px; color: var(--muted); }
+  .note .ico { width: 22px; height: 22px; color: var(--gold-deep); }
+</style>
+</head>
+<body data-num="14" data-part="plan" data-eyebrow="Project Timeline">
+<div class="slide">
+  <h1 class="title">Following the RAD phases, in order</h1>
+
+  <div class="content">
+    <div class="plan">
+      <div class="th"><span>#</span><span>RAD phase</span><span>Activity</span><span style="justify-self:end">Schedule</span></div>
+      <div class="done"><span class="n">01</span><span class="phase">Proposal</span><span class="what"><b>Thesis proposal defense</b></span><span class="when"><span><span class="ico"><i data-lucide="calendar-check"></i></span>November 3, 2026</span></span></div>
+      <div><span class="n">02</span><span class="phase">Requirements Planning</span><span class="what"><b>Interviews and site observation</b> with hydroponic farmers; SWOT analysis</span><span class="when"><span class="todo">[start – end]</span></span></div>
+      <div class="cycle"><span class="n">03</span><span class="phase">User Design</span><span class="what"><b>Architecture, database and dashboard design;</b> full-tower scan in Gazebo + SITL</span><span class="when"><span class="todo">[start – end]</span></span></div>
+      <div class="cycle"><span class="n">04</span><span class="phase">Rapid Construction</span><span class="what"><b>Stage 1:</b> dashboard, tower unit, dataset, simulation, manual flight</span><span class="when"><span class="todo">[start – end]</span></span></div>
+      <div class="cycle"><span class="n">05</span><span class="phase">Rapid Construction</span><span class="what"><b>Stage 2:</b> Pi + camera and GPS on the drone, visual alignment, full pipeline</span><span class="when"><span class="todo">[start – end]</span></span></div>
+      <div><span class="n">06</span><span class="phase">Cutover</span><span class="what"><b>Testing:</b> model, flights, streaming, offline sync, end-to-end</span><span class="when"><span class="todo">[start – end]</span></span></div>
+      <div><span class="n">07</span><span class="phase">Cutover</span><span class="what"><b>User evaluation</b> with the USE Questionnaire; data analysis</span><span class="when"><span class="todo">[start – end]</span></span></div>
+      <div><span class="n">08</span><span class="phase">Cutover</span><span class="what"><b>Final documentation</b> for the academic defense</span><span class="when"><span class="todo">[start – end]</span></span></div>
+    </div>
+    <div class="note"><span class="ico"><i data-lucide="info"></i></span>↻ User Design and Rapid Construction repeat as a cycle until each part works. Dates are set by the team; Chapter 1 does not fix a schedule.</div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

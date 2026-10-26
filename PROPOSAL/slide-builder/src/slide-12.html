@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 12 · Statistical Treatment of Data</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1fr 1.15fr; gap: 20px; }
+
+  .col { padding: 26px 28px; display: flex; flex-direction: column; }
+  .col header { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 1.5px solid #ece8de; }
+  .col header .ico { width: 52px; height: 52px; padding: 12px; border-radius: 14px; background: var(--leaf-soft); color: var(--forest); }
+  .col .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .col h3 { font-size: 25px; font-weight: 700; color: var(--forest); line-height: 1.15; margin-top: 2px; }
+
+  .metrics { margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 18px; }
+  .metrics li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; font-size: 23px; line-height: 1.38; color: #34433a; }
+  .metrics li .ico { width: 30px; height: 30px; padding: 6px; border-radius: 50%; background: var(--leaf-soft); color: var(--leaf-deep); }
+  .metrics b { color: var(--ink); }
+  .group { margin-top: 30px; font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--leaf-deep); }
+  .group + .metrics { margin-top: 10px; }
+
+  .use { background: var(--forest); border-color: var(--forest); }
+  .use header { border-color: rgba(255, 255, 255, 0.14); }
+  .use header .ico { background: var(--gold); }
+  .use .k { color: #9fb8ab; }
+  .use h3 { color: #fff; }
+  .use p { margin-top: 18px; font-size: 22px; line-height: 1.42; color: #d5e5da; }
+  .use p b { color: #fff; }
+
+  table { margin-top: 26px; width: 100%; border-collapse: collapse; font-size: 19px; color: #eef5f0; }
+  th { text-align: left; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9fb8ab; padding: 0 8px 10px 0; }
+  td { white-space: nowrap; padding: 18px 8px 18px 0; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+  td:first-child { font-family: var(--mono); font-weight: 700; color: var(--gold); width: 36px; }
+  td:last-child { font-weight: 700; color: #fff; }
+
+  .qual p { margin-top: 20px; font-size: 24px; line-height: 1.45; color: #34433a; }
+  .qual .flow { margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .qual .flow div { display: flex; align-items: center; gap: 12px; padding: 20px 18px; border-radius: 12px; background: var(--leaf-tint); font-size: 23px; font-weight: 600; color: var(--forest); }
+  .qual .flow .ico { width: 24px; height: 24px; color: var(--leaf-deep); flex: none; }
+</style>
+</head>
+<body data-num="12" data-part="method" data-eyebrow="Statistical Treatment of Data">
+<div class="slide">
+  <h1 class="title">How each kind of data will be analyzed</h1>
+
+  <div class="content">
+    <section class="card col qual">
+      <header><span class="ico"><i data-lucide="message-square-text"></i></span><div><div class="k">Qualitative · interviews</div><h3>Thematic analysis</h3></div></header>
+      <p>Interview notes and transcripts are read, coded and grouped into themes.</p>
+      <div class="flow">
+        <div><span class="ico"><i data-lucide="tag"></i></span>Code the responses</div>
+        <div><span class="ico"><i data-lucide="layers"></i></span>Group into themes: practices, challenges, views on drone monitoring</div>
+        <div><span class="ico"><i data-lucide="refresh-cw"></i></span>Update the SWOT analysis</div>
+      </div>
+    </section>
+
+    <section class="card col">
+      <header><span class="ico"><i data-lucide="gauge"></i></span><div><div class="k">Quantitative · system tests</div><h3>Performance measures</h3></div></header>
+      <div class="group">Detection model</div>
+      <ul class="metrics">
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Precision, recall, mAP@50</b></div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div><b>Counting accuracy</b> against manual counts of lettuce and empty pots</div></li>
+      </ul>
+      <div class="group">Flight tests</div>
+      <ul class="metrics">
+        <li><span class="ico"><i data-lucide="check"></i></span><div>Successful alignment rate; mean alignment error (cm)</div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div>Completed full-tower scan rate; slot matching accuracy</div></li>
+        <li><span class="ico"><i data-lucide="check"></i></span><div>Stream delay and frame loss; flight time per tower</div></li>
+      </ul>
+    </section>
+
+    <section class="card col use">
+      <header><span class="ico"><i data-lucide="star"></i></span><div><div class="k">Quantitative · USE Questionnaire</div><h3>Weighted mean and standard deviation</h3></div></header>
+      <p>Computed for each category: <b>usefulness, ease of use and user satisfaction</b>. The mean shows the average rating; the SD shows how similar the responses are.</p>
+      <table>
+        <thead><tr><th>Scale</th><th>Range</th><th>Descriptor</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>5</td><td>4.61 – 5.00</td><td>Strongly Agree</td><td>Highly Acceptable</td></tr>
+          <tr><td>4</td><td>3.41 – 4.60</td><td>Agree</td><td>Acceptable</td></tr>
+          <tr><td>3</td><td>2.61 – 3.40</td><td>Neutral</td><td>Fair</td></tr>
+          <tr><td>2</td><td>1.81 – 2.60</td><td>Disagree</td><td>Not Acceptable</td></tr>
+          <tr><td>1</td><td>1.00 – 1.80</td><td>Strongly Disagree</td><td>Highly Not Acceptable</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>
