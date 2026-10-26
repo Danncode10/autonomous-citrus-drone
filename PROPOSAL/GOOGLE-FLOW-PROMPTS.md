@@ -7,7 +7,7 @@ Four photos cover slides 1 to 10. All three use the same style so they look like
 | 1 | `figures/flow/title-hero.jpg` | Slide 1 · Title (right panel) | **3:4 portrait** | **1620 × 2160 px** or larger (if Flow has no 3:4, use 9:16 at **1536 × 2752 px**) |
 | 2 | `figures/flow/section-1-problem.jpg` ✅ done | Part 01 · The Problem (before slide 2) | **16:9 landscape** | **2752 × 1536 px** (Flow 2K) or **3840 × 2160 px** (4K) |
 | 3 | `figures/flow/section-2-solution.jpg` ✅ done | Part 02 · The Solution (before slide 4) | **16:9 landscape** | **2752 × 1536 px** (Flow 2K) or **3840 × 2160 px** (4K) |
-| 4 | `figures/flow/section-3-method.jpg` | Part 03 · The Method (before slide 8) | **16:9 landscape** | **2752 × 1536 px** (Flow 2K) or **3840 × 2160 px** (4K) |
+| 4 | `figures/flow/section-3-method.jpg` ✅ done | Part 03 · The Method (before slide 8) | **16:9 landscape** | **2752 × 1536 px** (Flow 2K) or **3840 × 2160 px** (4K) |
 
 **Why these sizes:** the slide images render at 3840 × 2160. A 16:9 photo fills a section slide exactly. The title photo fills a tall panel of 1580 × 2160 px on the right of slide 1, so 3:4 portrait fits it with very little cropping.
 
