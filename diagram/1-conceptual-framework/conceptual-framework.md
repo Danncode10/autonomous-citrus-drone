@@ -6,18 +6,20 @@ Caption (set in the document, not drawn in the image): **Figure 1.** *Conceptual
 
 ## Page 1: Conceptual Framework
 
-Six blocks, left to right and top to bottom: (1) Hydroponic Tower + Tower Unit, (2) Farmer + Web Application, (3) Database (Supabase), (4) Drone, (5) Ground Laptop, (6) Web Dashboard.
+Six blocks, left to right and top to bottom: (1) Hydroponic Tower + Tower Unit, (2) Farmer (Smartphone), (3) Database (Supabase), (4) Drone, (5) Ground Laptop, (6) Web Dashboard (Next.js). The Ground Laptop block ends with "Local offline cache" and "Local dashboard: start scan, Live Scan, Sync Center"; the Web Dashboard shows tower map, per-pot results, scan history.
 
-Numbered arrows follow the order of the explanation in Chapter 1:
+Numbered arrows follow the order of the explanation in Chapter 1. Each badge sits on its arrow line; letters (a, b) mark two arrows of the same step:
 
-1. Farmer presses Generate; the Tower Unit returns a QR with tower ID + location.
-2. Phone and Web Application register the tower / request a scan in the Database.
-3. Ground Laptop sends the mission (tower GPS, face A first) to the Drone.
+1. 1a: Farmer presses Generate (arrow to the Tower Unit). 1b: the Tower Unit returns a QR with tower ID + location.
+2. The Farmer's smartphone scans the QR code, registers the tower and requests a scan in the Database.
+3. Ground Laptop sends the mission and guidance (tower GPS, face A first, turn-to-tower commands) to the Drone.
 4. Drone flies to the tower: GPS approach, YOLO tower detection, QR/ArUco alignment, full-tower scan face by face, bottom to top.
-5. Drone streams live video + telemetry over local Wi-Fi to the Ground Laptop; dashed: backup recording after landing (gap filling).
-6. Dashed: Ground Laptop uploads to the Database when internet is available.
-7. Database feeds the Web Dashboard, which shows the farmer updated lettuce and empty pot counts per tower.
+5. 5a: Drone streams live video + telemetry over local Wi-Fi to the Ground Laptop. 5b (dashed): backup recording after landing (gap filling).
+6. Dashed, double-headed: Ground Laptop and Database exchange data when internet is available (download tower list and scan requests / upload results).
+7. 7a: Database feeds the Web Dashboard (updated lettuce and empty pot counts per tower). 7b: the Farmer uses it to view results.
 
-Dotted gray zones: "Offline (local Wi-Fi)" around blocks 1, 4, 5; "Online (internet)" around blocks 3 and 6. Block 2 straddles the shared border.
+Zones: one continuous dotted outline "Offline (local Wi-Fi)" around the Tower, Drone and Ground Laptop, and one "Online (internet)" around the Database and Web Dashboard. The Farmer block straddles the boundary (both outlines run behind it).
+
+Layout rule: every arrow label keeps at least 9 pt (12 px at 96 dpi) from every block edge. `build_figure.py` checks this on every run (plus label/label overlap, arrows crossing text, and badges sitting on their arrow line) and prints the results. The canvas is sized by the layout and scaled to 16 cm wide, so printed text is about 8.65 pt.
 
 Style: white background, black plus one gray accent, Cambria (Caladea, a metric-compatible font, is embedded in the SVG so it renders the same without Cambria), 16 cm wide, PNG at 300 dpi.

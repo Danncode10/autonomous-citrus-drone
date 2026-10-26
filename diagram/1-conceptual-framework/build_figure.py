@@ -28,7 +28,8 @@ BLACK = "#000000"
 GRAY = "#7F7F7F"  # the single gray accent: network zones, separators, zone labels
 FONT_STACK = "Cambria, Caladea, Georgia, 'Times New Roman', serif"
 
-W = 453.54  # 16 cm
+W = 453.54  # design width in pt; layout() re-sets it to fit, the SVG is always scaled to 16 cm
+PHYS_W_CM = 16.0
 TITLE_PT = 9.5
 BODY_PT = 9.0
 LABEL_PT = 9.0
@@ -64,19 +65,21 @@ def wrap(text, size, maxw):
 SEP = "---"   # thin gray rule inside a block
 DOWN = "v"    # small internal arrow inside a block
 
-BW = 98       # block width
-GAP = 68      # horizontal gap between blocks (holds the arrow labels)
-XA, XB, XC = 16, 16 + BW + GAP, 16 + 2 * (BW + GAP)
+BW = 90       # block width
+GAP_AB = 98   # gap between columns A and B (wider: holds the 4-line arrow 3 label)
+GAP_BC = 76   # gap between columns B and C
+XA = 14
+XB = XA + BW + GAP_AB
+XC = XB + BW + GAP_BC
 Y1 = 27       # top of row 1
-ROW_GAP = 62
 
 BLOCKS = {
     1: dict(col=XA, row=1, title=["Hydroponic Tower", "+ Tower Unit"],
             body=["Tower frame with lettuce, empty pots, and ArUco markers", SEP,
                   "Tower Unit: ESP32 + GPS module + e-paper QR display + Generate button"]),
-    2: dict(col=XB, row=1, title=["Farmer + Web", "Application"],
-            body=["Smartphone scans the QR code (tower ID, GPS coordinates, checksum) "
-                  "to register the tower and request a scan"]),
+    2: dict(col=XB, row=1, title=["Farmer", "(Smartphone)"],
+            body=["scans the QR code (tower ID, GPS coordinates, checksum), "
+                  "registers the tower, requests a scan"]),
     3: dict(col=XC, row=1, shape="cylinder", title=["Database", "(Supabase)"],
             body=["Stores towers, locations, scan missions, and results"]),
     4: dict(col=XA, row=2, title=["Drone"],
@@ -86,12 +89,14 @@ BLOCKS = {
     5: dict(col=XB, row=2, title=["Ground Laptop"],
             body=["Live YOLOv8 detection (tower frame, lettuce, empty pot)", DOWN,
                   "Slot matching by face, level, position", DOWN, "Slot availability", SEP,
-                  "Local offline cache"]),
-    6: dict(col=XC, row=2, title=["Web Dashboard"],
-            body=["Tower map, per-pot results, scan history, upload (Sync Center)"]),
+                  "Local offline cache", "Local dashboard: start scan, Live Scan, Sync Center"]),
+    6: dict(col=XC, row=2, title=["Web Dashboard", "(Next.js)"],
+            body=["Tower map, per-pot results, scan history"]),
 }
 
-LABEL_W = GAP - 3  # max width of a label that sits in a gap between blocks
+MARGIN = 9         # min clearance (pt) between any arrow label and a block edge (= 12 px at 96 dpi)
+LABEL_W = GAP_BC - 2 * MARGIN  # max label width in the B-C gap
+LABEL_W_AB = GAP_AB - 2 * MARGIN  # max label width in the A-B gap
 CLEAR = 7.5        # label offset from an arrow that carries a number circle
 
 
@@ -108,24 +113,40 @@ def content_height(b):
 
 
 def layout():
-    """Wrap block text, size rows, and place every block, arrow, label and zone."""
+    """Wrap block text, size rows, and place every block, arrow, label, badge and zone."""
     g = {}
+    lh = LABEL_PT * LINE
     for b in BLOCKS.values():
         b["lines"] = [p for para in b["body"]
-                      for p in ([para] if para in (SEP, DOWN) else wrap(para, BODY_PT, BW - 10))]
+                      for p in ([para] if para in (SEP, DOWN) else wrap(para, BODY_PT, BW - 8))]
     row_h = {r: max(content_height(b) + 14 + 2 * cyl(b) for b in BLOCKS.values() if b["row"] == r)
              for r in (1, 2)}
-    lh = LABEL_PT * LINE
 
-    def nlines(text):
-        return len(wrap(text, LABEL_PT, LABEL_W))
+    def wl(text, width=LABEL_W):
+        return wrap(text, LABEL_PT, width)
+
+    def wab(text):
+        return wrap(text, LABEL_PT, LABEL_W_AB)
+
+    t_gen, t_qr = "press Generate", "QR with tower ID + location"
+    t_reg = "register tower / request scan"
+    t_mis = ["mission and guidance", "(tower GPS, face A", "first, turn-to-tower", "commands)"]
+    t_vid, t_bak = "live video + telemetry over local Wi-Fi", "backup recording after landing (gap filling)"
+    t_fly = ("GPS approach \u2192 YOLO tower detection \u2192 QR/ArUco alignment \u2192 "
+             "full-tower scan, face by face, bottom to top")
+    t_sync = ["download tower list", "and scan requests /", "upload results (when", "internet is available)"]
+    t_dash = "updated lettuce and empty pot counts per tower"
+    t_view = "view results"
 
     # bottom row, Drone <-> Ground Laptop: three arrows stacked with their labels (3, 5, 5 dashed)
-    t3, t5, t5b = ("mission (tower GPS, face A first)", "live video + telemetry over local Wi-Fi",
-                   "backup recording after landing (gap filling)")
-    d5 = 10 + CLEAR + nlines(t3) * lh + 4 + nlines(t5) * lh + CLEAR
-    d5b = d5 + CLEAR + nlines(t5b) * lh + 3
-    row_h[2] = max(row_h[2], d5b + 9)
+    d3 = 10
+    d5 = d3 + MARGIN + len(t_mis) * lh + 4 + len(wab(t_vid)) * lh + MARGIN
+    d5b = d5 + MARGIN + len(wab(t_bak)) * lh + MARGIN
+    row_h[2] = max(row_h[2], d5b + 12)
+
+    # band between the rows: holds label 4, the return lane of 7 and label 6
+    lane_off = 38
+    ROW_GAP = lane_off + 7 + len(t_sync) * lh + MARGIN
     y2 = Y1 + row_h[1] + ROW_GAP
     for b in BLOCKS.values():
         b["x"], b["w"] = b["col"], BW
@@ -140,78 +161,157 @@ def layout():
     x6, y6, w6, _ = (BLOCKS[6][k] for k in "xywh")
     r1m, r1b = y1 + h1 / 2, y1 + h1
     ab, bc = (x1 + w1 + x2) / 2, (x2 + w2 + x3) / 2
-    a3y, a5y, a5by = y4 + 10, y4 + d5, y4 + d5b
-    a6x, a7x = bc - 14, bc + 12       # ⑥ and ⑦ vertical runs in the B-C gap
-    lane = r1b + 20                   # ⑦ return lane under block 2
+    a3y, a5y, a5by = y4 + d3, y4 + d5, y4 + d5b
+    up, lo = r1m - 13, r1m + 13        # the two parallel arrows between blocks 1 and 2 (and 2 -> 3)
+    a6x, a7x = bc - 14, bc + 16        # vertical runs of arrows 6 and 7 in the B-C gap
+    a7in = x2 + w2 - 16                # where arrow 7 (return) enters the Farmer block
+    a4x = x1 + 18
+    lane = r1b + lane_off              # return lane of arrow 7 under the Farmer block
+    a7dx = x3 + w3 - 18                # arrow 7 (database -> dashboard)
 
-    # arrows: id -> (points, dashed)
     g["arrows"] = {
-        "a1g": ([(x2, r1m - 13), (x1 + w1, r1m - 13)], False),
-        "a1q": ([(x1 + w1, r1m + 13), (x2, r1m + 13)], False),
-        "a2": ([(x2 + w2, r1m - 13), (x3, r1m - 13)], False),
-        "a3": ([(x5, a3y), (x4 + w4, a3y)], False),
-        "a4": ([(x4 + 18, y4), (x1 + 18, r1b)], False),
-        "a5": ([(x4 + w4, a5y), (x5, a5y)], False),
-        "a5b": ([(x4 + w4, a5by), (x5, a5by)], True),
-        "a6": ([(x5 + w5, y5 + 12), (a6x, y5 + 12), (a6x, r1b - 12), (x3, r1b - 12)], True),
-        "a7": ([(x3 + w3 - 18, r1b), (x6 + w6 - 18, y6)], False),
-        "a7b": ([(x6, y6 + 24), (a7x, y6 + 24), (a7x, lane), (x2 + w2 - 20, lane), (x2 + w2 - 20, r1b)], False),
+        "a1g": ([(x2, up), (x1 + w1, up)], False, False),
+        "a1q": ([(x1 + w1, lo), (x2, lo)], False, False),
+        "a2": ([(x2 + w2, up), (x3, up)], False, False),
+        "a3": ([(x5, a3y), (x4 + w4, a3y)], False, False),
+        "a4": ([(a4x, y4), (a4x, r1b)], False, False),
+        "a5": ([(x4 + w4, a5y), (x5, a5y)], False, False),
+        "a5b": ([(x4 + w4, a5by), (x5, a5by)], True, False),
+        "a6": ([(x5 + w5, y5 + 12), (a6x, y5 + 12), (a6x, r1b - 12), (x3, r1b - 12)], True, True),
+        "a7": ([(a7dx, r1b), (a7dx, y6)], False, False),
+        "a7b": ([(x6, y6 + 24), (a7x, y6 + 24), (a7x, lane), (a7in, lane), (a7in, r1b)], False, False),
     }
     g["hops"] = {"a7b": (a6x, lane)}
 
-    def stack(lines, top=None, bottom=None):
-        n = len(lines)
-        return top if top is not None else bottom - n * lh
+    lab, circles = [], []
 
-    lab = []  # (lines, x, y_top, anchor, number-or-None)
+    def gap_label(text, cx, top=None, bottom=None, ab_gap=False):
+        lines = text if isinstance(text, list) else (wab(text) if ab_gap else wl(text))
+        y = top if top is not None else bottom - len(lines) * lh
+        lab.append((lines, cx, y, "middle", None))
 
-    def gap_label(text, cx, top=None, bottom=None):
-        lines = wrap(text, LABEL_PT, LABEL_W)
-        lab.append((lines, cx, stack(lines, top, bottom), "middle", None))
+    # horizontal arrows: label above/below, badge on the line
+    gap_label(t_gen, ab, bottom=up - MARGIN + 1.5, ab_gap=True)
+    gap_label(t_qr, ab, top=lo + MARGIN - 1.5, ab_gap=True)
+    gap_label(t_reg, bc, bottom=up - MARGIN + 1.5)
+    gap_label(t_mis, ab, top=a3y + MARGIN - 1.5)
+    gap_label(t_vid, ab, bottom=a5y - MARGIN + 1.5, ab_gap=True)
+    gap_label(t_bak, ab, top=a5y + MARGIN - 1.5, ab_gap=True)
+    circles += [("1a", ab, up), ("1b", ab, lo), (2, bc, up), (3, ab, a3y), ("5a", ab, a5y), ("5b", ab, a5by)]
 
-    gap_label("press Generate", ab, bottom=r1m - 13 - 3)
-    gap_label("QR with tower ID + location", ab, top=r1m + 13 + 3)
-    gap_label("register tower / request scan", bc, bottom=r1m - 13 - CLEAR)
-    gap_label(t3, ab, top=a3y + CLEAR)
-    gap_label(t5, ab, bottom=a5y - CLEAR)
-    gap_label(t5b, ab, top=a5y + CLEAR)
-    lab.append((["GPS approach → YOLO tower", "detection → QR/ArUco alignment",
-                 "→ full-tower scan, face by face,", "bottom to top"],
-                x1 + 32, r1b + 8, "start", 4))
-    lab.append((["upload when internet", "is available"], a6x - 5, lane + 7, "end", 6))
-    lab.append((["updated lettuce and", "empty pot counts", "per tower"], x6 + w6 - 24, r1b + 8, "end", 7))
-    g["labels"] = lab
+    # vertical arrows: badge on the line, label beside it, vertically centred on the badge
+    mid4 = (y4 + r1b) / 2
+    l4 = wl(t_fly, 124)
+    lab.append((l4, a4x + CIRCLE_R + 5, mid4 - len(l4) * lh / 2, "start", None))
+    circles.append((4, a4x, mid4))
 
-    # number circles that sit on an arrow
-    g["circles"] = [(1, ab, r1m), (2, bc, r1m - 13), (3, ab, a3y), (5, ab, a5y)]
+    mid6 = lane + 7 + len(t_sync) * lh / 2
+    lab.append((t_sync, a6x - CIRCLE_R - 4, mid6 - len(t_sync) * lh / 2, "end", None))
+    circles.append((6, a6x, mid6))
 
-    # network zones (gray dotted); block 2 straddles the shared border
+    mid7 = (r1b + y6) / 2
+    l7 = wl(t_dash, 76)
+    lab.append((l7, a7dx - hw("7a") - 4, mid7 - len(l7) * lh / 2, "end", None))
+    circles.append(("7a", a7dx, mid7))
+
+    mid7b = (r1b + lane) / 2 + 3
+    l7b = wl(t_view)
+    lab.append((l7b, a7in - hw("7b") - 4, mid7b - len(l7b) * lh / 2, "end", None))
+    circles.append(("7b", a7in, mid7b))
+    g["labels"], g["circles"] = lab, circles
+
+    # network zones: one continuous dotted outline each. The Farmer block straddles the boundary,
+    # so both outlines run behind it (blocks are drawn on top of the zones).
+    global W
     pad = 7
     yt, yb = Y1 - pad - 12, y2 + row_h[2] + pad
-    xl, xr = x1 - pad - 3, x3 + w3 + pad + 3
-    midb = x2 + w2 / 2
-    step = r1m + 24
+    xl, xr = x1 - 10, x3 + w3 + 10
+    W = xr + xl                        # equal outer margins
+    xm = x2 + w2 / 2
+    xo = a6x + 10
+    ys = r1b + 5
     g["zones"] = [
-        [(xl, yt), (midb - 2, yt), (midb - 2, step), (bc - 2, step), (bc - 2, yb), (xl, yb)],
-        [(midb + 2, yt), (xr, yt), (xr, yb), (bc + 2, yb), (bc + 2, step + 4), (midb + 2, step + 4)],
+        [(xl, yt), (xm - 3, yt), (xm - 3, ys), (xo, ys), (xo, yb), (xl, yb)],
+        [(xm + 3, yt), (xr, yt), (xr, yb), (xo + 5, yb), (xo + 5, ys + 5), (xm + 3, ys + 5)],
     ]
     g["zone_labels"] = [("Offline (local Wi-Fi)", xl + 6, yt + 3, "start"),
                         ("Online (internet)", xr - 6, yt + 3, "end")]
     g["legend_y"] = yb + 13
-    g["H"] = yb + 22
+    g["H"] = yb + 22 + 12              # two legend rows
     return g
 
 
+def rect_gap(a, b):
+    dx = max(b[0] - a[2], a[0] - b[2], 0)
+    dy = max(b[1] - a[3], a[1] - b[3], 0)
+    return (dx * dx + dy * dy) ** 0.5
+
+
+def seg_hits_rect(p, q, r, inflate=1.0):
+    """Axis-aligned segment p-q against rectangle r=(x0,y0,x1,y1) grown by `inflate`."""
+    x0, y0, x1, y1 = r[0] - inflate, r[1] - inflate, r[2] + inflate, r[3] + inflate
+    sx0, sx1 = sorted((p[0], q[0]))
+    sy0, sy1 = sorted((p[1], q[1]))
+    return sx1 >= x0 and sx0 <= x1 and sy1 >= y0 and sy0 <= y1
+
+
+def dist_to_seg(pt, p, q):
+    (x, y), (ax, ay), (bx, by) = pt, p, q
+    dx, dy = bx - ax, by - ay
+    t = 0 if dx == dy == 0 else max(0, min(1, ((x - ax) * dx + (y - ay) * dy) / (dx * dx + dy * dy)))
+    return ((x - ax - t * dx) ** 2 + (y - ay - t * dy) ** 2) ** 0.5
+
+
 def check(g):
+    """Returns a list of problems and prints the four checks the figure is held to."""
     problems = []
+    lh = LABEL_PT * LINE
     for n, b in BLOCKS.items():
         for ln in b["title"]:
             if text_w(ln, TITLE_PT, True) > b["w"] - 8:
                 problems.append(f"block {n} title too wide: {ln!r}")
+    boxes = {n: (b["x"], b["y"], b["x"] + b["w"], b["y"] + b["h"]) for n, b in BLOCKS.items()}
+    badges = [(n, (cx - hw(n), cy - CIRCLE_R, cx + hw(n), cy + CIRCLE_R)) for n, cx, cy in g["circles"]]
+    lbls = []
     for lines, x, y, anchor, num in g["labels"]:
-        for ln in lines:
-            if anchor == "middle" and text_w(ln, LABEL_PT) > LABEL_W:
-                problems.append(f"gap label too wide: {ln!r}")
+        w = max(text_w(l, LABEL_PT) for l in lines)
+        x0 = {"middle": x - w / 2, "start": x, "end": x - w}[anchor]
+        lbls.append((lines[0], (x0, y, x0 + w, y + len(lines) * lh)))
+    # (a) labels vs block edges, other labels, badges
+    worst = 1e9
+    for name, bb in lbls:
+        for n, box in boxes.items():
+            gap = rect_gap(bb, box)
+            worst = min(worst, gap)
+            if gap < MARGIN - 0.01:
+                problems.append(f"(a) label {name!r} is {gap:.1f} pt from block {n} (need {MARGIN})")
+        for n, bd in badges:
+            if rect_gap(bb, bd) < 1.5:
+                problems.append(f"(a) label {name!r} touches badge {n}")
+    for i, (na, ba) in enumerate(lbls):
+        for nb, bb in lbls[i + 1:]:
+            if rect_gap(ba, bb) < 2:
+                problems.append(f"(a) labels {na!r} and {nb!r} touch")
+    # (b) arrows vs label text
+    for aid, (pts, dashed, both) in g["arrows"].items():
+        for name, bb in lbls:
+            for p, q in zip(pts, pts[1:]):
+                if seg_hits_rect(p, q, bb):
+                    problems.append(f"(b) arrow {aid} crosses label {name!r}")
+    # (c) every badge sits on an arrow line
+    worst_on = 0
+    for n, cx, cy in g["circles"]:
+        d = min(dist_to_seg((cx, cy), p, q) for pts, _, _ in g["arrows"].values() for p, q in zip(pts, pts[1:]))
+        worst_on = max(worst_on, d)
+        if d > 0.01:
+            problems.append(f"(c) badge {n} is {d:.2f} pt off its arrow line")
+    # (d) readability at the printed width
+    scale = PHYS_W_CM / 2.54 * 72 / W
+    smallest = min(LABEL_PT, BODY_PT, SMALL_PT, 7.8) * scale
+    print(f"(a) closest label-to-block gap {worst:.1f} pt = {worst * scale * 96 / 72 / scale:.1f} px at 96 dpi (design units)")
+    print(f"(c) worst badge offset from its arrow line: {worst_on:.3f} pt")
+    print(f"(d) print scale {scale:.3f}: labels {LABEL_PT * scale:.2f} pt, block text {BODY_PT * scale:.2f} pt, "
+          f"legend {SMALL_PT * scale:.2f} pt, badge digits {7.8 * scale:.2f} pt (smallest {smallest:.2f} pt)")
     return problems
 
 
@@ -275,9 +375,18 @@ def block_svg(n, b):
 
 
 def circle_svg(n, cx, cy):
-    return [f'<circle cx="{f2(cx)}" cy="{f2(cy)}" r="{CIRCLE_R}" fill="{BLACK}"/>',
-            f'<text x="{f2(cx)}" y="{f2(cy + 2.75)}" font-size="7.8" font-weight="bold" '
-            f'text-anchor="middle" fill="#FFFFFF">{n}</text>']
+    half = hw(n)
+    shape = (f'<circle cx="{f2(cx)}" cy="{f2(cy)}" r="{CIRCLE_R}" fill="{BLACK}"/>' if half == CIRCLE_R else
+             f'<rect x="{f2(cx - half)}" y="{f2(cy - CIRCLE_R)}" width="{f2(2 * half)}" height="{f2(2 * CIRCLE_R)}" '
+             f'rx="{CIRCLE_R}" ry="{CIRCLE_R}" fill="{BLACK}"/>')
+    return [shape, f'<text x="{f2(cx)}" y="{f2(cy + 2.75)}" font-size="7.8" font-weight="bold" '
+                   f'text-anchor="middle" fill="#FFFFFF">{n}</text>']
+
+
+def hw(n):
+    """Half width of a badge: a circle for one character, a pill for two."""
+    t = str(n)
+    return CIRCLE_R if len(t) == 1 else (text_w(t, 7.8, True) + 7) / 2
 
 
 def label_circle_x(lines, x, anchor):
@@ -288,7 +397,7 @@ def label_circle_x(lines, x, anchor):
 
 def build_svg(g):
     H = g["H"]
-    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="16cm" height="{H / 72 * 2.54:.2f}cm" '
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{PHYS_W_CM}cm" height="{H * PHYS_W_CM / W:.2f}cm" '
          f'viewBox="0 0 {f2(W)} {f2(H)}" font-family="{FONT_STACK}">',
          '<title>Conceptual Framework of the Autonomous Hydroponic Tower Monitoring System</title>']
     faces = []
@@ -300,7 +409,7 @@ def build_svg(g):
     o.append("<style>" + "".join(faces) + "</style>")
     o.append('<defs>'
              '<marker id="arr" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" '
-             f'markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="{BLACK}"/></marker>'
+             f'markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0.8 L10,5 L0,9.2 z" fill="{BLACK}"/></marker>'
              '<marker id="mini" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" '
              f'markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.5 L10,5 L0,9.5 z" fill="{BLACK}"/></marker>'
              '</defs>')
@@ -311,10 +420,11 @@ def build_svg(g):
                  f'stroke-dasharray="0.8 2.2" stroke-linecap="round" stroke-linejoin="round"/>')
     for txt, x, y, anchor in g["zone_labels"]:
         o += svg_text([txt], x, y, SMALL_PT, anchor=anchor, italic=True, fill=GRAY)
-    for aid, (pts, dashed) in g["arrows"].items():
+    for aid, (pts, dashed, both) in g["arrows"].items():
         dash = ' stroke-dasharray="3.2 2.2"' if dashed else ""
+        start = ' marker-start="url(#arr)"' if both else ""
         o.append(f'<path d="{path_d(pts, g["hops"].get(aid))}" fill="none" stroke="{BLACK}" '
-                 f'stroke-width="0.8"{dash} stroke-linejoin="round" marker-end="url(#arr)"/>')
+                 f'stroke-width="0.8"{dash} stroke-linejoin="round"{start} marker-end="url(#arr)"/>')
     for n, b in BLOCKS.items():
         o += block_svg(n, b)
     for n, cx, cy in g["circles"]:
@@ -337,9 +447,12 @@ def build_svg(g):
                  f'stroke-width="0.8"{dash}{mk}/>')
         lx += 26
         o += svg_text([txt], lx, ly - 4.5, SMALL_PT, anchor="start")
-        lx += text_w(txt, SMALL_PT) + 12
+        lx += text_w(txt, SMALL_PT) + 14
+    lx = g["zones"][0][0][0] + text_w("Legend:", SMALL_PT, True) + 8   # second row, aligned under the items
+    ly += 13
     o += circle_svg("n", lx + CIRCLE_R, ly)
-    o += svg_text(["step order"], lx + 2 * CIRCLE_R + 3, ly - 4.5, SMALL_PT, anchor="start")
+    o += svg_text(["step order (a, b = parts of the same step)"], lx + 2 * CIRCLE_R + 6, ly - 4.5, SMALL_PT,
+                  anchor="start")
     o.append("</svg>")
     return "\n".join(o)
 
@@ -373,11 +486,12 @@ def build_drawio(g):
                      f'<mxGeometry x="{f2(x)}" y="{f2(y)}" width="{f2(w)}" height="{f2(h)}" as="geometry"/></mxCell>')
 
     def circle(n, cx, cy):
-        r = CIRCLE_R * S
-        cells.append(f'<mxCell id="{nid()}" value="{n}" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;'
-                     'strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;" vertex="1" '
-                     f'parent="1"><mxGeometry x="{f2(cx * S - r)}" y="{f2(cy * S - r)}" width="{f2(2 * r)}" '
-                     f'height="{f2(2 * r)}" as="geometry"/></mxCell>')
+        r, half = CIRCLE_R * S, hw(n) * S
+        shape = "ellipse" if half == r else "rounded=1;arcSize=50"
+        cells.append(f'<mxCell id="{nid()}" value="{n}" style="{shape};whiteSpace=wrap;html=1;fillColor=#000000;'
+                     'strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Cambria;spacing=0;" '
+                     f'vertex="1" parent="1"><mxGeometry x="{f2(cx * S - half)}" y="{f2(cy * S - r)}" '
+                     f'width="{f2(2 * half)}" height="{f2(2 * r)}" as="geometry"/></mxCell>')
 
     for poly, (txt, x, y, anchor) in zip(g["zones"], g["zone_labels"]):
         polyline(poly + [poly[0]], f"endArrow=none;html=1;dashed=1;dashPattern=1 3;strokeColor={GRAY};"
@@ -386,8 +500,9 @@ def build_drawio(g):
         text(txt, x * S if anchor == "start" else x * S - tw, y * S, tw, SMALL_PT * LINE * S,
              f"fontColor={GRAY};fontStyle=2;fontSize={int(SMALL_PT * S)};"
              f"align={'left' if anchor == 'start' else 'right'};verticalAlign=top;")
-    for aid, (pts, dashed) in g["arrows"].items():
+    for aid, (pts, dashed, both) in g["arrows"].items():
         polyline(pts, "endArrow=block;endFill=1;endSize=6;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.6;"
+                      + ("startArrow=block;startFill=1;startSize=6;" if both else "")
                       + ("dashed=1;dashPattern=6 4;" if dashed else "")
                       + ("jumpStyle=arc;jumpSize=8;" if aid in g["hops"] else ""), cid=aid)
     for n, b in BLOCKS.items():
@@ -427,7 +542,8 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 
 def render_png(svg_path, png_path, H, dpi=300):
-    css_w, css_h = W * 96 / 72, H * 96 / 72
+    css_w = PHYS_W_CM / 2.54 * 96
+    css_h = css_w * H / W
     html = os.path.join(os.path.dirname(png_path), ".render.html")
     with open(html, "w") as fh:
         fh.write('<!doctype html><html><body style="margin:0;background:#fff">'
@@ -439,7 +555,8 @@ def render_png(svg_path, png_path, H, dpi=300):
                         f"--force-device-scale-factor={dpi / 96}",
                         f"--window-size={int(round(css_w))},{int(round(css_h)) + 1}",
                         f"--screenshot={raw}", "file://" + html], check=True, capture_output=True)
-        px_w, px_h = round(W / 72 * dpi), round(H / 72 * dpi)
+        px_w = round(PHYS_W_CM / 2.54 * dpi)
+        px_h = round(px_w * H / W)
         subprocess.run(["magick", raw, "-crop", f"{px_w}x{px_h}+0+0", "+repage", "-background", "white",
                         "-alpha", "remove", "-units", "PixelsPerInch", "-density", str(dpi), png_path], check=True)
     finally:
@@ -462,4 +579,4 @@ if __name__ == "__main__":
         fh.write(build_drawio(geo))
     if not args.no_png:
         render_png(svg, os.path.join(HERE, NAME + ".png"), geo["H"])
-    print(f"canvas {W / 72 * 2.54:.1f} x {geo['H'] / 72 * 2.54:.1f} cm")
+    print(f"canvas {PHYS_W_CM:.1f} x {geo['H'] * PHYS_W_CM / W:.1f} cm (design {W:.0f} x {geo['H']:.0f} pt)")
