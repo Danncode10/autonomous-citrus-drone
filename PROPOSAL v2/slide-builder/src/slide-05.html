@@ -5,38 +5,29 @@
 <title>Slide 05 · Research Objectives</title>
 <link rel="stylesheet" href="theme.css">
 <style>
-  .content { display: flex; flex-direction: column; gap: 22px; }
+  /* Wording is copied exactly from Chapter 1 v2, Objectives of the Study. */
+  .content { display: flex; flex-direction: column; gap: 12px; padding-top: 24px; }
 
   .general {
-    display: grid; grid-template-columns: 210px 1fr; gap: 30px; align-items: center;
-    padding: 24px 34px; border-radius: 22px; background: var(--forest); color: #fff;
+    display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: center;
+    padding: 16px 30px; border-radius: 20px; background: var(--forest); color: #fff;
   }
   .general .label { color: var(--gold); font-size: 16px; display: flex; flex-direction: column; gap: 12px; }
-  .general .label .ico { width: 40px; height: 40px; }
-  .general p { font-size: 25px; line-height: 1.42; color: var(--on-dark-2); }
-  .general b { color: #fff; font-weight: 700; }
+  .general .label .ico { width: 38px; height: 38px; }
+  .general p { font-size: 20px; line-height: 1.4; color: #eef5f0; }
 
-  .specific { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-  .obj { padding: 22px 22px 20px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .specific { flex: 1; min-height: 0; display: grid; grid-template-rows: auto repeat(5, auto); align-content: space-between; gap: 8px; }
+  .specific > .label { font-size: 16px; color: var(--leaf-deep); }
+  .obj { display: grid; grid-template-columns: 64px 1fr; gap: 22px; align-items: center; padding: 8px 24px 8px 14px; }
   .obj .n {
-    position: absolute; right: -6px; top: -22px;
-    font-family: var(--mono); font-size: 150px; font-weight: 700; line-height: 1;
-    color: transparent; -webkit-text-stroke: 2.5px #cfe3d1;
+    width: 46px; height: 46px; border-radius: 12px;
+    display: grid; place-items: center;
+    background: var(--leaf-soft); color: var(--forest);
+    font-family: var(--mono); font-size: 24px; font-weight: 700;
   }
-  .obj .ico { width: 66px; height: 66px; padding: 15px; border-radius: 15px; background: var(--leaf-soft); color: var(--forest); position: relative; }
-  .obj h3 { margin-top: 20px; font-size: 31px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); line-height: 1.12; }
-  .obj p { margin-top: 12px; font-size: 23px; line-height: 1.4; color: var(--body); }
-  .obj .proof { margin-top: auto; padding: 12px 14px; border-radius: 12px; background: var(--paper); }
-  .obj .proof .k, .obj .phase .k { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-  .obj .proof div:last-child { margin-top: 4px; font-size: 19px; line-height: 1.35; font-weight: 600; color: var(--forest); }
-  .obj.eval .proof { background: #fff; }
-  .obj .phase { margin-top: 14px; padding-top: 14px; border-top: 1.5px dashed var(--line); }
-  .obj .phase .k { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-  .obj .phase div:last-child { margin-top: 4px; font-size: 18px; font-weight: 700; color: var(--leaf-deep); }
+  .obj p { font-size: 20px; line-height: 1.35; color: var(--body); }
   .obj.eval { background: var(--gold-soft); border-color: #ecd9a2; }
-  .obj.eval .ico { background: var(--gold); }
-  .obj.eval .n { -webkit-text-stroke-color: #e9cf86; }
-  .obj.eval .phase div:last-child { color: var(--gold-deep); }
+  .obj.eval .n { background: var(--gold); }
 </style>
 </head>
 <body data-num="05" data-part="solution" data-eyebrow="Research Objectives">
@@ -46,50 +37,16 @@
   <div class="content">
     <section class="general">
       <div class="label"><span class="ico"><i data-lucide="target"></i></span>General objective</div>
-      <p>Design and develop an autonomous drone-based monitoring system that <b>registers towers through a printed QR code and the farmer's phone location</b>, navigates by GPS, <b>aligns using computer vision and visual markers</b>, scans every face in an open space, <b>detects lettuce and empty pots</b>, and shows tower-level records on a web dashboard.</p>
+      <p>This study aims to design and develop an autonomous drone-based monitoring system that registers vertical hydroponic towers through a printed QR code and the location of the farmer's phone, navigates to each tower using GPS, aligns itself using computer vision and visual markers, scans every face of the tower in an open space, detects lettuce plants and empty planting pots using computer vision, and displays tower-level records on a web-based dashboard.</p>
     </section>
 
     <section class="specific">
-      <article class="card obj">
-        <span class="n">1</span>
-        <span class="ico"><i data-lucide="clipboard-list"></i></span>
-        <h3>Set the baseline</h3>
-        <p>Identify the tools, process and challenges farmers face in monitoring vertical hydroponic farms.</p>
-        <div class="proof"><div class="k">Evidence</div><div>How often and how long farmers check; site conditions</div></div>
-        <div class="phase"><div class="k">RAD phase</div><div>Requirements Planning</div></div>
-      </article>
-      <article class="card obj">
-        <span class="n">2</span>
-        <span class="ico"><i data-lucide="qr-code"></i></span>
-        <h3>Offline-ready dashboard</h3>
-        <p>QR tower registration with the phone's location, scan requests and records, working even without internet.</p>
-        <div class="proof"><div class="k">Evidence</div><div>Web dashboard + local dashboard with Sync Center</div></div>
-        <div class="phase"><div class="k">RAD phase</div><div>User Design · Construction</div></div>
-      </article>
-      <article class="card obj">
-        <span class="n">3</span>
-        <span class="ico"><i data-lucide="crosshair"></i></span>
-        <h3>Navigate and align</h3>
-        <p>Combine GPS waypoints with onboard QR and ArUco positioning to scan every face of a tower.</p>
-        <div class="proof"><div class="k">Evidence</div><div>Alignment error (cm), full-tower scan success rate</div></div>
-        <div class="phase"><div class="k">RAD phase</div><div>Rapid Construction</div></div>
-      </article>
-      <article class="card obj">
-        <span class="n">4</span>
-        <span class="ico"><i data-lucide="scan-eye"></i></span>
-        <h3>Detect and integrate</h3>
-        <p>YOLOv8 for lettuce and empty pots: live preview in flight, final count from the recording, each matched to its pot.</p>
-        <div class="proof"><div class="k">Evidence</div><div>Precision, recall, mAP@50, counting error, slot matching</div></div>
-        <div class="phase"><div class="k">RAD phase</div><div>Rapid Construction</div></div>
-      </article>
-      <article class="card obj eval">
-        <span class="n">5</span>
-        <span class="ico"><i data-lucide="gauge"></i></span>
-        <h3>Evaluate</h3>
-        <p>Detection and counting accuracy, alignment and scan success, usefulness, ease of use and satisfaction.</p>
-        <div class="proof"><div class="k">Evidence</div><div>Weighted mean and SD of the adapted USE ratings</div></div>
-        <div class="phase"><div class="k">RAD phase · see slide 12</div><div>Cutover</div></div>
-      </article>
+      <div class="label">Specific objectives</div>
+      <div class="card obj"><span class="n">1</span><p>To identify the existing tools, process, and challenges in monitoring vertical hydroponic farming to establish the system's baseline requirements.</p></div>
+      <div class="card obj"><span class="n">2</span><p>To design and develop a web dashboard for QR-based tower registration using the location of the farmer's phone, scan requests, and inspection records that works even when the farm has no internet connection.</p></div>
+      <div class="card obj"><span class="n">3</span><p>To develop an autonomous navigation and alignment method that combines GPS waypoints with onboard QR code and ArUco marker positioning to scan every face of a tower.</p></div>
+      <div class="card obj"><span class="n">4</span><p>To develop a YOLOv8 computer vision model that detects lettuce heads and empty planting pots from the aerial video, shown as a live preview during flight and finalized from the full onboard recording after landing, and matches each detection to its exact pot on the tower, and to integrate it with the drone telemetry, offline cache, and web dashboard into a unified crop tracking system.</p></div>
+      <div class="card obj eval"><span class="n">5</span><p>To evaluate the system in terms of detection and counting accuracy, alignment and scan success, and its usefulness, ease of use, and user satisfaction.</p></div>
     </section>
   </div>
 </div>

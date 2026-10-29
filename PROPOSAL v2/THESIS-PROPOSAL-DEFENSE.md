@@ -31,7 +31,7 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 | 13b | Proposed System Architecture · Scan Sequence | **System** | 0:55 | Lopez | How one scan runs, and the failsafes. |
 | 13c | Proposed System Architecture · Technical Design | **System** | 0:35 | Lopez | Power, flight control, companion computer, ground link. |
 | 13d | Proposed System Architecture · Key Features | **System** | 0:35 | Lopez | Architecture layers and dashboard features. |
-| 14 | Project Timeline (Gantt Chart) | **Plan** | 0:25 | Lopez | Six months along the RAD phases. |
+| 14 | Project Timeline (Gantt Chart) | **Plan** | 0:25 | Lopez | Proposed six-month schedule along the RAD phases (not set in Chapter 1 v2). |
 | 15 | Expected Output | **Plan** | 0:35 | Lopez | Anticipated benefits and deliverables. |
 | 16 | Budget Requirements | **Plan** | 0:30 | Lopez | About ₱25,600 to ₱28,500 in hardware. |
 | 17 | Thank You / Open Forum | Closing | 0:10 | All | Invite questions. |
@@ -110,7 +110,7 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 | Mirandilla-Santos (2021); Serafica et al. (2023); Mayta et al. (2026) | **92%** of barangays have cell signal, rural areas lag; offline-first app kept 100% sync. | **Evidence:** internet can't be assumed. **Adopted:** offline cache + Sync Center. |
 | Schulze Schwering et al. (2022); Supabase (n.d.) | FMIS useful but underused; Supabase Realtime pushes changes live. | **Adopted:** Supabase + Next.js dashboard. |
 | Meier et al. (2022); ArduPilot Dev Team (n.d.); CAAP (2026) | Wind estimation from flight data; battery failsafe RTL; Part 11 open category (≤25 kg, VLOS, <120 m, daylight, **30 m** from others). | **Adopted:** fair-weather flights, RTL failsafes, open-category rules. |
-| Fauzi et al. (2023); Hajesmaeel-Gohari et al. (2022) | RAD has the shortest completion time among SDLC models; USE questionnaire: 30 items, 7-point. | **Adopted:** RAD; USE adapted to 5 points. |
+| Fauzi et al. (2023); Hajesmaeel-Gohari et al. (2022) | RAD has the shortest completion time among SDLC models; USE questionnaire: 30 items in four sections (usefulness, ease of use, ease of learning, satisfaction), 7-point. | **Adopted:** RAD; USE adapted to 5 points. |
 
 **Slide 3d: Research Gap**
 
@@ -188,7 +188,7 @@ To design and develop an autonomous drone-based monitoring system that registers
 **Research Design**
 
 * **Developmental research design**, **mixed-method** (interviews + tests and ratings), **RAD** (Fauzi et al., 2023).
-* **Phase 1 – Requirements Planning:** interviews, including how often and how long checks take; site observation; component selection; SWOT.
+* **Phase 1 – Requirements Planning:** interviews, including how often and how long checks take; site observation; components rated on availability, cost, weight, compatibility; SWOT.
 * **Phase 2 – User Design:** architecture, sign and marker layout, mission and slot matching, Supabase schema, dashboard shown to users, Gazebo + SITL (full scan, lost markers, lost Wi-Fi).
 * **Phase 3 – Rapid Construction:** drone build, thrust test, AutoTune; 1.5 m tower, sign, markers; ~2,000 labeled images → YOLOv8; streaming, alignment, cache, dashboards. Stage 1, then Stage 2.
 * **Phase 4 – Cutover:** model, flight, streaming and sync tests; end to end; USE evaluation; documentation.
@@ -196,7 +196,7 @@ To design and develop an autonomous drone-based monitoring system that registers
 **Slide 8b: Research Methodology · Dataset**
 
 * About **2,000 labeled images**: ≥ 1,500 with lettuce, ≥ 1,500 with empty pots, 5–10% background.
-* Basis: Wang et al. (2024) used 2,240 frames; Ultralytics recommends ≥ 1,500 images per class.
+* Basis: Wang et al. (2024) used 2,240 frames; meets the Ultralytics guideline of at least 1,500 images per class.
 * Capture from every side, distance and lighting → one frame per ~1 s → label in Supabox (YOLO format) → train YOLOv8.
 * Split 70/20/10 (~1,400 / ~400 / ~200); each recording session stays in one set.
 
@@ -238,7 +238,7 @@ To design and develop an autonomous drone-based monitoring system that registers
 1. **Secure Approval:** letter of request; approval from school authorities and the farm owner.
 2. **Validation of Instruments:** interview questionnaire reviewed and approved by the adviser.
 3. **Data Collection:** ~15-min interviews with informed consent; observation checklist; tower photos into the Supabox dataset; test flights; then the survey questionnaire.
-4. **Data Processing:** code interview responses; log test results per tower and flight; tally ratings per category.
+4. **Data Processing:** data organized and categorized; interview responses coded; flight and detection test results recorded.
 5. **Data Analysis:** themes update the SWOT; performance metrics; weighted mean and SD.
 
 *Ethics:* voluntary; RA 10173; consent for audio and photos, towers not people; AI use disclosed.
@@ -248,7 +248,7 @@ To design and develop an autonomous drone-based monitoring system that registers
 **Slide 12: Statistical Treatment of Data**
 
 * **Precision** = TP / (TP + FP) · **Recall** = TP / (TP + FN) · **mAP@50**.
-* **Counting error per tower** = |system − manual| / manual × 100% · **Slot matching accuracy** = correct slots / total slots × 100%.
+* **Counting error per tower:** system counts compared with manual counts of lettuce and empty pots · **Slot matching accuracy:** status assigned to each slot compared with the actual pot.
 * **Flight tests:** alignment success rate, mean alignment error (cm), full-tower scan completion, stream delay and frame loss, flight time per tower.
 * **Weighted mean** x̄ = Σfx / n and **standard deviation** per category.
 * **Thematic analysis** of interviews → SWOT.
