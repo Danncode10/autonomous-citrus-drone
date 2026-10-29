@@ -4,14 +4,15 @@ Proposal defense deck rebuilt from **Chapter 1 v2.docx**, which now holds the Re
 
 | File | What it is |
 | ----- | ----- |
-| `slides/` | 35 rendered slides, 3840 × 2160 PNG. Insert each as a full-slide picture in a 16:9 PowerPoint. |
+| `slides/` | 36 rendered slides, 3840 × 2160 PNG. Insert each as a full-slide picture in a 16:9 PowerPoint. |
 | `DEFENSE-SCRIPT.md` | What to say on each slide, and who says it. |
 | `QA-PREP.md` | Short answers to likely panel questions. |
+| `INTERVIEW-SAVARA.md` | Transcribed answers from the Savara Lettuce Farm interview; photos in `figures/interview/`. |
 | `THESIS-PROPOSAL-DEFENSE.md` | Slide-by-slide content, mapped to the school template. |
 | `figures/` | NVSU logo, the Google Flow photos from v1, and Figures 1, 3, 5, 6, 7 taken from Chapter 1 v2. |
 | `slide-builder/` | HTML source of every slide and `build.py`, which renders them. |
 
-## Slide order for PowerPoint (35 slides)
+## Slide order for PowerPoint (36 slides)
 
 Slides follow the school template (`PROPOSAL/THESIS-PROPOSAL-DEFENSE-Template.docx.md`) the same way v1 did. Each slide keeps its template number, and a template slide that needs more room is split into lettered slides (02a, 02b, 03a…). Every element the template asks for is on its slide. The parts not yet in Chapter 1 v2 show as yellow `[ ]` blanks.
 
@@ -35,23 +36,24 @@ Slides follow the school template (`PROPOSAL/THESIS-PROPOSAL-DEFENSE-Template.do
 | 16 |  | slide-08-0-section-method.png | Section: The Method |
 | 17 | 8 | slide-08a.png | Research Methodology · Research Design |
 | 18 | 8 | slide-08b.png | Research Methodology · Dataset (2,000 labeled images) |
-| 19 | 9 | slide-09.png | Locale and Participants |
-| 20 | 10 | slide-10.png | Research Instruments |
-| 21 | 11 | slide-11.png | Data Gathering Procedure |
-| 22 | 12 | slide-12.png | Statistical Treatment of Data |
-| 23 |  | slide-13-0-section-system.png | Section: The System |
-| 24 | 13 | slide-13a.png | Proposed System Architecture (Figure 6) |
-| 25 | 13 | slide-13b.png | Proposed System Architecture · Scan Sequence |
-| 26 | 13 | slide-13c.png | Proposed System Architecture · Technical Design (Figure 7) |
-| 27 | 13 | slide-13d.png | Proposed System Architecture · Key Features |
-| 28 |  | slide-14-0-section-plan.png | Section: The Plan |
-| 29 | 14 | slide-14.png | Project Timeline (Gantt Chart) |
-| 30 | 15 | slide-15.png | Expected Output |
-| 31 | 16 | slide-16.png | Budget Requirements |
-| 32 | 17 | slide-17.png | Thank You / Open Forum |
-| 33 |  | slide-A1.png | Backup A: SWOT |
-| 34 |  | slide-A2.png | Backup B: Safety and regulation |
-| 35 |  | slide-A3.png | Backup C: Hardware components |
+| 19 | 9 | slide-09a.png | Locale and Participants |
+| 20 | 9 | slide-09b.png | Locale and Participants · Preliminary Interview at Savara |
+| 21 | 10 | slide-10.png | Research Instruments |
+| 22 | 11 | slide-11.png | Data Gathering Procedure |
+| 23 | 12 | slide-12.png | Statistical Treatment of Data |
+| 24 |  | slide-13-0-section-system.png | Section: The System |
+| 25 | 13 | slide-13a.png | Proposed System Architecture (Figure 6) |
+| 26 | 13 | slide-13b.png | Proposed System Architecture · Scan Sequence |
+| 27 | 13 | slide-13c.png | Proposed System Architecture · Technical Design (Figure 7) |
+| 28 | 13 | slide-13d.png | Proposed System Architecture · Key Features |
+| 29 |  | slide-14-0-section-plan.png | Section: The Plan |
+| 30 | 14 | slide-14.png | Project Timeline (Gantt Chart) |
+| 31 | 15 | slide-15.png | Expected Output |
+| 32 | 16 | slide-16.png | Budget Requirements |
+| 33 | 17 | slide-17.png | Thank You / Open Forum |
+| 34 |  | slide-A1.png | Backup A: SWOT |
+| 35 |  | slide-A2.png | Backup B: Safety and regulation |
+| 36 |  | slide-A3.png | Backup C: Hardware components |
 
 ## Rebuilding a slide
 

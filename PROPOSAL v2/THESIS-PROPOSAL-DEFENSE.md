@@ -24,7 +24,8 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 | 7 | Scope and Delimitation | **Solution** | 0:55 | Valentino | What we build, and the limits we fly within. |
 | 8a | Research Methodology · Research Design | **Method** | 0:55 | Fernandez | Developmental, mixed-method, RAD with simulation first. |
 | 8b | Research Methodology · Dataset | **Method** | 0:45 | Fernandez | About 2,000 labeled images, split 70/20/10. |
-| 9 | Locale and Participants | **Method** | 0:35 | Fernandez | Busilac and Savara Lettuce Farm; 4 respondents by total enumeration. |
+| 9a | Locale and Participants | **Method** | 0:35 | Fernandez | Busilac and Savara Lettuce Farm; 4 respondents by total enumeration. |
+| 9b | Locale and Participants · Preliminary Interview | **Method** | 0:50 | Fernandez | The Savara interview is already done; what the farm owner said shaped the design. |
 | 10 | Research Instruments | **Method** | 0:45 | Fernandez | Survey, interview guide, observation checklist, system evaluation tool. |
 | 11 | Data Gathering Procedure | **Method** | 0:35 | Fernandez | Approval → validation → collection → processing → analysis. |
 | 12 | Statistical Treatment of Data | **Method** | 0:45 | Fernandez | Precision, recall, mAP@50, counting error; weighted mean and SD. |

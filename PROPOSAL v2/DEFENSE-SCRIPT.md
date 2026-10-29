@@ -150,9 +150,15 @@ The model learns from about 2,000 labeled images, at least 1,500 each for lettuc
 
 ---
 
-## slide-09.png · Locale and Participants (Fernandez)
+## slide-09a.png · Locale and Participants (Fernandez)
 
 Flight tests will be in Busilac, Bayombong, and interviews at Savara Lettuce Farm, the only hydroponic farm in Bayombong. Our respondents are one farmer and three IT experts, four in total, by total enumeration.
+
+---
+
+## slide-09b.png · Locale and Participants · Preliminary Interview (Fernandez)
+
+We have already done our first interview at Savara Lettuce Farm, on October 11. The farm owner, who has three years in hydroponics, checks the towers herself every day, by eye only, with no records. She strongly agreed that the upper levels are hard to see or reach, and agreed there aren't enough workers to check as often as she wants. She already uses pH, temperature and humidity sensors, but none of them counts pots. She is interested in our system, would use it on a smartphone, and asked for a website for real-time monitoring. Her concerns were cost, the drone hitting plants, and propeller wind. So we keep the system low-cost, use markers to hold a safe, steady distance, build a phone-ready dashboard with scan history, and save images for later health checks.
 
 ---
 

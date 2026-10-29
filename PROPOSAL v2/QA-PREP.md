@@ -20,6 +20,12 @@ The Raspberry Pi is too slow and can overheat (Shalash et al., 2026). The laptop
 **Why not train an AI model to find the tower after GPS, instead of using markers?**
 GPS gets the drone within about 4.9 m. From there, the drone has to steer itself, and its small computer can't run AI fast enough to steer; YOLO runs under 3 frames per second even on bigger Raspberry Pis (Shalash et al., 2026). Running the AI on the laptop doesn't work either, because Wi-Fi lag makes remote steering unsafe near the tower (Zhu & Chen, 2026). An AI model would also only find *a* tower, and it can't tell identical towers apart. Our approach is different: the QR code on the tower sign says *which* tower and face A, and the ArUco markers, at known positions on each face, run fast on the drone and give its exact distance and angle (OpenCV; Kalaitzakis et al., 2021). So AI does what it's best at, counting lettuce and empty pots, and markers do what they're best at, precise positioning.
 
+**Savara has Wi-Fi. Why design for offline?**
+Savara is one farm. Rural connectivity is uneven (Mirandilla-Santos, 2021; Serafica et al., 2023), and the scan should not depend on Wi-Fi reaching every tower.
+
+**Savara's towers are in a net house. Your study flies outdoors?**
+Savara is our needs-assessment site: the interview tells us how farmers monitor. Flight tests use our own 1.5 m tower in an open area in Busilac, as stated in our scope.
+
 **What if the Wi-Fi drops mid-scan?**
 The drone keeps scanning, because it steers itself. The final count comes from the full video saved on the drone.
 
