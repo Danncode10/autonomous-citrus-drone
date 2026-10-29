@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 07 · Scope and Delimitation</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1000px 1fr; gap: 30px; }
+
+  /* Flight envelope: a side view of the test, drawn to show every limit at once. */
+  .envelope { position: relative; overflow: hidden; background: linear-gradient(180deg, #eef6f0 0%, #fbfaf5 70%); }
+  .envelope > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .envelope .label.head { position: absolute; left: 26px; top: 22px; font-size: 15px; color: var(--muted); }
+
+  .chip {
+    position: absolute;
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 16px 10px 10px; border-radius: 14px;
+    background: #fff; border: 1.5px solid var(--line);
+    box-shadow: 0 6px 18px rgba(18, 57, 43, 0.08);
+  }
+  .chip .ico { width: 40px; height: 40px; padding: 9px; border-radius: 10px; background: var(--leaf-soft); color: var(--forest); }
+  .chip b { display: block; font-size: 22px; font-weight: 800; color: var(--forest); letter-spacing: -0.01em; line-height: 1.1; }
+  .chip span.s { display: block; margin-top: 2px; font-size: 15px; color: var(--muted); }
+  .chip.warn .ico { background: var(--gold-soft); color: var(--gold-deep); }
+  .chip .todo { font-size: 18px; padding: 0 8px; }
+
+  .right { display: flex; flex-direction: column; gap: 16px; }
+  .scope { flex: 1; padding: 22px 26px; }
+  .scope header, .out header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .scope header .ico, .out header .ico { width: 34px; height: 34px; padding: 6px; border-radius: 50%; }
+  .scope header .ico { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .scope h3, .out h3 { font-size: 26px; font-weight: 800; color: var(--forest); }
+  .scope ul { list-style: none; }
+  .scope li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; padding: 13px 0; border-top: 1.5px dashed var(--line-soft); font-size: 21px; line-height: 1.35; color: var(--body); }
+  .scope li:first-child { border-top: none; }
+  .scope li .ico { width: 22px; height: 22px; margin-top: 2px; color: var(--leaf-deep); }
+  .scope li b { color: var(--ink); }
+
+  .scope .sub, .out .sub { margin-left: auto; font-size: 16px; font-weight: 600; color: var(--muted); }
+  .out { padding: 20px 26px; background: #fffaf8; border-color: #ecc9bf; }
+  .out header .ico { background: var(--red-soft); color: var(--red); }
+  .out h3 { color: var(--red); }
+  .out .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .out .chips span { padding: 6px 12px; border-radius: 8px; background: var(--red-soft); color: #7d2f20; font-size: 17px; font-weight: 600; }
+</style>
+</head>
+<body data-num="07" data-part="solution" data-eyebrow="Scope and Delimitation">
+<div class="slide">
+  <h1 class="title">What we build, and <em>the limits we fly within</em></h1>
+
+  <div class="content">
+    <section class="card envelope">
+      <svg viewBox="0 0 1000 700" fill="none" preserveAspectRatio="xMidYMax meet">
+        <!-- ground -->
+        <rect x="0" y="600" width="1000" height="100" fill="#dfe9d9"/>
+        <path d="M0 600 H1000" stroke="#9db59a" stroke-width="3"/>
+
+        <!-- ceiling at 1.8 m -->
+        <path d="M40 228 H960" stroke="#b4452f" stroke-width="3" stroke-dasharray="12 10"/>
+        <text x="960" y="214" text-anchor="end" font-family="JetBrains Mono" font-size="19" font-weight="700" fill="#b4452f">CEILING ≤ 1.8 m (6 ft)</text>
+
+        <!-- tower, 1.5 m, on a printed base -->
+        <g transform="translate(760 0)">
+          <ellipse cx="0" cy="600" rx="74" ry="12" fill="#2d6a4a"/>
+          <rect x="-70" y="578" width="140" height="22" rx="6" fill="#3b8059"/>
+          <rect x="-24" y="290" width="48" height="290" rx="4" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="2"/>
+          <g fill="#7cc46a">
+            <circle cx="-40" cy="330" r="17"/><circle cx="40" cy="380" r="17"/><circle cx="-40" cy="430" r="17"/>
+            <circle cx="40" cy="480" r="17"/><circle cx="-40" cy="530" r="17"/>
+          </g>
+          <circle cx="40" cy="330" r="10" fill="#2b2b26"/><circle cx="-40" cy="480" r="10" fill="#2b2b26"/>
+          <g fill="#111"><rect x="-9" y="350" width="18" height="18"/><rect x="-9" y="450" width="18" height="18"/><rect x="-9" y="545" width="18" height="18"/></g>
+          <!-- height dimension -->
+          <path d="M110 290 V600 M100 290 H120 M100 600 H120" stroke="#12392b" stroke-width="2.5"/>
+          <text x="128" y="452" font-family="JetBrains Mono" font-size="19" font-weight="700" fill="#12392b">1.5 m</text>
+          <text x="128" y="474" font-family="JetBrains Mono" font-size="15" fill="#5b6a61">(5 ft)</text>
+        </g>
+
+        <!-- drone scanning the face, bottom to top -->
+        <path d="M640 560 V262" stroke="#3e9b4f" stroke-width="3" stroke-dasharray="8 8"/>
+        <path d="M630 276 L640 260 L650 276" stroke="#3e9b4f" stroke-width="3"/>
+        <g transform="translate(640 400)">
+          <path d="M-34 -6 H34" stroke="#16231c" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="-34" cy="-12" rx="20" ry="4" fill="#16231c" opacity="0.5"/>
+          <ellipse cx="34" cy="-12" rx="20" ry="4" fill="#16231c" opacity="0.5"/>
+          <rect x="-14" y="-12" width="28" height="16" rx="4" fill="#12392b"/>
+          <circle cx="16" cy="0" r="5" fill="#d9a520"/>
+          <path d="M21 0 L92 -40 M21 0 L92 40" stroke="#d9a520" stroke-width="1.5" opacity="0.7"/>
+        </g>
+
+        <!-- launch point and operator -->
+        <g transform="translate(130 600)">
+          <ellipse cx="0" cy="-2" rx="48" ry="10" fill="#c9d8c4"/>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#12392b">LAUNCH</text>
+        </g>
+        <!-- wifi arcs from laptop -->
+        <g stroke="#3f6fb0" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8">
+          <path d="M210 520 a40 40 0 0 1 56 0"/><path d="M196 506 a60 60 0 0 1 84 0"/><path d="M182 492 a80 80 0 0 1 112 0"/>
+        </g>
+        <rect x="214" y="548" width="48" height="30" rx="4" fill="#3f6fb0"/><rect x="206" y="578" width="64" height="6" rx="2" fill="#3f6fb0"/>
+
+        <!-- 20 m radius -->
+        <path d="M130 650 H900" stroke="#12392b" stroke-width="2.5"/>
+        <path d="M144 640 L130 650 L144 660 M886 640 L900 650 L886 660" stroke="#12392b" stroke-width="2.5"/>
+        <text x="515" y="684" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700" fill="#12392b">≤ 20 m FROM LAUNCH (not to scale)</text>
+      </svg>
+
+      <div class="label head">Delimitations · limits of coverage (side view)</div>
+
+      <div class="chip warn" style="left:26px; top:66px;"><span class="ico"><i data-lucide="wind"></i></span><div><b>Wind ≤ <span class="todo">[max] km/h</span></b><span class="s">Anemometer check before each flight</span></div></div>
+      <div class="chip" style="left:26px; top:160px;"><span class="ico"><i data-lucide="sun"></i></span><div><b>Daylight, fair weather</b><span class="s">No rain or night flights</span></div></div>
+      <div class="chip" style="left:26px; top:300px;"><span class="ico"><i data-lucide="battery-medium"></i></span><div><b>3–5 min per battery</b><span class="s">One tower per flight</span></div></div>
+      <div class="chip" style="left:26px; top:394px;"><span class="ico"><i data-lucide="map-pin"></i></span><div><b>Open area with GPS</b><span class="s">No obstacles, not indoors</span></div></div>
+      <div class="chip" style="left:300px; top:470px;"><span class="ico" style="background:var(--blue-soft);color:var(--blue)"><i data-lucide="wifi"></i></span><div><b>Local Wi-Fi only</b><span class="s">No internet during the scan</span></div></div>
+    </section>
+
+    <div class="right">
+      <section class="card scope">
+        <header><span class="ico"><i data-lucide="check"></i></span><h3>Scope</h3><span class="sub">Inclusions and coverage</span></header>
+        <ul>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>QR registration</b> with the phone's GPS; a printed sign, no electronics</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>GPS approach + onboard alignment</b> with QR and ArUco markers; every face, bottom to top</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>YOLOv8 lettuce and empty pots</b>: live preview, final count, matched to each pot</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>SQLite offline cache</b>, upload to Supabase, Next.js dashboard</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>One 1.5 m tower</b> built and tested; method meant to scale to taller and more towers</span></li>
+        </ul>
+      </section>
+      <section class="card out">
+        <header><span class="ico"><i data-lucide="x"></i></span><h3>Delimitations</h3><span class="sub">Exclusions</span></header>
+        <div class="chips">
+          <span>Watering or nutrient system</span><span>Crops other than lettuce</span><span>Disease, pests, growth, weight</span>
+          <span>Obstacle avoidance</span><span>Indoor or GPS-denied flight</span><span>LiDAR and 3D mapping</span>
+          <span>Cellular or cloud GPU</span><span>Commercial deployment</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

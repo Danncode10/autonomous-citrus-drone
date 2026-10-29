@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 13c · Technical Design</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1000px 1fr; gap: 30px; }
+
+  .plate.fig7 { padding: 10px 14px 36px; }
+
+  .right { display: flex; flex-direction: column; gap: 14px; }
+
+  .glance { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .glance div { padding: 14px 16px; border-radius: 16px; background: var(--forest); color: #fff; }
+  .glance b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .glance b small { font-size: 17px; color: var(--gold); margin-left: 3px; }
+  .glance span { display: block; margin-top: 6px; font-size: 15px; color: var(--on-dark-3); line-height: 1.3; }
+
+  .links { flex: 1; padding: 6px 20px; display: flex; flex-direction: column; justify-content: space-around; }
+  .link { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1.5px dashed var(--line-soft); }
+  .link:last-child { border-bottom: none; }
+  .link .dot { width: 36px; height: 36px; font-size: 15px; }
+  .link b { font-size: 20px; color: var(--forest); }
+  .link p { margin-top: 2px; font-size: 17px; line-height: 1.35; color: var(--muted); }
+
+  .bench { padding: 16px 20px; background: var(--gold-soft); border-color: #ecd9a2; }
+  .bench .label { font-size: 14px; color: var(--gold-deep); display: flex; align-items: center; gap: 8px; }
+  .bench .label .ico { width: 18px; height: 18px; }
+  .bench ul { list-style: none; margin-top: 8px; display: grid; gap: 6px; }
+  .bench li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; font-size: 17px; line-height: 1.35; color: #4a3a0c; }
+  .bench li .ico { width: 18px; height: 18px; margin-top: 2px; color: var(--gold-deep); }
+  .bench li b { color: #2e2405; }
+</style>
+</head>
+<body data-num="13c" data-part="build" data-eyebrow="Proposed System Architecture · Technical Design">
+<div class="slide">
+  <h1 class="title">Inside the drone: <em>who powers, flies and sees</em></h1>
+
+  <div class="content">
+    <figure class="plate fig7">
+      <img src="../../figures/fig7-technical-design.jpg" alt="Figure 7. Technical Design">
+      <span class="cap">Figure 7 · Technical Design</span>
+    </figure>
+
+    <div class="right">
+      <div class="glance">
+        <div><b>~200–240<small>g</small></b><span>Estimated takeoff weight</span></div>
+        <div><b>3S<small>650 mAh</small></b><span>LiPo, 3 batteries</span></div>
+        <div><b>3–5<small>min</small></b><span>Per battery, one tower</span></div>
+      </div>
+
+      <section class="card links">
+        <div class="link"><span class="dot">1</span><div><b>Power</b><p>LiPo feeds the flight stack; a separate 5 V BEC feeds the Pi so motor surges can't restart it</p></div></div>
+        <div class="link"><span class="dot">2</span><div><b>Flight control</b><p>SpeedyBee F405 Mini on ArduPilot, 4-in-1 ESC, Quad-X; GPS + compass; ELRS receiver</p></div></div>
+        <div class="link"><span class="dot">3</span><div><b>Companion + camera</b><p>Pi Zero 2 W talks MAVLink over serial; Pi Camera V2 records 1080p to microSD</p></div></div>
+        <div class="link"><span class="dot">4</span><div><b>Ground link</b><p>2.4 GHz Wi-Fi to the laptop hotspot; travel router only if range is short</p></div></div>
+      </section>
+
+      <section class="card bench">
+        <div class="label"><span class="ico"><i data-lucide="test-tube"></i></span>Checked on the bench before flying</div>
+        <ul>
+          <li><span class="ico"><i data-lucide="weight"></i></span><span><b>Weigh</b> the assembled drone</span></li>
+          <li><span class="ico"><i data-lucide="gauge"></i></span><span><b>Thrust test:</b> over ~half throttle to hover → 1404 motors</span></li>
+          <li><span class="ico"><i data-lucide="sliders-horizontal"></i></span><span><b>AutoTune</b> and checkerboard <b>camera calibration</b></span></li>
+          <li><span class="ico"><i data-lucide="thermometer"></i></span><span><b>Marker detection ~10 fps</b> without throttling</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

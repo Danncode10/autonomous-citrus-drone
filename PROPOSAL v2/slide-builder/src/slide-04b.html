@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 04b · Conceptual Framework</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1010px 1fr; gap: 34px; }
+
+  .plate.fig1 { padding: 10px 14px 34px; }
+
+  .flow { display: flex; flex-direction: column; }
+  .zone { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .zone .label { font-size: 15px; }
+  .zone.off .label { color: var(--leaf-deep); }
+  .zone.on .label { color: var(--blue); }
+  .zone::after { content: ''; flex: 1; height: 0; border-top: 2px dotted var(--line); }
+
+  .steps { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .steps li { display: grid; grid-template-columns: 52px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-radius: 14px; background: var(--card); border: 1.5px solid var(--line); }
+  .steps li.later { border-style: dashed; background: transparent; }
+  .steps .dot { width: 46px; height: 46px; font-size: 16px; }
+  .steps b { font-size: 21px; font-weight: 700; color: var(--forest); }
+  .steps p { margin-top: 2px; font-size: 18px; line-height: 1.32; color: var(--muted); }
+  .group { margin-bottom: 14px; }
+
+  .key { margin-top: auto; display: flex; gap: 22px; font-size: 17px; color: var(--muted); }
+  .key span { display: flex; align-items: center; gap: 10px; }
+  .key i { width: 34px; border-top: 3px solid var(--forest); }
+  .key i.d { border-top-style: dashed; }
+</style>
+</head>
+<body data-num="04b" data-part="solution" data-eyebrow="Conceptual Framework · System Flow">
+<div class="slide">
+  <h1 class="title">Fly and scan offline. <em>Use the internet only for records.</em></h1>
+
+  <div class="content">
+    <figure class="plate fig1">
+      <img src="../../figures/fig1-conceptual-framework.jpg" alt="Figure 1. Conceptual Framework">
+      <span class="cap">Figure 1 · Conceptual Framework</span>
+    </figure>
+
+    <div class="flow">
+      <div class="group">
+        <div class="zone off"><span class="label">At the tower · local Wi-Fi</span></div>
+        <ol class="steps">
+          <li><span class="dot">1</span><div><b>Scan QR + save phone GPS</b><p>Registers the tower; saved on the phone</p></div></li>
+          <li><span class="dot">3</span><div><b>Laptop sends the mission</b><p>Tower GPS, face A first</p></div></li>
+          <li><span class="dot">4</span><div><b>Approach, align, scan</b><p>Find marker, then each face bottom to top</p></div></li>
+          <li><span class="dot">5a</span><div><b>Live preview</b><p>Video + telemetry stream to the laptop</p></div></li>
+          <li class="later"><span class="dot">5b</span><div><b>Full recording after landing</b><p>Final count and slot matching</p></div></li>
+        </ol>
+      </div>
+      <div class="group">
+        <div class="zone on"><span class="label">Records · internet</span></div>
+        <ol class="steps">
+          <li class="later"><span class="dot">2</span><div><b>Upload registration</b><p>When the phone is online</p></div></li>
+          <li class="later"><span class="dot">6</span><div><b>Sync</b><p>Tower list down, results up</p></div></li>
+          <li><span class="dot">7</span><div><b>Dashboard shows the counts</b><p>Farmer views them on phone or computer</p></div></li>
+        </ol>
+      </div>
+      <div class="key">
+        <span><i></i>Live flow</span>
+        <span><i class="d"></i>Later / when online</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

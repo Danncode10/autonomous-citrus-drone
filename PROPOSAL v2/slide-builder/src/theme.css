@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+/* Design tokens. Every slide reads from these, so a palette change happens here only.
+   Same brand as PROPOSAL v1 so the Google Flow photos still match. */
+:root {
+  --forest: #12392b;
+  --forest-2: #1d5240;
+  --forest-3: #0b241b;
+  --leaf: #3e9b4f;
+  --leaf-deep: #2b7a3c;
+  --leaf-soft: #e4f1e5;
+  --leaf-tint: #f1f8f1;
+  --mint: #9fd6a9;
+  --gold: #d9a520;
+  --gold-deep: #9a6f05;
+  --gold-soft: #fbf1d6;
+  --red: #b4452f;
+  --red-soft: #f8e4de;
+  --blue: #3f6fb0;
+  --blue-soft: #e3ecf7;
+  --paper: #f7f5ef;
+  --card: #ffffff;
+  --ink: #16231c;
+  --body: #2f3d35;
+  --muted: #5b6a61;
+  --line: #ddd8cb;
+  --line-soft: #ece8de;
+
+  /* Dark-slide text */
+  --on-dark: #ffffff;
+  --on-dark-2: #c9dbd1;
+  --on-dark-3: #9fb8ab;
+
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --sans: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { width: 1920px; height: 1080px; overflow: hidden; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* ---------- Slide frame ---------- */
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  padding: 52px 96px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--leaf-deep);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.eyebrow .num {
+  color: var(--gold-deep);
+  text-transform: none;
+  padding-right: 16px;
+  border-right: 2px solid var(--line);
+}
+
+.progress {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #a3ab9f;
+}
+
+.progress li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.progress li::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.progress li.done { color: var(--leaf); }
+.progress li.active { color: #fff; background: var(--forest); }
+.progress li.active::before { background: var(--gold); }
+
+h1.title {
+  margin-top: 22px;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--forest);
+  position: relative;
+  z-index: 2;
+}
+h1.title em { font-style: normal; color: var(--leaf-deep); }
+
+.content {
+  flex: 1;
+  min-height: 0;
+  padding: 34px 0 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer {
+  height: 64px;
+  flex: none;
+  border-top: 1.5px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--muted);
+  position: relative;
+  z-index: 2;
+}
+
+.foot-left { display: flex; align-items: center; gap: 14px; }
+.foot-left img { width: 32px; height: 32px; border-radius: 50%; background: #fff; }
+.foot-right { display: flex; align-items: center; gap: 22px; }
+
+.foot-right .page {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--forest);
+}
+
+/* ---------- Dark content slides (body.dark) ----------
+   Used every few slides to break the rhythm of light pages. */
+
+body.dark { background: var(--forest); }
+body.dark .slide {
+  color: var(--on-dark);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(62, 155, 79, 0.22), transparent 42%),
+    radial-gradient(circle at 0% 100%, rgba(217, 165, 32, 0.08), transparent 40%),
+    var(--forest);
+}
+body.dark .eyebrow { color: var(--mint); }
+body.dark .eyebrow .num { color: var(--gold); border-color: rgba(255, 255, 255, 0.2); }
+body.dark .progress { color: rgba(255, 255, 255, 0.35); }
+body.dark .progress li.done { color: var(--mint); }
+body.dark .progress li.active { background: var(--gold); color: var(--forest); }
+body.dark .progress li.active::before { background: var(--forest); }
+body.dark h1.title { color: #fff; }
+body.dark h1.title em { color: var(--gold); }
+body.dark .footer { border-color: rgba(255, 255, 255, 0.16); color: var(--on-dark-3); }
+body.dark .foot-right .page { color: var(--gold); }
+
+/* Faint engineering grid behind dark slides, echoing the blueprint title photo. */
+body.dark .slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+/* ---------- Shared components ---------- */
+
+.ico { display: inline-flex; flex: none; }
+.ico svg { width: 100%; height: 100%; }
+
+.label {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.13);
+  border-radius: 20px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.tag.adopted { color: var(--leaf-deep); background: var(--leaf-soft); }
+.tag.gap { color: var(--red); background: var(--red-soft); }
+.tag.evidence { color: var(--gold-deep); background: var(--gold-soft); }
+.tag.offline { color: var(--leaf-deep); background: var(--leaf-soft); }
+.tag.online { color: var(--blue); background: var(--blue-soft); }
+
+.cite { color: var(--muted); font-weight: 500; }
+body.dark .cite { color: var(--on-dark-3); }
+
+/* Figure plate: a figure from Chapter 1 shown on paper. The line art is black on
+   white, so multiply lets the white blend into the plate. */
+.plate {
+  position: relative;
+  background: #fff;
+  border-radius: 22px;
+  border: 1.5px solid var(--line);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plate img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.plate .cap {
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+/* Numbered callout dot, matching the black circles in the figures. */
+.dot {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 17px;
+  font-weight: 700;
+}
+body.dark .dot { background: var(--gold); color: var(--forest); }
+
+/* Values still blank in Chapter 1 v2, shown so they're easy to spot and fill in. */
+.todo {
+  display: inline-block;
+  padding: 1px 10px;
+  border: 1.5px dashed var(--gold);
+  border-radius: 8px;
+  background: var(--gold-soft);
+  color: var(--gold-deep);
+  font-weight: 700;
+  white-space: nowrap;
+}

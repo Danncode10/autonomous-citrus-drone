@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 03c · Related Literature: Processing, Data and Method</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="rrl.css">
+</head>
+<body data-num="03c" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Processing, Data and Method">
+<div class="slide">
+  <h1 class="title">Keep the AI on the ground <em>and the data offline</em></h1>
+
+  <div class="content">
+    <div class="rrl">
+      <div class="th">Author</div>
+      <div class="th">Key Findings</div>
+      <div class="th">Relevance to this study</div>
+
+      <div class="who"><small>Edge vs. offboard</small><span>Shalash et al. (2026)</span><span>Zhu &amp; Chen (2026)</span></div>
+      <div class="what"><span class="stat">&lt;3 fps<small>on a Pi</small></span><span>YOLOv8–v12 on a Pi 4 or 5 ran mostly under 3 fps; Wi-Fi offloading took 15–45 ms and failed when the link weakened.</span></div>
+      <div class="why">
+        <p><span class="tag adopted">Adopted</span>YOLOv8 on the ground laptop.</p>
+        <p><span class="tag adopted">Adopted</span>Steering stays on the Pi.</p>
+      </div>
+
+      <div class="who"><small>Offline-first</small><span>Mirandilla-Santos (2021)</span><span>Serafica et al. (2023)</span><span>Mayta et al. (2026)</span></div>
+      <div class="what"><span class="stat">92%<small>cell signal</small></span><span>92% of barangays had cell signal, but rural areas lag; an offline-first farm app kept 100% sync under intermittent connectivity.</span></div>
+      <div class="why">
+        <p><span class="tag evidence">Evidence</span>Internet can't be assumed at the farm.</p>
+        <p><span class="tag adopted">Adopted</span>Offline cache + Sync Center.</p>
+      </div>
+
+      <div class="who"><small>Dashboards and FMIS</small><span>Schulze Schwering et al. (2022)</span><span>Supabase (n.d.)</span></div>
+      <div class="what"><span>Farm management systems are useful but underused; usability and farm-specific features matter. Supabase Realtime pushes database changes live.</span></div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>Supabase + Next.js tower dashboard.</p></div>
+
+      <div class="who"><small>Flight safety</small><span>Meier et al. (2022)</span><span>ArduPilot Dev Team (n.d.)</span><span>CAAP (2026)</span></div>
+      <div class="what"><span class="stat">30 m<small>from others</small></span><span>Flight data can estimate wind; battery failsafe triggers return to launch; Part 11 open category allows small, daytime, in-sight flights.</span></div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>Fair-weather flights, RTL failsafes, open-category rules.</p></div>
+
+      <div class="who"><small>Method and evaluation</small><span>Fauzi et al. (2023)</span><span>Hajesmaeel-Gohari et al. (2022)</span></div>
+      <div class="what"><span>RAD has the shortest completion time among SDLC models; the USE questionnaire (30 items, 7-point) covers usefulness, ease of use and satisfaction.</span></div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>RAD model; USE adapted to a 5-point scale.</p></div>
+    </div>
+
+    <div class="legend">
+      <span><span class="tag adopted">Adopted</span>used in our design</span>
+      <span><span class="tag gap">Gap</span>not yet addressed</span>
+      <span><span class="tag evidence">Evidence</span>supports the problem</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

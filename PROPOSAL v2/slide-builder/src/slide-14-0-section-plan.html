@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Section 05 · The Plan</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="section.css">
+<style>
+  /* No photo for this part: a drawn schedule on a blueprint grid takes its place. */
+  .section {
+    background:
+      radial-gradient(circle at 78% 42%, rgba(62, 155, 79, 0.3), transparent 50%),
+      linear-gradient(135deg, #0b241b, #174a37);
+  }
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(159, 214, 169, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(159, 214, 169, 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .art { position: absolute; right: 110px; top: 150px; width: 860px; height: 640px; }
+  .art svg { width: 100%; height: 100%; overflow: visible; }
+</style>
+</head>
+<body data-frame="none" data-part="plan">
+<div class="slide section">
+  <div class="grid"></div>
+
+  <div class="art">
+    <svg viewBox="0 0 860 640" fill="none">
+      <g font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#9fb8ab" letter-spacing="1.5">
+        <text x="40" y="34">M1</text><text x="180" y="34">M2</text><text x="320" y="34">M3</text>
+        <text x="460" y="34">M4</text><text x="600" y="34">M5</text><text x="740" y="34">M6</text>
+      </g>
+      <g stroke="rgba(159,214,169,0.18)" stroke-width="1.5" stroke-dasharray="4 8">
+        <path d="M20 56V600M160 56V600M300 56V600M440 56V600M580 56V600M720 56V600M860 56V600"/>
+      </g>
+      <g>
+        <rect x="24" y="80" width="250" height="40" rx="10" fill="#3e9b4f"/>
+        <rect x="164" y="148" width="250" height="40" rx="10" fill="#9fd6a9" opacity="0.9"/>
+        <rect x="164" y="216" width="390" height="40" rx="10" fill="#d9a520"/>
+        <rect x="304" y="284" width="390" height="40" rx="10" fill="#d9a520" opacity="0.7"/>
+        <rect x="444" y="352" width="250" height="40" rx="10" fill="#e4f1e5" opacity="0.85"/>
+        <rect x="584" y="420" width="250" height="40" rx="10" fill="#ffffff" opacity="0.6"/>
+        <rect x="724" y="488" width="112" height="40" rx="10" fill="#ffffff"/>
+      </g>
+      <g transform="translate(780 560)">
+        <path d="M0 40V-36" stroke="#d9a520" stroke-width="4" stroke-linecap="round"/>
+        <path d="M2 -36H52L40 -22L52 -8H2Z" fill="#d9a520"/>
+      </g>
+      <circle cx="44" cy="100" r="7" fill="#fff"/>
+    </svg>
+  </div>
+
+  <div class="shade" style="background: linear-gradient(90deg, rgba(11,36,27,0.9) 0%, rgba(11,36,27,0.55) 40%, rgba(11,36,27,0) 60%), linear-gradient(0deg, rgba(11,36,27,0.85) 0%, rgba(11,36,27,0) 30%);"></div>
+
+  <div class="copy">
+    <div class="part"><span>05</span>Part Five</div>
+    <h1>The Plan</h1>
+    <p class="tease">When it gets done, what we deliver, and what it costs.</p>
+    <ul class="covers">
+      <li>Project Timeline</li>
+      <li>Expected Output</li>
+      <li>Budget Requirements</li>
+    </ul>
+  </div>
+
+  <ol class="rail"></ol>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="section.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 01 · Title</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Full-bleed blueprint-to-real hero. The title sits over the empty grid on the
+     left; names and dates sit in a strip along the bottom, so the drawing of the
+     tower and drone in the middle stays visible. */
+  .slide { padding: 0; background: #0f3326; color: #fff; overflow: hidden; }
+
+  /* Shifted right so the blueprint drone clears the title column. */
+  .hero { position: absolute; top: 0; left: 150px; width: 1920px; height: 1080px; object-fit: cover; }
+
+  .shade {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(11, 36, 27, 0.88) 0%, rgba(11, 36, 27, 0.7) 26%, rgba(11, 36, 27, 0) 40%),
+      linear-gradient(0deg, rgba(11, 36, 27, 0.97) 0%, rgba(11, 36, 27, 0.9) 17%, rgba(11, 36, 27, 0) 36%);
+  }
+
+  .brand { position: absolute; left: 96px; top: 72px; display: flex; align-items: center; gap: 20px; }
+  .brand img { width: 84px; height: 84px; border-radius: 50%; background: #fff; padding: 4px; }
+  .brand-name { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+  .brand-sub { margin-top: 4px; font-size: 18px; font-weight: 500; color: #b9cfc3; }
+
+  .copy { position: absolute; left: 96px; top: 236px; width: 640px; }
+  .kicker {
+    display: flex; align-items: center; gap: 16px;
+    font-family: var(--mono); font-size: 19px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  .kicker::before { content: ''; width: 40px; height: 3px; background: var(--gold); }
+  .thesis-title {
+    margin-top: 22px;
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  }
+  .thesis-title span {
+    display: block;
+    margin-top: 16px;
+    font-size: 29px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: #9fd6a9;
+  }
+
+  .team { position: absolute; left: 96px; top: 676px; width: 800px; }
+  .team .label { font-size: 15px; color: #9fb8ab; }
+  .team .names { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  .team .names div {
+    padding: 12px 0 12px 18px;
+    border-left: 3px solid rgba(255, 255, 255, 0.22);
+    font-size: 24px; font-weight: 600; line-height: 1.25; white-space: nowrap;
+  }
+  .team .names .lead { border-left-color: var(--gold); }
+  .team .names .lead em { margin-left: 10px; vertical-align: 3px; }
+
+  .strip {
+    position: absolute;
+    left: 96px; right: 96px; bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    column-gap: 110px;
+    gap: 40px;
+    padding-top: 26px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.2);
+  }
+  .strip .label { font-size: 14px; color: #9fb8ab; }
+  .strip .v { margin-top: 10px; font-size: 23px; font-weight: 600; line-height: 1.4; }
+    .names em {
+    font-style: normal; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--forest); background: var(--gold); padding: 2px 7px; border-radius: 5px;
+  }
+</style>
+</head>
+<body data-frame="none">
+<div class="slide">
+  <img class="hero" src="../../figures/flow/title-hero.jpg" alt="Blueprint of the drone and tower turning into the real system">
+  <div class="shade"></div>
+
+  <div class="brand">
+    <img src="../../figures/nvsu-logo.jpg" alt="NVSU logo">
+    <div>
+      <div class="brand-name">Nueva Vizcaya State University</div>
+      <div class="brand-sub">College of Information Technology Education</div>
+    </div>
+  </div>
+
+  <div class="copy">
+    <div class="kicker">Thesis Proposal Defense</div>
+    <h1 class="thesis-title">
+      Computer Vision and Autonomous Drone Inspection for Hydroponic Towers
+      <span>with Web Dashboard Integration</span>
+    </h1>
+  </div>
+
+  <div class="team">
+    <div class="label">Researchers</div>
+    <div class="names">
+      <div class="lead">Lester Dann G. Lopez <em>Leader</em></div>
+      <div>Rhoan Joy M. Marvilla</div>
+      <div>Prince Daniel A. Valentino</div>
+      <div>Joshua Jing A. Fernandez</div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div><div class="label">Thesis Adviser</div><div class="v">Bernadeth B. Liggayu, MIT</div></div>
+    <div><div class="label">Program</div><div class="v">BS Computer Science<br>BSCS 4B</div></div>
+    <div><div class="label">Date</div><div class="v">November 3, 2026</div></div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

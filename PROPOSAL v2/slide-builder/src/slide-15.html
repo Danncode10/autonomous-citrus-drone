@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 15 · Expected Output</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 820px 1fr; gap: 34px; }
+
+  /* A mock of the per-tower result, so the panel sees what the farmer gets. */
+  .left { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+  .label.sec { color: var(--gold); font-size: 16px; }
+  .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .benefits div { display: flex; align-items: center; gap: 12px; padding: 12px 14px; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .benefits .ico { width: 30px; height: 30px; color: var(--gold); }
+  .mock { flex: 1; min-height: 0; display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; background: #fff; color: var(--ink); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35); }
+  .chrome { height: 46px; flex: none; display: flex; align-items: center; gap: 8px; padding: 0 18px; background: #eceae3; }
+  .chrome i { width: 13px; height: 13px; border-radius: 50%; background: #d3cfc3; }
+  .chrome span { margin-left: 14px; flex: 1; height: 26px; border-radius: 8px; background: #fff; font-family: var(--mono); font-size: 14px; color: var(--muted); display: flex; align-items: center; padding: 0 12px; }
+  .mock .body { flex: 1; padding: 16px 24px; display: grid; grid-template-columns: 1fr 250px; gap: 22px; }
+  .mock h3 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); }
+  .mock .meta { margin-top: 4px; font-size: 16px; color: var(--muted); }
+  .grid { margin-top: 18px; display: grid; grid-template-columns: 54px repeat(4, 1fr); gap: 8px; }
+  .grid .h { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--muted); text-align: center; }
+  .grid .lv { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--muted); display: flex; align-items: center; }
+  .grid .c { height: 52px; border-radius: 12px; display: grid; place-items: center; }
+  .grid .c .ico { width: 28px; height: 28px; }
+  .c.l { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .c.e { background: #fff; border: 2.5px dashed var(--red); color: var(--red); }
+
+  .tiles { display: flex; flex-direction: column; gap: 12px; }
+  .tile { flex: 1; padding: 16px 18px; border-radius: 16px; background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
+  .tile .k { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .tile b { margin-top: 4px; font-size: 40px; font-weight: 800; letter-spacing: -0.04em; color: var(--forest); line-height: 1; }
+  .tile b small { font-size: 20px; color: var(--muted); letter-spacing: 0; margin-left: 4px; }
+  .tile.av { background: var(--forest); }
+  .tile.av .k { color: var(--gold); }
+  .tile.av b { color: #fff; }
+  .tile.av b small { color: var(--on-dark-3); }
+  .mock .disclaimer { padding: 10px 26px; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold-deep); background: var(--gold-soft); text-transform: uppercase; }
+
+  .deliv { display: flex; flex-direction: column; gap: 12px; }
+  .deliv > .label { color: var(--gold); font-size: 16px; }
+  .item { flex: 1; display: grid; grid-template-columns: 60px 1fr; gap: 18px; align-items: center; padding: 0 22px; }
+  .item .ico { width: 60px; height: 60px; padding: 14px; border-radius: 15px; background: rgba(255, 255, 255, 0.1); color: var(--mint); }
+  .item h4 { font-size: 23px; font-weight: 800; letter-spacing: -0.01em; }
+  .item p { margin-top: 3px; font-size: 18px; line-height: 1.35; color: var(--on-dark-2); }
+  .item.hl .ico { background: var(--gold); color: var(--forest); }
+</style>
+</head>
+<body class="dark" data-num="15" data-part="plan" data-eyebrow="Expected Output">
+<div class="slide">
+  <h1 class="title">What the farmer gets, <em>and what we hand over</em></h1>
+
+  <div class="content">
+    <div class="left">
+    <div class="label sec">Anticipated benefits</div>
+    <section class="mock">
+      <div class="chrome"><i></i><i></i><i></i><span>dashboard / towers / T-01</span></div>
+      <div class="body">
+        <div>
+          <h3>Tower T-01</h3>
+          <div class="meta">Scanned today · all faces · offline cache synced</div>
+          <div class="grid">
+            <span></span><span class="h">FACE A</span><span class="h">FACE B</span><span class="h">FACE C</span><span class="h">FACE D</span>
+            <span class="lv">L4</span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c e"><span class="ico"><i data-lucide="circle-dashed"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span>
+            <span class="lv">L3</span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c e"><span class="ico"><i data-lucide="circle-dashed"></i></span></span>
+            <span class="lv">L2</span><span class="c e"><span class="ico"><i data-lucide="circle-dashed"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span>
+            <span class="lv">L1</span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span><span class="c e"><span class="ico"><i data-lucide="circle-dashed"></i></span></span><span class="c l"><span class="ico"><i data-lucide="sprout"></i></span></span>
+          </div>
+        </div>
+        <div class="tiles">
+          <div class="tile"><span class="k">Lettuce</span><b>12</b></div>
+          <div class="tile"><span class="k">Empty pots</span><b>4</b></div>
+          <div class="tile av"><span class="k">Slot availability</span><b>4<small>/ 16 empty</small></b></div>
+        </div>
+      </div>
+      <div class="disclaimer">Illustrative mock-up · layout and counts are examples, not results</div>
+    </section>
+    <div class="benefits">
+      <div class="glass"><span class="ico"><i data-lucide="footprints"></i></span>Per-tower counts without walking every tower</div>
+      <div class="glass"><span class="ico"><i data-lucide="calendar-check"></i></span>Plan replanting and harvest from slot availability</div>
+      <div class="glass"><span class="ico"><i data-lucide="book-open"></i></span>A reusable dataset and method for future research</div>
+    </div>
+    </div>
+
+    <section class="deliv">
+      <div class="label">Deliverables</div>
+      <article class="glass item hl"><span class="ico"><i data-lucide="drone"></i></span><div><h4>Working prototype drone</h4><p>ArduPilot, Pi Zero 2 W, Pi Camera V2; scans a full tower on its own</p></div></article>
+      <article class="glass item"><span class="ico"><i data-lucide="qr-code"></i></span><div><h4>Tower, sign and markers</h4><p>1.5 m frame, printed QR sign, 20 laminated ArUco markers</p></div></article>
+      <article class="glass item hl"><span class="ico"><i data-lucide="images"></i></span><div><h4>YOLOv8 model + ~2,000 labeled images</h4><p>Lettuce and empty pot, reusable by future researchers</p></div></article>
+      <article class="glass item"><span class="ico"><i data-lucide="layout-dashboard"></i></span><div><h4>Local and web dashboards</h4><p>Live Scan, Sync Center, SQLite cache; Next.js + Supabase</p></div></article>
+      <article class="glass item"><span class="ico"><i data-lucide="file-text"></i></span><div><h4>Test results and manuscript</h4><p>Performance and user evaluation, issues, recommendations</p></div></article>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

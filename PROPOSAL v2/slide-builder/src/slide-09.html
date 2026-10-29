@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 09 · Locale and Respondents</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  .col-label { display: flex; align-items: center; gap: 10px; color: var(--leaf-deep); font-size: 16px; margin-bottom: 14px; }
+  .col-label .ico { width: 22px; height: 22px; }
+
+  .locale { display: flex; flex-direction: column; }
+  .places { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+  .place { position: relative; overflow: hidden; display: grid; grid-template-columns: 150px 1fr; gap: 26px; align-items: center; padding: 26px 30px; }
+  .place .pin { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; background: var(--leaf-soft); color: var(--forest); position: relative; }
+  .place .pin .ico { width: 64px; height: 64px; }
+  .place .pin::after { content: ''; position: absolute; inset: -14px; border-radius: 50%; border: 2px dashed var(--leaf); opacity: 0.5; }
+  .place .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); }
+  .place h3 { margin-top: 6px; font-size: 32px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); line-height: 1.1; }
+  .place .addr { margin-top: 6px; font-size: 20px; font-weight: 600; color: var(--body); }
+  .place p { margin-top: 12px; font-size: 19px; line-height: 1.4; color: var(--muted); }
+  .place.farm { background: var(--forest); border-color: var(--forest); }
+  .place.farm .pin { background: var(--gold); }
+  .place.farm .pin::after { border-color: var(--gold); }
+  .place.farm h3 { color: #fff; }
+  .place.farm .addr { color: var(--on-dark-2); }
+  .place.farm p { color: var(--on-dark-3); }
+  .place.farm .k { color: var(--gold); }
+
+  .resp { display: flex; flex-direction: column; }
+  .equation { flex: 1; display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 14px; padding: 30px 30px 24px; }
+  .who { text-align: center; }
+  .who .ico { width: 64px; height: 64px; padding: 14px; border-radius: 18px; background: var(--leaf-soft); color: var(--forest); }
+  .who .n { margin-top: 10px; font-size: 130px; font-weight: 800; line-height: 1; letter-spacing: -0.05em; color: var(--forest); }
+  .who b { display: block; margin-top: 6px; font-size: 22px; font-weight: 700; color: var(--forest); }
+  .who span { display: block; margin-top: 4px; font-size: 17px; color: var(--muted); line-height: 1.35; }
+  .who.total .n { color: var(--gold-deep); }
+  .who.total .ico { background: var(--gold-soft); color: var(--gold-deep); }
+  .op { font-size: 60px; font-weight: 300; color: #b9b3a3; }
+
+  .method { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .method div { padding: 20px 24px; }
+  .method .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--leaf-deep); }
+  .method b { display: block; margin-top: 6px; font-size: 24px; font-weight: 800; color: var(--forest); }
+  .method p { margin-top: 6px; font-size: 18px; line-height: 1.4; color: var(--muted); }
+</style>
+</head>
+<body data-num="09" data-part="method" data-eyebrow="Locale and Participants">
+<div class="slide">
+  <h1 class="title">Where we test, and <em>who evaluates</em></h1>
+
+  <div class="content">
+    <section class="locale">
+      <div class="label col-label"><span class="ico"><i data-lucide="map-pin"></i></span>Research locale · Bayombong, Nueva Vizcaya</div>
+      <div class="places">
+        <article class="card place">
+          <span class="pin"><span class="ico"><i data-lucide="drone"></i></span></span>
+          <div>
+            <div class="k">Flight tests</div>
+            <h3>Purok 2, Busilac</h3>
+            <div class="addr">Bayombong, Nueva Vizcaya</div>
+            <p>Open, obstacle-free outdoor area with GPS signal; safe flying and a clear view of the tower.</p>
+          </div>
+        </article>
+        <article class="card place farm">
+          <span class="pin"><span class="ico"><i data-lucide="sprout"></i></span></span>
+          <div>
+            <div class="k">Needs-assessment interviews</div>
+            <h3>Savara Lettuce Farm</h3>
+            <div class="addr">Purok 5, Brgy. Masoc, Bayombong</div>
+            <p>The only hydroponic farm in Bayombong, Nueva Vizcaya.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="resp">
+      <div class="label col-label"><span class="ico"><i data-lucide="users"></i></span>Participants / respondents · population size</div>
+      <div class="card equation">
+        <div class="who">
+          <span class="ico"><i data-lucide="sprout"></i></span>
+          <div class="n">1</div>
+          <b>Hydroponic farmer</b>
+          <span>Savara Lettuce Farm</span>
+        </div>
+        <span class="op">+</span>
+        <div class="who">
+          <span class="ico"><i data-lucide="laptop"></i></span>
+          <div class="n">3</div>
+          <b>IT experts</b>
+          <span>CITE, NVSU</span>
+        </div>
+        <span class="op">=</span>
+        <div class="who total">
+          <span class="ico"><i data-lucide="users"></i></span>
+          <div class="n">4</div>
+          <b>Respondents</b>
+          <span>All evaluate the system</span>
+        </div>
+      </div>
+      <div class="method">
+        <div class="card"><div class="k">Sampling technique</div><b>Total enumeration</b><p>Savara is the only hydroponic farm in Bayombong, and three IT experts are available.</p></div>
+        <div class="card"><div class="k">Sample size</div><b>4 of 4 (100%)</b><p>Every member of the population takes part.</p></div>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

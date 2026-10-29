@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 16 · Budget Requirements</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 520px 1fr; gap: 30px; }
+
+  .total { display: flex; flex-direction: column; padding: 30px 32px; background: var(--forest); border-color: var(--forest); color: #fff; }
+  .total .k { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .total .big { margin-top: 14px; font-size: 76px; font-weight: 800; letter-spacing: -0.045em; line-height: 1; }
+  .total .to { margin: 8px 0; font-size: 22px; font-weight: 600; color: var(--on-dark-3); }
+  .total .sub { margin-top: 16px; font-size: 19px; line-height: 1.45; color: var(--on-dark-2); }
+  .notes { margin-top: auto; list-style: none; display: grid; gap: 10px; }
+  .notes li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: 17px; line-height: 1.38; color: var(--on-dark-2); }
+  .notes li .ico { width: 22px; height: 22px; color: var(--mint); margin-top: 1px; }
+  .notes li b { color: #fff; }
+  .notes li.plus .ico { color: var(--gold); }
+
+  /* Range bars: the solid part is the low estimate, the pale part runs to the high one. */
+  .rightcol { display: flex; flex-direction: column; gap: 14px; min-height: 0; }
+  .chart { flex: 1; min-height: 0; padding: 22px 30px 18px; display: flex; flex-direction: column; }
+  .other { display: grid; grid-template-columns: auto repeat(4, 1fr); gap: 16px; align-items: center; padding: 14px 24px; }
+  .other .label { font-size: 14px; color: var(--muted); }
+  .other div { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 19px; }
+  .other b { color: var(--forest); }
+  .other .todo { font-size: 16px; }
+  .chart .head { display: flex; justify-content: space-between; align-items: baseline; }
+  .chart .head b { font-size: 23px; font-weight: 800; color: var(--forest); }
+  .chart .head span { font-size: 16px; color: var(--muted); }
+  .rows { flex: 1; margin-top: 10px; display: flex; flex-direction: column; justify-content: space-around; }
+  .row { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: center; }
+  .row .name b { display: block; font-size: 21px; font-weight: 700; color: var(--ink); }
+  .row .name span { display: block; margin-top: 2px; font-size: 15px; line-height: 1.3; color: var(--muted); }
+  .track { position: relative; height: 34px; }
+  .track .lo, .track .hi { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 0 4px 4px 0; }
+  .track .lo { background: var(--leaf-deep); }
+  .track .hi { background: #a9d3b0; }
+  .track .val { position: absolute; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--forest); white-space: nowrap; padding-left: 12px; }
+  .track .val.in { left: auto; color: #fff; padding: 0; }
+  .axis { margin-top: 8px; display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+  .axis div { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 14px; color: var(--muted); border-top: 1.5px solid var(--line); padding-top: 6px; }
+</style>
+</head>
+<body data-num="16" data-part="plan" data-eyebrow="Budget Requirements">
+<div class="slide">
+  <h1 class="title">About <em>₱25,600 to ₱28,500</em> for the whole prototype</h1>
+
+  <div class="content">
+    <section class="card total">
+      <div class="k">Total budget · hardware (Table 5)</div>
+      <div class="big">₱25,637</div>
+      <div class="to">to</div>
+      <div class="big">₱28,467</div>
+      <p class="sub">Drone, tower, sign, markers, lettuce and field tools. Software is free and open source.</p>
+      <ul class="notes">
+        <li><span class="ico"><i data-lucide="laptop"></i></span><span><b>Not included:</b> the ground laptop, already owned</span></li>
+        <li class="plus"><span class="ico"><i data-lucide="plus"></i></span><span><b>+₱3,000–4,000</b> only if the thrust test calls for 1404 motors</span></li>
+        <li class="plus"><span class="ico"><i data-lucide="plus"></i></span><span><b>+₱1,000–1,500</b> only if a travel router is needed for range</span></li>
+        <li><span class="ico"><i data-lucide="tag"></i></span><span><b>Each extra tower</b> needs only a printed sign and markers, no electronics</span></li>
+      </ul>
+    </section>
+
+    <div class="rightcol">
+    <section class="card chart">
+      <div class="head"><b>Where the money goes</b><span>PHP · solid = low estimate, pale = up to high estimate</span></div>
+      <div class="rows">
+        <div class="row">
+          <div class="name"><b>Flight hardware</b><span>Frame, F405 stack, 4 motors, props, GPS</span></div>
+          <div class="track"><span class="hi" style="width:94.7%"></span><span class="lo" style="width:91.4%"></span><span class="val in" style="right:10.5%">₱10,969–11,369</span></div>
+        </div>
+        <div class="row">
+          <div class="name"><b>Power and control</b><span>3 LiPo, charger, 5 V regulator, RC set</span></div>
+          <div class="track"><span class="lo" style="width:50.7%"></span><span class="val" style="left:50.7%">₱6,089</span></div>
+        </div>
+        <div class="row">
+          <div class="name"><b>Pi and camera</b><span>Pi Zero 2 W, Camera V2, cable, microSD</span></div>
+          <div class="track"><span class="hi" style="width:40.4%"></span><span class="lo" style="width:39.4%"></span><span class="val" style="left:40.4%">₱4,729–4,849</span></div>
+        </div>
+        <div class="row">
+          <div class="name"><b>Tower and markers</b><span>Frame, sign, 20 markers, net pots, lettuce</span></div>
+          <div class="track"><span class="hi" style="width:22.2%"></span><span class="lo" style="width:15.8%"></span><span class="val" style="left:22.2%">₱1,900–2,660</span></div>
+        </div>
+        <div class="row">
+          <div class="name"><b>Fabrication</b><span>TPU and PLA/ABS filament, screws</span></div>
+          <div class="track"><span class="hi" style="width:22.5%"></span><span class="lo" style="width:12.1%"></span><span class="val" style="left:22.5%">₱1,450–2,700</span></div>
+        </div>
+        <div class="row">
+          <div class="name"><b>Field tools</b><span>Anemometer; Wi-Fi uses the laptop hotspot</span></div>
+          <div class="track"><span class="hi" style="width:6.7%"></span><span class="lo" style="width:4.2%"></span><span class="val" style="left:6.7%">₱500–800</span></div>
+        </div>
+      </div>
+      <div class="axis"><span></span><div><span>₱0</span><span>₱3,000</span><span>₱6,000</span><span>₱9,000</span><span>₱12,000</span></div></div>
+    </section>
+    <section class="card other">
+      <span class="label">Other items</span>
+      <div><b>Printing</b><span class="todo">₱ [ ]</span></div>
+      <div><b>Internet</b><span class="todo">₱ [ ]</span></div>
+      <div><b>Transportation</b><span class="todo">₱ [ ]</span></div>
+      <div><b>Miscellaneous</b><span class="todo">₱ [ ]</span></div>
+    </section>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

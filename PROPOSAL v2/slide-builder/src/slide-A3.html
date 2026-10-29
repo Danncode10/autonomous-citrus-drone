@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Backup C · Hardware Components</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .tbl { display: flex; flex-direction: column; overflow: hidden; }
+  .tbl header { display: flex; align-items: center; gap: 12px; padding: 16px 24px; background: var(--forest); color: #fff; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .tbl header .ico { width: 22px; height: 22px; color: var(--gold); }
+  .rows { flex: 1; display: flex; flex-direction: column; }
+  .r { flex: 1; display: grid; grid-template-columns: 220px 1fr; gap: 18px; align-items: center; padding: 0 24px; border-top: 1.5px solid var(--line-soft); }
+  .r:first-child { border-top: none; }
+  .r b { font-size: 19px; font-weight: 700; color: var(--forest); }
+  .r span { font-size: 18px; line-height: 1.35; color: var(--body); }
+  .r .todo { font-size: 15px; justify-self: start; }
+</style>
+</head>
+<body data-num="C" data-part="backup" data-eyebrow="Backup · Hardware Components (Table 1)">
+<div class="slide">
+  <h1 class="title">Why these parts: <em>light, cheap, and ArduPilot-ready</em></h1>
+
+  <div class="content">
+    <section class="card tbl">
+      <header><span class="ico"><i data-lucide="drone"></i></span>The drone</header>
+      <div class="rows">
+        <div class="r"><b>Flight controller + ESC</b><span>SpeedyBee F405 Mini stack, BLS 35A 4-in-1, ArduPilot (ArduCopter)</span></div>
+        <div class="r"><b>Motors</b><span>CADDXFPV 1303 6000KV (1404 if the thrust test fails)</span></div>
+        <div class="r"><b>Propellers</b><span>Gemfan Hurricane 3018, 2-blade</span></div>
+        <div class="r"><b>GPS</b><span>HGLRC M100-5883 GPS + compass on a small mast</span></div>
+        <div class="r"><b>Companion computer</b><span>Raspberry Pi Zero 2 W, quad-core Cortex-A53</span></div>
+        <div class="r"><b>Camera</b><span>Pi Camera Module V2, soft-mounted, 1080p</span></div>
+        <div class="r"><b>Storage</b><span>32 GB microSD, Class 10 / U1 / A1 (backup recording)</span></div>
+        <div class="r"><b>Battery</b><span>LiPo 3S 11.1 V, 650 mAh, 75C, XT30</span></div>
+        <div class="r"><b>Frame</b><span class="todo">[frame type and size]</span></div>
+      </div>
+    </section>
+    <section class="card tbl">
+      <header><span class="ico"><i data-lucide="sprout"></i></span>Tower, ground and links</header>
+      <div class="rows">
+        <div class="r"><b>Tower frame</b><span>~1.5 m (5 ft) on a 3D-printed base; <span class="todo">[material]</span>, <span class="todo">[faces × pots]</span></span></div>
+        <div class="r"><b>Tower sign</b><span>Laminated QR (tower ID + checksum) and 15 × 15 cm ArUco approach marker, DICT_4X4_50</span></div>
+        <div class="r"><b>Face markers</b><span>6 × 6 cm laminated ArUco, DICT_4X4_50, on flat rigid backings; 16 + 4 spares</span></div>
+        <div class="r"><b>Voltage regulator</b><span>5 V regulator or BEC for the Pi</span></div>
+        <div class="r"><b>Remote control</b><span>ExpressLRS 2.4 GHz transmitter and receiver, CRSF</span></div>
+        <div class="r"><b>Ground laptop</b><span>Ubuntu 22.04 LTS</span></div>
+        <div class="r"><b>Local Wi-Fi</b><span>Laptop hotspot at 2.4 GHz; TP-Link TL-WR802N as backup</span></div>
+        <div class="r"><b>Anemometer</b><span>Handheld wind meter for pre-flight checks</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

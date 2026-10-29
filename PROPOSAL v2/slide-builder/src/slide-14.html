@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 14 · Project Timeline</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Gantt chart. Bars are colored by RAD phase, and every row is labeled, so the
+     phase never depends on color alone. */
+  :root { --c-plan: #2a8a4a; --c-design: #3f6fb0; --c-build: #c98a12; --c-cut: #b4452f; --c-doc: #12392b; }
+
+  .content { display: flex; flex-direction: column; gap: 14px; }
+
+  .gantt { flex: 1; display: grid; grid-template-columns: 590px repeat(6, 1fr); grid-template-rows: 56px repeat(9, 1fr); background: var(--card); border: 1.5px solid var(--line); border-radius: 22px; overflow: hidden; position: relative; }
+  .gantt .mh { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); background: var(--paper); border-left: 1.5px solid var(--line-soft); }
+  .gantt .corner { background: var(--paper); display: flex; align-items: center; padding: 0 24px; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
+
+  .act { display: flex; align-items: center; gap: 14px; padding: 0 24px; border-top: 1.5px solid var(--line-soft); }
+  .act .ph { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; color: #fff; white-space: nowrap; width: 132px; text-align: center; flex: none; letter-spacing: 0.04em; }
+  .act b { font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+  .act span.s { display: block; font-size: 15px; color: var(--muted); font-weight: 500; }
+
+  .lane { grid-column: 2 / -1; position: relative; border-top: 1.5px solid var(--line-soft); background-image: linear-gradient(90deg, var(--line-soft) 1.5px, transparent 1.5px); background-size: calc(100% / 6) 100%; }
+  .bar { position: absolute; top: 50%; height: 30px; transform: translateY(-50%); border-radius: 4px; }
+  .bar.loop { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.22) 0 8px, transparent 8px 16px); }
+  .flag { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 26px; height: 26px; border-radius: 6px; rotate: 45deg; background: var(--gold); border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--gold-deep); }
+  .flag-label { position: absolute; top: 50%; transform: translateY(-50%); font-size: 16px; font-weight: 700; color: var(--gold-deep); white-space: nowrap; }
+
+  .foot { display: flex; align-items: center; justify-content: space-between; font-size: 17px; color: var(--muted); }
+  .legend { display: flex; gap: 20px; }
+  .legend span { display: flex; align-items: center; gap: 8px; }
+  .legend i { width: 22px; height: 14px; border-radius: 3px; }
+  .foot .note { display: flex; align-items: center; gap: 8px; }
+  .foot .note .ico { width: 20px; height: 20px; color: var(--gold-deep); }
+</style>
+</head>
+<body data-num="14" data-part="plan" data-eyebrow="Project Timeline (Gantt Chart)">
+<div class="slide">
+  <h1 class="title">Six months, <em>following the RAD phases</em></h1>
+
+  <div class="content">
+    <div class="gantt">
+      <div class="corner">ACTIVITY</div>
+      <div class="mh">MONTH 1</div><div class="mh">MONTH 2</div><div class="mh">MONTH 3</div><div class="mh">MONTH 4</div><div class="mh">MONTH 5</div><div class="mh">MONTH 6</div>
+
+      <div class="act"><span class="ph" style="background:var(--c-doc)">Proposal</span><b>Proposal defense</b></div>
+      <div class="lane"><span class="flag" style="left:4%"></span><span class="flag-label" style="left:calc(4% + 30px)">November 3, 2026</span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-plan)">Req. planning</span><div><b>Interviews and site observation</b><span class="s">Savara Lettuce Farm; SWOT</span></div></div>
+      <div class="lane"><span class="bar" style="left:0.6%; width:32.1%; background:var(--c-plan)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-plan)">Req. planning</span><b>Validation of instruments</b></div>
+      <div class="lane"><span class="bar" style="left:0.6%; width:32.1%; background:var(--c-plan)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-design)">User design</span><div><b>Architecture, UI, Gazebo + SITL</b><span class="s">Repeats with construction</span></div></div>
+      <div class="lane"><span class="bar loop" style="left:17.3%; width:32.1%; background-color:var(--c-design)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-build)">Construction</span><div><b>Stage 1</b><span class="s">Dashboard, sign, ~2,000-image dataset, manual flight</span></div></div>
+      <div class="lane"><span class="bar loop" style="left:17.3%; width:48.8%; background-color:var(--c-build)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-build)">Construction</span><div><b>Stage 2</b><span class="s">Pi + camera + GPS, alignment, full pipeline</span></div></div>
+      <div class="lane"><span class="bar loop" style="left:34%; width:48.8%; background-color:var(--c-build)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-cut)">Cutover</span><div><b>Testing</b><span class="s">Model, flight, streaming, sync, end to end</span></div></div>
+      <div class="lane"><span class="bar" style="left:50.6%; width:32.1%; background:var(--c-cut)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-cut)">Cutover</span><b>User evaluation and analysis</b></div>
+      <div class="lane"><span class="bar" style="left:67.3%; width:32.1%; background:var(--c-cut)"></span></div>
+
+      <div class="act"><span class="ph" style="background:var(--c-doc)">Final</span><b>Documentation and final defense</b></div>
+      <div class="lane"><span class="bar" style="left:84%; width:15.4%; background:var(--c-doc)"></span></div>
+    </div>
+
+    <div class="foot">
+      <div class="legend">
+        <span><i style="background:var(--c-plan)"></i>Requirements Planning</span>
+        <span><i style="background:var(--c-design)"></i>User Design</span>
+        <span><i style="background:var(--c-build)"></i>Rapid Construction</span>
+        <span><i style="background:var(--c-cut)"></i>Cutover</span>
+        <span><i style="background:var(--c-build); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.35) 0 4px, transparent 4px 8px)"></i>Repeated cycle</span>
+      </div>
+      <span class="note"><span class="ico"><i data-lucide="calendar-clock"></i></span>Proposed schedule; replace months with actual dates</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

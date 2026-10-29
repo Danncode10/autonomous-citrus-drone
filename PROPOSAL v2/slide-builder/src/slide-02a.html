@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 02a · Background of the Study</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 640px 1fr; grid-template-rows: 1fr auto; gap: 26px 56px; }
+
+  /* Left: the tower, with the question nobody's sensor can answer. */
+  .stage {
+    position: relative;
+    border-radius: 26px;
+    background:
+      radial-gradient(circle at 50% 30%, #ffffff 0%, #eef6ee 55%, #dcebdc 100%);
+    border: 1.5px solid var(--line);
+    overflow: hidden;
+  }
+  .stage .tower-art { position: absolute; left: 40px; top: 14px; width: 330px; height: 600px; }
+  .stage .tower-art svg { width: 100%; height: 100%; }
+
+  .bubble {
+    position: absolute;
+    right: 34px;
+    top: 46px;
+    width: 250px;
+    padding: 22px 24px;
+    border-radius: 22px 22px 22px 6px;
+    background: var(--forest);
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(18, 57, 43, 0.25);
+  }
+  .bubble b { display: block; font-size: 30px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+  .bubble span { display: block; margin-top: 10px; font-size: 19px; line-height: 1.35; color: var(--on-dark-2); }
+
+  .legend-mini { position: absolute; right: 34px; top: 262px; display: grid; gap: 10px; font-size: 19px; font-weight: 600; color: var(--body); }
+  .legend-mini div { display: flex; align-items: center; gap: 12px; }
+  .legend-mini i { width: 26px; height: 26px; border-radius: 50%; flex: none; }
+  .legend-mini .l i { background: #7cc46a; }
+  .legend-mini .e i { background: #2b2b26; outline: 3px dashed var(--red); outline-offset: 3px; width: 20px; height: 20px; margin: 3px; }
+
+  .sensor {
+    position: absolute;
+    right: 34px;
+    bottom: 34px;
+    width: 250px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+  }
+  .sensor .label { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .sensor .label .ico { width: 18px; height: 18px; }
+  .readings { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--forest); }
+  .readings .miss { grid-column: 1 / -1; margin-top: 6px; padding-top: 10px; border-top: 1.5px dashed var(--line); color: var(--red); display: flex; align-items: center; gap: 8px; }
+  .readings .miss .ico { width: 20px; height: 20px; }
+
+  /* Right: three facts, read top to bottom. */
+  .facts { display: flex; flex-direction: column; gap: 0; }
+  .fact { flex: 1; display: grid; grid-template-columns: 96px 1fr; gap: 26px; align-items: center; border-bottom: 1.5px solid var(--line); }
+  .fact:last-child { border-bottom: none; }
+  .fact .n {
+    font-family: var(--mono);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--leaf);
+  }
+  .fact.hit .n { -webkit-text-stroke-color: var(--red); }
+  .fact .k { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px; }
+  .fact h3 { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); line-height: 1.12; }
+  .fact.hit h3 { color: var(--red); }
+  .fact p { margin-top: 10px; font-size: 23px; line-height: 1.42; color: var(--body); }
+
+  .strip {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 20px 28px;
+    border-radius: 18px;
+    background: var(--forest);
+    color: #fff;
+  }
+  .strip .why { display: flex; align-items: center; gap: 18px; flex: 1; font-size: 23px; line-height: 1.35; }
+  .strip .why .ico { width: 32px; height: 32px; color: var(--gold); }
+  .strip .why span { color: var(--on-dark-2); }
+  .sdgs { display: flex; gap: 10px; }
+  .sdg { display: flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; border-radius: 10px; background: rgba(255, 255, 255, 0.08); font-size: 17px; font-weight: 600; white-space: nowrap; }
+  .sdg i { font-style: normal; width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 19px; color: #fff; }
+</style>
+</head>
+<body data-num="02a" data-part="problem" data-eyebrow="Introduction / Background of the Study">
+<div class="slide">
+  <h1 class="title">Towers grow upward. Pot checks are <em>still done by hand.</em></h1>
+
+  <div class="content">
+    <section class="stage">
+      <div class="tower-art" data-pattern="LL EL LL LE LL LL EL" data-highlight="empty"></div>
+      <div class="bubble"><b>Which pots are empty?</b><span>Someone still has to walk up, look, and write it down.</span></div>
+      <div class="legend-mini">
+        <div class="l"><i></i>Lettuce</div>
+        <div class="e"><i></i>Empty pot</div>
+      </div>
+      <div class="sensor">
+        <div class="label"><span class="ico"><i data-lucide="activity"></i></span>IoT sensor readout</div>
+        <div class="readings">
+          <span>pH 6.1</span><span>24 °C</span><span>EC 1.4</span><span>RH 72%</span>
+          <span class="miss"><span class="ico"><i data-lucide="eye-off"></i></span>Empty pots: ?</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts">
+      <div class="fact">
+        <span class="n">01</span>
+        <div>
+          <div class="k">Context of the problem</div><h3>Vertical farms save land, if they are managed well</h3>
+          <p>Stacked tiers use less land and water, but success depends on efficient management. <span class="cite">(van Delden et al., 2021; Saad et al., 2021)</span></p>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="n">02</span>
+        <div>
+          <div class="k">Current situation</div><h3>Monitoring is still manual</h3>
+          <p>An Iloilo lettuce farm logged data by hand with inconsistent results; Bohol systems still rely on manual checks. <span class="cite">(Domingo, 2022; Bunga, 2026)</span></p>
+        </div>
+      </div>
+      <div class="fact hit">
+        <span class="n">03</span>
+        <div>
+          <div class="k">Current situation</div><h3>Sensors can't see an empty pot</h3>
+          <p>IoT tracks temperature, humidity, pH and nutrients, not whether each pot holds a plant. <span class="cite">(Dhanaraju et al., 2022; Santiago et al., 2025)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="why">
+        <span class="ico"><i data-lucide="sprout"></i></span>
+        <div><b>Importance:</b> <span>slot availability (empty pots vs. total slots) tells farmers where to replant and when to harvest, without walking every tower.</span></div>
+      </div>
+      <div class="sdgs">
+        <div class="sdg"><i style="background:#dda63a">2</i>Zero Hunger</div>
+        <div class="sdg"><i style="background:#fd6925">9</i>Innovation</div>
+        <div class="sdg"><i style="background:#fd9d24">11</i>Sustainable Cities</div>
+        <div class="sdg"><i style="background:#bf8b2e">12</i>Responsible Production</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="tower.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

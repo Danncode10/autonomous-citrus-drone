@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Backup A · SWOT Analysis</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; }
+  .q { padding: 24px 30px; display: flex; flex-direction: column; }
+  .q header { display: flex; align-items: center; gap: 16px; }
+  .q header .ico { width: 54px; height: 54px; padding: 12px; border-radius: 14px; }
+  .q h3 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+  .q header span.k { margin-left: auto; font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .q ul { list-style: none; margin-top: 14px; flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 26px; align-content: space-around; }
+  .q li { position: relative; padding-left: 20px; font-size: 21px; line-height: 1.35; color: var(--body); }
+  .q li::before { content: ''; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; }
+
+  .s header .ico { background: var(--leaf-soft); color: var(--leaf-deep); } .s h3 { color: var(--leaf-deep); } .s li::before { background: var(--leaf); }
+  .w header .ico { background: var(--gold-soft); color: var(--gold-deep); } .w h3 { color: var(--gold-deep); } .w li::before { background: var(--gold); }
+  .o header .ico { background: var(--blue-soft); color: var(--blue); } .o h3 { color: var(--blue); } .o li::before { background: var(--blue); }
+  .t header .ico { background: var(--red-soft); color: var(--red); } .t h3 { color: var(--red); } .t li::before { background: var(--red); }
+</style>
+</head>
+<body data-num="A" data-part="backup" data-eyebrow="Backup · SWOT Analysis (Figure 4)">
+<div class="slide">
+  <h1 class="title">Strengths, weaknesses, <em>and the risks we plan for</em></h1>
+
+  <div class="content">
+    <article class="card q s">
+      <header><span class="ico"><i data-lucide="trending-up"></i></span><h3>Strengths</h3><span class="k">Internal</span></header>
+      <ul>
+        <li>Automates counting of lettuce and empty pots</li>
+        <li>Low-cost drone and 2D camera, no LiDAR</li>
+        <li>Scans every face and identifies each pot</li>
+        <li>Inspection history and a live scan preview</li>
+        <li>Works offline; upload later</li>
+        <li>Towers need only a printed sign</li>
+      </ul>
+    </article>
+    <article class="card q w">
+      <header><span class="ico"><i data-lucide="triangle-alert"></i></span><h3>Weaknesses</h3><span class="k">Internal</span></header>
+      <ul>
+        <li>Lettuce only</li>
+        <li>Short flight time, small batteries</li>
+        <li>Needs GPS and an open space</li>
+        <li>Live preview needs Wi-Fi range</li>
+        <li>Accuracy depends on the dataset</li>
+        <li>Pots with no visible marker matched with lower confidence</li>
+      </ul>
+    </article>
+    <article class="card q o">
+      <header><span class="ico"><i data-lucide="sparkles"></i></span><h3>Opportunities</h3><span class="k">External</span></header>
+      <ul>
+        <li>Saved images reused for health and harvest studies</li>
+        <li>Other crops and farm types</li>
+        <li>Cellular and cloud processing for large farms</li>
+        <li>Work with local farms and agri offices</li>
+      </ul>
+    </article>
+    <article class="card q t">
+      <header><span class="ico"><i data-lucide="cloud-lightning"></i></span><h3>Threats</h3><span class="k">External</span></header>
+      <ul>
+        <li>Strong wind and rain</li>
+        <li>GPS drift causing misalignment</li>
+        <li>Weak Wi-Fi interrupting the live stream</li>
+        <li>Lighting changes lowering accuracy</li>
+      </ul>
+    </article>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

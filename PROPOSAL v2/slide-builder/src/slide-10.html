@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 10 · Research Instruments</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 18px; }
+
+  .docs { flex: 1; display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; gap: 18px; }
+
+  /* Each instrument is drawn as a sheet of paper with a folded corner. */
+  .sheet {
+    position: relative;
+    display: flex; flex-direction: column;
+    padding: 26px 24px 22px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: 18px 46px 18px 18px;
+    box-shadow: 0 10px 26px rgba(18, 57, 43, 0.07);
+  }
+  .sheet::before {
+    content: ''; position: absolute; right: -1.5px; top: -1.5px; width: 46px; height: 46px;
+    background: linear-gradient(225deg, var(--paper) 50%, var(--line-soft) 50%);
+    border-radius: 0 0 0 12px;
+  }
+  .sheet .top { display: flex; align-items: center; gap: 14px; }
+  .sheet .ico { width: 54px; height: 54px; padding: 12px; border-radius: 14px; background: var(--leaf-soft); color: var(--forest); }
+  .sheet .who { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--leaf-deep); line-height: 1.4; }
+  .sheet h3 { margin-top: 20px; font-size: 29px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); line-height: 1.12; }
+  .sheet p { margin-top: 10px; font-size: 21px; line-height: 1.4; color: var(--body); }
+  .lines { margin-top: 22px; padding-top: 0; list-style: none; display: grid; gap: 12px; }
+  .lines li { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 600; color: var(--ink); padding-bottom: 7px; border-bottom: 1.5px dashed var(--line-soft); }
+  .lines li:last-child { border-bottom: none; }
+  .lines li i { width: 16px; height: 16px; flex: none; border: 2px solid var(--leaf); border-radius: 4px; }
+
+  /* The USE adaptation, shown as the scale shrinking from 7 points to 5. */
+  .scale7 { margin-top: 14px; display: grid; gap: 8px; }
+  .row { display: grid; grid-template-columns: 70px 1fr; gap: 10px; align-items: center; font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--muted); }
+  .dots { display: flex; gap: 6px; }
+  .dots span { flex: 1; height: 36px; border-radius: 6px; background: var(--line-soft); display: grid; place-items: center; font-size: 14px; color: var(--muted); }
+  .dots.five span { background: var(--leaf-soft); color: var(--forest); }
+  .dots.five span.mid { background: var(--gold-soft); color: var(--gold-deep); }
+  .cats { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .cats span { padding: 6px 12px; border-radius: 8px; background: var(--forest); color: #fff; font-size: 16px; font-weight: 600; }
+  .mid-note { margin-top: 12px; font-size: 18px; line-height: 1.4; color: var(--gold-deep); font-weight: 600; }
+
+  .sheet.sys { background: var(--forest); border-color: var(--forest); }
+  .sheet.sys::before { background: linear-gradient(225deg, var(--paper) 50%, var(--forest-2) 50%); }
+  .sheet.sys .ico { background: var(--gold); }
+  .sheet.sys .who { color: var(--gold); }
+  .sheet.sys h3 { color: #fff; }
+  .sheet.sys p { color: var(--on-dark-2); }
+  .sheet.sys .lines li { color: #fff; border-color: rgba(255, 255, 255, 0.14); }
+  .sheet.sys .lines li i { border-color: var(--gold); }
+
+  .valid { display: grid; grid-template-columns: auto 1.6fr 1fr 1fr; gap: 14px; align-items: stretch; }
+  .valid .label { align-self: center; font-size: 15px; color: var(--muted); padding-right: 6px; }
+  .valid div.v { display: flex; align-items: center; gap: 14px; padding: 14px 18px; font-size: 18px; line-height: 1.35; color: var(--body); }
+  .valid .todo { font-size: 15px; }
+  .valid .ico { width: 40px; height: 40px; padding: 9px; border-radius: 50%; background: var(--leaf-soft); color: var(--leaf-deep); }
+  .valid b { color: var(--forest); }
+</style>
+</head>
+<body data-num="10" data-part="method" data-eyebrow="Research Instruments">
+<div class="slide">
+  <h1 class="title">Four instruments, <em>from farmer interviews to flight logs</em></h1>
+
+  <div class="content">
+    <div class="docs">
+      <article class="sheet">
+        <div class="top"><span class="ico"><i data-lucide="star"></i></span><div class="who">Farmer and IT experts<br>after using the system</div></div>
+        <h3>Survey Questionnaire</h3>
+        <p>Adapted USE questionnaire <span class="cite">(Hajesmaeel-Gohari et al., 2022)</span>.</p>
+        <div class="scale7">
+          <div class="row">ORIGINAL<div class="dots"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
+          <div class="row" style="color:var(--leaf-deep)">OURS<div class="dots five"><span>SD</span><span>D</span><span class="mid">MA</span><span>A</span><span>SA</span></div></div>
+        </div>
+        <div class="mid-note">"Moderately Agree" replaces neutral, so every answer takes a side.</div>
+        <div class="cats"><span>Usefulness</span><span>Ease of use</span><span>Satisfaction</span></div>
+      </article>
+      <article class="sheet">
+        <div class="top"><span class="ico"><i data-lucide="mic"></i></span><div class="who">Farmers<br>~15 min, face to face</div></div>
+        <h3>Interview Guide</h3>
+        <p>Interview questionnaire on how farmers monitor towers today, in six parts.</p>
+        <ul class="lines">
+          <li><i></i>Respondent and farm profile</li>
+          <li><i></i>Farm setup</li>
+          <li><i></i>Current monitoring practices</li>
+          <li><i></i>Challenges (5-point scale)</li>
+          <li><i></i>Views on the proposed system</li>
+          <li><i></i>Open-ended questions</li>
+        </ul>
+      </article>
+      <article class="sheet">
+        <div class="top"><span class="ico"><i data-lucide="clipboard-check"></i></span><div class="who">Researchers<br>on site</div></div>
+        <h3>Observation Checklist</h3>
+        <p>Site observation sheet for the towers and the flying area.</p>
+        <ul class="lines">
+          <li><i></i>Tower height, levels, pots per level</li>
+          <li><i></i>Open space for the drone</li>
+          <li><i></i>Nearby obstacles</li>
+          <li><i></i>Lighting and wind</li>
+          <li><i></i>GPS and network signal</li>
+        </ul>
+      </article>
+      <article class="sheet sys">
+        <div class="top"><span class="ico"><i data-lucide="gauge"></i></span><div class="who">The system<br>during cutover</div></div>
+        <h3>System Evaluation Tool</h3>
+        <p>Test logs, recorded per tower and per flight.</p>
+        <ul class="lines">
+          <li><i></i>Precision, recall, mAP@50</li>
+          <li><i></i>Counting error, slot matching</li>
+          <li><i></i>Alignment error, scan success</li>
+          <li><i></i>Stream delay, frame loss</li>
+          <li><i></i>Flight time, Pi temp, marker fps</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="valid">
+      <span class="label">Validation</span>
+      <div class="card v"><span class="ico"><i data-lucide="user-check"></i></span><span><b>Expert validation.</b> The thesis adviser reviews and approves the interview questionnaire before data gathering.</span></div>
+      <div class="card v"><span class="ico"><i data-lucide="flask-conical"></i></span><span><b>Pilot testing.</b> <span class="todo">[not yet in Chapter 1 v2]</span></span></div>
+      <div class="card v"><span class="ico"><i data-lucide="sigma"></i></span><span><b>Reliability testing.</b> <span class="todo">[not yet in Chapter 1 v2]</span></span></div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

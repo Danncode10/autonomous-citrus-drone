@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Backup B · Safety and Regulation</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1.1fr 1fr; gap: 26px; }
+
+  .rule { padding: 24px 28px; display: flex; flex-direction: column; }
+  .rule .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .rule h3 { margin-top: 6px; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; }
+  .rule p.src { margin-top: 4px; font-size: 17px; color: var(--on-dark-3); }
+  .checks { margin-top: 16px; flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
+  .check { display: grid; grid-template-columns: 1fr 40px 1fr; gap: 14px; align-items: center; padding: 14px 0; border-top: 1.5px solid rgba(255, 255, 255, 0.12); }
+  .check .lim { font-size: 19px; color: var(--on-dark-2); }
+  .check .lim b { display: block; font-size: 15px; font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-dark-3); margin-bottom: 2px; }
+  .check .ok { width: 40px; height: 40px; border-radius: 50%; background: var(--gold); color: var(--forest); display: grid; place-items: center; }
+  .check .ok svg { width: 22px; height: 22px; }
+  .check .ours { font-size: 21px; font-weight: 700; color: #fff; }
+
+  .right { display: flex; flex-direction: column; gap: 14px; }
+  .box { padding: 20px 24px; }
+  .box .label { font-size: 15px; color: var(--mint); display: flex; align-items: center; gap: 10px; }
+  .box .label .ico { width: 22px; height: 22px; }
+  .box ul { list-style: none; margin-top: 14px; display: grid; gap: 18px; }
+  .box li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; font-size: 21px; line-height: 1.38; color: var(--on-dark-2); }
+  .box li .ico { width: 20px; height: 20px; margin-top: 2px; color: var(--mint); }
+  .box li b { color: #fff; }
+  .box.grow { flex: 1; }
+</style>
+</head>
+<body class="dark" data-num="B" data-part="backup" data-eyebrow="Backup · Flight Safety and Regulation">
+<div class="slide">
+  <h1 class="title">Is it safe, and is it legal to fly? <em>Yes, in the open category.</em></h1>
+
+  <div class="content">
+    <section class="glass rule">
+      <div class="k">CAAP PCAR Part 11 · open category</div>
+      <h3>No special permit needed when all of these hold</h3>
+      <p class="src">Civil Aviation Authority of the Philippines (2026)</p>
+      <div class="checks">
+        <div class="check"><div class="lim"><b>Limit</b>Aircraft weighs 25 kg or less</div><span class="ok"><i data-lucide="check"></i></span><div class="ours">~200–240 g</div></div>
+        <div class="check"><div class="lim"><b>Limit</b>Within visual line of sight</div><span class="ok"><i data-lucide="check"></i></span><div class="ours">≤ 20 m from launch</div></div>
+        <div class="check"><div class="lim"><b>Limit</b>Below 120 m above ground</div><span class="ok"><i data-lucide="check"></i></span><div class="ours">≤ 1.8 m (6 ft)</div></div>
+        <div class="check"><div class="lim"><b>Limit</b>Daylight only</div><span class="ok"><i data-lucide="check"></i></span><div class="ours">Daylight, fair weather</div></div>
+        <div class="check"><div class="lim"><b>Limit</b>≥ 30 m from people not involved</div><span class="ok"><i data-lucide="check"></i></span><div class="ours">Open area away from people</div></div>
+      </div>
+    </section>
+
+    <div class="right">
+      <section class="glass box grow">
+        <div class="label"><span class="ico"><i data-lucide="shield-check"></i></span>On every flight</div>
+        <ul>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>Supervised</b>, with the RC transmitter as a manual override</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>Wind checked</b> with a handheld anemometer before takeoff</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>AutoTune</b> and GPS position hold keep the light drone steady</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>Return to launch</b> on low battery, lost RC, or markers lost for ~10 s</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span><b>Full scan simulated first</b> in Gazebo with ArduPilot SITL</span></li>
+        </ul>
+      </section>
+      <section class="glass box">
+        <div class="label"><span class="ico"><i data-lucide="users"></i></span>During the user evaluation</div>
+        <ul>
+          <li><span class="ico"><i data-lucide="check"></i></span><span>Respondents are <b>directly involved participants</b>: they stay at the ground station and start scans only from the dashboard</span></li>
+          <li><span class="ico"><i data-lucide="check"></i></span><span>They <b>never handle the RC transmitter</b>; a trained researcher keeps it</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

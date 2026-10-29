@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 02b · The Idea</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .slide { padding-right: 0; }
+  .topbar, h1.title, .footer { margin-right: 96px; }
+  h1.title { max-width: 1060px; }
+
+  .content { display: grid; grid-template-columns: 1fr 640px; gap: 0 64px; padding-top: 26px; }
+
+  /* Figure 5 runs off the right edge like a poster pinned to the slide. */
+  .plate.fig5 {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    width: 640px;
+    height: 868px;
+    border-radius: 26px 0 0 26px;
+    border: none;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  }
+  .plate.fig5 img { object-fit: cover; object-position: 50% 40%; }
+
+  .steps { list-style: none; display: grid; grid-template-rows: repeat(4, 1fr); gap: 14px; }
+  .steps li {
+    display: grid;
+    grid-template-columns: 74px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    padding: 0 28px;
+  }
+  .steps .ico { width: 74px; height: 74px; padding: 18px; border-radius: 20px; background: var(--gold); color: var(--forest); }
+  .steps .k { font-family: var(--mono); font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .steps h3 { margin-top: 4px; font-size: 31px; font-weight: 800; letter-spacing: -0.02em; }
+  .steps p { margin-top: 6px; font-size: 22px; line-height: 1.38; color: var(--on-dark-2); }
+  .steps .refs { display: flex; gap: 6px; }
+  .steps .refs span {
+    width: 34px; height: 34px; border-radius: 50%;
+    display: grid; place-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-family: var(--mono); font-size: 15px; font-weight: 700; color: #fff;
+  }
+
+  .pills { grid-column: 1; margin-top: 22px; display: flex; gap: 14px; }
+  .pills div {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 22px; border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255, 255, 255, 0.16);
+    font-size: 21px; font-weight: 600;
+  }
+  .pills .ico { width: 26px; height: 26px; color: var(--mint); }
+</style>
+</head>
+<body class="dark" data-num="02b" data-part="problem" data-eyebrow="Introduction · Key Concepts">
+<div class="slide">
+  <h1 class="title">Key concepts: <em>one drone checks every pot</em> on every tower.</h1>
+
+  <div class="content">
+    <ol class="steps">
+      <li class="glass">
+        <span class="ico"><i data-lucide="qr-code"></i></span>
+        <div><div class="k">Step 1 · Register</div><h3>Scan the tower sign</h3><p>The farmer scans the printed QR sign; the phone saves its GPS as the tower location.</p></div>
+        <div class="refs"><span>1</span></div>
+      </li>
+      <li class="glass">
+        <span class="ico"><i data-lucide="crosshair"></i></span>
+        <div><div class="k">Step 2 · Fly and align</div><h3>GPS gets near, markers align</h3><p>The Pi finds the ArUco approach marker, then holds distance, height and face.</p></div>
+        <div class="refs"><span>4</span><span>3</span></div>
+      </li>
+      <li class="glass">
+        <span class="ico"><i data-lucide="scan-eye"></i></span>
+        <div><div class="k">Step 3 · Scan and detect</div><h3>Every face, bottom to top</h3><p>YOLOv8 shows a live preview on the laptop; final counts come from the onboard recording.</p></div>
+        <div class="refs"><span>5</span><span>10</span></div>
+      </li>
+      <li class="glass">
+        <span class="ico"><i data-lucide="layout-dashboard"></i></span>
+        <div><div class="k">Step 4 · Upload and view</div><h3>Slot availability per tower</h3><p>Saved offline first; the farmer uploads to the web dashboard when there is internet.</p></div>
+        <div class="refs"><span>13</span></div>
+      </li>
+    </ol>
+
+    <div style="position: relative;">
+      <figure class="plate fig5">
+        <img src="../../figures/fig5-system-illustration.jpg" alt="Figure 5. Conceptual illustration of the system">
+        <span class="cap">Figure 5 · Conceptual illustration</span>
+      </figure>
+    </div>
+
+    <div class="pills">
+      <div><span class="ico"><i data-lucide="tag"></i></span>Printed sign, no electronics</div>
+      <div><span class="ico"><i data-lucide="wifi-off"></i></span>No internet needed on site</div>
+      <div><span class="ico"><i data-lucide="repeat"></i></span>One drone, every tower</div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

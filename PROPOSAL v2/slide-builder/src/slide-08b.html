@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 08b · The Dataset</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 600px 1fr; gap: 50px; }
+
+  /* Left: the headline number and its classes. */
+  .hero .label { color: var(--gold); font-size: 17px; }
+  .hero .big { margin-top: 6px; font-size: 200px; font-weight: 800; line-height: 0.9; letter-spacing: -0.06em; color: #fff; }
+  .hero .unit { margin-top: 22px; font-size: 40px; font-weight: 800; letter-spacing: -0.02em; color: var(--gold); }
+  .hero .basis { margin-top: 14px; font-size: 20px; line-height: 1.45; color: var(--on-dark-2); }
+
+  .classes { margin-top: 28px; display: grid; gap: 14px; }
+  .cls { display: grid; grid-template-columns: 160px 1fr; gap: 16px; align-items: center; }
+  .cls .name { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 700; }
+  .cls .sw { width: 22px; height: 22px; border-radius: 6px; flex: none; }
+  .cls .track { position: relative; height: 40px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); }
+  .cls .bar { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--forest); }
+  .cls .goal { position: absolute; top: -6px; bottom: -6px; border-left: 2px dashed rgba(255, 255, 255, 0.6); }
+  .axis-note { margin-top: 6px; display: flex; justify-content: space-between; padding-left: 176px; font-family: var(--mono); font-size: 14px; color: var(--on-dark-3); }
+
+  /* Right: how the images are made, as a pipeline, then the split. */
+  .right { display: flex; flex-direction: column; gap: 18px; }
+  .pipe { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .step { padding: 24px 22px; display: flex; flex-direction: column; justify-content: center; position: relative; }
+  .step .n { font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; }
+  .step .ico { margin-top: 18px; width: 72px; height: 72px; padding: 17px; border-radius: 14px; background: var(--gold); color: var(--forest); }
+  .step h3 { margin-top: 20px; font-size: 29px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.15; }
+  .step p { margin-top: 10px; font-size: 21px; line-height: 1.4; color: var(--on-dark-2); }
+  .step:not(:last-child)::after {
+    content: ''; position: absolute; right: -14px; top: 50%; width: 16px; height: 16px;
+    border-top: 3px solid var(--gold); border-right: 3px solid var(--gold); transform: translateY(-50%) rotate(45deg);
+  }
+
+  .split { padding: 22px 24px; }
+  .split .head { display: flex; justify-content: space-between; align-items: baseline; }
+  .split .head b { font-size: 23px; font-weight: 800; }
+  .split .head span { font-size: 17px; color: var(--on-dark-3); }
+  .stack { margin-top: 14px; display: flex; gap: 2px; height: 66px; }
+  .stack div { display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border-radius: 4px; color: var(--forest); }
+  .stack b { font-size: 22px; font-weight: 800; }
+  .stack span { font-size: 15px; font-weight: 600; opacity: 0.8; }
+  .note { margin-top: 12px; display: flex; align-items: center; gap: 10px; font-size: 18px; color: var(--mint); }
+  .note .ico { width: 22px; height: 22px; }
+</style>
+</head>
+<body class="dark" data-num="08b" data-part="method" data-eyebrow="Research Methodology · Dataset">
+<div class="slide">
+  <h1 class="title">The model learns from <em>about 2,000 labeled images</em></h1>
+
+  <div class="content">
+    <section class="hero">
+      <div class="label">Target dataset</div>
+      <div class="big">2,000</div>
+      <div class="unit">labeled tower images</div>
+      <p class="basis">Close to the 2,240 frames Wang et al. (2024) used for YOLOv8n on hydroponic lettuce, and above the 1,500-images-per-class guideline (Ultralytics).</p>
+
+      <div class="classes">
+        <div class="cls">
+          <div class="name"><span class="sw" style="background:#9fd6a9"></span>Lettuce</div>
+          <div class="track"><div class="bar" style="width:75%; background:#9fd6a9">≥ 1,500</div></div>
+        </div>
+        <div class="cls">
+          <div class="name"><span class="sw" style="background:#d9a520"></span>Empty pot</div>
+          <div class="track"><div class="bar" style="width:75%; background:#d9a520">≥ 1,500</div></div>
+        </div>
+        <div class="cls">
+          <div class="name"><span class="sw" style="background:#c9dbd1"></span>Background</div>
+          <div class="track"><div class="bar" style="width:10%; background:#c9dbd1"></div><span style="position:absolute; left:calc(10% + 12px); top:8px; font-family:var(--mono); font-size:17px; font-weight:700; color:#c9dbd1">5–10% · none of the classes</span></div>
+        </div>
+      </div>
+      <div class="axis-note"><span>0</span><span>images containing the class</span><span>2,000</span></div>
+    </section>
+
+    <section class="right">
+      <div class="pipe">
+        <article class="glass step">
+          <span class="n">01</span><span class="ico"><i data-lucide="video"></i></span>
+          <h3>Capture</h3>
+          <p>Drone and handheld videos, from every side, distance and lighting</p>
+        </article>
+        <article class="glass step">
+          <span class="n">02</span><span class="ico"><i data-lucide="film"></i></span>
+          <h3>Sample</h3>
+          <p>One frame about every second, so near-duplicates are skipped</p>
+        </article>
+        <article class="glass step">
+          <span class="n">03</span><span class="ico"><i data-lucide="square-dashed-mouse-pointer"></i></span>
+          <h3>Label in Supabox</h3>
+          <p>Boxes for lettuce and empty pot; export in YOLO format</p>
+        </article>
+        <article class="glass step">
+          <span class="n">04</span><span class="ico"><i data-lucide="brain-circuit"></i></span>
+          <h3>Train YOLOv8</h3>
+          <p>Test on unseen images: precision, recall, mAP@50</p>
+        </article>
+      </div>
+
+      <div class="glass split">
+        <div class="head"><b>70 / 20 / 10 split</b><span>of ~2,000 images</span></div>
+        <div class="stack">
+          <div style="flex:70; background:#9fd6a9"><b>~1,400</b><span>Training · 70%</span></div>
+          <div style="flex:20; background:#d9a520"><b>~400</b><span>Validation · 20%</span></div>
+          <div style="flex:10; background:#fff"><b>~200</b><span>Test</span></div>
+        </div>
+        <div class="note"><span class="ico"><i data-lucide="lock"></i></span>Images from one recording session stay in one set, so test images are truly unseen.</div>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 08a · Research Design</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: flex; flex-direction: column; gap: 18px; }
+
+  .design { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .design div { display: flex; align-items: center; gap: 16px; padding: 14px 20px; }
+  .design .ico { width: 46px; height: 46px; padding: 10px; border-radius: 12px; background: var(--leaf-soft); color: var(--forest); }
+  .design .k { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .design b { display: block; font-size: 21px; font-weight: 700; color: var(--forest); }
+  .design span.s { font-size: 17px; color: var(--muted); }
+
+  /* RAD drawn as a loop: phases 2 and 3 sit inside one dashed frame. */
+  .rad { flex: 1; display: grid; grid-template-columns: 1fr 64px 2.15fr 64px 1fr; align-items: stretch; }
+  .arrow { display: flex; align-items: center; justify-content: center; color: var(--leaf); }
+  .arrow .ico { width: 40px; height: 40px; }
+  .phase { padding: 22px 22px; display: flex; flex-direction: column; }
+  .phase .top { display: flex; align-items: center; gap: 14px; }
+  .phase .num { width: 48px; height: 48px; border-radius: 12px; background: var(--forest); color: #fff; display: grid; place-items: center; font-family: var(--mono); font-size: 22px; font-weight: 700; }
+  .phase .top .ico { width: 34px; height: 34px; margin-left: auto; color: var(--leaf-deep); }
+  .phase h3 { margin-top: 16px; font-size: 29px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); line-height: 1.12; }
+  .phase ul { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 14px; }
+  .phase li { position: relative; padding-left: 20px; font-size: 21px; line-height: 1.35; color: var(--body); }
+  .phase li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--leaf); }
+  .phase li b { color: var(--ink); }
+
+  .loop {
+    position: relative;
+    border: 2.5px dashed var(--leaf);
+    border-radius: 26px;
+    padding: 34px 16px 16px;
+    display: grid; grid-template-columns: 1fr 70px 1fr;
+    background: rgba(228, 241, 229, 0.45);
+  }
+  .loop .badge {
+    position: absolute; top: -18px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 16px; border-radius: 999px; background: var(--leaf-deep); color: #fff;
+    font-size: 17px; font-weight: 700; white-space: nowrap;
+  }
+  .loop .badge .ico { width: 18px; height: 18px; }
+  .cycle { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--leaf-deep); font-size: 14px; font-weight: 700; text-align: center; line-height: 1.2; }
+  .cycle .ico { width: 34px; height: 34px; }
+
+  .phase.cut { background: var(--forest); border-color: var(--forest); }
+  .phase.cut .num { background: var(--gold); color: var(--forest); }
+  .phase.cut .top .ico { color: var(--gold); }
+  .phase.cut h3 { color: #fff; }
+  .phase.cut li { color: var(--on-dark-2); }
+  .phase.cut li b { color: #fff; }
+  .phase.cut li::before { background: var(--gold); }
+
+  .stages { display: grid; grid-template-columns: auto 1fr 1fr; gap: 12px; align-items: center; }
+  .stages .label { font-size: 15px; color: var(--muted); padding-right: 10px; }
+  .stages div.s { padding: 12px 18px; border-radius: 12px; background: var(--card); border: 1.5px solid var(--line); font-size: 18px; color: var(--body); }
+  .stages div.s b { font-family: var(--mono); font-size: 14px; letter-spacing: 0.1em; color: var(--gold-deep); margin-right: 10px; }
+</style>
+</head>
+<body data-num="08a" data-part="method" data-eyebrow="Research Methodology · Research Design">
+<div class="slide">
+  <h1 class="title">Built in short cycles, <em>tested in simulation first</em></h1>
+
+  <div class="content">
+    <div class="design">
+      <div class="card"><span class="ico"><i data-lucide="hammer"></i></span><div><div class="k">Design</div><b>Developmental research</b></div></div>
+      <div class="card"><span class="ico"><i data-lucide="split"></i></span><div><div class="k">Approach</div><b>Mixed-method</b><span class="s">Interviews + tests and ratings</span></div></div>
+      <div class="card"><span class="ico"><i data-lucide="refresh-cw"></i></span><div><div class="k">Model</div><b>Rapid Application Development</b><span class="s">Fauzi et al., 2023</span></div></div>
+    </div>
+
+    <div class="rad">
+      <article class="card phase">
+        <div class="top"><span class="num">1</span><span class="ico"><i data-lucide="clipboard-list"></i></span></div>
+        <h3>Requirements Planning</h3>
+        <ul>
+          <li><b>Farmer interviews</b>, incl. how often and how long checks take</li>
+          <li>Site observation sheet</li>
+          <li>Components rated on cost, weight, fit</li>
+          <li>SWOT analysis</li>
+        </ul>
+      </article>
+
+      <div class="arrow"><span class="ico"><i data-lucide="arrow-right"></i></span></div>
+
+      <div class="loop">
+        <span class="badge"><span class="ico"><i data-lucide="repeat"></i></span>Repeated until each part works</span>
+        <article class="card phase">
+          <div class="top"><span class="num">2</span><span class="ico"><i data-lucide="pencil-ruler"></i></span></div>
+          <h3>User Design</h3>
+          <ul>
+            <li>Architecture, power, <b>sign and marker layout</b></li>
+            <li>Mission and slot-matching flow</li>
+            <li>Supabase schema; <b>dashboard shown to users</b></li>
+            <li><b>Gazebo + ArduPilot SITL</b>: full scan, lost markers, lost Wi-Fi</li>
+          </ul>
+        </article>
+        <div class="cycle">
+          <span class="ico"><i data-lucide="arrow-right"></i></span>build
+          <span style="height:18px"></span>
+          feedback<span class="ico"><i data-lucide="arrow-left"></i></span>
+        </div>
+        <article class="card phase">
+          <div class="top"><span class="num">3</span><span class="ico"><i data-lucide="wrench"></i></span></div>
+          <h3>Rapid Construction</h3>
+          <ul>
+            <li>Drone build, <b>thrust test</b>, AutoTune</li>
+            <li>1.5 m tower, sign, ArUco markers</li>
+            <li><b>~2,000 labeled images</b> → YOLOv8</li>
+            <li>Streaming, alignment, cache, dashboards</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="arrow"><span class="ico"><i data-lucide="arrow-right"></i></span></div>
+
+      <article class="card phase cut">
+        <div class="top"><span class="num">4</span><span class="ico"><i data-lucide="flag"></i></span></div>
+        <h3>Cutover</h3>
+        <ul>
+          <li>Model, flight, streaming and sync tests</li>
+          <li><b>End to end</b>: QR to dashboard</li>
+          <li>User evaluation (USE)</li>
+          <li>Final documentation</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="stages">
+      <span class="label">Construction stages</span>
+      <div class="s"><b>STAGE 1</b>Dashboard, tower sign, dataset, Gazebo simulation, manual flight</div>
+      <div class="s"><b>STAGE 2</b>Pi, camera and GPS on the drone; visual alignment; full pipeline</div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

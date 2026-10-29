@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 03b · Related Literature: Detection and Flight</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="rrl.css">
+</head>
+<body data-num="03b" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Detection and Flight">
+<div class="slide">
+  <h1 class="title">Detection and flight work, <em>but not for empty pots on a tower</em></h1>
+
+  <div class="content">
+    <div class="rrl">
+      <div class="th">Author</div>
+      <div class="th">Key Findings</div>
+      <div class="th">Relevance to this study</div>
+
+      <div class="who"><small>Computer vision</small><span>Terven et al. (2023)</span><span>Ultralytics (n.d.)</span></div>
+      <div class="what"><span>YOLO is a central real-time detector, judged by precision, recall and mAP; YOLOv8 (2023) is anchor-free for speed and accuracy.</span></div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>YOLOv8, measured with precision, recall and mAP@50.</p></div>
+
+      <div class="who"><small>Lettuce detection</small><span>Wang, Wu &amp; Shen (2024)</span></div>
+      <div class="what"><span class="stat">~99%<small>precision</small></span><span>YOLOv8n found hydroponic lettuce heads with about 99% precision and recall, from 2,240 video frames.</span></div>
+      <div class="why">
+        <p><span class="tag adopted">Adopted</span>YOLOv8 and a ~2,000-image dataset.</p>
+        <p><span class="tag gap">Gap</span>No empty-pot class; stable camera only.</p>
+      </div>
+
+      <div class="who"><small>Tracking and counting</small><span>Zhang et al. (2022)</span><span>Villacrés et al. (2023)</span></div>
+      <div class="what"><span class="stat">20.07%<small>count error</small></span><span>ByteTrack keeps low-score boxes to cut missed tracks; DeepSORT + YOLOv5 averaged 20.07% counting error on apples.</span></div>
+      <div class="why"><p><span class="tag adopted">Adopted</span>ByteTrack; counting error checked against manual counts.</p></div>
+
+      <div class="who"><small>UAVs in agriculture</small><span>Aslan et al. (2022)</span><span>de Azambuja et al. (2022)</span><span>Aliane (2024)</span></div>
+      <div class="what"><span class="stat">&lt;250 g<small>CogniFly</small></span><span>Almost no UAV work in greenhouses; CogniFly survived 7 m/s collisions; ArduPilot supports companion computers and SITL.</span></div>
+      <div class="why">
+        <p><span class="tag adopted">Adopted</span>CogniFly-style frame, ArduPilot + Pi, Gazebo SITL.</p>
+        <p><span class="tag gap">Gap</span>No study inspects a single tower.</p>
+      </div>
+
+      <div class="who"><small>Fiducial markers</small><span>Kalaitzakis et al. (2021)</span><span>OpenCV (n.d.)</span><span>Andrzejewski et al. (2026)</span></div>
+      <div class="what"><span>Markers make localization accurate and robust; pose comes from four corners; a Pi + ArduPilot landed precisely on markers.</span></div>
+      <div class="why">
+        <p><span class="tag adopted">Adopted</span>ArUco + solvePnP alignment on the Pi.</p>
+        <p><span class="tag gap">Gap</span>Landing pads only, not vertical faces.</p>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><span class="tag adopted">Adopted</span>used in our design</span>
+      <span><span class="tag gap">Gap</span>not yet addressed</span>
+      <span><span class="tag evidence">Evidence</span>supports the problem</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

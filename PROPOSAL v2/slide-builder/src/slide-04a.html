@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 04a · Paradigm of the Study</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1fr 1.25fr 0.8fr; grid-template-rows: auto 1fr auto; gap: 0 22px; }
+
+  /* Chevron headers make the left-to-right reading obvious from the back row. */
+  .chev {
+    height: 76px;
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 40px 0 28px;
+    font-family: var(--mono); font-size: 26px; font-weight: 700; letter-spacing: 0.16em;
+    color: var(--forest);
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%, 16px 50%);
+    margin-bottom: 18px;
+  }
+  .chev:first-child { clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%); }
+  .chev .ico { width: 30px; height: 30px; }
+  .c1 { background: var(--mint); }
+  .c2 { background: var(--gold); }
+  .c3 { background: #fff; }
+
+  .col { display: flex; flex-direction: column; gap: 14px; }
+  .box { padding: 20px 24px; }
+  .box .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .box h3 { margin-top: 6px; font-size: 25px; font-weight: 700; }
+  .box p { margin-top: 6px; font-size: 20px; line-height: 1.38; color: var(--on-dark-2); }
+  .chips { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips span { padding: 6px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.1); font-size: 17px; font-weight: 600; color: #eef5f0; }
+  .chips span.new { background: var(--gold); color: var(--forest); }
+
+  .rad { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1; align-content: space-between; }
+  .phase { padding: 16px 18px; border-radius: 16px; background: rgba(255, 255, 255, 0.06); border: 1.5px solid rgba(255, 255, 255, 0.13); }
+  .phase .n { font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--gold); }
+  .phase h4 { margin-top: 4px; font-size: 22px; font-weight: 700; }
+  .phase p { margin-top: 6px; font-size: 18px; line-height: 1.35; color: var(--on-dark-2); }
+  .phase.wide { grid-column: 1 / -1; }
+  .phase.wide p { display: inline; margin-left: 12px; }
+  .phase.wide h4 { display: inline; }
+  .phase.loop { border: 2px dashed var(--gold); background: rgba(217, 165, 32, 0.08); }
+  .loop-note { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; color: var(--gold); }
+  .loop-note .ico { width: 20px; height: 20px; }
+
+  .out { flex: 1; padding: 26px 26px; border-radius: 20px; background: #fff; color: var(--forest); display: flex; flex-direction: column; }
+  .out h3 { font-size: 27px; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; }
+  .out .label { margin-top: auto; font-size: 14px; color: var(--muted); }
+  .out ul { list-style: none; margin-top: 12px; display: grid; gap: 10px; }
+  .out li { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 12px; background: var(--leaf-tint); font-size: 21px; font-weight: 700; }
+  .out li .ico { width: 36px; height: 36px; padding: 7px; border-radius: 9px; background: var(--forest); color: var(--gold); }
+
+  .feedback { grid-column: 1 / -1; height: 70px; position: relative; }
+  .feedback svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .feedback span {
+    position: absolute; left: 50%; top: 36px; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 18px; border-radius: 999px; background: var(--forest);
+    font-size: 19px; font-weight: 600; color: var(--mint); white-space: nowrap;
+  }
+  .feedback .ico { width: 20px; height: 20px; }
+</style>
+</head>
+<body class="dark" data-num="04a" data-part="solution" data-eyebrow="Conceptual Framework · Input–Process–Output (IPO) Model">
+<div class="slide">
+  <h1 class="title">From farmer needs to <em>a working inspection system</em></h1>
+
+  <div class="content">
+    <div class="chev c1"><span class="ico"><i data-lucide="log-in"></i></span>INPUT</div>
+    <div class="chev c2"><span class="ico"><i data-lucide="cog"></i></span>PROCESS</div>
+    <div class="chev c3"><span class="ico"><i data-lucide="package-check"></i></span>OUTPUT</div>
+
+    <div class="col">
+      <div class="glass box"><div class="k">Problem input</div><p>Interviews with hydroponic farmers on how they monitor towers today</p></div>
+      <div class="glass box"><div class="k">Knowledge input</div><p>Related literature: vertical farming, computer vision, UAVs, markers</p></div>
+      <div class="glass box" style="flex:1">
+        <div class="k">Technical inputs</div>
+        <div class="chips">
+          <span>SpeedyBee F405 Mini</span><span>HGLRC GPS</span><span>Pi Zero 2 W</span><span>Pi Camera V2</span>
+          <span class="new">Printed tower sign</span><span>ArUco markers</span><span>Ground laptop</span>
+          <span>YOLOv8</span><span>ArduPilot</span><span>Supabase</span><span>Web dashboard</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="rad">
+        <div class="phase wide"><div class="n">PHASE 1</div><h4>Requirements Planning</h4><p>Farmer needs, components, scope, evaluation criteria</p></div>
+        <div class="phase loop"><div class="n">PHASE 2</div><h4>User Design</h4><p>Architecture, database, dashboard, mission; Gazebo test first</p></div>
+        <div class="phase loop"><div class="n">PHASE 3</div><h4>Rapid Construction</h4><p>Drone, tower, sign, dataset, YOLOv8, streaming, dashboard</p></div>
+        <div class="loop-note"><span class="ico"><i data-lucide="repeat"></i></span>Phases 2 and 3 repeat until each part works</div>
+        <div class="phase wide"><div class="n">PHASE 4</div><h4>Cutover</h4><p>End-to-end tests outdoors, then user evaluation</p></div>
+      </div>
+      <div class="glass box">
+        <div class="k">Measured by</div>
+        <div class="chips">
+          <span>Precision · Recall · mAP@50</span><span>Counting error</span><span>Alignment + scan success</span><span>Weighted mean (USE)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="out">
+        <h3>Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration</h3>
+        <div class="label">Reports for every tower</div>
+        <ul>
+          <li><span class="ico"><i data-lucide="sprout"></i></span>Lettuce count</li>
+          <li><span class="ico"><i data-lucide="circle-dashed"></i></span>Empty pot count</li>
+          <li><span class="ico"><i data-lucide="gauge"></i></span>Slot availability</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feedback">
+      <svg viewBox="0 0 1728 70" preserveAspectRatio="none" fill="none">
+        <path d="M1590 0 V50 H120 V0" stroke="#9fd6a9" stroke-width="3" stroke-dasharray="10 8"/>
+        <path d="M108 14 L120 0 L132 14" stroke="#9fd6a9" stroke-width="3"/>
+      </svg>
+      <span><span class="ico"><i data-lucide="rotate-ccw"></i></span>Feedback: flight tests, detection tests and user evaluations refine the next iteration</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

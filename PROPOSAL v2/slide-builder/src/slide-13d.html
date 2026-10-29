@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 13d · Tech Stack and Dashboard</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .content { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; }
+
+  /* The stack, top (what the farmer sees) to bottom (what keeps the drone in the air). */
+  .stack { display: flex; flex-direction: column; gap: 8px; }
+  .layer { flex: 1; display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 18px; padding: 0 20px; border-radius: 16px; }
+  .layer .name { display: flex; align-items: center; gap: 14px; }
+  .layer .name .ico { width: 46px; height: 46px; padding: 10px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); }
+  .layer .name b { font-size: 21px; font-weight: 800; line-height: 1.15; }
+  .layer .name span { display: block; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin-top: 3px; }
+  .layer .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+  .layer .tools span { padding: 7px 12px; border-radius: 9px; font-size: 17px; font-weight: 600; background: rgba(255, 255, 255, 0.12); }
+  .layer .tools span.todo { background: var(--gold-soft); font-size: 15px; }
+
+  .l1 { background: #f4f8f4; color: var(--forest); }
+  .l1 .name .ico, .l1 .tools span { background: var(--leaf-soft); }
+  .l2 { background: #a9c6f0; color: #102a4c; }
+  .l2 .name .ico, .l2 .tools span { background: rgba(255, 255, 255, 0.45); }
+  .l3 { background: var(--gold); color: var(--forest); }
+  .l3 .name .ico, .l3 .tools span { background: rgba(255, 255, 255, 0.35); }
+  .l4 { background: var(--leaf); color: #fff; }
+  .l5 { background: var(--forest-2); color: #fff; border: 1.5px solid rgba(255, 255, 255, 0.15); }
+  .l6 { background: transparent; color: var(--on-dark-2); border: 1.5px dashed rgba(255, 255, 255, 0.3); }
+
+  .dash { display: flex; flex-direction: column; gap: 14px; }
+  .panel { padding: 20px 22px; }
+  .panel header { display: flex; align-items: center; justify-content: space-between; }
+  .panel h3 { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 800; }
+  .panel h3 .ico { width: 30px; height: 30px; color: var(--gold); }
+  .panel ul { list-style: none; margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .panel li { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.07); font-size: 18px; font-weight: 600; line-height: 1.25; }
+  .panel li .ico { width: 26px; height: 26px; color: var(--mint); }
+  .panel.web { flex: 1; }
+  .free { padding: 16px 20px; display: flex; align-items: center; gap: 14px; font-size: 19px; line-height: 1.35; color: var(--on-dark-2); }
+  .free .ico { width: 34px; height: 34px; color: var(--gold); }
+  .free b { color: #fff; }
+</style>
+</head>
+<body class="dark" data-num="13d" data-part="build" data-eyebrow="Proposed System Architecture · Key Features">
+<div class="slide">
+  <h1 class="title">Architecture layers and <em>key features</em></h1>
+
+  <div class="content">
+    <section class="stack">
+      <div class="layer l1"><div class="name"><span class="ico"><i data-lucide="monitor-smartphone"></i></span><div><b>Web front end</b><span>Phone and computer</span></div></div>
+        <div class="tools"><span>Next.js</span><span>qr-scanner (Nimiq)</span><span>Leaflet + OpenStreetMap</span></div></div>
+      <div class="layer l2"><div class="name"><span class="ico"><i data-lucide="cloud"></i></span><div><b>Cloud back end</b><span>When online</span></div></div>
+        <div class="tools"><span>Supabase: PostgreSQL</span><span>Storage</span><span>Realtime</span></div></div>
+      <div class="layer l3"><div class="name"><span class="ico"><i data-lucide="laptop"></i></span><div><b>Ground processing</b><span>Laptop · Ubuntu 22.04</span></div></div>
+        <div class="tools"><span>ROS 2</span><span>Python + OpenCV</span><span>YOLOv8</span><span>ByteTrack</span><span>SQLite cache</span></div></div>
+      <div class="layer l4"><div class="name"><span class="ico"><i data-lucide="cpu"></i></span><div><b>Drone companion</b><span>Pi Zero 2 W</span></div></div>
+        <div class="tools"><span>Picamera2</span><span>GStreamer</span><span>pymavlink + mavlink-router</span><span>OpenCV ArUco + QR</span></div></div>
+      <div class="layer l5"><div class="name"><span class="ico"><i data-lucide="drone"></i></span><div><b>Flight control</b><span>SpeedyBee F405 Mini</span></div></div>
+        <div class="tools"><span>ArduPilot (ArduCopter)</span><span class="todo">[ground control station]</span></div></div>
+      <div class="layer l6"><div class="name"><span class="ico"><i data-lucide="flask-conical"></i></span><div><b>Build and test</b><span>Before flying</span></div></div>
+        <div class="tools"><span>Supabox (~2,000 images)</span><span>Gazebo Sim + ArduPilot SITL</span></div></div>
+    </section>
+
+    <section class="dash">
+      <article class="glass panel web">
+        <header><h3><span class="ico"><i data-lucide="globe"></i></span>Key features · web dashboard</h3><span class="tag online">Online</span></header>
+        <ul>
+          <li><span class="ico"><i data-lucide="scan-qr-code"></i></span>Register towers by QR, even offline</li>
+          <li><span class="ico"><i data-lucide="map"></i></span>Tower map</li>
+          <li><span class="ico"><i data-lucide="send"></i></span>Request scans</li>
+          <li><span class="ico"><i data-lucide="history"></i></span>Inspection history</li>
+          <li><span class="ico"><i data-lucide="grid-3x3"></i></span>Per-pot results</li>
+          <li><span class="ico"><i data-lucide="download"></i></span>Exportable datasets</li>
+        </ul>
+      </article>
+      <article class="glass panel">
+        <header><h3><span class="ico"><i data-lucide="laptop"></i></span>Key features · local dashboard</h3><span class="tag offline">Offline</span></header>
+        <ul>
+          <li><span class="ico"><i data-lucide="radio"></i></span>Live Scan view</li>
+          <li><span class="ico"><i data-lucide="cloud-upload"></i></span>Sync Center, no duplicates</li>
+        </ul>
+      </article>
+      <div class="glass free"><span class="ico"><i data-lucide="badge-check"></i></span><span><b>Free and open-source tools</b> keep the system affordable for small farms.</span></div>
+    </section>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>
