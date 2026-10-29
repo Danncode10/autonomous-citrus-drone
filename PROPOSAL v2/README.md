@@ -5,7 +5,8 @@ Proposal defense deck rebuilt from **Chapter 1 v2.docx**, which now holds the Re
 | File | What it is |
 | ----- | ----- |
 | `slides/` | 34 rendered slides, 3840 × 2160 PNG. Insert each as a full-slide picture in a 16:9 PowerPoint. |
-| `DEFENSE-SCRIPT.md` | Full speaker script for every slide, with timing, speakers, `<next>` cues and *If asked* answers. |
+| `DEFENSE-SCRIPT.md` | What to say on each slide, and who says it. |
+| `QA-PREP.md` | Short answers to likely panel questions. |
 | `THESIS-PROPOSAL-DEFENSE.md` | Slide-by-slide content, mapped to the school template. |
 | `figures/` | NVSU logo, the Google Flow photos from v1, and Figures 1, 3, 5, 6, 7 taken from Chapter 1 v2. |
 | `slide-builder/` | HTML source of every slide and `build.py`, which renders them. |

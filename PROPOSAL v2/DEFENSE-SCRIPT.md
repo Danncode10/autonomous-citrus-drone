@@ -1,413 +1,264 @@
-# Thesis Proposal Defense: Speaker Script (v2)
+# Defense Script
 
-**Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration**
-November 3, 2026 · Nueva Vizcaya State University · College of Information Technology Education
-
-Source: **Chapter 1 v2.docx**, which now includes the Review of Related Literature. Slides follow the school template (`PROPOSAL/THESIS-PROPOSAL-DEFENSE-Template.docx.md`). Each slide is numbered by its template slide, and a template slide that needs more than one gets letters, as in v1 (03a, 03b…).
-
-**How to read this script**
-- Times assume about 130 words per minute. Sentences marked ✂ can be cut if you run long.
-- **`<next>`** means click to the next slide. The arrow names the image that should appear. Whoever is speaking clicks.
-- Section slides (`…-0-section-…`) have no lines; just click through.
-- *If asked* notes are short answers taken from Chapter 1 v2, in case a panelist interrupts.
-
-## Timing and speakers
-
-Target: **about 19 minutes**, then open forum. Presenter assignment carries over from v1; rebalance it so each member presents what they built or wrote.
-
-| Template | Slide | Speaker | Time |
-| ----- | ----- | ----- | ----- |
-| 1 | slide-01 · Title | Lester Dann G. Lopez | 0:35 |
-| | slide-02-0 · Section: The Problem | Lopez | 0:02 |
-| 2 | slide-02a · Introduction / Background of the Study | Lopez | 1:15 |
-| 2 | slide-02b · Introduction · Key Concepts (Figure 5) | Lopez | 1:00 |
-| 3 | slide-03a · RRL · Farm and Monitoring | Rhoan Joy M. Marvilla | 0:55 |
-| 3 | slide-03b · RRL · Detection and Flight | Marvilla | 0:55 |
-| 3 | slide-03c · RRL · Processing, Data and Method | Marvilla | 0:40 |
-| 3 | slide-03d · Research Gap | Marvilla | 0:40 |
-| | slide-04-0 · Section: The Solution | Marvilla | 0:02 |
-| 4 | slide-04a · Conceptual Framework · IPO Model | Marvilla | 0:45 |
-| 4 | slide-04b · Conceptual Framework · System Flow (Figure 1) | Marvilla | 0:55 |
-| 5 | slide-05 · Research Objectives | Prince Daniel A. Valentino | 1:00 |
-| 6 | slide-06 · Significance of the Study | Valentino | 0:45 |
-| 7 | slide-07 · Scope and Delimitation | Valentino | 0:55 |
-| | slide-08-0 · Section: The Method | Valentino | 0:02 |
-| 8 | slide-08a · Research Methodology · Research Design | Joshua Jing A. Fernandez | 0:55 |
-| 8 | slide-08b · Research Methodology · Dataset (2,000 images) | Fernandez | 0:45 |
-| 9 | slide-09 · Locale and Participants | Fernandez | 0:35 |
-| 10 | slide-10 · Research Instruments | Fernandez | 0:45 |
-| 11 | slide-11 · Data Gathering Procedure | Fernandez | 0:35 |
-| 12 | slide-12 · Statistical Treatment of Data | Fernandez | 0:45 |
-| | slide-13-0 · Section: The System | Fernandez | 0:02 |
-| 13 | slide-13a · Proposed System Architecture (Figure 6) | Lopez | 0:55 |
-| 13 | slide-13b · Scan Sequence and Failsafes | Lopez | 0:55 |
-| 13 | slide-13c · Technical Design (Figure 7) | Lopez | 0:35 |
-| 13 | slide-13d · Architecture Layers and Key Features | Lopez | 0:35 |
-| | slide-14-0 · Section: The Plan | Lopez | 0:02 |
-| 14 | slide-14 · Project Timeline (Gantt Chart) | Lopez | 0:25 |
-| 15 | slide-15 · Expected Output | Lopez | 0:35 |
-| 16 | slide-16 · Budget Requirements | Lopez | 0:30 |
-| 17 | slide-17 · Thank You / Open Forum | All | 0:10 |
-| | | **Total** | **≈ 19:00** |
-
-Backup slides A–C (SWOT, safety and regulation, hardware) come after slide-17. Show them only when asked.
+Section title slides (Part One, Part Two, and so on) have no lines. Click past them.
 
 ---
 
-## slide-01 · Title
-**Speaker:** Lopez · **Time:** 0:35
+## 01 · Title (Lopez)
 
-Good [morning / afternoon] to our honorable panel members, to our thesis adviser, Bernadeth B. Liggayu, and to everyone present.
+Good [morning / afternoon] to our panel, to our thesis adviser, Bernadeth B. Liggayu, and to everyone here.
 
-We are Lester Dann Lopez, Rhoan Joy Marvilla, Prince Daniel Valentino, and Joshua Jing Fernandez, from BS Computer Science 4B.
+I am Lester Dann Lopez, Rhoan Joy Marvilla, Prince Daniel Valentino, and Joshua Jing Fernandez, from BS Computer Science 4B.
 
-Today we present **"Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration."** In one line: a small drone scans a hydroponic tower and tells the farmer which pots have lettuce and which are empty.
-
-**`<next>`** → slide-02-0-section-problem
-**`<next>`** → slide-02a · Introduction / Background of the Study
+Our thesis is "Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration." Simply put, a small drone flies around a hydroponic tower, and a computer counts which pots have lettuce and which are empty.
 
 ---
 
-## slide-02a · Introduction / Background of the Study
-**Speaker:** Lopez · **Time:** 1:15
+## 02a · Background of the Study (Lopez)
 
-First, the context. Vertical farms stack crops in tiers. Van Delden and colleagues found that this saves land and water, but only if the farm is managed well.
+Vertical farms grow crops in stacked towers. They save land and water, but only if they are managed well. A big part of that is knowing which pots have plants and which are empty, so the farmer knows where to replant and what to harvest.
 
-The current situation: managing it is still done by hand. A lettuce farm in Iloilo logged its data manually, with inconsistent results, and in Bohol, Bunga reported that hydroponic systems still rely on manual monitoring.
+Today, this is still checked by hand. Studies from Iloilo and Bohol show that farms still monitor and record manually. Most farm technology uses IoT sensors, but these only measure things like temperature, pH and nutrients. A sensor cannot tell if a pot is empty.
 
-Most farm technology today is IoT: sensors for temperature, humidity, pH and nutrients. Look at the readout on the left. It knows the pH. It does not know **which pots are empty**. Someone still has to walk up, look, and write it down.
-
-And it is never just one tower. **A farm has many towers**, and stackable towers grow taller module by module, so checking every pot by hand takes longer as the farm grows.
-
-That is why this study matters: **slot availability**, empty pots against total slots, for every tower on the farm, tells farmers where to replant and when to harvest. ✂ This work supports SDGs 2, 9, 11 and 12.
-
-**`<next>`** → slide-02b · Key Concepts
-
-> **If asked: "Why not just add more sensors?"**
-> Sensors measure the air and the nutrient solution. Whether a pot holds a plant needs a visual record of the tower itself (Chapter 1 v2, IoT and Smart Farming).
+And a farm has many towers, and towers can be made taller. So checking every pot by hand takes longer as the farm grows. That is the problem our study solves.
 
 ---
 
-## slide-02b · Introduction · Key Concepts
-**Speaker:** Lopez · **Time:** 1:00
+## 02b · Key Concepts (Lopez)
 
-So our system does the looking. Four key concepts, in four steps; the numbers on the right match Figure 5.
+Our solution has four parts.
 
-**One, QR registration:** the farmer scans a printed QR sign on the tower, and the phone saves its own GPS as the tower's location. **Two, GPS and ArUco markers:** the drone flies there by GPS, then the Raspberry Pi finds the markers and holds its distance, height and face. **Three, YOLOv8 computer vision:** the drone scans every face, bottom to top, while a ground laptop shows a live preview; the final count comes from the full recording after landing. **Four, an offline-first dashboard:** results are saved offline, and the farmer uploads them when there is internet.
+First, registration. Each tower has a printed sign with a QR code. The farmer scans it with a phone, and the phone saves the tower's GPS location.
 
-And this is built for **the whole farm, not one tower**. Each tower is registered with its own QR code and location, so the same drone inspects every tower, one after another. Adding a tower costs only a printed sign, no electronics.
+Second, navigation. The drone flies to the tower using GPS. Since GPS is only accurate to a few meters, the drone then uses ArUco markers, printed black-and-white squares on the tower, to keep the right distance and height.
 
-**`<next>`** → slide-03a · Related Literature: Farm and Monitoring
+Third, detection. The drone flies up each side of the tower and records video. On a laptop, an AI model called YOLOv8 finds the lettuce and the empty pots and matches each one to its exact pot.
 
-> **If asked: "Why a printed sign and not an electronic tower unit?"**
-> A sign costs about ₱150 and needs no battery or wiring. The phone already has GPS, so the tower does not need its own. That keeps the cost of adding towers low (Table 5).
+Fourth, the dashboard. Results are saved on the laptop first, so no internet is needed at the farm. They are uploaded to a web dashboard when internet is available.
 
----
-
-## slide-03a · Review of Related Literature · Farm and Monitoring
-**Speaker:** Marvilla · **Time:** 0:55
-
-Thank you. We reviewed 38 sources, shown in three tables: author, key findings, and relevance. The tags say whether we **adopted** it, whether it leaves a **gap**, or whether it is **evidence** for the problem.
-
-Van Delden, Saad and Siregar show vertical farms only pay off when managed well, but they focus on the environment, not on which slots are in use. Locally, SIGLA at UPLB and Bendanillo's PVC gardens confirm that towers are made of discrete slots. Domingo and Bunga show monitoring is still manual. IoT studies like Dhanaraju and Santiago track the air and water, but none reports whether a slot holds a plant.
-
-And from Qian and GPS.gov: a QR code reads reliably at the right size, and phone GPS is accurate to about **4.9 meters**. So we use a printed QR sign with the phone's GPS, and GPS only gets the drone near.
-
-**`<next>`** → slide-03b · Related Literature: Detection and Flight
+Because every tower has its own QR code, one drone can check every tower on the farm.
 
 ---
 
-## slide-03b · Review of Related Literature · Detection and Flight
-**Speaker:** Marvilla · **Time:** 0:55
+## 03a · Related Literature: Farm and Monitoring (Marvilla)
 
-For detection, Terven and Ultralytics support YOLOv8 and its metrics. Wang and colleagues reached about **99 percent** precision on hydroponic lettuce with 2,240 frames, so we adopt YOLOv8 with about 2,000 images. But their model had **no empty-pot class**, and their camera was stable.
+Thank you. We reviewed 38 sources. For each one, the table shows what it found and how it relates to our study.
 
-ByteTrack, from Zhang, counts each pot once. Villacrés found a **20 percent** counting error even with good trackers, so we check against manual counts.
+Studies on vertical farming, like van Delden and Saad, say towers work well only with good management. Local projects, like SIGLA at UPLB, use towers with separate planting slots, the same layout we scan. Domingo and Bunga show that local farms still monitor by hand. IoT studies like Dhanaraju and Santiago measure the air and water, but none of them checks if a pot is empty.
 
-For flight, Aslan found almost no drone work in greenhouses, and CogniFly, **under 250 grams**, gave us our frame concept. Kalaitzakis and Andrzejewski show a Pi with ArduPilot can align on markers, but **only for landing on flat pads**, not beside a vertical face.
-
-**`<next>`** → slide-03c · Related Literature: Processing, Data and Method
-
-> **If asked: "Why YOLOv8 and not a newer version?"**
-> YOLOv8 has published results on hydroponic lettuce (Wang et al., 2024) and a documented evaluation method (Terven et al., 2023), which gives us a baseline to compare against.
+For registration, Qian shows phones read QR codes reliably, and phone GPS is accurate to about 4.9 meters. So we use a QR sign and the phone's GPS, but GPS only gets the drone close to the tower.
 
 ---
 
-## slide-03c · Review of Related Literature · Processing, Data and Method
-**Speaker:** Marvilla · **Time:** 0:40
+## 03b · Related Literature: Detection and Flight (Marvilla)
 
-Shalash found YOLO on a Raspberry Pi runs **under 3 frames per second**, and Zhu and Chen showed that Wi-Fi offloading fails when the link weakens. So YOLOv8 runs on the laptop, and steering stays on the Pi.
+For detection, Wang and colleagues used YOLOv8 to find hydroponic lettuce with about 99 percent accuracy, so we use YOLOv8 too. But their model did not detect empty pots, and their camera did not move. Ours detects both, from a moving drone.
 
-Rural connectivity is uneven, and an offline-first farm app kept full sync, so we cache offline and sync later. ✂ Schulze Schwering and Supabase shape the dashboard; Meier, ArduPilot and CAAP shape our safety rules; and Fauzi and Hajesmaeel-Gohari support RAD and the USE questionnaire.
+To avoid counting the same pot twice, we use a tracker called ByteTrack. Villacrés showed that counts can still be off by about 20 percent, so we will check our counts against manual counts.
 
-**`<next>`** → slide-03d · Research Gap
-
----
-
-## slide-03d · Research Gap
-**Speaker:** Marvilla · **Time:** 0:40
-
-Read this table across. IoT studies cover none of these columns. Lettuce detection sees plants, but not empty pots. Agricultural drones fly over fields, not beside one tower. Marker-based drones align, but only for landing. Offline-first apps work offline, but do none of the rest.
-
-**No study we reviewed combines all of it.** That is our gap: one low-cost system, tested on lettuce towers in an open outdoor area, in the Philippine setting.
-
-**`<next>`** → slide-04-0-section-solution
-**`<next>`** → slide-04a · Conceptual Framework · IPO Model
+For the drone, Aslan found almost no drone studies on farms like ours, and CogniFly, a drone under 250 grams, inspired our design. Other studies used markers to guide drones, but only for landing, not for flying beside a tower.
 
 ---
 
-## slide-04a · Conceptual Framework · Input–Process–Output (IPO) Model
-**Speaker:** Marvilla · **Time:** 0:45
+## 03c · Related Literature: Processing and Data (Marvilla)
 
-We framed the study as Input–Process–Output. **Inputs**: farmer interviews, the literature, and the hardware and software, including the printed tower sign. **Process**: the four RAD phases, with User Design and Rapid Construction repeating until each part works, measured by precision, recall, mAP@50, counting error, scan success, and the weighted mean of user ratings. **Output**: a system that reports lettuce count, empty pot count and slot availability for every tower. Test results feed back into the next iteration.
+Shalash found that AI models run slowly on a small Raspberry Pi, under 3 frames per second. So in our system, the AI runs on the laptop, while the drone's Raspberry Pi only reads the markers and steers. Zhu and Chen showed that Wi-Fi can lag, which is another reason the laptop never controls the drone.
 
-**`<next>`** → slide-04b · Conceptual Framework · System Flow
+Internet in rural areas is unreliable, so, like Mayta's offline-first app, we save results locally and upload them later.
 
-> **If asked: "Why RAD and not Waterfall or Agile?"**
-> RAD favors quick prototypes and repeated user feedback over a long, fixed plan, and has the shortest completion time among SDLC models (Fauzi et al., 2023). The drone, the model and the dashboard each need several build-and-test rounds before they work together.
+The remaining studies guided our dashboard, our safety rules under CAAP, our development method, and our user survey.
 
 ---
 
-## slide-04b · Conceptual Framework · System Flow (Figure 1)
-**Speaker:** Marvilla · **Time:** 0:55
+## 03d · Research Gap (Marvilla)
 
-Figure 1 shows how that output works in the field, in two zones.
+To sum up: IoT studies cannot see empty pots. Lettuce detection studies do not detect empty pots. Farm drones fly over fields, not around a single tower. And marker-based drones use markers only for landing.
 
-At the tower, on local Wi-Fi only: the farmer scans the QR and saves the phone's GPS, **step 1**. The laptop sends the mission, **3**. The drone approaches, aligns and scans each face, **4**. Video streams to the laptop for a live preview, **5a**. After landing, the full recording is processed for the final count, **5b**.
-
-The internet is used only for records: uploading the registration, **2**; syncing, **6**; and showing the counts on the dashboard, **7**.
-
-**`<next>`** → slide-05 · Research Objectives
+No study we found combines all of these into one low-cost system. That is our research gap, and that is what this study will build.
 
 ---
 
-## slide-05 · Research Objectives
-**Speaker:** Valentino · **Time:** 1:00
+## 04a · Conceptual Framework (Marvilla)
 
-Thank you. Our general objective, in short: register towers with a printed QR code and the phone's location, fly there by GPS, align with markers, scan every face, detect lettuce and empty pots, and show the records on a web dashboard.
+Our study follows an Input–Process–Output model.
 
-Five specific objectives. **One**, set the baseline: how farmers monitor towers today, including how often and how long they check. **Two**, an offline-ready dashboard for QR registration, scan requests and records. **Three**, navigation and alignment with GPS plus onboard QR and ArUco markers. **Four**, the YOLOv8 model: live preview in flight, final count from the recording, each detection matched to its pot. **Five**, evaluation.
+The input is what farmers tell us in interviews, what we learned from the literature, and our hardware and software.
 
-Each card shows the evidence we will collect and the RAD phase. ✂ Objective five is measured with the tools on slide 12.
+The process is Rapid Application Development, or RAD. We plan, then design and build in repeated cycles, then test the whole system.
 
-**`<next>`** → slide-06 · Significance of the Study
-
----
-
-## slide-06 · Significance of the Study
-**Speaker:** Valentino · **Time:** 0:45
-
-At the center is the idea of the whole study: **one drone for every tower on the farm**. The benefits spread outward from there. **Farmers** spend less time checking pots, especially the upper levels. **Managers and workers** get a per-tower history with fewer counting errors. **Students and researchers** get a reference and a labeled dataset. The **academic community** gains work on smart farming and computer vision. And **local agricultural offices** get guidance on affordable vertical farming.
-
-Our **technical contribution**: we extend marker alignment from landing pads to the vertical faces of a tower, and map every detection to its exact pot.
-
-**`<next>`** → slide-07 · Scope and Delimitation
+The output is our system, which reports the lettuce count, the empty pot count, and the available slots for each tower. Test results go back into the next cycle, so the system keeps improving.
 
 ---
 
-## slide-07 · Scope and Delimitation
-**Speaker:** Valentino · **Time:** 0:55
+## 04b · System Flow (Marvilla)
 
-Our **scope**, on the right: QR registration, GPS approach with onboard alignment, YOLOv8 detection matched to each pot, the offline cache and dashboards. We build and test **one 1.5-meter tower** to fit the budget, but the system is designed for the whole farm: every registered tower is scanned the same way.
+This figure shows how the system works, step by step.
 
-Our **delimitations**. On the left are the limits we fly within: the drone stays **no higher than 1.8 meters** and **within 20 meters** of launch; one tower per battery, three to five minutes; daylight and fair weather, with wind checked on an anemometer; an open area with GPS; local Wi-Fi only. And we exclude watering systems, other crops, plant health, obstacle avoidance, indoor flight, LiDAR, and commercial deployment.
+The farmer scans the tower's QR code. The laptop sends the drone to that tower. The drone finds the tower, aligns using the markers, and scans each side from bottom to top. During the flight, the laptop shows a live preview. After landing, the full video is processed for the final count.
 
-**`<next>`** → slide-08-0-section-method
-**`<next>`** → slide-08a · Research Methodology · Research Design
-
-> **If asked: "Why only one tower?"**
-> Each stackable module adds printing and material cost, so one 5 ft tower fits the budget. Because the drone scans face by face using markers at known positions, the method is meant to extend to taller towers and many towers.
-
-> **Fill in before the defense:** the maximum wind speed (km/h) is still blank in Chapter 1 v2.
+Everything at the farm works on local Wi-Fi, without internet. Internet is needed only to upload the results to the online dashboard.
 
 ---
 
-## slide-08a · Research Methodology · Research Design
-**Speaker:** Fernandez · **Time:** 0:55
+## 05 · Research Objectives (Valentino)
 
-Thank you. This is a **developmental** study with a **mixed-method** approach: interviews for qualitative data, and system tests and user ratings for quantitative data. It follows **Rapid Application Development**.
+Thank you. Our general objective is to build a drone system that registers towers by QR code, flies to them, scans every side, detects lettuce and empty pots, and shows the results on a web dashboard.
 
-**Phase 1**, Requirements Planning: farmer interviews, site observation, choosing components, and SWOT. **Phases 2 and 3** repeat as a loop: we design, including a full scan in **Gazebo simulation** with lost-marker and lost-Wi-Fi tests, then build the drone with a thrust test, the tower and markers, the dataset, and the software. **Phase 4**, Cutover: end-to-end tests and user evaluation.
+Specifically, we aim to:
 
-Construction runs in two stages: first the dashboard, sign, dataset and manual flight; then the Pi, camera and GPS on the drone and the full pipeline.
-
-**`<next>`** → slide-08b · Research Methodology · Dataset
-
----
-
-## slide-08b · Research Methodology · Dataset
-**Speaker:** Fernandez · **Time:** 0:45
-
-The model learns from about **2,000 labeled images**. That is close to the 2,240 frames Wang and colleagues used, and above the Ultralytics guideline of 1,500 images per class.
-
-At least **1,500 images contain lettuce**, at least **1,500 contain empty pots**, and 5 to 10 percent are background images with neither, to reduce false detections.
-
-We capture video from every side, distance and lighting; take one frame about every second; label in Supabox; and train YOLOv8. The split is **70, 20, 10**, and every image from one recording session stays in one set, so the test images are truly unseen.
-
-**`<next>`** → slide-09 · Locale and Participants
-
-> **If asked: "Is 2,000 images enough?"**
-> It matches the published lettuce study (Wang et al., 2024) and the 1,500-per-class guideline (Ultralytics). The 10,000-objects-per-class guideline is treated as a goal for best results, not a minimum.
+1. Find out how farmers monitor their towers today and what problems they face.
+2. Build a web dashboard for registering towers, requesting scans and viewing results, which works even without internet.
+3. Develop the drone's navigation and alignment using GPS and markers.
+4. Train a YOLOv8 model to detect lettuce and empty pots and match each one to its pot.
+5. Evaluate the system's accuracy and how useful and easy to use it is.
 
 ---
 
-## slide-09 · Locale and Participants
-**Speaker:** Fernandez · **Time:** 0:35
+## 06 · Significance of the Study (Valentino)
 
-Our research locale: flight tests at **Purok 2, Busilac, Bayombong**, an open, obstacle-free area with GPS, and interviews at **Savara Lettuce Farm** in Masoc, Bayombong, the only hydroponic farm in town.
+Farmers spend less time checking pots, especially on the upper levels, and can plan replanting and harvesting better. Farm managers and workers get a clear record of every tower. Students and researchers get a reference and a labeled image dataset they can reuse. The study adds to research on smart farming and computer vision, and it can help local agriculture offices promote affordable vertical farming.
 
-The population is **one hydroponic farmer and three IT experts** from CITE, four in total. Our sampling technique is **total enumeration**, so the sample size is all four.
-
-**`<next>`** → slide-10 · Research Instruments
-
-> **If asked: "Isn't four respondents too few?"**
-> Total enumeration covers the whole population: Savara is the only hydroponic farm in Bayombong, and three IT experts are available. The main claims of the study rest on system performance tests (detection, counting, alignment), which are measured on many images and flights, not on the four ratings.
+Our technical contribution is using markers to keep a drone aligned beside a tower, not just for landing, and matching every detection to its exact pot.
 
 ---
 
-## slide-10 · Research Instruments
-**Speaker:** Fernandez · **Time:** 0:45
+## 07 · Scope and Delimitation (Valentino)
 
-Four instruments. A **survey questionnaire**, adapted from the USE questionnaire: we shortened it from seven points to five, with "Moderately Agree" in place of neutral, covering usefulness, ease of use and satisfaction. An **interview guide** for farmers, in six parts, about 15 minutes. An **observation checklist** for tower size, open space, obstacles, wind and signal. And a **system evaluation tool**: the test logs.
+Our scope covers QR registration, flying to the tower on its own, scanning every side, detecting lettuce and empty pots, and the offline and online dashboards. We will build and test one tower, about 1.5 meters tall, to fit our budget, but the system is designed for a whole farm.
 
-For validation, our adviser reviews and approves the questionnaire before any data gathering.
-
-**`<next>`** → slide-11 · Data Gathering Procedure
-
-> **If asked about pilot or reliability testing:**
-> Chapter 1 v2 covers expert (adviser) validation only, and the slide shows the other two as blanks. Decide your answer and fill them in before the defense; see `README.md`, open items.
+As for our delimitations, we cover only lettuce, and only whether a pot is full or empty, not plant health or growth. The tower has no watering system. We fly only outdoors, in an open area with GPS, in daylight and good weather, no higher than 1.8 meters and within 20 meters of where the drone takes off. One battery lasts about three to five minutes, enough for one tower.
 
 ---
 
-## slide-11 · Data Gathering Procedure
-**Speaker:** Fernandez · **Time:** 0:35
+## 08a · Research Design (Fernandez)
 
-Five steps. **Secure approval** from the school and the farm owner. **Validation of instruments** with our adviser. **Data collection**: interviews with consent, the observation checklist, tower photos for the dataset, test flights, then the survey. **Data processing**, per tower and per flight. And **data analysis**.
+Thank you. This is a developmental study that uses both qualitative data, from interviews, and quantitative data, from system tests and user ratings. We follow Rapid Application Development, or RAD, in four phases.
 
-Participation is voluntary, we follow the Data Privacy Act, photos show towers and not people, and we disclose our use of AI tools.
-
-**`<next>`** → slide-12 · Statistical Treatment of Data
+In phase one, requirements planning, we interview farmers, observe the site, and choose our components. In phase two, design, we plan the system and test the full drone scan in a computer simulation before any real flight. In phase three, construction, we build the drone, the tower and the software. We repeat phases two and three until everything works. In phase four, cutover, we test the whole system outdoors and let users evaluate it.
 
 ---
 
-## slide-12 · Statistical Treatment of Data
-**Speaker:** Fernandez · **Time:** 0:45
+## 08b · Dataset (Fernandez)
 
-For the model: **precision**, **recall** and **mAP at 50**, on unseen images. For counting: the **counting error per tower** against a manual count, and **slot matching accuracy**. For flights: alignment success and error in centimeters, full-scan completion, stream delay and frame loss, and flight time.
+To train the AI model, we will prepare about 2,000 labeled images of the tower. At least 1,500 will contain lettuce, at least 1,500 will contain empty pots, and a few will contain neither, to reduce false detections. This is close to the 2,240 images Wang and colleagues used.
 
-For the survey: the **weighted mean and standard deviation** per category, read with this scale, from Highly Acceptable at 4.21 and up, down to Highly Not Acceptable. Interviews go through thematic analysis and update the SWOT.
-
-**`<next>`** → slide-13-0-section-system
-**`<next>`** → slide-13a · Proposed System Architecture
+We record videos from every side, distance and lighting, take about one frame per second, label every lettuce and empty pot, and train YOLOv8. We use 70 percent of the images for training, 20 for validation and 10 for testing. The test images are ones the model has never seen.
 
 ---
 
-## slide-13a · Proposed System Architecture (Figure 6)
-**Speaker:** Lopez · **Time:** 0:55
+## 09 · Locale and Participants (Fernandez)
 
-Figure 6 shows five parts: the tower and sign, the drone, the farmer, the ground station, and the cloud. **Only the cloud needs internet.**
+Flight tests will be at Purok 2, Busilac, Bayombong, an open area with a clear GPS signal. Interviews will be at Savara Lettuce Farm in Masoc, Bayombong, the only hydroponic farm in town.
 
-Three design decisions. **First**, the laptop does the AI. A Pi Zero 2 W running YOLOv8 would be slow and could overheat; the Pi only reads markers at about 640 by 480, ten frames a second. **Second**, only the Pi steers. The laptop never sends flight commands, because Wi-Fi delay varies and a late correction near the tower could cause a collision. **Third**, no internet is needed to scan. The farmer decides when to upload.
-
-**`<next>`** → slide-13b · Scan Sequence and Failsafes
+Our respondents are one hydroponic farmer and three IT experts from CITE, four in total. Since the group is small, we include all of them. This is called total enumeration.
 
 ---
 
-## slide-13b · Scan Sequence and Failsafes
-**Speaker:** Lopez · **Time:** 0:55
+## 10 · Research Instruments (Fernandez)
 
-Here is one scan. The drone flies by GPS to an approach point. The Pi turns it slowly until it sees the **15-centimeter approach marker** on the sign. Then the **6-centimeter markers** on each face give its pose through solvePnP, and the Pi sends small corrections. It climbs face A **bottom to top**, moves to the next face, and repeats. After landing, the 1080p recording goes to the laptop for the final count.
+We use four instruments:
+- A survey questionnaire, adapted from the USE questionnaire, to rate how useful, easy to use and satisfying the system is, on a five-point scale.
+- An interview guide, to learn how farmers monitor their towers today.
+- An observation checklist, for the tower and the flying area.
+- A system evaluation tool, which is the test records from the drone and the model.
 
-If Wi-Fi drops, it **keeps scanning**. If markers are lost, it **holds about ten seconds**, then returns to launch. If the RC link or battery fails, ArduPilot returns it home. And a trained researcher always holds the RC transmitter.
-
-**`<next>`** → slide-13c · Technical Design
-
----
-
-## slide-13c · Technical Design (Figure 7)
-**Speaker:** Lopez · **Time:** 0:35
-
-Inside the drone: the LiPo powers the flight stack, and a **separate 5-volt BEC** powers the Pi so motor surges cannot restart it. The SpeedyBee runs ArduPilot with GPS and compass. The Pi talks to it over MAVLink and records 1080p video. The drone weighs an estimated 200 to 240 grams.
-
-Before flying, we weigh it, run a thrust test, and switch to 1404 motors if it needs more than half throttle to hover, then run AutoTune.
-
-**`<next>`** → slide-13d · Architecture Layers and Key Features
+Our adviser reviews and approves the instruments before we collect any data.
 
 ---
 
-## slide-13d · Architecture Layers and Key Features
-**Speaker:** Lopez · **Time:** 0:35
+## 11 · Data Gathering Procedure (Fernandez)
 
-The architecture, layer by layer: the web front end on Next.js; Supabase in the cloud; YOLOv8, ByteTrack and SQLite on the laptop; Picamera2, GStreamer, MAVLink and OpenCV on the Pi; and ArduPilot flying the drone.
+We gather data in five steps:
+1. We get approval from the school and the farm owner.
+2. Our adviser validates the instruments.
+3. We collect data: interviews with consent, site observation, tower photos for the dataset, test flights, and the survey.
+4. We organize the data per tower and per flight.
+5. We analyze it.
 
-Key features: farmers register towers by QR even offline, see them on a map, request scans, and review history and per-pot results. At the farm, the local dashboard shows the **live scan** and has the **Sync Center**.
-
-**`<next>`** → slide-14-0-section-plan
-**`<next>`** → slide-14 · Project Timeline
-
----
-
-## slide-14 · Project Timeline (Gantt Chart)
-**Speaker:** Lopez · **Time:** 0:25
-
-We plan six months, following the RAD phases: planning first, then design and construction overlapping as a loop, then cutover testing, evaluation, and the final defense.
-
-**`<next>`** → slide-15 · Expected Output
+Participation is voluntary, personal data is protected under the Data Privacy Act, and photos show only the towers, not people.
 
 ---
 
-## slide-15 · Expected Output
-**Speaker:** Lopez · **Time:** 0:35
+## 12 · Statistical Treatment of Data (Fernandez)
 
-Anticipated benefits: a per-pot view of each tower, with lettuce, empty pots and slot availability, so farmers can plan replanting and harvest without walking every tower. This is a mock-up, not a result.
+For the AI model, we measure three things:
+- Precision: how many of its detections are correct.
+- Recall: how many of the actual pots it found.
+- mAP: a standard overall accuracy score.
 
-Our deliverables: the working drone; the tower, sign and markers; the YOLOv8 model with the **2,000-image dataset**; the local and web dashboards; and the test results and manuscript.
+For counting, we compare the system's count with a manual count for each tower, and check whether each pot was matched correctly. For the drone, we measure how well it aligns, how often it finishes a full scan, and how long each flight takes.
 
-**`<next>`** → slide-16 · Budget Requirements
-
----
-
-## slide-16 · Budget Requirements
-**Speaker:** Lopez · **Time:** 0:30
-
-The hardware costs about **₱25,600 to ₱28,500**. The biggest share is the flight hardware. This excludes the laptop we already own; the 1404 motors and a travel router are bought only if tests show we need them. Each extra tower needs only a printed sign and markers. ✂ Printing, internet, transportation and miscellaneous costs are [to be estimated].
-
-**`<next>`** → slide-17 · Thank You
+For the survey, we compute the weighted mean and standard deviation and interpret the results with this scale, from Highly Acceptable down to Highly Not Acceptable.
 
 ---
 
-## slide-17 · Thank You / Open Forum
-**Speaker:** All · **Time:** 0:10
+## 13a · System Architecture (Lopez)
 
-Thank you. We welcome your questions, comments and suggestions.
+Our system has five parts: the tower with its sign, the drone, the farmer, the laptop, and the cloud. Only the cloud needs internet.
 
----
-
-## More *If asked* answers
-
-> **"What if the drone drifts in the wind?"**
-> ArduPilot stabilization and GPS position hold, tuned with AutoTune, plus marker corrections from the Pi. Flights happen only below the wind limit, checked with an anemometer; above it, the operator cancels and the drone returns to launch. → Backup B.
-
-> **"Is it legal to fly?"**
-> Yes, in the CAAP Part 11 open category: under 25 kg, within sight, below 120 m, in daylight, and at least 30 m from anyone not involved. → Backup B.
-
-> **"How do you know which pot a detection belongs to?"**
-> ArUco markers sit at known positions on each face. Their positions in the frame give each detection its face, level and position. The final status of a slot is decided from every frame it appeared in.
-
-> **"What if a pot has no marker beside it?"**
-> It is matched with lower confidence, which is listed as a weakness in the SWOT. → Backup A.
-
-> **"Why not a 3D or LiDAR sensor?"**
-> The task is only occupied or empty. 2D RGB is enough for that (Wang et al., 2024), and LiDAR adds weight and power to a drone of about 200–240 g.
-
-> **"Why these specific parts?"** → Backup C.
+We made three key decisions:
+- The AI runs on the laptop, because the drone's small computer is too slow for it.
+- Only the drone steers itself, because a Wi-Fi delay from the laptop could cause a crash near the tower.
+- The scan works without internet, and the farmer uploads the results when ready.
 
 ---
 
-## Rehearsal checklist
+## 13b · Scan Sequence and Failsafes (Lopez)
 
-- [ ] Each speaker has read their part aloud at least three times with a timer.
-- [ ] Every speaker can answer the *If asked* notes on their slides without reading.
-- [ ] Decide who says "Good morning" or "Good afternoon".
-- [ ] Fill in the blanks shown in yellow on the slides (wind limit on 07; pilot and reliability testing on 10; other budget items on 16; ground control station on 13d) and re-render.
-- [ ] Click through the whole deck once and check that every `<next>` lands on the named image.
+Here is how one scan works. The drone flies to the tower by GPS. It turns until it sees the large marker on the tower sign. Then it uses the smaller markers to stay at the right distance and height. It flies up one side, moves to the next side, and repeats until every side is scanned. Then it lands, and the full video is processed.
+
+For safety:
+- If the Wi-Fi drops, it keeps scanning.
+- If it loses the markers, it waits ten seconds, then returns home.
+- If the battery runs low or the remote signal is lost, it returns home.
+
+A team member always holds the remote control.
+
+---
+
+## 13c · Technical Design (Lopez)
+
+Inside the drone, the battery powers the flight controller, and a separate power supply runs the Raspberry Pi, so it does not restart during flight. The flight controller keeps the drone stable using GPS. The Raspberry Pi records the video and sends small corrections to the flight controller. The whole drone weighs about 200 to 240 grams.
+
+---
+
+## 13d · Key Features (Lopez)
+
+On the web dashboard, farmers can:
+- register towers by QR code, even offline;
+- see their towers on a map;
+- request scans;
+- view the results and history for every pot.
+
+On the laptop, they can watch a scan live and upload the results when they have internet. All the software we use is free and open source.
+
+---
+
+## 14 · Project Timeline (Lopez)
+
+We plan to finish in six months, following the RAD phases: planning first, then designing and building in cycles, then testing, user evaluation, and the final defense.
+
+---
+
+## 15 · Expected Output (Lopez)
+
+The farmer gets a view of each tower showing which pots have lettuce, which are empty, and how many slots are available, without checking by hand. This is a sample screen, not actual results.
+
+We will deliver:
+- the working drone;
+- the tower with its sign and markers;
+- the trained AI model and the 2,000-image dataset;
+- the dashboards;
+- our test results and manuscript.
+
+---
+
+## 16 · Budget Requirements (Lopez)
+
+Our hardware budget is about 25,600 to 28,500 pesos. Most of it goes to the drone's flight parts. This does not include the laptop, which we already have. Adding another tower costs only a printed sign and markers.
+
+---
+
+## 17 · Thank You (All)
+
+Thank you. We welcome your questions and suggestions.
