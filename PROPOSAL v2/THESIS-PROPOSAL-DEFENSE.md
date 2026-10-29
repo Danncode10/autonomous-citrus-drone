@@ -18,7 +18,8 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 | 3d | Research Gap | **Problem** | 0:40 | Marvilla | Each piece exists; no study combines them. |
 | 4a | Conceptual Framework · IPO Model | **Solution** | 0:45 | Marvilla | Inputs → RAD process → working inspection system, with feedback. |
 | 4b | Conceptual Framework · System Flow (Figure 1) | **Solution** | 0:55 | Marvilla | Fly and scan offline; internet only for records. |
-| 5 | Research Objectives | **Solution** | 1:00 | Valentino | One general objective, five specific objectives. |
+| 5a | Research Objectives · General Objective | **Solution** | 0:30 | Valentino | The general objective, in the chapter's exact words. |
+| 5b | Research Objectives · Specific Objectives | **Solution** | 1:00 | Valentino | The five specific objectives, in the chapter's exact words. |
 | 6 | Significance of the Study | **Solution** | 0:45 | Valentino | Practical, academic, technical and community contributions. |
 | 7 | Scope and Delimitation | **Solution** | 0:55 | Valentino | What we build, and the limits we fly within. |
 | 8a | Research Methodology · Research Design | **Method** | 0:55 | Fernandez | Developmental, mixed-method, RAD with simulation first. |
@@ -143,10 +144,11 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 
 ---
 
-**Slide 5: Research Objectives**
+**Slide 5a: Research Objectives**
 **General Objective**
 To design and develop an autonomous drone-based monitoring system that registers vertical hydroponic towers through a printed QR code and the location of the farmer's phone, navigates to each tower using GPS, aligns itself using computer vision and visual markers, scans every face of the tower in an open space, detects lettuce plants and empty planting pots using computer vision, and displays tower-level records on a web-based dashboard.
 
+**Slide 5b: Research Objectives**
 **Specific Objectives**
 
 1. To identify the existing tools, process, and challenges in monitoring vertical hydroponic farming to establish the system's baseline requirements.

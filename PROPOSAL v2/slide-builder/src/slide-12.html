@@ -8,41 +8,41 @@
   .content { display: grid; grid-template-columns: 1fr 520px; gap: 26px; }
 
   .left { display: grid; grid-template-rows: auto 1fr auto; gap: 14px; }
-  .group-label { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--leaf-deep); }
+  .group-label { display: flex; align-items: center; gap: 10px; font-size: 17px; color: var(--leaf-deep); }
   .group-label .ico { width: 20px; height: 20px; }
 
   .formulas { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 14px; }
   .f { padding: 18px 22px; display: flex; flex-direction: column; }
-  .f .name { font-size: 23px; font-weight: 700; color: var(--forest); }
-  .f .what { margin-top: 4px; font-size: 18px; color: var(--muted); }
+  .f .name { font-size: 25px; font-weight: 700; color: var(--forest); }
+  .f .what { margin-top: 4px; font-size: 22px; color: var(--muted); }
 
   /* Fractions set like printed equations so they read from the back of the room. */
   .eq { margin: auto 0; padding-top: 12px; white-space: nowrap; display: flex; align-items: center; gap: 14px; font-family: 'Times New Roman', Georgia, serif; font-style: italic; font-size: 30px; color: var(--ink); }
   .eq .frac { display: inline-flex; flex-direction: column; align-items: center; }
   .eq .frac span:first-child { padding: 0 8px 4px; border-bottom: 2px solid var(--ink); }
   .eq .frac span:last-child { padding-top: 4px; }
-  .eq .small { font-size: 22px; font-style: normal; font-family: var(--sans); color: var(--muted); }
+  .eq .small { font-size: 25px; font-style: normal; font-family: var(--sans); color: var(--muted); }
 
   .f.hl { background: var(--leaf-tint); border-color: #cfe3d1; }
 
   .flight { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 16px 22px; }
   .flight .ico { width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: var(--leaf-soft); color: var(--forest); }
-  .flight p { font-size: 19px; line-height: 1.4; color: var(--body); }
+  .flight p { font-size: 22px; line-height: 1.4; color: var(--body); }
   .flight b { color: var(--forest); }
 
   /* Right: the interpretation scale as a vertical gauge. */
   .gauge { display: flex; flex-direction: column; padding: 22px 24px; background: var(--forest); border-color: var(--forest); color: #fff; }
-  .gauge .k { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .gauge .k { font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
   .gauge h3 { margin-top: 6px; font-size: 25px; font-weight: 800; line-height: 1.15; }
   .gauge .eq { color: #fff; font-size: 34px; margin: 10px 0 0; padding-top: 0; }
   .gauge .eq .frac span:first-child { border-color: #fff; }
-  .gauge .eq .small { color: var(--on-dark-3); font-size: 18px; }
+  .gauge .eq .small { color: var(--on-dark-3); font-size: 22px; }
   .bands { margin-top: 16px; flex: 1; display: grid; grid-template-rows: repeat(5, 1fr); gap: 4px; }
   .band { display: grid; grid-template-columns: 44px 128px 1fr; align-items: center; gap: 12px; padding: 0 14px; border-radius: 10px; }
   .band .s { font-family: var(--mono); font-size: 24px; font-weight: 700; }
-  .band .r { font-family: var(--mono); font-size: 17px; font-weight: 700; }
-  .band b { display: block; font-size: 18px; font-weight: 700; }
-  .band span.d { display: block; font-size: 15px; opacity: 0.85; }
+  .band .r { font-family: var(--mono); font-size: 20px; font-weight: 700; }
+  .band b { display: block; font-size: 22px; font-weight: 700; }
+  .band span.d { display: block; font-size: 17px; opacity: 0.85; }
   .b5 { background: #9fd6a9; color: var(--forest); }
   .b4 { background: #c7e7cc; color: var(--forest); }
   .b3 { background: #f3e2ad; color: #5e4504; }
@@ -72,11 +72,11 @@
         </article>
         <article class="card f hl">
           <div class="name">Counting error per tower</div><div class="what">Lettuce and empty pots vs. a manual count</div>
-          <div class="eq" style="font-family: var(--sans); font-style: normal; font-size: 22px; font-weight: 700; color: var(--forest); white-space: normal">System count compared with the manual count</div>
+          <div class="eq" style="font-family: var(--sans); font-style: normal; font-size: 25px; font-weight: 700; color: var(--forest); white-space: normal">System count compared with the manual count</div>
         </article>
         <article class="card f hl">
           <div class="name">Slot matching accuracy</div><div class="what">Each slot's status vs. the actual pot</div>
-          <div class="eq" style="font-family: var(--sans); font-style: normal; font-size: 22px; font-weight: 700; color: var(--forest); white-space: normal">Assigned status compared with the actual pot</div>
+          <div class="eq" style="font-family: var(--sans); font-style: normal; font-size: 25px; font-weight: 700; color: var(--forest); white-space: normal">Assigned status compared with the actual pot</div>
         </article>
         <article class="card f">
           <div class="name">Interviews</div><div class="what">Qualitative needs data</div>

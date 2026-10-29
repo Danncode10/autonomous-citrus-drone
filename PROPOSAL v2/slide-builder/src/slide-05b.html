@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide 05b · Specific Objectives</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Wording is copied exactly from Chapter 1 v2, Objectives of the Study. */
+  .content { display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+  .obj { display: grid; grid-template-columns: 64px 1fr; gap: 26px; align-items: center; padding: 18px 30px 18px 20px; }
+  .obj .n {
+    width: 60px; height: 60px; border-radius: 16px;
+    display: grid; place-items: center;
+    background: var(--forest); color: #fff;
+    font-family: var(--mono); font-size: 28px; font-weight: 700;
+  }
+  .obj p { font-size: 27px; line-height: 1.38; color: var(--ink); }
+</style>
+</head>
+<body data-num="05b" data-part="solution" data-eyebrow="Research Objectives · Specific Objectives">
+<div class="slide">
+  <h1 class="title">Specific objectives</h1>
+  <div class="content">
+    <div class="card obj"><span class="n">1</span><p>To identify the existing tools, process, and challenges in monitoring vertical hydroponic farming to establish the system's baseline requirements.</p></div>
+    <div class="card obj"><span class="n">2</span><p>To design and develop a web dashboard for QR-based tower registration using the location of the farmer's phone, scan requests, and inspection records that works even when the farm has no internet connection.</p></div>
+    <div class="card obj"><span class="n">3</span><p>To develop an autonomous navigation and alignment method that combines GPS waypoints with onboard QR code and ArUco marker positioning to scan every face of a tower.</p></div>
+    <div class="card obj"><span class="n">4</span><p>To develop a YOLOv8 computer vision model that detects lettuce heads and empty planting pots from the aerial video, shown as a live preview during flight and finalized from the full onboard recording after landing, and matches each detection to its exact pot on the tower, and to integrate it with the drone telemetry, offline cache, and web dashboard into a unified crop tracking system.</p></div>
+    <div class="card obj"><span class="n">5</span><p>To evaluate the system in terms of detection and counting accuracy, alignment and scan success, and its usefulness, ease of use, and user satisfaction.</p></div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="frame.js"></script>
+</body>
+</html>

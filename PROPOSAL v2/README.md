@@ -4,14 +4,14 @@ Proposal defense deck rebuilt from **Chapter 1 v2.docx**, which now holds the Re
 
 | File | What it is |
 | ----- | ----- |
-| `slides/` | 34 rendered slides, 3840 × 2160 PNG. Insert each as a full-slide picture in a 16:9 PowerPoint. |
+| `slides/` | 35 rendered slides, 3840 × 2160 PNG. Insert each as a full-slide picture in a 16:9 PowerPoint. |
 | `DEFENSE-SCRIPT.md` | What to say on each slide, and who says it. |
 | `QA-PREP.md` | Short answers to likely panel questions. |
 | `THESIS-PROPOSAL-DEFENSE.md` | Slide-by-slide content, mapped to the school template. |
 | `figures/` | NVSU logo, the Google Flow photos from v1, and Figures 1, 3, 5, 6, 7 taken from Chapter 1 v2. |
 | `slide-builder/` | HTML source of every slide and `build.py`, which renders them. |
 
-## Slide order for PowerPoint (34 slides)
+## Slide order for PowerPoint (35 slides)
 
 Slides follow the school template (`PROPOSAL/THESIS-PROPOSAL-DEFENSE-Template.docx.md`) the same way v1 did. Each slide keeps its template number, and a template slide that needs more room is split into lettered slides (02a, 02b, 03a…). Every element the template asks for is on its slide. The parts not yet in Chapter 1 v2 show as yellow `[ ]` blanks.
 
@@ -28,29 +28,30 @@ Slides follow the school template (`PROPOSAL/THESIS-PROPOSAL-DEFENSE-Template.do
 | 9 |  | slide-04-0-section-solution.png | Section: The Solution |
 | 10 | 4 | slide-04a.png | Conceptual Framework · IPO Model |
 | 11 | 4 | slide-04b.png | Conceptual Framework · System Flow (Figure 1) |
-| 12 | 5 | slide-05.png | Research Objectives |
-| 13 | 6 | slide-06.png | Significance of the Study |
-| 14 | 7 | slide-07.png | Scope and Delimitation |
-| 15 |  | slide-08-0-section-method.png | Section: The Method |
-| 16 | 8 | slide-08a.png | Research Methodology · Research Design |
-| 17 | 8 | slide-08b.png | Research Methodology · Dataset (2,000 labeled images) |
-| 18 | 9 | slide-09.png | Locale and Participants |
-| 19 | 10 | slide-10.png | Research Instruments |
-| 20 | 11 | slide-11.png | Data Gathering Procedure |
-| 21 | 12 | slide-12.png | Statistical Treatment of Data |
-| 22 |  | slide-13-0-section-system.png | Section: The System |
-| 23 | 13 | slide-13a.png | Proposed System Architecture (Figure 6) |
-| 24 | 13 | slide-13b.png | Proposed System Architecture · Scan Sequence |
-| 25 | 13 | slide-13c.png | Proposed System Architecture · Technical Design (Figure 7) |
-| 26 | 13 | slide-13d.png | Proposed System Architecture · Key Features |
-| 27 |  | slide-14-0-section-plan.png | Section: The Plan |
-| 28 | 14 | slide-14.png | Project Timeline (Gantt Chart) |
-| 29 | 15 | slide-15.png | Expected Output |
-| 30 | 16 | slide-16.png | Budget Requirements |
-| 31 | 17 | slide-17.png | Thank You / Open Forum |
-| 32 |  | slide-A1.png | Backup A: SWOT |
-| 33 |  | slide-A2.png | Backup B: Safety and regulation |
-| 34 |  | slide-A3.png | Backup C: Hardware components |
+| 12 | 5 | slide-05a.png | Research Objectives · General Objective |
+| 13 | 5 | slide-05b.png | Research Objectives · Specific Objectives |
+| 14 | 6 | slide-06.png | Significance of the Study |
+| 15 | 7 | slide-07.png | Scope and Delimitation |
+| 16 |  | slide-08-0-section-method.png | Section: The Method |
+| 17 | 8 | slide-08a.png | Research Methodology · Research Design |
+| 18 | 8 | slide-08b.png | Research Methodology · Dataset (2,000 labeled images) |
+| 19 | 9 | slide-09.png | Locale and Participants |
+| 20 | 10 | slide-10.png | Research Instruments |
+| 21 | 11 | slide-11.png | Data Gathering Procedure |
+| 22 | 12 | slide-12.png | Statistical Treatment of Data |
+| 23 |  | slide-13-0-section-system.png | Section: The System |
+| 24 | 13 | slide-13a.png | Proposed System Architecture (Figure 6) |
+| 25 | 13 | slide-13b.png | Proposed System Architecture · Scan Sequence |
+| 26 | 13 | slide-13c.png | Proposed System Architecture · Technical Design (Figure 7) |
+| 27 | 13 | slide-13d.png | Proposed System Architecture · Key Features |
+| 28 |  | slide-14-0-section-plan.png | Section: The Plan |
+| 29 | 14 | slide-14.png | Project Timeline (Gantt Chart) |
+| 30 | 15 | slide-15.png | Expected Output |
+| 31 | 16 | slide-16.png | Budget Requirements |
+| 32 | 17 | slide-17.png | Thank You / Open Forum |
+| 33 |  | slide-A1.png | Backup A: SWOT |
+| 34 |  | slide-A2.png | Backup B: Safety and regulation |
+| 35 |  | slide-A3.png | Backup C: Hardware components |
 
 ## Rebuilding a slide
 
@@ -61,7 +62,7 @@ python3 build.py            # every slide
 python3 build.py 07 16      # only slides whose number starts with these
 ```
 
-Needs Python Playwright and Google Chrome, plus internet for fonts and icons on the first run. The build warns about content spilling off the slide and about unknown icon names. Three warnings are expected and harmless: `slide-01` (hero photo offset), `slide-05` (outline numbers) and `slide-06` (ripple rings).
+Needs Python Playwright and Google Chrome, plus internet for fonts and icons on the first run. The build warns about content spilling off the slide and about unknown icon names. Two warnings are expected and harmless: `slide-01` (hero photo offset) and `slide-06` (ripple rings).
 
 Shared pieces: `theme.css` (colors, fonts, light and dark slides), `frame.js` (top bar and footer), `tower.js` (the drawn tower on slide-02a), `rrl.css` (the literature tables), `section.css` / `section.js` (section dividers).
 

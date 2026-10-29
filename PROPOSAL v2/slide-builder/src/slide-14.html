@@ -12,21 +12,21 @@
   .content { display: flex; flex-direction: column; gap: 14px; }
 
   .gantt { flex: 1; display: grid; grid-template-columns: 590px repeat(6, 1fr); grid-template-rows: 56px repeat(9, 1fr); background: var(--card); border: 1.5px solid var(--line); border-radius: 22px; overflow: hidden; position: relative; }
-  .gantt .mh { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); background: var(--paper); border-left: 1.5px solid var(--line-soft); }
-  .gantt .corner { background: var(--paper); display: flex; align-items: center; padding: 0 24px; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
+  .gantt .mh { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); background: var(--paper); border-left: 1.5px solid var(--line-soft); }
+  .gantt .corner { background: var(--paper); display: flex; align-items: center; padding: 0 24px; font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
 
   .act { display: flex; align-items: center; gap: 14px; padding: 0 24px; border-top: 1.5px solid var(--line-soft); }
-  .act .ph { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; color: #fff; white-space: nowrap; width: 132px; text-align: center; flex: none; letter-spacing: 0.04em; }
-  .act b { font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.2; }
-  .act span.s { display: block; font-size: 15px; color: var(--muted); font-weight: 500; }
+  .act .ph { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; color: #fff; white-space: nowrap; width: 132px; text-align: center; flex: none; letter-spacing: 0.04em; }
+  .act b { font-size: 24px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+  .act span.s { display: block; font-size: 17px; color: var(--muted); font-weight: 500; }
 
   .lane { grid-column: 2 / -1; position: relative; border-top: 1.5px solid var(--line-soft); background-image: linear-gradient(90deg, var(--line-soft) 1.5px, transparent 1.5px); background-size: calc(100% / 6) 100%; }
   .bar { position: absolute; top: 50%; height: 30px; transform: translateY(-50%); border-radius: 4px; }
   .bar.loop { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.22) 0 8px, transparent 8px 16px); }
   .flag { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 26px; height: 26px; border-radius: 6px; rotate: 45deg; background: var(--gold); border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--gold-deep); }
-  .flag-label { position: absolute; top: 50%; transform: translateY(-50%); font-size: 16px; font-weight: 700; color: var(--gold-deep); white-space: nowrap; }
+  .flag-label { position: absolute; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 700; color: var(--gold-deep); white-space: nowrap; }
 
-  .foot { display: flex; align-items: center; justify-content: space-between; font-size: 17px; color: var(--muted); }
+  .foot { display: flex; align-items: center; justify-content: space-between; font-size: 20px; color: var(--muted); }
   .legend { display: flex; gap: 20px; }
   .legend span { display: flex; align-items: center; gap: 8px; }
   .legend i { width: 22px; height: 14px; border-radius: 3px; }

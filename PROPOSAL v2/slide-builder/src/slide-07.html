@@ -10,7 +10,7 @@
   /* Flight envelope: a side view of the test, drawn to show every limit at once. */
   .envelope { position: relative; overflow: hidden; background: linear-gradient(180deg, #eef6f0 0%, #fbfaf5 70%); }
   .envelope > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .envelope .label.head { position: absolute; left: 26px; top: 22px; font-size: 15px; color: var(--muted); }
+  .envelope .label.head { position: absolute; left: 26px; top: 22px; font-size: 17px; color: var(--muted); }
 
   .chip {
     position: absolute;
@@ -20,10 +20,10 @@
     box-shadow: 0 6px 18px rgba(18, 57, 43, 0.08);
   }
   .chip .ico { width: 40px; height: 40px; padding: 9px; border-radius: 10px; background: var(--leaf-soft); color: var(--forest); }
-  .chip b { display: block; font-size: 22px; font-weight: 800; color: var(--forest); letter-spacing: -0.01em; line-height: 1.1; }
-  .chip span.s { display: block; margin-top: 2px; font-size: 15px; color: var(--muted); }
+  .chip b { display: block; font-size: 25px; font-weight: 800; color: var(--forest); letter-spacing: -0.01em; line-height: 1.1; }
+  .chip span.s { display: block; margin-top: 2px; font-size: 17px; color: var(--muted); }
   .chip.warn .ico { background: var(--gold-soft); color: var(--gold-deep); }
-  .chip .todo { font-size: 18px; padding: 0 8px; }
+  .chip .todo { font-size: 22px; padding: 0 8px; }
 
   .right { display: flex; flex-direction: column; gap: 16px; }
   .scope { flex: 1; padding: 22px 26px; }
@@ -32,17 +32,17 @@
   .scope header .ico { background: var(--leaf-soft); color: var(--leaf-deep); }
   .scope h3, .out h3 { font-size: 26px; font-weight: 800; color: var(--forest); }
   .scope ul { list-style: none; }
-  .scope li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; padding: 13px 0; border-top: 1.5px dashed var(--line-soft); font-size: 21px; line-height: 1.35; color: var(--body); }
+  .scope li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; padding: 8px 0; border-top: 1.5px dashed var(--line-soft); font-size: 22px; line-height: 1.35; color: var(--body); }
   .scope li:first-child { border-top: none; }
   .scope li .ico { width: 22px; height: 22px; margin-top: 2px; color: var(--leaf-deep); }
   .scope li b { color: var(--ink); }
 
-  .scope .sub, .out .sub { margin-left: auto; font-size: 16px; font-weight: 600; color: var(--muted); }
+  .scope .sub, .out .sub { margin-left: auto; font-size: 20px; font-weight: 600; color: var(--muted); }
   .out { padding: 20px 26px; background: #fffaf8; border-color: #ecc9bf; }
   .out header .ico { background: var(--red-soft); color: var(--red); }
   .out h3 { color: var(--red); }
   .out .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .out .chips span { padding: 6px 12px; border-radius: 8px; background: var(--red-soft); color: #7d2f20; font-size: 17px; font-weight: 600; }
+  .out .chips span { padding: 6px 12px; border-radius: 8px; background: var(--red-soft); color: #7d2f20; font-size: 20px; font-weight: 600; }
 </style>
 </head>
 <body data-num="07" data-part="solution" data-eyebrow="Scope and Delimitation">
@@ -58,7 +58,7 @@
 
         <!-- ceiling at 1.8 m -->
         <path d="M40 228 H960" stroke="#b4452f" stroke-width="3" stroke-dasharray="12 10"/>
-        <text x="960" y="214" text-anchor="end" font-family="JetBrains Mono" font-size="19" font-weight="700" fill="#b4452f">CEILING ≤ 1.8 m (6 ft)</text>
+        <text x="960" y="214" text-anchor="end" font-family="JetBrains Mono" font-size="22" font-weight="700" fill="#b4452f">CEILING ≤ 1.8 m (6 ft)</text>
 
         <!-- tower, 1.5 m, on a printed base -->
         <g transform="translate(760 0)">
@@ -73,8 +73,8 @@
           <g fill="#111"><rect x="-9" y="350" width="18" height="18"/><rect x="-9" y="450" width="18" height="18"/><rect x="-9" y="545" width="18" height="18"/></g>
           <!-- height dimension -->
           <path d="M110 290 V600 M100 290 H120 M100 600 H120" stroke="#12392b" stroke-width="2.5"/>
-          <text x="128" y="452" font-family="JetBrains Mono" font-size="19" font-weight="700" fill="#12392b">1.5 m</text>
-          <text x="128" y="474" font-family="JetBrains Mono" font-size="15" fill="#5b6a61">(5 ft)</text>
+          <text x="128" y="452" font-family="JetBrains Mono" font-size="22" font-weight="700" fill="#12392b">1.5 m</text>
+          <text x="128" y="474" font-family="JetBrains Mono" font-size="17" fill="#5b6a61">(5 ft)</text>
         </g>
 
         <!-- drone scanning the face, bottom to top -->
@@ -92,7 +92,7 @@
         <!-- launch point and operator -->
         <g transform="translate(130 600)">
           <ellipse cx="0" cy="-2" rx="48" ry="10" fill="#c9d8c4"/>
-          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#12392b">LAUNCH</text>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#12392b">LAUNCH</text>
         </g>
         <!-- wifi arcs from laptop -->
         <g stroke="#3f6fb0" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8">
@@ -103,7 +103,7 @@
         <!-- 20 m radius -->
         <path d="M130 650 H900" stroke="#12392b" stroke-width="2.5"/>
         <path d="M144 640 L130 650 L144 660 M886 640 L900 650 L886 660" stroke="#12392b" stroke-width="2.5"/>
-        <text x="515" y="684" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700" fill="#12392b">≤ 20 m FROM LAUNCH (not to scale)</text>
+        <text x="515" y="684" text-anchor="middle" font-family="JetBrains Mono" font-size="22" font-weight="700" fill="#12392b">≤ 20 m FROM LAUNCH (not to scale)</text>
       </svg>
 
       <div class="label head">Delimitations · limits of coverage (side view)</div>

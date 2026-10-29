@@ -19,8 +19,8 @@
   .stage .tower-art { position: absolute; left: 50px; top: 10px; width: 280px; height: 400px; }
   .farm { position: absolute; left: 26px; bottom: 24px; width: 330px; }
   .farm svg { width: 100%; height: 78px; display: block; }
-  .farm p { margin-top: 8px; font-size: 18px; font-weight: 700; color: var(--forest); line-height: 1.3; }
-  .farm p span { display: block; font-size: 16px; font-weight: 500; color: var(--muted); }
+  .farm p { margin-top: 8px; font-size: 22px; font-weight: 700; color: var(--forest); line-height: 1.3; }
+  .farm p span { display: block; font-size: 20px; font-weight: 500; color: var(--muted); }
   .stage .tower-art svg { width: 100%; height: 100%; }
 
   .bubble {
@@ -35,9 +35,9 @@
     box-shadow: 0 18px 40px rgba(18, 57, 43, 0.25);
   }
   .bubble b { display: block; font-size: 30px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
-  .bubble span { display: block; margin-top: 10px; font-size: 19px; line-height: 1.35; color: var(--on-dark-2); }
+  .bubble span { display: block; margin-top: 10px; font-size: 22px; line-height: 1.35; color: var(--on-dark-2); }
 
-  .legend-mini { position: absolute; right: 34px; top: 318px; display: grid; gap: 10px; font-size: 19px; font-weight: 600; color: var(--body); }
+  .legend-mini { position: absolute; right: 34px; top: 318px; display: grid; gap: 10px; font-size: 22px; font-weight: 600; color: var(--body); }
   .legend-mini div { display: flex; align-items: center; gap: 12px; }
   .legend-mini i { width: 26px; height: 26px; border-radius: 50%; flex: none; }
   .legend-mini .l i { background: #7cc46a; }
@@ -53,9 +53,9 @@
     background: #fff;
     border: 1.5px solid var(--line);
   }
-  .sensor .label { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .sensor .label { font-size: 15px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
   .sensor .label .ico { width: 18px; height: 18px; }
-  .readings { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--forest); }
+  .readings { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--forest); }
   .readings .miss { grid-column: 1 / -1; margin-top: 6px; padding-top: 10px; border-top: 1.5px dashed var(--line); color: var(--red); display: flex; align-items: center; gap: 8px; }
   .readings .miss .ico { width: 20px; height: 20px; }
 
@@ -72,10 +72,10 @@
     -webkit-text-stroke: 2px var(--leaf);
   }
   .fact.hit .n { -webkit-text-stroke-color: var(--red); }
-  .fact .k { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px; }
+  .fact .k { font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px; }
   .fact h3 { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; color: var(--forest); line-height: 1.12; }
   .fact.hit h3 { color: var(--red); }
-  .fact p { margin-top: 10px; font-size: 23px; line-height: 1.42; color: var(--body); }
+  .fact p { margin-top: 10px; font-size: 25px; line-height: 1.42; color: var(--body); }
 
   .strip {
     grid-column: 1 / -1;
@@ -87,12 +87,12 @@
     background: var(--forest);
     color: #fff;
   }
-  .strip .why { display: flex; align-items: center; gap: 18px; flex: 1; font-size: 23px; line-height: 1.35; }
+  .strip .why { display: flex; align-items: center; gap: 18px; flex: 1; font-size: 25px; line-height: 1.35; }
   .strip .why .ico { width: 32px; height: 32px; color: var(--gold); }
   .strip .why span { color: var(--on-dark-2); }
   .sdgs { display: flex; gap: 10px; }
-  .sdg { display: flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; border-radius: 10px; background: rgba(255, 255, 255, 0.08); font-size: 17px; font-weight: 600; white-space: nowrap; }
-  .sdg i { font-style: normal; width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 19px; color: #fff; }
+  .sdg { display: flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; border-radius: 10px; background: rgba(255, 255, 255, 0.08); font-size: 20px; font-weight: 600; white-space: nowrap; }
+  .sdg i { font-style: normal; width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 22px; color: #fff; }
 </style>
 </head>
 <body data-num="02a" data-part="problem" data-eyebrow="Introduction / Background of the Study">
@@ -104,10 +104,6 @@
       <div class="tower-art" data-pattern="LL EL LL LE LL LL EL" data-highlight="empty"></div>
       <div class="bubble"><b>Which pots are empty?</b><span>On every tower, someone still has to walk up, look, and write it down.</span></div>
       <div class="farm"><svg viewBox="0 0 300 90" fill="none"><g opacity="1.0"><ellipse cx="22" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="17" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="13" cy="16" r="6" fill="#7cc46a"/><circle cx="31" cy="28" r="6" fill="#7cc46a"/><circle cx="13" cy="40" r="6" fill="#7cc46a"/><circle cx="31" cy="52" r="6" fill="#7cc46a"/><circle cx="13" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.9"><ellipse cx="62" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="57" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="53" cy="16" r="6" fill="#7cc46a"/><circle cx="71" cy="28" r="6" fill="#7cc46a"/><circle cx="53" cy="40" r="6" fill="#2b2b26"/><circle cx="71" cy="52" r="6" fill="#7cc46a"/><circle cx="53" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.8"><ellipse cx="102" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="97" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="93" cy="16" r="6" fill="#7cc46a"/><circle cx="111" cy="28" r="6" fill="#7cc46a"/><circle cx="93" cy="40" r="6" fill="#7cc46a"/><circle cx="111" cy="52" r="6" fill="#7cc46a"/><circle cx="93" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.7"><ellipse cx="142" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="137" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="133" cy="16" r="6" fill="#2b2b26"/><circle cx="151" cy="28" r="6" fill="#7cc46a"/><circle cx="133" cy="40" r="6" fill="#7cc46a"/><circle cx="151" cy="52" r="6" fill="#7cc46a"/><circle cx="133" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.6"><ellipse cx="182" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="177" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="173" cy="16" r="6" fill="#7cc46a"/><circle cx="191" cy="28" r="6" fill="#7cc46a"/><circle cx="173" cy="40" r="6" fill="#7cc46a"/><circle cx="191" cy="52" r="6" fill="#7cc46a"/><circle cx="173" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.5"><ellipse cx="222" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="217" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="213" cy="16" r="6" fill="#7cc46a"/><circle cx="231" cy="28" r="6" fill="#7cc46a"/><circle cx="213" cy="40" r="6" fill="#7cc46a"/><circle cx="231" cy="52" r="6" fill="#2b2b26"/><circle cx="213" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.4"><ellipse cx="262" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="257" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="253" cy="16" r="6" fill="#7cc46a"/><circle cx="271" cy="28" r="6" fill="#7cc46a"/><circle cx="253" cy="40" r="6" fill="#7cc46a"/><circle cx="271" cy="52" r="6" fill="#7cc46a"/><circle cx="253" cy="64" r="6" fill="#7cc46a"/></g><g fill="#9db59a"><circle cx="292" cy="50" r="3"/><circle cx="282" cy="50" r="3"/></g></svg><p>…and every other tower on the farm<span>More towers, taller towers, more pots to check</span></p></div>
-      <div class="legend-mini">
-        <div class="l"><i></i>Lettuce</div>
-        <div class="e"><i></i>Empty pot</div>
-      </div>
       <div class="sensor">
         <div class="label"><span class="ico"><i data-lucide="activity"></i></span>Example IoT readout</div>
         <div class="readings">
@@ -136,7 +132,7 @@
         <span class="n">03</span>
         <div>
           <div class="k">Current situation</div><h3>Sensors can't see an empty pot</h3>
-          <p>IoT tracks temperature, humidity, pH and nutrients, not whether each pot holds a plant. <span class="cite">(Dhanaraju et al., 2022; Santiago et al., 2025)</span></p>
+          <p>IoT tracks temperature, humidity, pH and nutrients, not whether each pot holds a plant. A weight sensor per pot needs its own wiring and power and shows no picture. <span class="cite">(Dhanaraju et al., 2022; Santiago et al., 2025)</span></p>
         </div>
       </div>
     </section>

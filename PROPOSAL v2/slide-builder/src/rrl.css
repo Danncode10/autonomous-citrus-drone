@@ -6,7 +6,7 @@
 .rrl {
   flex: 1;
   display: grid;
-  grid-template-columns: 330px 1fr 560px;
+  grid-template-columns: 300px 1fr 600px;
   grid-template-rows: auto;
   grid-auto-rows: 1fr;
   background: var(--card);
@@ -16,7 +16,7 @@
 }
 
 .rrl > div {
-  padding: 12px 24px;
+  padding: 8px 22px;
   border-top: 1.5px solid var(--line-soft);
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   background: var(--forest);
   color: var(--on-dark-2);
   font-family: var(--mono);
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -37,17 +37,17 @@
 }
 
 .rrl .who {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.35;
   color: var(--forest);
   background: var(--leaf-tint);
 }
 .rrl .who span { display: block; }
-.rrl .who small { display: block; margin-bottom: 4px; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
+.rrl .who small { display: block; margin-bottom: 4px; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
 
 /* Key finding, with an optional headline number pulled out on the left. */
-.rrl .what { flex-direction: row; align-items: center; justify-content: flex-start; gap: 20px; font-size: 20px; line-height: 1.4; color: var(--body); }
+.rrl .what { flex-direction: row; align-items: center; justify-content: flex-start; gap: 18px; font-size: 22px; line-height: 1.35; color: var(--body); }
 .rrl .what .stat {
   flex: none;
   min-width: 128px;
@@ -56,16 +56,16 @@
   background: var(--forest);
   color: #fff;
   text-align: center;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
 }
-.rrl .what .stat small { display: block; margin-top: 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.rrl .what .stat small { display: block; margin-top: 4px; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
 
-.rrl .why { font-size: 20px; line-height: 1.38; color: var(--body); gap: 8px; }
+.rrl .why { font-size: 22px; line-height: 1.32; color: var(--body); gap: 6px; }
 .rrl .why p { display: flex; gap: 12px; align-items: baseline; }
 .rrl .why .tag { flex: none; min-width: 108px; justify-content: center; }
 
-.legend { display: flex; justify-content: flex-end; gap: 26px; font-size: 18px; color: var(--muted); }
+.legend { display: flex; justify-content: flex-end; gap: 26px; font-size: 20px; color: var(--muted); }
 .legend span { display: flex; align-items: center; gap: 10px; }
