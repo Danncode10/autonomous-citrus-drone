@@ -18,7 +18,7 @@ Good [morning / afternoon] to our panel, to our adviser, Bernadeth B. Liggayu, a
 
 ## slide-02a.png · Introduction / Background of the Study (Lopez)
 
-Vertical farms save land, but only if they are managed well. Today, monitoring is still manual, as farms in Iloilo and Bohol show. And sensors can't see an empty pot. IoT measures pH and nutrients, and a weight sensor per pot needs its own wiring and shows no picture.
+Vertical farms save land, but only if they are managed well, according to van Delden and Saad. Today, monitoring is still manual, as Domingo and Bunga show for farms in Iloilo and Bohol. And sensors can't see an empty pot. IoT, in studies by Dhanaraju and Santiago, measures pH and nutrients, and a weight sensor per pot needs its own wiring and shows no picture.
 
 So on every tower, and every other tower on the farm, someone still walks up and checks by hand. Knowing the slot availability tells farmers where to replant and when to harvest.
 
@@ -34,25 +34,45 @@ Step 1, register: the farmer scans the tower's QR sign, and the phone saves its 
 
 ## slide-03a.png · Review of Related Literature · Farm and Monitoring (Marvilla)
 
-Thank you. We reviewed 38 sources. Studies show vertical farms need good management, local towers are slot-based, and monitoring is still manual. IoT studies measure the environment, but none checks whether a slot holds a plant. Phone GPS is accurate to about 4.9 meters, so GPS brings the drone near, and the marker on the sign locks it on.
+Thank you. We reviewed 38 sources.
+
+Van Delden, Saad and Siregar found vertical farms save land and water, but only if they are managed well. They don't track which slots are being used.
+
+DOST-PCAARRD and Bendanillo show local towers are built in separate slots, the same layout our drone scans.
+
+Domingo and Bunga found farms in Iloilo and Bohol still check by hand, and Petropoulou showed that knowing where the plants are helps plan the space.
+
+Dhanaraju and Santiago's sensor systems track pH and nutrients, but never check if a slot has a plant.
+
+Qian found phones read QR codes reliably, and GPS.gov says phone GPS can be off by about 4.9 meters. So we use the QR code and phone GPS to register towers, and the marker on the sign for the final alignment.
 
 ---
 
 ## slide-03b.png · Review of Related Literature · Detection and Flight (Marvilla)
 
-YOLOv8 found hydroponic lettuce with about 99 percent precision, so we use it, but it had no empty-pot class. ByteTrack counts each plant once, though video counts can still be off by about 20 percent, so we check against manual counts. CogniFly, under 250 grams, inspired our drone. And markers have guided drones only for landing, not beside a tower.
+Terven and Ultralytics describe YOLO as a fast AI that finds objects in video. Wang, Wu and Shen used YOLOv8 on lettuce and scored about 99 percent. So we use YOLOv8, but they never taught it to find empty pots.
+
+Zhang's ByteTrack makes sure each plant is counted only once. Still, Villacrés found video counts can be off by about 20 percent, so we compare ours with a count done by hand.
+
+Aslan found drones are rarely flown close to plants. De Azambuja's CogniFly, under 250 grams, showed a light drone is safer, and Aliane shows ArduPilot lets us test in simulation first.
+
+Kalaitzakis, OpenCV and Andrzejewski show printed markers help a drone position itself exactly, but only for landing, never beside a tower.
 
 ---
 
 ## slide-03c.png · Review of Related Literature · Processing, Data and Method (Marvilla)
 
-AI runs under 3 frames per second on a Raspberry Pi, and Wi-Fi lags, so the AI runs on the laptop and the Pi steers. Rural internet is unreliable, so we save offline and sync later. Other studies guided our dashboard, safety rules, RAD method and USE survey.
+Shalash found AI runs too slowly on a Raspberry Pi, and Zhu and Chen found Wi-Fi can lag. So the laptop runs the AI, and the drone steers itself.
+
+Mirandilla-Santos and Serafica show rural internet is unreliable, and Mayta's farm app worked offline and synced later. Ours does the same.
+
+Schulze Schwering and Supabase shaped our dashboard; Meier, ArduPilot and CAAP, our safety rules; and Fauzi and Hajesmaeel-Gohari, our RAD method and survey.
 
 ---
 
 ## slide-03d.png · Research Gap (Marvilla)
 
-Each piece exists, but no study puts them together. This table shows each group covers only part. This study covers all six, plus QR registration and a final count from the onboard recording.
+Each piece exists, but no study puts them together. Dhanaraju, Domingo and Santiago don't look at the pots. Wang and Petropoulou find plants, not empty pots. Aslan and de Azambuja fly over fields, not beside a tower. Andrzejewski uses markers only to land. Mayta's app works offline, but does nothing more. No study we reviewed does all of this. Ours does.
 
 ---
 
@@ -64,7 +84,15 @@ Each piece exists, but no study puts them together. This table shows each group 
 
 ## slide-04a.png · Conceptual Framework · Input–Process–Output (IPO) Model (Marvilla)
 
-Our inputs are farmer interviews, the literature, and our hardware and software. The process follows RAD's four phases, with design and construction repeating. The output is our system, reporting lettuce count, empty pot count and slot availability. Test results feed back into the next cycle.
+Our framework follows the Input–Process–Output model, from farmer needs to a working inspection system.
+
+The input has three parts. The problem input comes from interviews with farmers on how they monitor towers today. The knowledge input comes from the literature on vertical farming, computer vision, drones and markers. The technical inputs are our hardware and software: the SpeedyBee flight controller, GPS, Raspberry Pi and camera, the printed tower sign, ArUco markers, the ground laptop, YOLOv8, ArduPilot, Supabase and the web dashboard.
+
+The process follows RAD in four phases. Phase 1, Requirements Planning: we gather farmer needs and choose the components, scope and evaluation criteria. Phase 2, User Design: we design the system, database, dashboard and drone mission, and test it in a Gazebo simulation first. Phase 3, Rapid Construction: we build the drone, tower, sign, dataset, YOLOv8 model, streaming and dashboard. Phases 2 and 3 repeat until each part works. Phase 4, Cutover: we test the whole system outdoors, then run the user evaluation.
+
+We measure it with precision, recall and mAP@50, counting error, alignment and scan success, and the weighted mean of the USE survey.
+
+The output is our system, which reports the lettuce count, empty pot count and slot availability for every tower. And feedback from the tests and evaluations goes back into the next cycle.
 
 ---
 
@@ -112,13 +140,13 @@ Our scope: QR registration, autonomous scanning of every face, lettuce and empty
 
 ## slide-08a.png · Research Methodology · Research Design (Fernandez)
 
-Thank you. This is developmental research with a mixed-method approach, using RAD. Phase 1, we interview farmers and choose components. Phase 2, we design the system and simulate the scan in Gazebo. Phase 3, we build the drone, tower and software, repeating with design. Phase 4, we test everything and run the user evaluation.
+Thank you. This is developmental research with a mixed-method approach, using RAD, following Fauzi and colleagues. Phase 1, we interview farmers and choose components. Phase 2, we design the system and simulate the scan in Gazebo. Phase 3, we build the drone, tower and software, repeating with design. Phase 4, we test everything and run the user evaluation.
 
 ---
 
 ## slide-08b.png · Research Methodology · Dataset (Fernandez)
 
-The model learns from about 2,000 labeled images, at least 1,500 each for lettuce and empty pots. We capture, sample, label in Supabox, and train YOLOv8, split 70, 20 and 10 percent, so the test images are unseen.
+The model learns from about 2,000 labeled images, at least 1,500 each for lettuce and empty pots. This is close to the 2,240 frames Wang and colleagues used, and meets the Ultralytics guideline. We capture, sample, label in Supabox, and train YOLOv8, split 70, 20 and 10 percent, so the test images are unseen.
 
 ---
 
@@ -130,7 +158,7 @@ Flight tests will be in Busilac, Bayombong, and interviews at Savara Lettuce Far
 
 ## slide-10.png · Research Instruments (Fernandez)
 
-We use three instruments, plus test logs: a survey questionnaire adapted from USE, an interview guide, an observation checklist, and the system evaluation tool. Our adviser validates the interview questionnaire. [Pilot and reliability testing: fill in.]
+We use three instruments, plus test logs: a survey questionnaire adapted from the USE questionnaire described by Hajesmaeel-Gohari, an interview guide, an observation checklist, and the system evaluation tool. Our adviser validates the interview questionnaire. [Pilot and reliability testing: fill in.]
 
 ---
 
@@ -154,7 +182,7 @@ For the model, we use precision, recall and mAP@50. Counts and slot matches are 
 
 ## slide-13a.png · Proposed System Architecture (Lopez)
 
-Our system has five parts, and only the cloud needs internet. Three decisions: the laptop runs the AI, because the Pi is too slow; only the Pi steers, because Wi-Fi lag is unsafe near the tower; and scanning works without internet.
+Our system has five parts, and only the cloud needs internet. Three decisions: the laptop runs the AI, because the Pi is too slow, as Shalash found; only the Pi steers, because Wi-Fi lag is unsafe near the tower; and scanning works without internet.
 
 ---
 
