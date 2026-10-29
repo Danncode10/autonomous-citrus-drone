@@ -16,7 +16,11 @@
     border: 1.5px solid var(--line);
     overflow: hidden;
   }
-  .stage .tower-art { position: absolute; left: 40px; top: 14px; width: 330px; height: 600px; }
+  .stage .tower-art { position: absolute; left: 50px; top: 10px; width: 280px; height: 400px; }
+  .farm { position: absolute; left: 26px; bottom: 24px; width: 330px; }
+  .farm svg { width: 100%; height: 78px; display: block; }
+  .farm p { margin-top: 8px; font-size: 18px; font-weight: 700; color: var(--forest); line-height: 1.3; }
+  .farm p span { display: block; font-size: 16px; font-weight: 500; color: var(--muted); }
   .stage .tower-art svg { width: 100%; height: 100%; }
 
   .bubble {
@@ -33,7 +37,7 @@
   .bubble b { display: block; font-size: 30px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
   .bubble span { display: block; margin-top: 10px; font-size: 19px; line-height: 1.35; color: var(--on-dark-2); }
 
-  .legend-mini { position: absolute; right: 34px; top: 262px; display: grid; gap: 10px; font-size: 19px; font-weight: 600; color: var(--body); }
+  .legend-mini { position: absolute; right: 34px; top: 318px; display: grid; gap: 10px; font-size: 19px; font-weight: 600; color: var(--body); }
   .legend-mini div { display: flex; align-items: center; gap: 12px; }
   .legend-mini i { width: 26px; height: 26px; border-radius: 50%; flex: none; }
   .legend-mini .l i { background: #7cc46a; }
@@ -93,12 +97,13 @@
 </head>
 <body data-num="02a" data-part="problem" data-eyebrow="Introduction / Background of the Study">
 <div class="slide">
-  <h1 class="title">Towers grow upward. Pot checks are <em>still done by hand.</em></h1>
+  <h1 class="title">More towers, taller towers. Pot checks are <em>still done by hand.</em></h1>
 
   <div class="content">
     <section class="stage">
       <div class="tower-art" data-pattern="LL EL LL LE LL LL EL" data-highlight="empty"></div>
-      <div class="bubble"><b>Which pots are empty?</b><span>Someone still has to walk up, look, and write it down.</span></div>
+      <div class="bubble"><b>Which pots are empty?</b><span>On every tower, someone still has to walk up, look, and write it down.</span></div>
+      <div class="farm"><svg viewBox="0 0 300 90" fill="none"><g opacity="1.0"><ellipse cx="22" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="17" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="13" cy="16" r="6" fill="#7cc46a"/><circle cx="31" cy="28" r="6" fill="#7cc46a"/><circle cx="13" cy="40" r="6" fill="#7cc46a"/><circle cx="31" cy="52" r="6" fill="#7cc46a"/><circle cx="13" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.9"><ellipse cx="62" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="57" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="53" cy="16" r="6" fill="#7cc46a"/><circle cx="71" cy="28" r="6" fill="#7cc46a"/><circle cx="53" cy="40" r="6" fill="#2b2b26"/><circle cx="71" cy="52" r="6" fill="#7cc46a"/><circle cx="53" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.8"><ellipse cx="102" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="97" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="93" cy="16" r="6" fill="#7cc46a"/><circle cx="111" cy="28" r="6" fill="#7cc46a"/><circle cx="93" cy="40" r="6" fill="#7cc46a"/><circle cx="111" cy="52" r="6" fill="#7cc46a"/><circle cx="93" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.7"><ellipse cx="142" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="137" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="133" cy="16" r="6" fill="#2b2b26"/><circle cx="151" cy="28" r="6" fill="#7cc46a"/><circle cx="133" cy="40" r="6" fill="#7cc46a"/><circle cx="151" cy="52" r="6" fill="#7cc46a"/><circle cx="133" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.6"><ellipse cx="182" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="177" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="173" cy="16" r="6" fill="#7cc46a"/><circle cx="191" cy="28" r="6" fill="#7cc46a"/><circle cx="173" cy="40" r="6" fill="#7cc46a"/><circle cx="191" cy="52" r="6" fill="#7cc46a"/><circle cx="173" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.5"><ellipse cx="222" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="217" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="213" cy="16" r="6" fill="#7cc46a"/><circle cx="231" cy="28" r="6" fill="#7cc46a"/><circle cx="213" cy="40" r="6" fill="#7cc46a"/><circle cx="231" cy="52" r="6" fill="#2b2b26"/><circle cx="213" cy="64" r="6" fill="#7cc46a"/></g><g opacity="0.4"><ellipse cx="262" cy="80" rx="14" ry="4" fill="#3b8059"/><rect x="257" y="8" width="10" height="72" rx="2" fill="#fbfbf8" stroke="#c9cdc4" stroke-width="1.5"/><circle cx="253" cy="16" r="6" fill="#7cc46a"/><circle cx="271" cy="28" r="6" fill="#7cc46a"/><circle cx="253" cy="40" r="6" fill="#7cc46a"/><circle cx="271" cy="52" r="6" fill="#7cc46a"/><circle cx="253" cy="64" r="6" fill="#7cc46a"/></g><g fill="#9db59a"><circle cx="292" cy="50" r="3"/><circle cx="282" cy="50" r="3"/></g></svg><p>…and every other tower on the farm<span>More towers, taller towers, more pots to check</span></p></div>
       <div class="legend-mini">
         <div class="l"><i></i>Lettuce</div>
         <div class="e"><i></i>Empty pot</div>
@@ -139,7 +144,7 @@
     <div class="strip">
       <div class="why">
         <span class="ico"><i data-lucide="sprout"></i></span>
-        <div><b>Importance:</b> <span>slot availability (empty pots vs. total slots) tells farmers where to replant and when to harvest, without walking every tower.</span></div>
+        <div><b>Importance:</b> <span>slot availability (empty pots vs. total slots) for every tower on the farm tells farmers where to replant and when to harvest.</span></div>
       </div>
       <div class="sdgs">
         <div class="sdg"><i style="background:#dda63a">2</i>Zero Hunger</div>

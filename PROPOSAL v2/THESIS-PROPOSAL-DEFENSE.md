@@ -7,13 +7,13 @@ Source: *Chapter 1 v2.docx* (Introduction, Review of Related Literature, Objecti
 
 ## Presentation Flow
 
-Target length: **about 18½ minutes** of presentation, then open forum. Slides keep the template numbers 1–17; where one template slide needs more room, it is split into lettered slides (2a, 2b, 3a–3d …), as in v1. A section slide opens each of the five parts.
+Target length: **about 19 minutes** of presentation, then open forum. Slides keep the template numbers 1–17; where one template slide needs more room, it is split into lettered slides (2a, 2b, 3a–3d …), as in v1. A section slide opens each of the five parts.
 
 | # | Slide | Part | Time | Presenter | Key message (one sentence) |
 | ----- | ----- | ----- | ----- | ----- | ----- |
 | 1 | Title | Opening | 0:35 | Lopez | Who we are and what we propose. |
-| 2a | Introduction / Background of the Study | **Problem** | 1:05 | Lopez | Towers grow upward, but pot checks are still manual and sensors can't see empty pots. |
-| 2b | Introduction · Key Concepts | **Problem** | 0:55 | Lopez | QR registration, GPS + ArUco alignment, YOLOv8, offline-first dashboard. |
+| 2a | Introduction / Background of the Study | **Problem** | 1:15 | Lopez | More towers, taller towers, but pot checks are still manual and sensors can't see empty pots. |
+| 2b | Introduction · Key Concepts | **Problem** | 1:00 | Lopez | QR registration, GPS + ArUco alignment, YOLOv8, offline-first dashboard; one drone for the whole farm. |
 | 3a–3c | Review of Related Literature and Studies | **Problem** | 2:30 | Marvilla | 38 sources: what we adopt, what they leave out. |
 | 3d | Research Gap | **Problem** | 0:40 | Marvilla | Each piece exists; no study combines them. |
 | 4a | Conceptual Framework · IPO Model | **Solution** | 0:45 | Marvilla | Inputs → RAD process → working inspection system, with feedback. |
@@ -61,10 +61,11 @@ Target length: **about 18½ minutes** of presentation, then open forum. Slides k
 
 * **Context of the problem:** Vertical farms use less land and water, but success depends on efficient management (van Delden et al., 2021; Saad et al., 2021).
 * **Current situation:** Monitoring is still manual (Domingo, 2022; Bunga, 2026). IoT tracks temperature, humidity, pH and nutrients, not whether each pot holds a plant (Dhanaraju et al., 2022; Santiago et al., 2025).
-* **Importance of the study:** Slot availability (empty pots vs. total slots) tells farmers where to replant and when to harvest, without walking every tower.
+* **Scale:** a farm has many towers, and stackable towers grow taller module by module, so checking by hand takes longer as the farm grows (Significance of the Study).
+* **Importance of the study:** Slot availability (empty pots vs. total slots) for every tower on the farm tells farmers where to replant and when to harvest.
 * **SDGs:** 2, 9, 11, 12.
 
-*Visual:* drawn tower with empty pots ringed in red, next to an IoT readout showing "Empty pots: ?".
+*Visual:* drawn tower with empty pots ringed in red, a row of towers behind it ("…and every other tower on the farm"), and an IoT readout showing "Empty pots: ?".
 
 **Slide 2b: Introduction · Key Concepts**
 
@@ -72,6 +73,7 @@ Target length: **about 18½ minutes** of presentation, then open forum. Slides k
 * **GPS + ArUco markers:** GPS brings the drone near; the Raspberry Pi aligns on the markers.
 * **YOLOv8 computer vision:** every face, bottom to top; live preview on the laptop; final count from the onboard recording.
 * **Offline-first dashboard:** saved offline first, uploaded when there is internet.
+* **Whole farm, not one tower:** each tower has its own QR code and location, so one drone inspects every tower in turn; adding a tower costs only a printed sign.
 
 *Visual:* Figure 5 (Conceptual Illustration). Each step points to its callout numbers.
 

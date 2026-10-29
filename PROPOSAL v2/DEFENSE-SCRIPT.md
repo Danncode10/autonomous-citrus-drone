@@ -13,14 +13,14 @@ Source: **Chapter 1 v2.docx**, which now includes the Review of Related Literatu
 
 ## Timing and speakers
 
-Target: **about 18½ minutes**, then open forum. Presenter assignment carries over from v1; rebalance it so each member presents what they built or wrote.
+Target: **about 19 minutes**, then open forum. Presenter assignment carries over from v1; rebalance it so each member presents what they built or wrote.
 
 | Template | Slide | Speaker | Time |
 | ----- | ----- | ----- | ----- |
 | 1 | slide-01 · Title | Lester Dann G. Lopez | 0:35 |
 | | slide-02-0 · Section: The Problem | Lopez | 0:02 |
-| 2 | slide-02a · Introduction / Background of the Study | Lopez | 1:05 |
-| 2 | slide-02b · Introduction · Key Concepts (Figure 5) | Lopez | 0:55 |
+| 2 | slide-02a · Introduction / Background of the Study | Lopez | 1:15 |
+| 2 | slide-02b · Introduction · Key Concepts (Figure 5) | Lopez | 1:00 |
 | 3 | slide-03a · RRL · Farm and Monitoring | Rhoan Joy M. Marvilla | 0:55 |
 | 3 | slide-03b · RRL · Detection and Flight | Marvilla | 0:55 |
 | 3 | slide-03c · RRL · Processing, Data and Method | Marvilla | 0:40 |
@@ -48,7 +48,7 @@ Target: **about 18½ minutes**, then open forum. Presenter assignment carries ov
 | 15 | slide-15 · Expected Output | Lopez | 0:35 |
 | 16 | slide-16 · Budget Requirements | Lopez | 0:30 |
 | 17 | slide-17 · Thank You / Open Forum | All | 0:10 |
-| | | **Total** | **≈ 18:45** |
+| | | **Total** | **≈ 19:00** |
 
 Backup slides A–C (SWOT, safety and regulation, hardware) come after slide-17. Show them only when asked.
 
@@ -69,7 +69,7 @@ Today we present **"Computer Vision and Autonomous Drone Inspection for Hydropon
 ---
 
 ## slide-02a · Introduction / Background of the Study
-**Speaker:** Lopez · **Time:** 1:05
+**Speaker:** Lopez · **Time:** 1:15
 
 First, the context. Vertical farms stack crops in tiers. Van Delden and colleagues found that this saves land and water, but only if the farm is managed well.
 
@@ -77,7 +77,9 @@ The current situation: managing it is still done by hand. A lettuce farm in Iloi
 
 Most farm technology today is IoT: sensors for temperature, humidity, pH and nutrients. Look at the readout on the left. It knows the pH. It does not know **which pots are empty**. Someone still has to walk up, look, and write it down.
 
-That is why this study matters: **slot availability**, empty pots against total slots, tells farmers where to replant and when to harvest. ✂ This work supports SDGs 2, 9, 11 and 12.
+And it is never just one tower. **A farm has many towers**, and stackable towers grow taller module by module, so checking every pot by hand takes longer as the farm grows.
+
+That is why this study matters: **slot availability**, empty pots against total slots, for every tower on the farm, tells farmers where to replant and when to harvest. ✂ This work supports SDGs 2, 9, 11 and 12.
 
 **`<next>`** → slide-02b · Key Concepts
 
@@ -87,13 +89,13 @@ That is why this study matters: **slot availability**, empty pots against total 
 ---
 
 ## slide-02b · Introduction · Key Concepts
-**Speaker:** Lopez · **Time:** 0:55
+**Speaker:** Lopez · **Time:** 1:00
 
 So our system does the looking. Four key concepts, in four steps; the numbers on the right match Figure 5.
 
 **One, QR registration:** the farmer scans a printed QR sign on the tower, and the phone saves its own GPS as the tower's location. **Two, GPS and ArUco markers:** the drone flies there by GPS, then the Raspberry Pi finds the markers and holds its distance, height and face. **Three, YOLOv8 computer vision:** the drone scans every face, bottom to top, while a ground laptop shows a live preview; the final count comes from the full recording after landing. **Four, an offline-first dashboard:** results are saved offline, and the farmer uploads them when there is internet.
 
-The tower needs only a printed sign, not electronics, and one drone can serve every tower on the farm.
+And this is built for **the whole farm, not one tower**. Each tower is registered with its own QR code and location, so the same drone inspects every tower, one after another. Adding a tower costs only a printed sign, no electronics.
 
 **`<next>`** → slide-03a · Related Literature: Farm and Monitoring
 
@@ -195,7 +197,7 @@ Each card shows the evidence we will collect and the RAD phase. ✂ Objective fi
 ## slide-06 · Significance of the Study
 **Speaker:** Valentino · **Time:** 0:45
 
-The benefits spread from the tower outward. **Farmers** spend less time checking pots, especially the upper levels. **Managers and workers** get a per-tower history with fewer counting errors. **Students and researchers** get a reference and a labeled dataset. The **academic community** gains work on smart farming and computer vision. And **local agricultural offices** get guidance on affordable vertical farming.
+At the center is the idea of the whole study: **one drone for every tower on the farm**. The benefits spread outward from there. **Farmers** spend less time checking pots, especially the upper levels. **Managers and workers** get a per-tower history with fewer counting errors. **Students and researchers** get a reference and a labeled dataset. The **academic community** gains work on smart farming and computer vision. And **local agricultural offices** get guidance on affordable vertical farming.
 
 Our **technical contribution**: we extend marker alignment from landing pads to the vertical faces of a tower, and map every detection to its exact pot.
 
@@ -206,7 +208,7 @@ Our **technical contribution**: we extend marker alignment from landing pads to 
 ## slide-07 · Scope and Delimitation
 **Speaker:** Valentino · **Time:** 0:55
 
-Our **scope**, on the right: QR registration, GPS approach with onboard alignment, YOLOv8 detection matched to each pot, the offline cache and dashboards, all on **one 1.5-meter tower**.
+Our **scope**, on the right: QR registration, GPS approach with onboard alignment, YOLOv8 detection matched to each pot, the offline cache and dashboards. We build and test **one 1.5-meter tower** to fit the budget, but the system is designed for the whole farm: every registered tower is scanned the same way.
 
 Our **delimitations**. On the left are the limits we fly within: the drone stays **no higher than 1.8 meters** and **within 20 meters** of launch; one tower per battery, three to five minutes; daylight and fair weather, with wind checked on an anemometer; an open area with GPS; local Wi-Fi only. And we exclude watering systems, other crops, plant health, obstacle avoidance, indoor flight, LiDAR, and commercial deployment.
 
