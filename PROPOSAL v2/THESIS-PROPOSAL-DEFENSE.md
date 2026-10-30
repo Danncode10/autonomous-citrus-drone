@@ -11,32 +11,32 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 
 | # | Slide | Part | Time | Presenter | Key message (one sentence) |
 | ----- | ----- | ----- | ----- | ----- | ----- |
-| 1 | Title | Opening | 0:35 | Lopez | Who we are and what we propose. |
-| 2a | Introduction / Background of the Study | **Problem** | 1:15 | Lopez | More towers, taller towers, but pot checks are still manual and sensors can't see empty pots. |
-| 2b | Introduction · Key Concepts | **Problem** | 1:00 | Lopez | QR registration, GPS + ArUco alignment, YOLOv8, offline-first dashboard; one drone for the whole farm. |
-| 3a–3c | Review of Related Literature and Studies | **Problem** | 2:30 | Marvilla | 38 sources: what we adopt, what they leave out. |
-| 3d | Research Gap | **Problem** | 0:40 | Marvilla | Each piece exists, but only on its own; our study puts them together. |
-| 4a | Conceptual Framework · IPO Model | **Solution** | 0:45 | Marvilla | Inputs → RAD process → working inspection system, with feedback. |
-| 4b | Conceptual Framework · System Flow (Figure 1) | **Solution** | 0:55 | Marvilla | Fly and scan offline; internet only for records. |
-| 5a | Research Objectives · General Objective | **Solution** | 0:30 | Valentino | The general objective, in the chapter's exact words. |
-| 5b | Research Objectives · Specific Objectives | **Solution** | 1:00 | Valentino | The five specific objectives, in the chapter's exact words. |
-| 6 | Significance of the Study | **Solution** | 0:45 | Valentino | Practical, academic, technical and community contributions. |
-| 7 | Scope and Delimitation | **Solution** | 0:55 | Valentino | What we build, and the limits we fly within. |
-| 8a | Research Methodology · Research Design | **Method** | 0:55 | Fernandez | Developmental, mixed-method, RAD with simulation first. |
-| 8b | Research Methodology · Dataset | **Method** | 0:45 | Fernandez | About 2,000 labeled images, split 70/20/10. |
-| 9a | Locale and Participants | **Method** | 0:35 | Fernandez | Busilac and Savara Lettuce Farm; 4 respondents by total enumeration. |
-| 9b | Locale and Participants · Preliminary Interview | **Method** | 0:50 | Fernandez | The Savara interview is already done; what the farm owner said shaped the design. |
-| 10 | Research Instruments | **Method** | 0:45 | Fernandez | Survey, interview guide, observation checklist, system evaluation tool. |
-| 11 | Data Gathering Procedure | **Method** | 0:35 | Fernandez | Approval → validation → collection → processing → analysis. |
-| 12 | Statistical Treatment of Data | **Method** | 0:45 | Fernandez | Precision, recall, mAP@50, counting error; weighted mean and SD. |
-| 13a | Proposed System Architecture | **System** | 0:55 | Lopez | Five parts; only the cloud needs internet. |
-| 13b | Proposed System Architecture · Scan Sequence | **System** | 0:55 | Lopez | How one scan runs, and the failsafes. |
-| 13c | Proposed System Architecture · Technical Design | **System** | 0:35 | Lopez | Power, flight control, companion computer, ground link. |
-| 13d | Proposed System Architecture · Key Features | **System** | 0:35 | Lopez | Architecture layers and dashboard features. |
-| 14 | Project Timeline (Gantt Chart) | **Plan** | 1:30 | Lopez | Computer vision first (Sem 1), then the drone (Sem 2); finish by Mar 30, 2027. |
-| 15 | Expected Output | **Plan** | 0:35 | Lopez | Anticipated benefits and deliverables. |
-| 16 | Budget Requirements | **Plan** | 0:30 | Lopez | About ₱25,600 to ₱28,500 in hardware. |
-| 17 | Thank You / Open Forum | Closing | 0:10 | All | Invite questions. |
+| 1 | Title | Opening | 0:35 | Dann | Who we are and what we propose. |
+| 2a | Introduction / Background of the Study | **Problem** | 1:15 | Dann | More towers, taller towers, but pot checks are still manual and sensors can't see empty pots. |
+| 2b | Introduction · Key Concepts | **Problem** | 1:00 | Dann | QR registration, GPS + ArUco alignment, YOLOv8, offline-first dashboard; one drone for the whole farm. |
+| 3a–3c | Review of Related Literature and Studies | **Problem** | 2:30 | RJ | 38 sources: what we adopt, what they leave out. |
+| 3d | Research Gap | **Problem** | 0:40 | RJ | Each piece exists, but only on its own; our study puts them together. |
+| 4a | Conceptual Framework · IPO Model | **Solution** | 0:45 | RJ | Inputs → RAD process → working inspection system, with feedback. |
+| 4b | Conceptual Framework · System Flow (Figure 1) | **Solution** | 0:55 | RJ | Fly and scan offline; internet only for records. |
+| 5a | Research Objectives · General Objective | **Solution** | 0:30 | Prince | The general objective, in the chapter's exact words. |
+| 5b | Research Objectives · Specific Objectives | **Solution** | 1:00 | Prince | The five specific objectives, in the chapter's exact words. |
+| 6 | Significance of the Study | **Solution** | 0:45 | Prince | Practical, academic, technical and community contributions. |
+| 7 | Scope and Delimitation | **Solution** | 0:55 | Prince | What we build, and the limits we fly within. |
+| 8a | Research Methodology · Research Design | **Method** | 0:55 | Prince | Developmental, mixed-method, RAD with simulation first. |
+| 8b | Research Methodology · Dataset | **Method** | 0:45 | Prince | About 2,000 labeled images, split 70/20/10. |
+| 9a | Locale and Participants | **Method** | 0:35 | Joshua | Busilac and Savara Lettuce Farm; 4 respondents by total enumeration. |
+| 9b | Locale and Participants · Preliminary Interview | **Method** | 0:50 | Joshua | The Savara interview is already done; what the farm owner said shaped the design. |
+| 10 | Research Instruments | **Method** | 0:45 | Joshua | Survey, interview guide, observation checklist, system evaluation tool. |
+| 11 | Data Gathering Procedure | **Method** | 0:35 | Joshua | Approval → validation → collection → processing → analysis. |
+| 12 | Statistical Treatment of Data | **Method** | 0:45 | Dann | Precision, recall, mAP@50, counting error; weighted mean and SD. |
+| 13a | Proposed System Architecture | **System** | 0:55 | Prince | Five parts; only the cloud needs internet. |
+| 13b | Proposed System Architecture · Scan Sequence | **System** | 0:55 | Dann | How one scan runs, and the failsafes. |
+| 13c | Proposed System Architecture · Technical Design | **System** | 0:35 | Dann | Power, flight control, companion computer, ground link. |
+| 13d | Proposed System Architecture · Key Features | **System** | 0:35 | RJ | Architecture layers and dashboard features. |
+| 14 | Project Timeline (Gantt Chart) | **Plan** | 1:30 | Dann | Computer vision first (Sem 1), then the drone (Sem 2); finish by Mar 30, 2027. |
+| 15 | Expected Output | **Plan** | 0:35 | Joshua | Anticipated benefits and deliverables. |
+| 16 | Budget Requirements | **Plan** | 0:30 | Joshua | About ₱25,600 to ₱28,500 in hardware. |
+| 17 | Thank You / Open Forum | Closing | 0:10 | Dann, then all | Invite questions. |
 |  | Backup slides A–C | Q&A | — | As asked | Show only when a panelist asks. |
 
 > Presenter assignment is a suggestion. Rebalance it so that each member speaks on the part they built or wrote.
