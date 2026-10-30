@@ -8,7 +8,7 @@ Target: about 12 minutes. The slides already show the details. The script explai
 
 ## slide-01.png · Title (Dann)
 
-Good [morning / afternoon] to our panel, to our adviser, Bernadeth B. Liggayu, and to everyone here. I am Lester Dann Lopez, and with me are Rhoan Joy Marvilla, Prince Daniel Valentino and Joshua Jing Fernandez. Our study is titled "Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration."
+Good morning to our panel, to our adviser, Bernadeth B. Liggayu, and to everyone here. I am Lester Dann Lopez, and with me are Rhoan Joy Marvilla, Prince Daniel Valentino and Joshua Jing Fernandez. Our study is titled "Computer Vision and Autonomous Drone Inspection for Hydroponic Towers with Web Dashboard Integration."
 
 ---
 
@@ -36,7 +36,7 @@ First, the farmer scans the QR sign on the tower, and the phone saves the tower'
 
 Next, the drone flies there by GPS. But phone GPS can be off by about five meters, which is too far when flying near plants. So for the last few meters, the drone uses ArUco markers. These are printed black-and-white squares. When the camera sees one, it knows exactly how far away the tower is and at what angle.
 
-Then the drone scans each side from bottom to top, and YOLOv8 counts the lettuce and the empty pots. Finally, the results appear on the farmer's dashboard.
+Then the drone scans each side from bottom to top, and YOLOv8 counts the lettuce and the empty pots. Finally, the dashboard shows the counts and the photos of each pot. So the farmer can see the crops without walking to the tower.
 
 RJ will now present the related studies.
 
@@ -232,7 +232,7 @@ RJ will now present our software.
 
 Thank you. This slide shows our software from the drone up to the farmer. ArduPilot flies the drone. The Pi uses OpenCV to read the markers and GStreamer to send the video. The laptop runs YOLOv8 and ByteTrack and saves the results in SQLite. When there is internet the results go to Supabase. The farmer sees them on a Next.js dashboard. Before flying we label images in Supabox and test the scan in a Gazebo simulation.
 
-The web dashboard works on a phone. The farmer registers towers by QR even offline. They can request scans and see each pot on every tower. The local dashboard on the laptop shows the scan live. It uploads the results later without duplicates. All our tools are free and open source. This keeps costs low for small farms.
+The web dashboard works on a phone. The farmer registers towers by QR even offline. They can request scans and see each pot on every tower. The dashboard also keeps the photos from every scan. So the farmer sees the actual plants and not just the counts. We do not analyze these photos yet. But future researchers can use them to study plant health. The local dashboard on the laptop shows the scan live. It uploads the results later without duplicates. All our tools are free and open source. This keeps costs low for small farms.
 
 Dann will now present our plan.
 
