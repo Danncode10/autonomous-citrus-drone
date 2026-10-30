@@ -23,6 +23,8 @@
   .eq .frac span:last-child { padding-top: 4px; }
   .eq .small { font-size: 25px; font-style: normal; font-family: var(--sans); color: var(--muted); }
 
+  .f .target { align-self: flex-start; margin-top: 10px; padding: 5px 12px; border-radius: 8px; background: var(--gold); color: var(--forest); font-family: var(--mono); font-size: 18px; font-weight: 700; }
+
   .f.hl { background: var(--leaf-tint); border-color: #cfe3d1; }
 
   .flight { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 16px 22px; }
@@ -56,22 +58,22 @@
 
   <div class="content">
     <section class="left">
-      <div class="label group-label"><span class="ico"><i data-lucide="scan-eye"></i></span>System performance · tested on unseen images and real flights</div>
+      <div class="label group-label"><span class="ico"><i data-lucide="scan-eye"></i></span>How accurate the AI is · tested on unseen images and real flights</div>
       <div class="formulas">
         <article class="card f">
-          <div class="name">Precision</div><div class="what">Of what it detected, how much was right</div>
+          <div class="name">Precision</div><div class="what">Of the AI's boxes, how many were right</div><span class="target">Target ≥ 90%</span>
           <div class="eq">P =<span class="frac"><span>TP</span><span>TP + FP</span></span></div>
         </article>
         <article class="card f">
-          <div class="name">Recall</div><div class="what">Of what was there, how much it found</div>
+          <div class="name">Recall</div><div class="what">Of the real plants and empty pots, how many it found</div><span class="target">Target ≥ 90%</span>
           <div class="eq">R =<span class="frac"><span>TP</span><span>TP + FN</span></span></div>
         </article>
         <article class="card f">
-          <div class="name">mAP@50</div><div class="what">Mean average precision at IoU 0.50</div>
+          <div class="name">mAP@50</div><div class="what">Both in one score; a box counts if it overlaps the real one by half</div><span class="target">Target ≥ 90%</span>
           <div class="eq">mAP =<span class="frac"><span>Σ AP<sub>c</sub></span><span>classes</span></span></div>
         </article>
         <article class="card f hl">
-          <div class="name">Counting error per tower</div><div class="what">Lettuce and empty pots vs. a manual count</div>
+          <div class="name">Counting error per tower</div><div class="what">Lettuce and empty pots vs. a manual count</div><span class="target">Target ≤ 10%</span>
           <div class="eq" style="font-family: var(--sans); font-style: normal; font-size: 25px; font-weight: 700; color: var(--forest); white-space: normal">System count compared with the manual count</div>
         </article>
         <article class="card f hl">

@@ -5,29 +5,42 @@
 <title>Slide 14 · Project Timeline</title>
 <link rel="stylesheet" href="theme.css">
 <style>
-  /* Gantt chart. Bars are colored by RAD phase, and every row is labeled, so the
-     phase never depends on color alone. */
-  :root { --c-plan: #2a8a4a; --c-design: #3f6fb0; --c-build: #c98a12; --c-cut: #b4452f; --c-doc: #12392b; }
+  /* Gantt chart on a real calendar, October 2026 to March 2027. Bars are placed
+     by date and colored by RAD phase; every row also names its phase, so the
+     chart never depends on color alone. Semester 1 builds the computer vision,
+     semester 2 builds the drone. */
+  :root { --c-plan: #2a8a4a; --c-design: #3f6fb0; --c-build: #c98a12; --c-cut: #b4452f; --c-doc: #12392b; --label: 560px; }
 
-  .content { display: flex; flex-direction: column; gap: 14px; }
+  .content { display: flex; flex-direction: column; gap: 12px; }
 
-  .gantt { flex: 1; display: grid; grid-template-columns: 590px repeat(6, 1fr); grid-template-rows: 56px repeat(9, 1fr); background: var(--card); border: 1.5px solid var(--line); border-radius: 22px; overflow: hidden; position: relative; }
-  .gantt .mh { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); background: var(--paper); border-left: 1.5px solid var(--line-soft); }
-  .gantt .corner { background: var(--paper); display: flex; align-items: center; padding: 0 24px; font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
+  .gantt { flex: 1; display: grid; grid-template-columns: var(--label) 1fr; grid-template-rows: 46px 40px; grid-auto-rows: 1fr; background: var(--card); border: 1.5px solid var(--line); border-radius: 22px; overflow: hidden; }
 
-  .act { display: flex; align-items: center; gap: 14px; padding: 0 24px; border-top: 1.5px solid var(--line-soft); }
-  .act .ph { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; color: #fff; white-space: nowrap; width: 132px; text-align: center; flex: none; letter-spacing: 0.04em; }
-  .act b { font-size: 24px; font-weight: 700; color: var(--ink); line-height: 1.2; }
-  .act span.s { display: block; font-size: 17px; color: var(--muted); font-weight: 500; }
+  .corner { grid-row: 1 / 3; background: var(--paper); display: flex; align-items: flex-end; padding: 0 24px 10px; font-family: var(--mono); font-size: 16px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
 
-  .lane { grid-column: 2 / -1; position: relative; border-top: 1.5px solid var(--line-soft); background-image: linear-gradient(90deg, var(--line-soft) 1.5px, transparent 1.5px); background-size: calc(100% / 6) 100%; }
-  .bar { position: absolute; top: 50%; height: 30px; transform: translateY(-50%); border-radius: 4px; }
-  .bar.loop { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.22) 0 8px, transparent 8px 16px); }
-  .flag { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 26px; height: 26px; border-radius: 6px; rotate: 45deg; background: var(--gold); border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--gold-deep); }
-  .flag-label { position: absolute; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 700; color: var(--gold-deep); white-space: nowrap; }
+  .sems, .months { position: relative; background: var(--paper); }
+  .sems > div { position: absolute; top: 8px; bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 8px; font-family: var(--mono); font-size: 16px; font-weight: 700; letter-spacing: 0.08em; }
+  .sems .s1 { background: var(--leaf-soft); color: var(--leaf-deep); }
+  .sems .s2 { background: var(--gold-soft); color: var(--gold-deep); }
+  .months > span { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 17px; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); border-left: 1.5px solid var(--line-soft); }
 
-  .foot { display: flex; align-items: center; justify-content: space-between; font-size: 20px; color: var(--muted); }
-  .legend { display: flex; gap: 20px; }
+  .act { display: flex; align-items: center; gap: 14px; padding: 0 22px; border-top: 1.5px solid var(--line-soft); }
+  .act .ph { flex: none; width: 112px; padding: 4px 6px; border-radius: 6px; text-align: center; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; }
+  .act b { display: block; font-size: 21px; font-weight: 700; line-height: 1.15; color: var(--ink); }
+  .act .s { display: block; font-size: 15px; line-height: 1.25; color: var(--muted); }
+
+  .lane { position: relative; border-top: 1.5px solid var(--line-soft); }
+  .lane .grid { position: absolute; top: 0; bottom: 0; border-left: 1.5px solid var(--line-soft); }
+  .lane .sem { position: absolute; top: 0; bottom: 0; border-left: 2.5px dashed var(--gold); }
+  .bar { position: absolute; top: 50%; height: 26px; transform: translateY(-50%); border-radius: 5px; }
+  .bar.loop { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.24) 0 8px, transparent 8px 16px); }
+  .when { position: absolute; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .flag { position: absolute; top: 50%; width: 22px; height: 22px; transform: translate(-50%, -50%) rotate(45deg); border-radius: 5px; background: var(--gold); border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--gold-deep); }
+  .flag.done { background: var(--c-plan); box-shadow: 0 0 0 1.5px var(--c-plan); }
+  .flag-label { position: absolute; top: 50%; transform: translateY(-50%); font-size: 18px; font-weight: 800; color: var(--gold-deep); white-space: nowrap; }
+  .flag-label.done { color: var(--c-plan); }
+
+  .foot { display: flex; align-items: center; justify-content: space-between; font-size: 18px; color: var(--muted); }
+  .legend { display: flex; gap: 18px; }
   .legend span { display: flex; align-items: center; gap: 8px; }
   .legend i { width: 22px; height: 14px; border-radius: 3px; }
   .foot .note { display: flex; align-items: center; gap: 8px; }
@@ -36,39 +49,13 @@
 </head>
 <body data-num="14" data-part="plan" data-eyebrow="Project Timeline (Gantt Chart)">
 <div class="slide">
-  <h1 class="title">Proposed schedule, <em>following the RAD phases</em></h1>
+  <h1 class="title">Computer vision first, <em>then the drone</em></h1>
 
   <div class="content">
     <div class="gantt">
       <div class="corner">ACTIVITY</div>
-      <div class="mh">MONTH 1</div><div class="mh">MONTH 2</div><div class="mh">MONTH 3</div><div class="mh">MONTH 4</div><div class="mh">MONTH 5</div><div class="mh">MONTH 6</div>
-
-      <div class="act"><span class="ph" style="background:var(--c-doc)">Proposal</span><b>Proposal defense</b></div>
-      <div class="lane"><span class="flag" style="left:4%"></span><span class="flag-label" style="left:calc(4% + 30px)">November 3, 2026</span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-plan)">Req. planning</span><div><b>Interviews and site observation</b><span class="s">Savara Lettuce Farm; SWOT</span></div></div>
-      <div class="lane"><span class="bar" style="left:0.6%; width:32.1%; background:var(--c-plan)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-plan)">Req. planning</span><b>Validation of instruments</b></div>
-      <div class="lane"><span class="bar" style="left:0.6%; width:32.1%; background:var(--c-plan)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-design)">User design</span><div><b>Architecture, UI, Gazebo + SITL</b><span class="s">Repeats with construction</span></div></div>
-      <div class="lane"><span class="bar loop" style="left:17.3%; width:32.1%; background-color:var(--c-design)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-build)">Construction</span><div><b>Stage 1</b><span class="s">Dashboard, sign, ~2,000-image dataset, manual flight</span></div></div>
-      <div class="lane"><span class="bar loop" style="left:17.3%; width:48.8%; background-color:var(--c-build)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-build)">Construction</span><div><b>Stage 2</b><span class="s">Pi + camera + GPS, alignment, full pipeline</span></div></div>
-      <div class="lane"><span class="bar loop" style="left:34%; width:48.8%; background-color:var(--c-build)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-cut)">Cutover</span><div><b>Testing</b><span class="s">Model, flight, streaming, sync, end to end</span></div></div>
-      <div class="lane"><span class="bar" style="left:50.6%; width:32.1%; background:var(--c-cut)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-cut)">Cutover</span><b>User evaluation and analysis</b></div>
-      <div class="lane"><span class="bar" style="left:67.3%; width:32.1%; background:var(--c-cut)"></span></div>
-
-      <div class="act"><span class="ph" style="background:var(--c-doc)">Final</span><b>Documentation and final defense</b></div>
-      <div class="lane"><span class="bar" style="left:84%; width:15.4%; background:var(--c-doc)"></span></div>
+      <div class="sems"></div>
+      <div class="months"></div>
     </div>
 
     <div class="foot">
@@ -77,12 +64,89 @@
         <span><i style="background:var(--c-design)"></i>User Design</span>
         <span><i style="background:var(--c-build)"></i>Rapid Construction</span>
         <span><i style="background:var(--c-cut)"></i>Cutover</span>
-        <span><i style="background:var(--c-build); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.35) 0 4px, transparent 4px 8px)"></i>Repeated cycle</span>
+        <span><i style="background:var(--c-doc)"></i>Paper and defense</span>
       </div>
-      <span class="note"><span class="ico"><i data-lucide="calendar-clock"></i></span>Proposed schedule; replace months with actual dates</span>
+      <span class="note"><span class="ico"><i data-lucide="calendar-clock"></i></span>Target dates</span>
     </div>
   </div>
 </div>
+<script>
+  // Calendar: October 1, 2026 to March 31, 2027. Positions are percentages of it.
+  const START = Date.UTC(2026, 9, 1);
+  const END = Date.UTC(2027, 3, 1);
+  const pct = (iso) => ((Date.parse(iso) - START) / (END - START)) * 100;
+  const SEM2 = '2027-01-04';
+
+  const MONTHS = [['OCT', '2026-10-01'], ['NOV', '2026-11-01'], ['DEC', '2026-12-01'], ['JAN', '2027-01-01'], ['FEB', '2027-02-01'], ['MAR', '2027-03-01']];
+  const edges = [...MONTHS.map(([, d]) => pct(d)), 100];
+
+  const PHASE = {
+    plan: ['Planning', 'var(--c-plan)'],
+    design: ['User design', 'var(--c-design)'],
+    build: ['Construction', 'var(--c-build)'],
+    cut: ['Cutover', 'var(--c-cut)'],
+    doc: ['Paper', 'var(--c-doc)'],
+  };
+
+  // Each row: phase, name, detail, and either a milestone or a date range.
+  const ROWS = [
+    { ph: 'plan', name: 'Interview at Savara Lettuce Farm', s: 'Where we found the problem', flag: '2026-10-11', label: 'Oct 11 · done', done: true },
+    { ph: 'doc', name: 'Proposal defense', s: 'Approval to build', flag: '2026-11-03', label: 'Nov 3' },
+    { ph: 'build', name: 'Camera streams to laptop and dashboard', s: 'Raspberry Pi + camera, Supabase, Next.js', from: '2026-11-04', to: '2026-11-27', loop: true },
+    { ph: 'build', name: 'QR registration with phone GPS', s: 'Tower location saved to the dashboard', from: '2026-11-16', to: '2026-12-04', loop: true },
+    { ph: 'build', name: 'Tower frame, markers and lettuce', s: 'Handheld test: each marker leads to the right pot', from: '2026-11-23', to: '2026-12-11', loop: true },
+    { ph: 'build', name: 'Dataset and YOLOv8 training', s: '2,000 images labeled in Supabox', from: '2026-12-07', to: '2027-01-15', loop: true },
+    { ph: 'design', name: 'Flight practice in simulation', s: 'Gazebo + ArduPilot SITL, no drone needed', from: '2026-12-14', to: '2027-01-22', loop: true },
+    { ph: 'build', name: 'Build the drone', s: 'Buy parts, ArduPilot, bench tests', from: '2027-01-04', to: '2027-01-29', loop: true },
+    { ph: 'build', name: 'Autonomous scan flights', s: 'To the tower, each side bottom to top, back', from: '2027-02-01', to: '2027-03-05', loop: true },
+    { ph: 'cut', name: 'Full testing and user evaluation', s: 'Accuracy, flights, USE survey', from: '2027-03-01', to: '2027-03-19' },
+    { ph: 'doc', name: 'Finalize paper and final defense', s: 'Results, chapters 4 and 5', from: '2027-03-08', to: '2027-03-30', label: 'Mar 30 · finish' },
+  ];
+
+  const fmt = (iso) => new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+
+  const gantt = document.querySelector('.gantt');
+
+  // Semester bands and month headers.
+  const s2 = pct(SEM2);
+  document.querySelector('.sems').innerHTML = `
+    <div class="s1" style="left:calc(${pct('2026-11-03')}% + 4px); width:calc(${s2 - pct('2026-11-03')}% - 8px)">SEM 1 · ₱10,000 · COMPUTER VISION</div>
+    <div class="s2" style="left:calc(${s2}% + 4px); width:calc(${100 - s2}% - 8px)">SEM 2 · ₱20,000 · DRONE</div>`;
+  document.querySelector('.months').innerHTML = MONTHS.map(([m], i) =>
+    `<span style="left:${edges[i]}%; width:${edges[i + 1] - edges[i]}%">${m} ${i < 3 ? '2026' : '2027'}</span>`).join('');
+
+  ROWS.forEach((r) => {
+    const [tag, color] = PHASE[r.ph];
+    const act = document.createElement('div');
+    act.className = 'act';
+    act.innerHTML = `<span class="ph" style="background:${color}">${tag}</span><div><b>${r.name}</b><span class="s">${r.s}</span></div>`;
+
+    const lane = document.createElement('div');
+    lane.className = 'lane';
+    let html = edges.slice(1, -1).map((e) => `<span class="grid" style="left:${e}%"></span>`).join('');
+    html += `<span class="sem" style="left:${s2}%"></span>`;
+    if (r.from) {
+      const a = pct(r.from);
+      const b = pct(r.to);
+      html += `<span class="bar ${r.loop ? 'loop' : ''}" style="left:${a}%; width:${b - a}%; background-color:${color}"></span>`;
+      if (r.label) {
+        html += `<span class="flag-label" style="right:calc(${100 - a}% + 12px)">${r.label}</span>`;
+      } else {
+        // Date range beside the bar, on whichever side has room.
+        html += b < 70
+          ? `<span class="when" style="left:calc(${b}% + 10px)">${fmt(r.from)} – ${fmt(r.to)}</span>`
+          : `<span class="when" style="right:calc(${100 - a}% + 10px)">${fmt(r.from)} – ${fmt(r.to)}</span>`;
+      }
+    }
+    if (r.flag) {
+      const f = pct(r.flag);
+      html += `<span class="flag ${r.done ? 'done' : ''}" style="left:${f}%"></span>`;
+      html += `<span class="flag-label ${r.done ? 'done' : ''}" style="left:calc(${f}% + 22px)">${r.label}</span>`;
+    }
+    lane.innerHTML = html;
+    gantt.append(act, lane);
+  });
+</script>
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="frame.js"></script>
 </body>

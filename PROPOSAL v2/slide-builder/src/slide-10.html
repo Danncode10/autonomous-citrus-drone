@@ -7,7 +7,7 @@
 <style>
   .content { display: flex; flex-direction: column; gap: 18px; }
 
-  .docs { flex: 1; display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; gap: 18px; }
+  .docs { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 
   /* Each instrument is drawn as a sheet of paper with a folded corner. */
   .sheet {
@@ -34,16 +34,6 @@
   .lines li:last-child { border-bottom: none; }
   .lines li i { width: 16px; height: 16px; flex: none; border: 2px solid var(--leaf); border-radius: 4px; }
 
-  /* The USE adaptation, shown as the scale shrinking from 7 points to 5. */
-  .scale7 { margin-top: 14px; display: grid; gap: 8px; }
-  .row { display: grid; grid-template-columns: 70px 1fr; gap: 10px; align-items: center; font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--muted); }
-  .dots { display: flex; gap: 6px; }
-  .dots span { flex: 1; height: 36px; border-radius: 6px; background: var(--line-soft); display: grid; place-items: center; font-size: 17px; color: var(--muted); }
-  .dots.five span { background: var(--leaf-soft); color: var(--forest); }
-  .dots.five span.mid { background: var(--gold-soft); color: var(--gold-deep); }
-  .cats { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
-  .cats span { padding: 6px 12px; border-radius: 8px; background: var(--forest); color: #fff; font-size: 20px; font-weight: 600; }
-  .mid-note { margin-top: 12px; font-size: 22px; line-height: 1.4; color: var(--gold-deep); font-weight: 600; }
 
   .sheet.sys { background: var(--forest); border-color: var(--forest); }
   .sheet.sys::before { background: linear-gradient(225deg, var(--paper) 50%, var(--forest-2) 50%); }
@@ -71,13 +61,12 @@
       <article class="sheet">
         <div class="top"><span class="ico"><i data-lucide="star"></i></span><div class="who">Farmer and IT experts<br>after using the system</div></div>
         <h3>Survey Questionnaire</h3>
-        <p>Adapted USE questionnaire <span class="cite">(Hajesmaeel-Gohari et al., 2022)</span>.</p>
-        <div class="scale7">
-          <div class="row">ORIGINAL<div class="dots"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
-          <div class="row" style="color:var(--leaf-deep)">OURS<div class="dots five"><span>SD</span><span>D</span><span class="mid">MA</span><span>A</span><span>SA</span></div></div>
-        </div>
-        <div class="mid-note">"Moderately Agree" replaces neutral, so every answer takes a side.</div>
-        <div class="cats"><span>Usefulness</span><span>Ease of use</span><span>Satisfaction</span></div>
+        <p>Rates the system after use. Adapted from the USE questionnaire <span class="cite">(Hajesmaeel-Gohari et al., 2022)</span>.</p>
+        <ul class="lines">
+          <li><i></i>Usefulness</li>
+          <li><i></i>Ease of use</li>
+          <li><i></i>Satisfaction</li>
+        </ul>
       </article>
       <article class="sheet">
         <div class="top"><span class="ico"><i data-lucide="mic"></i></span><div class="who">Farmers<br>~15 min, face to face</div></div>

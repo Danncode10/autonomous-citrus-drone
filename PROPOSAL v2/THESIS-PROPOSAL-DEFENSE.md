@@ -15,7 +15,7 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 | 2a | Introduction / Background of the Study | **Problem** | 1:15 | Lopez | More towers, taller towers, but pot checks are still manual and sensors can't see empty pots. |
 | 2b | Introduction · Key Concepts | **Problem** | 1:00 | Lopez | QR registration, GPS + ArUco alignment, YOLOv8, offline-first dashboard; one drone for the whole farm. |
 | 3a–3c | Review of Related Literature and Studies | **Problem** | 2:30 | Marvilla | 38 sources: what we adopt, what they leave out. |
-| 3d | Research Gap | **Problem** | 0:40 | Marvilla | Each piece exists; no study combines them. |
+| 3d | Research Gap | **Problem** | 0:40 | Marvilla | Each piece exists, but only on its own; our study puts them together. |
 | 4a | Conceptual Framework · IPO Model | **Solution** | 0:45 | Marvilla | Inputs → RAD process → working inspection system, with feedback. |
 | 4b | Conceptual Framework · System Flow (Figure 1) | **Solution** | 0:55 | Marvilla | Fly and scan offline; internet only for records. |
 | 5a | Research Objectives · General Objective | **Solution** | 0:30 | Valentino | The general objective, in the chapter's exact words. |
@@ -33,7 +33,7 @@ Target length: **about 19 minutes** of presentation, then open forum. Slides kee
 | 13b | Proposed System Architecture · Scan Sequence | **System** | 0:55 | Lopez | How one scan runs, and the failsafes. |
 | 13c | Proposed System Architecture · Technical Design | **System** | 0:35 | Lopez | Power, flight control, companion computer, ground link. |
 | 13d | Proposed System Architecture · Key Features | **System** | 0:35 | Lopez | Architecture layers and dashboard features. |
-| 14 | Project Timeline (Gantt Chart) | **Plan** | 0:25 | Lopez | Proposed six-month schedule along the RAD phases (not set in Chapter 1 v2). |
+| 14 | Project Timeline (Gantt Chart) | **Plan** | 1:30 | Lopez | Computer vision first (Sem 1), then the drone (Sem 2); finish by Mar 30, 2027. |
 | 15 | Expected Output | **Plan** | 0:35 | Lopez | Anticipated benefits and deliverables. |
 | 16 | Budget Requirements | **Plan** | 0:30 | Lopez | About ₱25,600 to ₱28,500 in hardware. |
 | 17 | Thank You / Open Forum | Closing | 0:10 | All | Invite questions. |
@@ -305,17 +305,21 @@ To design and develop an autonomous drone-based monitoring system that registers
 
 **Slide 14: Project Timeline (Gantt Chart)**
 
-| Activities | Month 1 | Month 2 | Month 3 | Month 4 | Month 5 | Month 6 |
-| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| Proposal Defense (Nov 3, 2026) | ◆ |  |  |  |  |  |
-| Requirements Planning (interviews, site observation, SWOT) | ■ | ■ |  |  |  |  |
-| Validation of Instruments | ■ | ■ |  |  |  |  |
-| User Design (architecture, UI, Gazebo + SITL) |  | ■ | ■ |  |  |  |
-| Rapid Construction – Stage 1 (dashboard, sign, ~2,000-image dataset, manual flight) |  | ■ | ■ | ■ |  |  |
-| Rapid Construction – Stage 2 (Pi + camera + GPS, alignment, full pipeline) |  |  | ■ | ■ | ■ |  |
-| Cutover Testing (model, flight, streaming, sync, end to end) |  |  |  | ■ | ■ |  |
-| User Evaluation and Data Analysis |  |  |  |  | ■ | ■ |
-| Documentation and Final Defense |  |  |  |  |  | ■ |
+| Activity | RAD phase | Target dates |
+| ----- | ----- | ----- |
+| Interview at Savara Lettuce Farm | Requirements Planning | Oct 11 (done) |
+| Proposal defense | — | Nov 3, 2026 |
+| **Sem 1 (₱10,000): computer vision first** | | |
+| Camera streams to laptop and dashboard (Raspberry Pi + camera, Supabase, Next.js) | Rapid Construction | Nov 4 – Nov 27, 2026 |
+| QR registration with phone GPS | Rapid Construction | Nov 16 – Dec 4, 2026 |
+| Tower frame, ArUco markers and lettuce; handheld marker-to-pot test | Rapid Construction | Nov 23 – Dec 11, 2026 |
+| Dataset (~2,000 images labeled in Supabox) and YOLOv8 training | Rapid Construction | Dec 7, 2026 – Jan 15, 2027 |
+| Flight practice in Gazebo + ArduPilot SITL | User Design | Dec 14, 2026 – Jan 22, 2027 |
+| **Sem 2 (₱20,000): the drone** | | |
+| Build the drone (parts, ArduPilot, bench tests) | Rapid Construction | Jan 4 – Jan 29, 2027 |
+| Autonomous scan flights (to the tower, each side bottom to top, back) | Rapid Construction | Feb 1 – Mar 5, 2027 |
+| Full testing and user evaluation (USE survey) | Cutover | Mar 1 – Mar 19, 2027 |
+| Finalize paper and final defense | — | Mar 8 – Mar 30, 2027 |
 
 `[Proposed schedule. Chapter 1 v2 sets no dates; replace Month 1–6 with actual months.]`
 
