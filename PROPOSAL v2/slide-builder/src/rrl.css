@@ -1,71 +1,55 @@
-/* Literature table shared by slides 03a, 03b and 03c: the template's
-   Author | Key Findings | Relevance layout, one row per group of studies. */
+/* Literature slides 03a–03c: one illustrated panel per group of studies.
+   Each panel shows the finding as a picture, says it in one line, tags how it
+   relates to this study, and keeps the citations at the bottom. */
 
 .content { display: flex; flex-direction: column; gap: 14px; }
 
-.rrl {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 300px 1fr 600px;
-  grid-template-rows: auto;
-  grid-auto-rows: 1fr;
+.panels { flex: 1; min-height: 0; display: grid; gap: 24px; }
+
+.panel {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   background: var(--card);
   border: 1.5px solid var(--line);
   border-radius: 22px;
   overflow: hidden;
 }
 
-.rrl > div {
-  padding: 8px 22px;
-  border-top: 1.5px solid var(--line-soft);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.panel .art {
+  flex: none;
+  position: relative;
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #eef6ee 60%, #e2efe2 100%);
+  border-bottom: 1.5px solid var(--line-soft);
 }
+.panel .art svg { display: block; width: 100%; height: 100%; font-family: var(--sans); }
 
-.rrl .th {
-  border-top: none;
-  background: var(--forest);
-  color: var(--on-dark-2);
+.panel .body { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 18px 24px 16px; }
+
+.panel .kick {
   font-family: var(--mono);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  color: var(--gold-deep);
 }
 
-.rrl .who {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: var(--forest);
-  background: var(--leaf-tint);
+.panel h3 { font-size: 29px; font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--forest); }
+.panel p { font-size: 21px; line-height: 1.4; color: var(--body); }
+
+.panel .verdict { margin-top: auto; display: flex; flex-direction: column; gap: 6px; font-size: 19px; font-weight: 600; color: var(--body); }
+.panel .verdict span { display: flex; align-items: center; gap: 10px; }
+.panel .verdict .tag { min-width: 104px; justify-content: center; font-size: 15px; }
+
+.panel .cites {
+  padding-top: 10px;
+  border-top: 1.5px dashed var(--line);
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--muted);
 }
-.rrl .who span { display: block; }
-.rrl .who small { display: block; margin-bottom: 4px; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
 
-/* Key finding, with an optional headline number pulled out on the left. */
-.rrl .what { flex-direction: row; align-items: center; justify-content: flex-start; gap: 18px; font-size: 22px; line-height: 1.35; color: var(--body); }
-.rrl .what .stat {
-  flex: none;
-  min-width: 128px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: var(--forest);
-  color: #fff;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-.rrl .what .stat small { display: block; margin-top: 4px; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
-
-.rrl .why { font-size: 22px; line-height: 1.32; color: var(--body); gap: 6px; }
-.rrl .why p { display: flex; gap: 12px; align-items: baseline; }
-.rrl .why .tag { flex: none; min-width: 108px; justify-content: center; }
-
-.legend { display: flex; justify-content: flex-end; gap: 26px; font-size: 20px; color: var(--muted); }
+.legend { display: flex; justify-content: flex-end; gap: 26px; font-size: 19px; color: var(--muted); }
 .legend span { display: flex; align-items: center; gap: 10px; }
+.legend .tag { font-size: 15px; }

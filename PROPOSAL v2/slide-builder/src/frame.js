@@ -45,6 +45,16 @@ const SHORT_TITLE = 'Computer Vision and Autonomous Drone Inspection for Hydropo
     slide.append(foot);
   }
 
+  // Build steps: a slide with <body data-steps="3"> marks its parts with data-step="1..3".
+  // Opening it with ?step=N hides every part after N, so build.py can render
+  // click-to-reveal frames. Hidden parts keep their space, so nothing shifts.
+  const step = Number(new URLSearchParams(location.search).get('step'));
+  if (step) {
+    document.querySelectorAll('[data-step]').forEach((el) => {
+      if (Number(el.dataset.step) > step) el.style.visibility = 'hidden';
+    });
+  }
+
   document.querySelectorAll('i[data-lucide]').forEach((i) => {
     const svg = CUSTOM_ICONS[i.dataset.lucide];
     if (svg) i.outerHTML = svg;

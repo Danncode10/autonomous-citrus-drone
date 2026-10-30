@@ -66,7 +66,9 @@ python3 build.py 07 16      # only slides whose number starts with these
 
 Needs Python Playwright and Google Chrome, plus internet for fonts and icons on the first run. The build warns about content spilling off the slide and about unknown icon names. Two warnings are expected and harmless: `slide-01` (hero photo offset) and `slide-06` (ripple rings).
 
-Shared pieces: `theme.css` (colors, fonts, light and dark slides), `frame.js` (top bar and footer), `tower.js` (the drawn tower on slide-02a), `rrl.css` (the literature tables), `section.css` / `section.js` (section dividers).
+Shared pieces: `theme.css` (colors, fonts, light and dark slides), `frame.js` (top bar, footer and build steps), `tower.js` (the drawn tower, also embedded in other drawings), `rrl.css` and `rrl-art.js` (the literature panels and their illustrations), `section.css` / `section.js` (section dividers).
+
+**Build steps (click to reveal).** Slides 03a–03d also render partial frames to `slides/steps/` (for example `slide-03a-1.png` to `slide-03a-3.png`). In PowerPoint, put each slide's step frames before its full PNG, in order, and give them a Fade transition. Each click then reveals the next panel. The `[click]` cues in `DEFENSE-SCRIPT.md` mark where to advance. To add steps to another slide, set `data-steps="N"` on `<body>` and `data-step="1..N"` on its parts.
 
 ## What changed from v1
 
@@ -85,8 +87,8 @@ Shared pieces: `theme.css` (colors, fonts, light and dark slides), `frame.js` (t
 **Design, to make it less monotonous**
 - Dark and light slides alternate; v1 was almost all light cards.
 - More visuals and fewer bullet cards:
-  - RRL tables with highlighted numbers (03a–03c)
-  - a coverage matrix (03d)
+  - illustrated literature panels, one picture per group of studies (03a–03c)
+  - a puzzle: five loose pieces from past studies, locked together as this study (03d)
   - a ripple diagram (06)
   - a drawn flight envelope (07)
   - a dataset chart (08b)

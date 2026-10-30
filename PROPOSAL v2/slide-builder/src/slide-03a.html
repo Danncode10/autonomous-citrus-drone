@@ -5,51 +5,157 @@
 <title>Slide 03a · Related Literature: Farm and Monitoring</title>
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="rrl.css">
+<style>
+  .panels { grid-template-columns: repeat(4, 1fr); }
+  .panel .art { height: 300px; }
+</style>
 </head>
-<body data-num="03a" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Farm and Monitoring">
+<body data-num="03a" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Farm and Monitoring" data-steps="4">
 <div class="slide">
   <h1 class="title">Farms are going vertical. <em>Monitoring hasn't caught up.</em></h1>
 
   <div class="content">
-    <div class="rrl">
-      <div class="th">Author</div>
-      <div class="th">Key Findings</div>
-      <div class="th">Relevance to this study</div>
-
-      <div class="who"><small>Vertical farming</small><span>van Delden et al. (2021)</span><span>Saad et al. (2021)</span><span>Siregar et al. (2022)</span></div>
-      <div class="what"><span>Vertical farms use less land and water, but success depends on efficient management; automation and AI crop monitoring are key prospects.</span></div>
-      <div class="why">
-        <p><span class="tag evidence">Evidence</span>Towers only pay off when well managed.</p>
-        <p><span class="tag gap">Gap</span>Focus on environment, not which slots are in use.</p>
+    <div class="panels">
+      <div class="panel" data-step="1">
+        <div class="art"><svg data-art="land" viewBox="0 0 400 290"></svg></div>
+        <div class="body">
+          <div class="kick">01 · Vertical farming</div>
+          <h3>Towers grow more on less land</h3>
+          <p>Vertical farms save land and water, but only when they are managed well. Local towers are built from separate slots.</p>
+          <div class="verdict"><span><span class="tag evidence">Evidence</span>Towers need good monitoring</span></div>
+          <div class="cites">van Delden et al. (2021) · Saad et al. (2021) · Siregar et al. (2022) · DOST-PCAARRD (n.d.) · Bendanillo (2023)</div>
+        </div>
       </div>
 
-      <div class="who"><small>Philippine initiatives</small><span>DOST-PCAARRD (n.d.)</span><span>Bendanillo (2023)</span></div>
-      <div class="what"><span>UPLB's SIGLA vertical farm trialed lettuce; PVC pipe-and-pot gardens split each structure into discrete growing slots.</span></div>
-      <div class="why"><p><span class="tag evidence">Evidence</span>Local towers are slot-based, the layout our scan maps.</p></div>
+      <div class="panel" data-step="2">
+        <div class="art"><svg data-art="manual" viewBox="0 0 400 290"></svg></div>
+        <div class="body">
+          <div class="kick">02 · Manual monitoring</div>
+          <h3>Farms still check by hand</h3>
+          <p>Farms in Iloilo and Bohol still log their towers by hand. Knowing where the plants are helps plan the space.</p>
+          <div class="verdict"><span><span class="tag evidence">Evidence</span>Monitoring is still manual</span></div>
+          <div class="cites">Domingo (2022) · Bunga (2026) · Petropoulou et al. (2023)</div>
+        </div>
+      </div>
 
-      <div class="who"><small>Manual monitoring</small><span>Domingo (2022)</span><span>Bunga (2026)</span><span>Petropoulou et al. (2023)</span></div>
-      <div class="what"><span>An Iloilo lettuce farm logged data by hand with inconsistent results; Bohol systems still rely on manual checks; plant-position data guides how space is used.</span></div>
-      <div class="why"><p><span class="tag evidence">Evidence</span>Monitoring is still manual, and slot data helps planning.</p></div>
+      <div class="panel" data-step="3">
+        <div class="art"><svg data-art="sensors" viewBox="0 0 400 290"></svg></div>
+        <div class="body">
+          <div class="kick">03 · IoT and smart farming</div>
+          <h3>Sensors watch the water, not the pots</h3>
+          <p>IoT systems track pH, nutrients and temperature. None of them reports whether a pot holds a plant.</p>
+          <div class="verdict"><span><span class="tag gap">Gap</span>No one checks each pot</span></div>
+          <div class="cites">Dhanaraju et al. (2022) · Santiago et al. (2025)</div>
+        </div>
+      </div>
 
-      <div class="who"><small>IoT and smart farming</small><span>Dhanaraju et al. (2022)</span><span>Santiago et al. (2025)</span></div>
-      <div class="what"><span>IoT systems track temperature, humidity, pH and nutrients in real time and automate fertilizer for lettuce.</span></div>
-      <div class="why"><p><span class="tag gap">Gap</span>None reports whether each slot holds a plant.</p></div>
-
-      <div class="who"><small>QR codes and GPS</small><span>Qian et al. (2021)</span><span>GPS.gov (n.d.)</span></div>
-      <div class="what"><span class="stat">4.9 m<small>phone GPS</small></span><span>QR readability depends on distance, size and curvature; phone GPS is accurate to about 4.9 m under open sky.</span></div>
-      <div class="why">
-        <p><span class="tag adopted">Adopted</span>Printed QR sign + phone GPS to register towers.</p>
-        <p><span class="tag adopted">Adopted</span>GPS brings the drone near; the sign's marker locks it on.</p>
+      <div class="panel" data-step="4">
+        <div class="art"><svg data-art="gps" viewBox="0 0 400 290"></svg></div>
+        <div class="body">
+          <div class="kick">04 · QR codes and GPS</div>
+          <h3>Phone GPS is off by about 5 m</h3>
+          <p>That is close enough to find the tower but too rough to fly beside it. Phones read printed QR codes reliably.</p>
+          <div class="verdict">
+            <span><span class="tag adopted">Adopted</span>QR sign + phone GPS</span>
+            <span><span class="tag adopted">Adopted</span>Markers for the last meters</span>
+          </div>
+          <div class="cites">Qian et al. (2021) · GPS.gov (n.d.)</div>
+        </div>
       </div>
     </div>
 
     <div class="legend">
-      <span><span class="tag adopted">Adopted</span>used in our design</span>
-      <span><span class="tag gap">Gap</span>not yet addressed</span>
       <span><span class="tag evidence">Evidence</span>supports the problem</span>
+      <span><span class="tag gap">Gap</span>not yet addressed</span>
+      <span><span class="tag adopted">Adopted</span>used in our design</span>
     </div>
   </div>
 </div>
+<script src="tower.js"></script>
+<script src="rrl-art.js"></script>
+<script>
+  const T = 'font-size="18" font-weight="700" fill="#12392b" text-anchor="middle"';
+
+  // Six plants on a flat bed take far more ground than twelve on a tower.
+  Art.scenes.land = () => {
+    const ground = 246;
+    const pattern = 'LL LL LL LL LL LL';
+    const w = 120;
+    const m = towerMarkup(pattern);
+    const ty = ground - (w * m.h / m.w) * Art.towerGround(pattern);
+    let bed = '';
+    for (let i = 0; i < 6; i++) bed += Art.lettuce(38 + i * 36, ground - 14, 0.5);
+    return `
+      <rect x="0" y="${ground}" width="400" height="44" fill="#e2d9c4"/>
+      ${bed}
+      ${Art.tower(262, ty, w, pattern, { markers: false })}
+      <path d="M18 ${ground + 12} v8 H234 v-8" stroke="#b4452f" stroke-width="2.5" fill="none"/>
+      <path d="M292 ${ground + 12} v8 H352 v-8" stroke="#2b7a3c" stroke-width="2.5" fill="none"/>
+      <text x="126" y="${ground + 40}" ${T} fill="#b4452f">6 plants</text>
+      <text x="322" y="${ground + 40}" ${T}>12 plants</text>`;
+  };
+
+  // A farmer looks up at pots above eye level.
+  Art.scenes.manual = () => {
+    const ground = 272;
+    const pattern = 'LL LE LL EL LL LL EL LE';
+    const w = 120;
+    const m = towerMarkup(pattern);
+    const ty = ground - (w * m.h / m.w) * Art.towerGround(pattern);
+    const eye = [108, ground - 140];
+    const looks = [[262, ty + 24], [338, ty + 50], [258, ty + 76]];
+    return `
+      <rect x="0" y="${ground}" width="400" height="18" fill="#e2d9c4"/>
+      ${Art.tower(240, ty, w, pattern, { markers: false })}
+      ${Art.person(98, ground, 0.85)}
+      ${looks.map(([x, y]) => `<path d="M${eye[0]} ${eye[1]} L${x} ${y}" stroke="#b4452f" stroke-width="2" stroke-dasharray="5 6"/>`).join('')}
+      ${looks.map(([x, y]) => Art.ask(x, y, 15)).join('')}`;
+  };
+
+  // The probe reads the water; nothing reads the pots.
+  Art.scenes.sensors = () => {
+    const tankTop = 214;
+    const pattern = 'LE LL EL LL LE';
+    const w = 150;
+    const m = towerMarkup(pattern);
+    const ty = tankTop - (w * m.h / m.w) * Art.towerGround(pattern);
+    const row = (y, label, ok) => `
+      <text x="30" y="${y}" font-family="JetBrains Mono, monospace" font-size="18" font-weight="700" fill="${ok ? '#12392b' : '#b4452f'}">${label}</text>
+      ${ok ? Art.check(140, y - 6, 10) : Art.cross(140, y - 6, 10)}`;
+    return `
+      <rect x="170" y="${tankTop}" width="160" height="60" rx="10" fill="#dbe8f5" stroke="#a9c1de" stroke-width="2"/>
+      <path d="M176 ${tankTop + 14} q14 -6 28 0 t28 0 t28 0 t28 0 t28 0 t14 0" stroke="#7ea4d0" stroke-width="2" fill="none"/>
+      ${Art.tower(175, ty, w, pattern, { ring: true, markers: false })}
+      <path d="M190 ${tankTop - 18} V${tankTop + 40}" stroke="#12392b" stroke-width="4" stroke-linecap="round"/>
+      <rect x="184" y="${tankTop + 32}" width="12" height="20" rx="4" fill="#12392b"/>
+      <rect x="14" y="58" width="150" height="152" rx="12" fill="#fff" stroke="#ddd8cb" stroke-width="2"/>
+      ${row(90, 'pH 6.1', true)}
+      ${row(120, 'EC 1.4', true)}
+      ${row(150, '24 °C', true)}
+      <path d="M26 166 H152" stroke="#ddd8cb" stroke-width="2" stroke-dasharray="4 5"/>
+      ${row(194, 'Pots ?', false)}
+      <path d="M164 196 L188 ${tankTop - 18}" stroke="#12392b" stroke-width="2" stroke-dasharray="4 5"/>`;
+  };
+
+  // The tower is a dot; the phone's GPS fix could be anywhere in the circle.
+  Art.scenes.gps = () => {
+    const [cx, cy, r] = [200, 150, 118];
+    const pin = [150, 132];
+    return `
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="rgba(217,165,32,0.13)" stroke="#9a6f05" stroke-width="3" stroke-dasharray="8 8"/>
+      <path d="M${cx + 18} ${cy} H${cx + r - 4}" stroke="#9a6f05" stroke-width="3"/>
+      <path d="M${cx + r - 14} ${cy - 7} l10 7 l-10 7" stroke="#9a6f05" stroke-width="3" fill="none"/>
+      <text x="${cx + 62}" y="${cy - 12}" font-size="22" font-weight="800" fill="#9a6f05" text-anchor="middle">≈ 4.9 m</text>
+      <circle cx="${cx}" cy="${cy}" r="15" fill="#fff" stroke="#12392b" stroke-width="3"/>
+      ${[0, 90, 180, 270].map((a) => `<circle cx="${cx + 15 * Math.cos(a * Math.PI / 180)}" cy="${cy + 15 * Math.sin(a * Math.PI / 180)}" r="6" fill="#5fae5a"/>`).join('')}
+      <text x="${cx}" y="${cy + 42}" font-size="18" font-weight="700" fill="#12392b" text-anchor="middle">real tower</text>
+      <path d="M${pin[0]} ${pin[1]} c-14 -16 -14 -36 0 -36 c14 0 14 20 0 36z" fill="#3f6fb0"/>
+      <circle cx="${pin[0]}" cy="${pin[1] - 22}" r="5" fill="#fff"/>
+      <text x="${pin[0]}" y="${pin[1] - 46}" font-size="17" font-weight="700" fill="#3f6fb0" text-anchor="middle">GPS says here</text>`;
+  };
+
+  Art.mount();
+</script>
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="frame.js"></script>
 </body>

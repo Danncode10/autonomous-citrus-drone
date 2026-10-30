@@ -4,6 +4,10 @@ Each src/slide-*.html is a 1920x1080 (16:9) page. It is captured at 2x, so every
 PNG is 3840x2160 and stays sharp on a projector. Insert each PNG as a full-slide
 picture in a 16:9 PowerPoint slide.
 
+A slide with <body data-steps="N"> also gets click-to-reveal frames in slides/steps/
+(slide-03a-1.png ... slide-03a-<N-1>.png). Put them before the full slide in
+PowerPoint with a Fade transition, and each click reveals the next part.
+
 Usage (from any directory):
     python3 build.py              # render every slide
     python3 build.py 01 03a       # render only slides whose number starts with these
@@ -20,6 +24,7 @@ from playwright.sync_api import sync_playwright
 HERE = Path(__file__).resolve().parent
 SRC = HERE / "src"
 OUT = HERE.parent / "slides"
+STEPS = OUT / "steps"
 
 # Flags any element that spills past the bottom or right edge of the main content
 # area, so overflow is caught at build time instead of in the projector.
@@ -64,6 +69,15 @@ def main(selected):
             note = f"  !! overflow: {', '.join(overflow)}" if overflow else ""
             note += f"  !! unknown icons: {', '.join(missing)}" if missing else ""
             print(f"wrote slides/{out.name}{note}")
+
+            steps = int(page.evaluate("document.body.dataset.steps || 0"))
+            if steps > 1:
+                STEPS.mkdir(exist_ok=True)
+                for n in range(1, steps):
+                    page.goto(f"{src.as_uri()}?step={n}", wait_until="networkidle")
+                    page.wait_for_function("window.slideReady === true")
+                    page.screenshot(path=str(STEPS / f"{src.stem}-{n}.png"))
+                print(f"  + {steps - 1} build steps in slides/steps/")
         browser.close()
 
 

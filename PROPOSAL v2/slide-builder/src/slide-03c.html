@@ -5,51 +5,189 @@
 <title>Slide 03c · Related Literature: Processing, Data and Method</title>
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="rrl.css">
+<style>
+  /* Four stops along the data path, drone to phone. Each panel pairs a finding
+     with the design decision it led to; pills in the gaps name the links. */
+  .panels { position: relative; grid-template-columns: repeat(4, 1fr); gap: 56px; }
+  .panel .art { height: 270px; }
+  .panel .body { gap: 12px; }
+
+  .stat { font-size: 46px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--forest); }
+  .stat small { display: block; margin-top: 6px; font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-deep); }
+
+  .so {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: var(--leaf-soft);
+    color: var(--leaf-deep);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .so .ico { width: 24px; height: 24px; margin-top: 1px; }
+
+  .link {
+    position: absolute;
+    top: 96px;
+    width: 120px;
+    margin-left: -60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 6px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 3;
+  }
+  .link .ico { width: 26px; height: 26px; }
+  .link.wifi { color: var(--leaf-deep); }
+  .link.net { color: var(--blue); border-style: dashed; border-color: var(--blue); }
+  .link.sync { color: var(--forest); }
+
+  .extra { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .chip { display: flex; align-items: center; gap: 16px; padding: 14px 20px; border-radius: 16px; background: var(--card); border: 1.5px solid var(--line); font-size: 19px; line-height: 1.35; color: var(--body); }
+  .chip .ico { width: 30px; height: 30px; color: var(--leaf-deep); }
+  .chip b { color: var(--forest); }
+  .chip .cite { display: block; font-size: 16px; }
+</style>
 </head>
-<body data-num="03c" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Processing, Data and Method">
+<body data-num="03c" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Processing, Data and Method" data-steps="4">
 <div class="slide">
   <h1 class="title">Keep the AI on the ground <em>and the data offline</em></h1>
 
   <div class="content">
-    <div class="rrl">
-      <div class="th">Author</div>
-      <div class="th">Key Findings</div>
-      <div class="th">Relevance to this study</div>
-
-      <div class="who"><small>Edge vs. offboard</small><span>Shalash et al. (2026)</span><span>Zhu &amp; Chen (2026)</span></div>
-      <div class="what"><span class="stat">&lt;3 fps<small>on a Pi</small></span><span>YOLOv8–v12 on a Pi 4 or 5 ran mostly under 3 fps; Wi-Fi offloading took 15–45 ms and failed when the link weakened.</span></div>
-      <div class="why">
-        <p><span class="tag adopted">Adopted</span>YOLOv8 on the ground laptop.</p>
-        <p><span class="tag adopted">Adopted</span>Steering stays on the Pi.</p>
+    <div class="panels">
+      <div class="panel" data-step="1">
+        <div class="art"><svg data-art="drone" viewBox="0 0 390 250"></svg></div>
+        <div class="body">
+          <div class="kick">01 · On the drone</div>
+          <div class="stat">&lt; 3 fps<small>YOLO on a Raspberry Pi</small></div>
+          <p>The Pi is too slow to run detection during flight.</p>
+          <div class="so"><span class="ico"><i data-lucide="arrow-right"></i></span>So the Pi only reads markers and steers.</div>
+          <div class="cites">Shalash et al. (2026)</div>
+        </div>
       </div>
 
-      <div class="who"><small>Offline-first</small><span>Mirandilla-Santos (2021)</span><span>Serafica et al. (2023)</span><span>Mayta et al. (2026)</span></div>
-      <div class="what"><span class="stat">92%<small>cell signal</small></span><span>92% of barangays had cell signal, but rural areas lag; an offline-first farm app kept 100% sync under intermittent connectivity.</span></div>
-      <div class="why">
-        <p><span class="tag evidence">Evidence</span>Internet can't be assumed at the farm.</p>
-        <p><span class="tag adopted">Adopted</span>Offline cache + Sync Center.</p>
+      <div class="link wifi" data-step="2" style="left: calc(25% - 14px)"><span class="ico"><i data-lucide="wifi"></i></span>Wi-Fi</div>
+
+      <div class="panel" data-step="2">
+        <div class="art"><svg data-art="laptop" viewBox="0 0 390 250"></svg></div>
+        <div class="body">
+          <div class="kick">02 · Drone to laptop</div>
+          <div class="stat">15–45 ms<small>Wi-Fi delay</small></div>
+          <p>Sending video over Wi-Fi adds delay, and it fails when the link weakens.</p>
+          <div class="so"><span class="ico"><i data-lucide="arrow-right"></i></span>So the laptop runs the AI but never steers.</div>
+          <div class="cites">Zhu &amp; Chen (2026)</div>
+        </div>
       </div>
 
-      <div class="who"><small>Dashboards and FMIS</small><span>Schulze Schwering et al. (2022)</span><span>Supabase (n.d.)</span></div>
-      <div class="what"><span>Farm management systems are useful but underused; usability and farm-specific features matter. Supabase Realtime pushes database changes live.</span></div>
-      <div class="why"><p><span class="tag adopted">Adopted</span>Supabase + Next.js tower dashboard.</p></div>
+      <div class="link net" data-step="3" style="left: 50%"><span class="ico"><i data-lucide="globe"></i></span>Internet<br>if any</div>
 
-      <div class="who"><small>Flight safety</small><span>Meier et al. (2022)</span><span>ArduPilot Dev Team (n.d.)</span><span>CAAP (2026)</span></div>
-      <div class="what"><span class="stat">30 m<small>from others</small></span><span>Flight data can estimate wind; battery failsafe triggers return to launch; Part 11 open category allows small, daytime, in-sight flights.</span></div>
-      <div class="why"><p><span class="tag adopted">Adopted</span>Fair-weather flights, RTL failsafes, open-category rules.</p></div>
+      <div class="panel" data-step="3">
+        <div class="art"><svg data-art="cloud" viewBox="0 0 390 250"></svg></div>
+        <div class="body">
+          <div class="kick">03 · Laptop to cloud</div>
+          <div class="stat">92%<small>Barangays with signal</small></div>
+          <p>Rural areas still lag. An offline-first farm app kept every record in sync.</p>
+          <div class="so"><span class="ico"><i data-lucide="arrow-right"></i></span>So we save first and upload later.</div>
+          <div class="cites">Mirandilla-Santos (2021) · Serafica et al. (2023) · Mayta et al. (2026)</div>
+        </div>
+      </div>
 
-      <div class="who"><small>Method and evaluation</small><span>Fauzi et al. (2023)</span><span>Hajesmaeel-Gohari et al. (2022)</span></div>
-      <div class="what"><span>RAD has the shortest completion time among SDLC models; the USE questionnaire (30 items, 7-point) covers usefulness, ease of use, ease of learning and satisfaction.</span></div>
-      <div class="why"><p><span class="tag adopted">Adopted</span>RAD model; USE adapted to a 5-point scale.</p></div>
+      <div class="link sync" data-step="4" style="left: calc(75% + 14px)"><span class="ico"><i data-lucide="refresh-cw"></i></span>Live sync</div>
+
+      <div class="panel" data-step="4">
+        <div class="art"><svg data-art="phone" viewBox="0 0 390 250"></svg></div>
+        <div class="body">
+          <div class="kick">04 · The dashboard</div>
+          <div class="stat">Simple<small>or it goes unused</small></div>
+          <p>Farm systems go unused when they are hard to use. Supabase updates the data live.</p>
+          <div class="so"><span class="ico"><i data-lucide="arrow-right"></i></span>So the dashboard is simple and works on a phone.</div>
+          <div class="cites">Schulze Schwering et al. (2022) · Supabase (n.d.)</div>
+        </div>
+      </div>
     </div>
 
-    <div class="legend">
-      <span><span class="tag adopted">Adopted</span>used in our design</span>
-      <span><span class="tag gap">Gap</span>not yet addressed</span>
-      <span><span class="tag evidence">Evidence</span>supports the problem</span>
+    <div class="extra" data-step="4">
+      <div class="chip"><span class="ico"><i data-lucide="shield-check"></i></span><span><b>Flight safety:</b> fair weather, return-to-launch, 30 m from people <span class="cite">Meier et al. (2022) · ArduPilot Dev Team (n.d.) · CAAP (2026)</span></span></div>
+      <div class="chip"><span class="ico"><i data-lucide="clipboard-check"></i></span><span><b>Method:</b> RAD model and the USE survey <span class="cite">Fauzi et al. (2023) · Hajesmaeel-Gohari et al. (2022)</span></span></div>
     </div>
   </div>
 </div>
+<script src="rrl-art.js"></script>
+<script>
+  // Drone with its Pi called out.
+  Art.scenes.drone = () => `
+    ${Art.drone(195, 120, 2)}
+    <path d="M195 82 V52" stroke="#9a6f05" stroke-width="2.5"/>
+    <rect x="148" y="22" width="94" height="32" rx="8" fill="#d9a520"/>
+    <text x="195" y="45" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700" fill="#12392b" text-anchor="middle">Pi Zero</text>
+    ${Art.marker(300, 140, 40)}
+    <path d="M247 124 L298 156" stroke="#d9a520" stroke-width="2.5" stroke-dasharray="5 6"/>`;
+
+  // Laptop running detection: boxes on the screen.
+  Art.scenes.laptop = () => `
+    <rect x="110" y="30" width="170" height="114" rx="10" fill="#12392b"/>
+    <rect x="120" y="40" width="150" height="94" rx="4" fill="#1d5240"/>
+    <rect x="134" y="54" width="44" height="40" rx="3" stroke="#9fd6a9" stroke-width="3" fill="none"/>
+    <rect x="196" y="72" width="44" height="40" rx="3" stroke="#9fd6a9" stroke-width="3" fill="none"/>
+    <rect x="150" y="100" width="40" height="28" rx="3" stroke="#e58b72" stroke-width="3" fill="none" stroke-dasharray="5 4"/>
+    <circle cx="156" cy="74" r="12" fill="#7cc46a"/>
+    <circle cx="218" cy="92" r="12" fill="#7cc46a"/>
+    <ellipse cx="170" cy="115" rx="12" ry="5" fill="#0b241b"/>
+    <path d="M90 144 H300 L318 166 H72 Z" fill="#cfd3ca"/>
+    <rect x="72" y="166" width="246" height="8" rx="3" fill="#b9beb4"/>`;
+
+  // Cloud holding the database, uploaded to only when there is internet.
+  Art.scenes.cloud = () => `
+    <g fill="#dfe9f6">
+      <circle cx="150" cy="112" r="44"/><circle cx="205" cy="88" r="56"/><circle cx="258" cy="116" r="40"/>
+      <rect x="110" y="112" width="186" height="52" rx="26"/>
+    </g>
+    <g fill="#3f6fb0">
+      <ellipse cx="205" cy="98" rx="34" ry="11"/>
+      <path d="M171 98 v44 a34 11 0 0 0 68 0 v-44 a34 11 0 0 1 -68 0z"/>
+    </g>
+    <path d="M171 116 a34 11 0 0 0 68 0" stroke="#dfe9f6" stroke-width="3" fill="none"/>
+    <text x="205" y="196" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#3f6fb0" text-anchor="middle">SUPABASE</text>`;
+
+  // Phone showing one tower's pots: green = lettuce, dark = empty.
+  Art.scenes.phone = () => {
+    const cells = 'LLEL LLLL ELLL LLLE'.split(' ');
+    let grid = '';
+    cells.forEach((row, r) => [...row].forEach((c, k) => {
+      grid += `<rect x="${168 + k * 14}" y="${78 + r * 14}" width="11" height="11" rx="2" fill="${c === 'L' ? '#7cc46a' : '#2b2b26'}"/>`;
+    }));
+    return `
+      <rect x="150" y="14" width="90" height="182" rx="16" fill="#12392b"/>
+      <rect x="158" y="30" width="74" height="150" rx="6" fill="#fff"/>
+      <rect x="166" y="40" width="58" height="9" rx="3" fill="#2b7a3c"/>
+      <rect x="166" y="54" width="38" height="7" rx="3" fill="#ddd8cb"/>
+      ${grid}
+      <rect x="166" y="144" width="58" height="22" rx="5" fill="#fbf1d6"/>
+      <text x="195" y="160" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#9a6f05" text-anchor="middle">3 / 16</text>`;
+  };
+
+  // Center each drawing in the taller art box.
+  Object.keys(Art.scenes).forEach((k) => {
+    const draw = Art.scenes[k];
+    Art.scenes[k] = () => `<g transform="translate(0 20)">${draw()}</g>`;
+  });
+
+  Art.mount();
+</script>
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="frame.js"></script>
 </body>

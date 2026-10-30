@@ -5,124 +5,123 @@
 <title>Slide 03d · Research Gap</title>
 <link rel="stylesheet" href="theme.css">
 <style>
-  .content { display: flex; flex-direction: column; gap: 18px; }
+  /* The gap as a puzzle: five loose pieces from past studies on top, the same
+     five locked together as this study below. Pieces are drawn by the script. */
+  .content { display: flex; flex-direction: column; gap: 14px; }
 
-  /* Coverage matrix: which study group covers which capability. */
-  .matrix {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 420px repeat(6, 1fr);
-    grid-template-rows: 112px repeat(5, 1fr) 1.15fr;
-    border-radius: 22px;
-    overflow: hidden;
-    background: var(--card);
-    border: 1.5px solid var(--line);
-  }
-  .matrix > div { display: flex; align-items: center; justify-content: center; border-top: 1.5px solid var(--line-soft); border-left: 1.5px solid var(--line-soft); }
-  .matrix .h { border-top: none; flex-direction: column; gap: 8px; padding: 12px 10px; text-align: center; background: var(--paper); font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--forest); }
-  .matrix .h .ico { width: 28px; height: 28px; color: var(--leaf-deep); }
-  .matrix .corner { border-left: none; align-items: flex-start; justify-content: flex-end; font-family: var(--mono); font-size: 17px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0 26px 16px; }
+  .loose { position: relative; height: 404px; flex: none; }
+  .piece { position: absolute; }
+  .piece > svg { position: absolute; left: 0; top: 0; overflow: visible; }
+  .piece .inner { position: absolute; left: 0; top: 0; display: flex; flex-direction: column; gap: 10px; }
 
-  .matrix .row { border-left: none; justify-content: center; padding: 0 26px; flex-direction: column; align-items: flex-start; gap: 4px; }
-  .matrix .row b { font-size: 25px; font-weight: 700; color: var(--ink); }
-  .matrix .row span { font-size: 20px; color: var(--muted); }
+  .loose .inner { padding: 26px 22px 22px 46px; gap: 14px; }
+  .loose .ico-wrap { width: 54px; height: 54px; border-radius: 14px; background: var(--leaf-soft); color: var(--leaf-deep); display: grid; place-items: center; }
+  .loose .ico-wrap .ico { width: 30px; height: 30px; }
+  .loose h3 { font-size: 25px; font-weight: 800; line-height: 1.12; letter-spacing: -0.01em; color: var(--forest); }
+  .loose .does, .loose .miss { display: flex; gap: 8px; align-items: center; font-size: 20px; font-weight: 600; line-height: 1.25; }
+  .loose .does { color: var(--leaf-deep); }
+  .loose .miss { color: var(--red); }
+  .loose .does .ico, .loose .miss .ico { width: 22px; height: 22px; }
+  .loose .cite { margin-top: auto; font-size: 16px; }
 
-  .y, .n, .p { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; }
-  .y { background: var(--leaf-soft); color: var(--leaf-deep); }
-  .n { background: transparent; color: #c9c4b6; }
-  .p { background: var(--gold-soft); color: var(--gold-deep); }
-  .y svg, .n svg, .p svg { width: 28px; height: 28px; }
-  .cell-note { flex-direction: column; gap: 6px; }
-  .cell-note small { font-size: 20px; font-weight: 600; color: var(--gold-deep); }
+  .join { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 27px; font-weight: 800; color: var(--forest); }
+  .join .ico { width: 34px; height: 34px; color: var(--gold-deep); }
+  .join em { font-style: normal; color: var(--leaf-deep); }
 
-  /* "This study" row: the only row with every box filled. */
-  .matrix .us { background: var(--forest); border-color: rgba(255, 255, 255, 0.1); }
-  .matrix .us.row b { color: #fff; font-size: 26px; }
-  .matrix .us.row span { color: var(--gold); font-weight: 600; }
-  .matrix .us .y { background: var(--gold); color: var(--forest); width: 52px; height: 52px; }
+  .locked { position: relative; height: 210px; flex: none; }
+  .locked .inner { padding: 24px 30px 20px 48px; justify-content: center; gap: 12px; }
+  .locked .first .inner { padding-left: 30px; }
+  .locked .ok { width: 40px; height: 40px; border-radius: 50%; background: var(--gold); color: var(--forest); display: grid; place-items: center; }
+  .locked .ok .ico { width: 24px; height: 24px; }
+  .locked b { font-size: 24px; font-weight: 800; line-height: 1.18; color: #fff; }
+  .locked .tag-us { position: absolute; left: 0; top: -16px; z-index: 2; font-family: var(--mono); font-size: 16px; font-weight: 700; letter-spacing: 0.1em; padding: 6px 12px; border-radius: 8px; background: var(--gold); color: var(--forest); }
 
-  .foot { display: flex; align-items: center; justify-content: space-between; }
-  .key { display: flex; gap: 26px; font-size: 22px; color: var(--muted); }
-  .key span { display: flex; align-items: center; gap: 10px; }
-  .key .y, .key .n, .key .p { width: 30px; height: 30px; }
-  .key svg { width: 18px; height: 18px; }
-  .claim { font-size: 24px; font-weight: 600; color: var(--forest); }
+  .claim { text-align: center; font-size: 22px; font-weight: 600; color: var(--body); }
   .claim b { color: var(--leaf-deep); }
 </style>
 </head>
-<body data-num="03d" data-part="problem" data-eyebrow="Research Gap">
+<body data-num="03d" data-part="problem" data-eyebrow="Research Gap" data-steps="2">
 <div class="slide">
   <h1 class="title">Each piece exists. <em>No study puts them together.</em></h1>
 
   <div class="content">
-    <div class="matrix">
-      <div class="h corner">Reviewed studies</div>
-      <div class="h"><span class="ico"><i data-lucide="sprout"></i></span>Sees if a pot holds a plant</div>
-      <div class="h"><span class="ico"><i data-lucide="circle-dashed"></i></span>Detects empty pots</div>
-      <div class="h"><span class="ico"><i data-lucide="drone"></i></span>Camera on a moving drone</div>
-      <div class="h"><span class="ico"><i data-lucide="align-vertical-space-around"></i></span>Aligns beside a vertical face</div>
-      <div class="h"><span class="ico"><i data-lucide="grid-3x3"></i></span>Maps each pot to its slot</div>
-      <div class="h"><span class="ico"><i data-lucide="wifi-off"></i></span>Works offline</div>
+    <div class="loose" data-step="1"></div>
 
-      <div class="row"><b>IoT hydroponics</b><span>Dhanaraju 2022 · Domingo 2022 · Santiago 2025</span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
+    <div class="join" data-step="2"><span class="ico"><i data-lucide="arrow-down"></i></span>Our study <em>locks all five together</em><span class="ico"><i data-lucide="arrow-down"></i></span></div>
 
-      <div class="row"><b>Lettuce detection</b><span>Wang 2024 · Petropoulou 2023</span></div>
-      <div class="cell-note"><span class="p"><i data-lucide="contrast"></i></span><small>plants only</small></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
+    <div class="locked" data-step="2"><span class="tag-us">THIS STUDY</span></div>
 
-      <div class="row"><b>Agricultural UAVs</b><span>Aslan 2022 · de Azambuja 2022</span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div class="cell-note"><span class="y"><i data-lucide="check"></i></span><small style="color:var(--leaf-deep)">fields, orchards</small></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-
-      <div class="row"><b>Marker-based UAVs</b><span>Andrzejewski 2026</span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="y"><i data-lucide="check"></i></span></div>
-      <div class="cell-note"><span class="p"><i data-lucide="contrast"></i></span><small>landing pads only</small></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-
-      <div class="row"><b>Offline-first apps</b><span>Mayta 2026</span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="n"><i data-lucide="minus"></i></span></div>
-      <div><span class="y"><i data-lucide="check"></i></span></div>
-
-      <div class="row us"><b>This study</b><span>Lettuce towers · open outdoor area · PH setting</span></div>
-      <div class="us"><span class="y"><i data-lucide="check"></i></span></div>
-      <div class="us"><span class="y"><i data-lucide="check"></i></span></div>
-      <div class="us"><span class="y"><i data-lucide="check"></i></span></div>
-      <div class="us"><span class="y"><i data-lucide="check"></i></span></div>
-      <div class="us"><span class="y"><i data-lucide="check"></i></span></div>
-      <div class="us"><span class="y"><i data-lucide="check"></i></span></div>
-    </div>
-
-    <div class="foot">
-      <p class="claim">Plus <b>QR registration with the farmer's phone GPS</b> and a <b>live preview + final count</b> from the onboard recording.</p>
-      <div class="key">
-        <span><span class="y"><i data-lucide="check"></i></span>Covered</span>
-        <span><span class="p"><i data-lucide="contrast"></i></span>Partly</span>
-        <span><span class="n"><i data-lucide="minus"></i></span>Not covered</span>
-      </div>
-    </div>
+    <p class="claim" data-step="2">Plus <b>QR registration with the farmer's phone GPS</b> and a <b>live preview with a final count</b> from the onboard recording.</p>
   </div>
 </div>
+<script>
+  // Jigsaw outline, w × h, with an optional notch on the left edge and knob on
+  // the right. Both are arcs of radius r, so a knob fits the next piece's notch.
+  function piecePath(w, h, notch, knob, r) {
+    const m = h / 2;
+    const right = knob ? `V${m - 0.8 * r} a${r} ${r} 0 1 1 0 ${1.6 * r} V${h}` : `V${h}`;
+    const left = notch ? `V${m + 0.8 * r} a${r} ${r} 0 1 0 0 ${-1.6 * r} V0` : 'V0';
+    return `M0 0 H${w} ${right} H0 ${left} Z`;
+  }
+
+  function piece({ x, y, w, h, r, notch, knob, tilt = 0, fill, stroke, html, cls = '' }) {
+    const el = document.createElement('div');
+    el.className = `piece ${cls}`;
+    el.style.cssText = `left:${x}px; top:${y}px; width:${w}px; height:${h}px; transform:rotate(${tilt}deg);`;
+    el.innerHTML = `
+      <svg width="${w + (knob ? 1.6 * r : 0)}" height="${h}" viewBox="0 0 ${w + (knob ? 1.6 * r : 0)} ${h}">
+        <path d="${piecePath(w, h, notch, knob, r)}" fill="${fill}" stroke="${stroke}" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <div class="inner" style="width:${w}px; height:${h}px">${html}</div>`;
+    return el;
+  }
+
+  // What each group of studies does, and what it leaves out.
+  const STUDIES = [
+    { icon: 'gauge', name: 'IoT hydroponics', does: 'Watches the water', miss: "Can't see the pots", cite: 'Dhanaraju 2022 · Domingo 2022 · Santiago 2025' },
+    { icon: 'scan-eye', name: 'Lettuce detection', does: 'Finds lettuce', miss: 'Ignores empty pots', cite: 'Wang 2024 · Petropoulou 2023' },
+    { icon: 'drone', name: 'Farm drones', does: 'Flies over fields', miss: 'Never beside a tower', cite: 'Aslan 2022 · de Azambuja 2022' },
+    { icon: 'qr-code', name: 'Marker-guided drones', does: 'Lands on a marker', miss: 'Not on a wall of pots', cite: 'Andrzejewski 2026' },
+    { icon: 'wifi-off', name: 'Offline-first apps', does: 'Works without internet', miss: "Doesn't inspect crops", cite: 'Mayta 2026' },
+  ];
+  const OURS = [
+    'Sees if each pot holds a plant',
+    'Detects empty pots too',
+    'Flies right beside the tower',
+    'Aligns on markers, pot by pot',
+    'Works without internet',
+  ];
+
+  const loose = document.querySelector('.loose');
+  const lr = 20;
+  const lw = 288;
+  const step = (1728 - lw - 1.6 * lr - 16) / 4;
+  const tilts = [-3, 2, -2.5, 3, -1.5];
+  const drops = [6, 30, 12, 34, 10];
+  STUDIES.forEach((s, i) => {
+    loose.append(piece({
+      x: i * step, y: drops[i], w: lw, h: 350, r: lr, notch: true, knob: true, tilt: tilts[i],
+      fill: '#ffffff', stroke: '#ddd8cb',
+      html: `
+        <span class="ico-wrap"><span class="ico"><i data-lucide="${s.icon}"></i></span></span>
+        <h3>${s.name}</h3>
+        <span class="does"><span class="ico"><i data-lucide="check"></i></span>${s.does}</span>
+        <span class="miss"><span class="ico"><i data-lucide="x"></i></span>${s.miss}</span>
+        <span class="cite">${s.cite}</span>`,
+    }));
+  });
+
+  const locked = document.querySelector('.locked');
+  const kr = 22;
+  const kw = 1728 / 5;
+  OURS.forEach((text, i) => {
+    locked.append(piece({
+      x: i * kw, y: 0, w: kw, h: 210, r: kr, notch: i > 0, knob: i < 4,
+      fill: i % 2 ? '#1d5240' : '#12392b', stroke: 'rgba(255,255,255,0.22)', cls: i === 0 ? 'first' : '',
+      html: `<span class="ok"><span class="ico"><i data-lucide="check"></i></span></span><b>${text}</b>`,
+    }));
+  });
+</script>
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="frame.js"></script>
 </body>

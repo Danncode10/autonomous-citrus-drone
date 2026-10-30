@@ -39,10 +39,8 @@
     return `<rect x="${x}" y="${y}" width="${s}" height="${s}" fill="#111"/>${inner}`;
   }
 
-  function draw(el) {
-    const levels = (el.dataset.pattern || 'LL LE LL EL LL LE LL').split(' ');
-    const ring = el.dataset.highlight === 'empty';
-    const markers = el.dataset.markers !== 'off';
+  // Returns the tower's SVG body and its viewBox size, so other drawings can embed it.
+  function markup(levels, ring, markers) {
     const gap = 92;
     const top = 40;
     const h = levels.length * gap + 40;
@@ -55,7 +53,7 @@
       if (markers && i % 2 === 0) tags += marker(cx - 13, y - 58, 26);
     });
     const base = top + h;
-    el.innerHTML = `<svg viewBox="0 0 440 ${base + 70}" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return { w: 440, h: base + 70, body: `
       <ellipse cx="${cx}" cy="${base + 40}" rx="150" ry="16" fill="rgba(0,0,0,0.12)"/>
       <path d="M${cx - 120} ${base} h240 v30 a120 14 0 0 1 -240 0 Z" fill="#2d6a4a"/>
       <ellipse cx="${cx}" cy="${base}" rx="120" ry="14" fill="#3b8059"/>
@@ -63,9 +61,21 @@
       <rect x="${cx - 40}" y="${top}" width="22" height="${h}" fill="#e9ebe4"/>
       <ellipse cx="${cx}" cy="${top}" rx="40" ry="8" fill="#eef0ea" stroke="#cfd3ca" stroke-width="2"/>
       ${tags}
-      ${pots}
-    </svg>`;
+      ${pots}` };
   }
+
+  function draw(el) {
+    const m = markup(
+      (el.dataset.pattern || 'LL LE LL EL LL LE LL').split(' '),
+      el.dataset.highlight === 'empty',
+      el.dataset.markers !== 'off',
+    );
+    el.innerHTML = `<svg viewBox="0 0 ${m.w} ${m.h}" fill="none" xmlns="http://www.w3.org/2000/svg">${m.body}</svg>`;
+  }
+
+  // Embeddable version: towerMarkup('LL LE', { ring: true, markers: false }).
+  window.towerMarkup = (pattern, opts = {}) =>
+    markup(pattern.split(' '), !!opts.ring, opts.markers !== false);
 
   document.querySelectorAll('.tower-art').forEach(draw);
 })();

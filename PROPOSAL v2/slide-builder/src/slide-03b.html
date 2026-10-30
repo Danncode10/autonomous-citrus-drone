@@ -5,54 +5,156 @@
 <title>Slide 03b · Related Literature: Detection and Flight</title>
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="rrl.css">
+<style>
+  .panels { grid-template-columns: repeat(3, 1fr); }
+  .panel .art { height: 340px; }
+</style>
 </head>
-<body data-num="03b" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Detection and Flight">
+<body data-num="03b" data-part="problem" data-eyebrow="Review of Related Literature and Studies · Detection and Flight" data-steps="3">
 <div class="slide">
   <h1 class="title">Detection and flight work, <em>but not for empty pots on a tower</em></h1>
 
   <div class="content">
-    <div class="rrl">
-      <div class="th">Author</div>
-      <div class="th">Key Findings</div>
-      <div class="th">Relevance to this study</div>
-
-      <div class="who"><small>Computer vision</small><span>Terven et al. (2023)</span><span>Ultralytics (n.d.)</span></div>
-      <div class="what"><span>YOLO is a central real-time detector, judged by precision, recall and mAP; YOLOv8 (2023) is anchor-free for speed and accuracy.</span></div>
-      <div class="why"><p><span class="tag adopted">Adopted</span>YOLOv8, measured with precision, recall and mAP@50.</p></div>
-
-      <div class="who"><small>Lettuce detection</small><span>Wang, Wu &amp; Shen (2024)</span></div>
-      <div class="what"><span class="stat">~99%<small>precision</small></span><span>YOLOv8n found hydroponic lettuce heads with about 99% precision and recall, from 2,240 video frames.</span></div>
-      <div class="why">
-        <p><span class="tag adopted">Adopted</span>YOLOv8 and a ~2,000-image dataset.</p>
-        <p><span class="tag gap">Gap</span>No empty-pot class; stable camera only.</p>
+    <div class="panels">
+      <div class="panel" data-step="1">
+        <div class="art"><svg data-art="yolo" viewBox="0 0 560 340"></svg></div>
+        <div class="body">
+          <div class="kick">01 · Computer vision</div>
+          <h3>YOLOv8 finds lettuce, not empty pots</h3>
+          <p>Wang and colleagues reached about 99% precision on hydroponic lettuce. No study taught the model what an empty pot looks like.</p>
+          <div class="verdict">
+            <span><span class="tag adopted">Adopted</span>YOLOv8 as our detector</span>
+            <span><span class="tag gap">Gap</span>No empty-pot class</span>
+          </div>
+          <div class="cites">Terven et al. (2023) · Ultralytics (n.d.) · Wang, Wu &amp; Shen (2024)</div>
+        </div>
       </div>
 
-      <div class="who"><small>Tracking and counting</small><span>Zhang et al. (2022)</span><span>Villacrés et al. (2023)</span></div>
-      <div class="what"><span class="stat">20.07%<small>count error</small></span><span>ByteTrack keeps low-score boxes to cut missed tracks; DeepSORT + YOLOv5 averaged 20.07% counting error on apples.</span></div>
-      <div class="why"><p><span class="tag adopted">Adopted</span>ByteTrack; counting error checked against manual counts.</p></div>
-
-      <div class="who"><small>UAVs in agriculture</small><span>Aslan et al. (2022)</span><span>de Azambuja et al. (2022)</span><span>Aliane (2024)</span></div>
-      <div class="what"><span class="stat">&lt;250 g<small>CogniFly</small></span><span>Almost no UAV work in greenhouses; CogniFly survived 7 m/s collisions; ArduPilot supports companion computers and SITL.</span></div>
-      <div class="why">
-        <p><span class="tag adopted">Adopted</span>CogniFly-style frame, ArduPilot + Pi, Gazebo SITL.</p>
-        <p><span class="tag gap">Gap</span>No study inspects a single tower.</p>
+      <div class="panel" data-step="2">
+        <div class="art"><svg data-art="track" viewBox="0 0 560 340"></svg></div>
+        <div class="body">
+          <div class="kick">02 · Tracking and counting</div>
+          <h3>ByteTrack counts each plant once</h3>
+          <p>Video shows the same plant in many frames. Counting without care was off by about 20%.</p>
+          <div class="verdict">
+            <span><span class="tag adopted">Adopted</span>ByteTrack, checked against a hand count</span>
+          </div>
+          <div class="cites">Zhang et al. (2022) · Villacrés et al. (2023)</div>
+        </div>
       </div>
 
-      <div class="who"><small>Fiducial markers</small><span>Kalaitzakis et al. (2021)</span><span>OpenCV (n.d.)</span><span>Andrzejewski et al. (2026)</span></div>
-      <div class="what"><span>Markers make localization accurate and robust; pose comes from four corners; a Pi + ArduPilot landed precisely on markers.</span></div>
-      <div class="why">
-        <p><span class="tag adopted">Adopted</span>ArUco + solvePnP alignment on the Pi.</p>
-        <p><span class="tag gap">Gap</span>Landing pads only, not vertical faces.</p>
+      <div class="panel" data-step="3">
+        <div class="art"><svg data-art="markers" viewBox="0 0 560 340"></svg></div>
+        <div class="body">
+          <div class="kick">03 · Drones and markers</div>
+          <h3>Markers guide drones, but only to land</h3>
+          <p>Drones under 250 g are safer near plants. Markers already land drones precisely, but never beside a tower.</p>
+          <div class="verdict">
+            <span><span class="tag adopted">Adopted</span>ArUco markers on a light drone</span>
+            <span><span class="tag gap">Gap</span>Alignment beside a vertical face</span>
+          </div>
+          <div class="cites">Aslan et al. (2022) · de Azambuja et al. (2022) · Aliane (2024) · Kalaitzakis et al. (2021) · OpenCV (n.d.) · Andrzejewski et al. (2026)</div>
+        </div>
       </div>
     </div>
 
     <div class="legend">
-      <span><span class="tag adopted">Adopted</span>used in our design</span>
       <span><span class="tag gap">Gap</span>not yet addressed</span>
-      <span><span class="tag evidence">Evidence</span>supports the problem</span>
+      <span><span class="tag adopted">Adopted</span>used in our design</span>
     </div>
   </div>
 </div>
+<script src="tower.js"></script>
+<script src="rrl-art.js"></script>
+<script>
+  const MONO = 'font-family="JetBrains Mono, monospace" font-weight="700"';
+
+  // What the camera sees: lettuce boxed and labeled, empty pots unknown.
+  Art.scenes.yolo = () => {
+    const cols = [228, 348];
+    const rows = [122, 262];
+    const grid = [['L', 'E'], ['E', 'L']];
+    let pots = '';
+    let boxes = '';
+    grid.forEach((row, r) => row.forEach((kind, c) => {
+      const [x, y] = [cols[c], rows[r]];
+      pots += Art.pot(x, y - 6, 1.1, kind);
+      if (kind === 'L') {
+        boxes += `<rect x="${x - 42}" y="${y - 64}" width="84" height="92" rx="4" stroke="#2b7a3c" stroke-width="3" fill="none"/>
+          <rect x="${x - 42}" y="${y - 86}" width="106" height="22" rx="3" fill="#2b7a3c"/>
+          <text x="${x - 36}" y="${y - 69}" ${MONO} font-size="15" fill="#fff">lettuce .99</text>`;
+      } else {
+        boxes += `<rect x="${x - 40}" y="${y - 24}" width="80" height="54" rx="4" stroke="#b4452f" stroke-width="3" stroke-dasharray="7 6" fill="none"/>
+          <rect x="${x - 40}" y="${y - 46}" width="92" height="22" rx="3" fill="#b4452f"/>
+          <text x="${x - 34}" y="${y - 29}" ${MONO} font-size="15" fill="#fff">empty ?</text>`;
+      }
+    }));
+    const corner = (x, y, dx, dy) => `<path d="M${x} ${y + dy * 26} V${y} H${x + dx * 26}" stroke="#12392b" stroke-width="4" fill="none"/>`;
+    return `
+      <rect x="168" y="0" width="240" height="340" fill="#fbfbf8" stroke="#cfd3ca" stroke-width="2"/>
+      <rect x="168" y="0" width="36" height="340" fill="#eef0ea"/>
+      ${pots}${boxes}
+      ${corner(26, 16, 1, 1)}${corner(534, 16, -1, 1)}${corner(26, 324, 1, -1)}${corner(534, 324, -1, -1)}
+      <rect x="40" y="128" width="112" height="84" rx="14" fill="#12392b"/>
+      <text x="96" y="172" font-size="32" font-weight="800" fill="#fff" text-anchor="middle">~99%</text>
+      <text x="96" y="198" ${MONO} font-size="14" fill="#d9a520" text-anchor="middle">PRECISION</text>`;
+  };
+
+  // The same lettuce in three frames: a detector counts it three times, a tracker once.
+  Art.scenes.track = () => {
+    const xs = [30, 205, 380];
+    const ys = [70, 106, 142];
+    let frames = '';
+    xs.forEach((x, i) => {
+      const [px, py] = [x + 75, ys[i]];
+      frames += `
+        <rect x="${x}" y="22" width="150" height="168" rx="12" fill="#eef3ec" stroke="#c9cdc4" stroke-width="2"/>
+        <rect x="${x + 50}" y="23" width="50" height="166" fill="#fbfbf8"/>
+        ${Art.pot(px, py, 0.8, 'L')}
+        <rect x="${px - 34}" y="${py - 52}" width="68" height="76" rx="4" stroke="#2b7a3c" stroke-width="3" fill="none"/>
+        <rect x="${px + 6}" y="${py - 52}" width="28" height="20" rx="3" fill="#d9a520"/>
+        <text x="${px + 20}" y="${py - 37}" ${MONO} font-size="14" fill="#12392b" text-anchor="middle">#7</text>
+        <text x="${x + 75}" y="212" ${MONO} font-size="15" fill="#5b6a61" text-anchor="middle">FRAME ${i + 1}</text>`;
+    });
+    const arrow = (x) => `<path d="M${x} 96 l12 10 l-12 10" stroke="#5b6a61" stroke-width="3" fill="none" stroke-linecap="round"/>`;
+    return `
+      ${frames}${arrow(186)}${arrow(361)}
+      ${Art.cross(48, 256, 14)}
+      <text x="74" y="263" font-size="21" font-weight="700" fill="#b4452f">Detector alone: 3 lettuce</text>
+      ${Art.check(48, 302, 14)}
+      <text x="74" y="309" font-size="21" font-weight="700" fill="#12392b">With ByteTrack: ID #7 = 1 lettuce</text>`;
+  };
+
+  // Left: markers land a drone. Right: our use, holding it beside a tower.
+  Art.scenes.markers = () => {
+    const ground = 300;
+    const pattern = 'LE LL EL LL LE';
+    const w = 150;
+    const m = towerMarkup(pattern);
+    const ty = ground - (w * m.h / m.w) * Art.towerGround(pattern);
+    return `
+      <rect x="0" y="${ground}" width="560" height="40" fill="#e2d9c4"/>
+      <path d="M280 20 V${ground - 10}" stroke="#ddd8cb" stroke-width="2" stroke-dasharray="6 7"/>
+
+      ${Art.check(40, 38, 13)}
+      <text x="62" y="45" font-size="20" font-weight="800" fill="#12392b">Landing on a marker</text>
+      <g transform="translate(108 ${ground - 18}) scale(1 0.32)">${Art.marker(0, 0, 64)}</g>
+      ${Art.drone(140, 132, 1)}
+      <path d="M140 150 V${ground - 30}" stroke="#2b7a3c" stroke-width="3" stroke-dasharray="7 7"/>
+      <path d="M131 ${ground - 40} l9 12 l9 -12" stroke="#2b7a3c" stroke-width="3" fill="none"/>
+
+      <rect x="300" y="24" width="56" height="28" rx="6" fill="#fbf1d6"/>
+      <text x="328" y="44" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="#9a6f05" text-anchor="middle">NEW</text>
+      <text x="366" y="45" font-size="20" font-weight="800" fill="#12392b">Beside a tower</text>
+      ${Art.tower(410, ty, w, pattern)}
+      ${Art.drone(350, 204, 0.85)}
+      <path d="M372 204 L462 172 M372 204 L462 236" stroke="#d9a520" stroke-width="2.5" stroke-dasharray="5 6"/>
+      <path d="M350 226 v36 M336 248 l14 14 l14 -14" stroke="#2b7a3c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M350 168 v-36 M336 146 l14 -14 l14 14" stroke="#2b7a3c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+  };
+
+  Art.mount();
+</script>
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="frame.js"></script>
 </body>
